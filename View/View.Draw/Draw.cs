@@ -535,11 +535,7 @@ public class Draw : Any
 
     private bool InternRectSetFromRect(ulong internRect, Rect rect)
     {
-        Pos pos;
-        Size size;
-        pos = rect.Pos;
-        size = rect.Size;
-        this.InternInfra.RectSet(internRect, pos.Col, pos.Row, size.Wed, size.Het);
+        this.InternInfra.RectSet(internRect, rect.Pos.Col, rect.Pos.Row, rect.Size.Wed, rect.Size.Het);
         return true;
     }
 }
