@@ -50,7 +50,7 @@ public class Infra : Any
         this.WhiteSlash = this.CreateSlash(whiteColor, k);
         this.ZeroSlash = this.CreateSlash(transparentColor, k);
 
-        this.FontAriaName = this.TextInfra.S("Source Sans 3");
+        this.FontAriaName = this.TextInfra.S("Segoe UI Variable");
         this.FontMonoName = this.TextInfra.S("Cascadia Mono");
         return true;
     }
