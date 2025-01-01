@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../../Class/Tool/Z.Infra.StatItemListSourceGen/Z.Infra.StatItemListSourceGen.csproj" />
+        <ProjectReference Include="../../../Class/Tool/../../Class/Tool/Z.Infra.StatItemListSourceGen/Z.Infra.StatItemListSourceGen.csproj" />
     </ItemGroup>
 
 </Project>
