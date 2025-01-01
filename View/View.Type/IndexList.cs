@@ -94,7 +94,7 @@ public class IndexList : Any
         this.SignOrn = this.AddSignIndex('|');
 
         //this.ControlEscape = this.AddControlButton();
-        this.InnSpace = this.AddSignIndex(' ');
+        this.InnSpace = this.AddSpaceIndex();
         this.InnTab = this.AddInnIndex();
         this.InnGroupIndex = 0x03;
         this.InnRem = this.AddInnIndex();
@@ -290,6 +290,15 @@ public class IndexList : Any
         Index a;
         a = this.AddIndex(index, oc);
         this.InnGroupIndex = this.InnGroupIndex + 1;
+        return a;
+    }
+
+    protected virtual Index AddSpaceIndex()
+    {
+        long index;
+        index = ' ';
+        Index a;
+        a = this.AddIndex(index, 0);
         return a;
     }
 
