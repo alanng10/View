@@ -464,7 +464,7 @@ public class Draw : Any
         return true;
     }
 
-    public virtual bool ExecuteText(TextText text, Align colAlign, Align rowAlign, bool wordWarp, Rect destRect)
+    public virtual bool ExecuteText(TextText text, Align colAlign, Align rowAlign, bool wordWrap, Rect destRect)
     {
         if (this.TextCount < text.Range.Count)
         {
@@ -481,11 +481,7 @@ public class Draw : Any
         kab = (ulong)(rowAlign.Index + 1);
 
         ulong wordWrapK;
-        wordWrapK = 0;
-        if (wordWarp)
-        {
-            wordWrapK = 1;
-        }
+        wordWrapK = this.InternInfra.Bool(wordWrap);
 
         Extern.Draw_ExecuteText(this.Intern, this.InternText, kaa, kab, wordWrapK, this.InternRectA, this.InternRectB);
         return true;
