@@ -495,6 +495,11 @@ class Draw : Any
 
     maide precate Int MathValue(var Int cand, var Int expo)
     {
-        
+        this.MathComp.Cand : cand;
+        this.MathComp.Expo : expo;
+
+        var Int a;
+        a : this.Math.Value(this.MathComp);
+        return a;
     }
 }
