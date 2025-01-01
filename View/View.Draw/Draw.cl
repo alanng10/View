@@ -485,4 +485,11 @@ class Draw : Any
         this.Extern.String_CountSet(this.InternText, count);
         return true;
     }
+
+    maide precate Int MathInt(var Int n)
+    {
+        var Int a;
+        a : this.MathInfra.Int(this.MathComp, n);
+        return a;
+    }
 }
