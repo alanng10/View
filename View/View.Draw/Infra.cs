@@ -36,8 +36,8 @@ public class Infra : Any
         Color whiteColor;
         whiteColor = this.ColorCreate(this.ColorCompMax, this.ColorCompMax, this.ColorCompMax, this.ColorCompMax);
 
-        Color transparentColor;
-        transparentColor = this.ColorCreate(0, 0, 0, 0);
+        Color zeroColor;
+        zeroColor = this.ColorCreate(0, 0, 0, 0);
 
         MathComp ka;
         ka = new MathComp();
@@ -48,7 +48,7 @@ public class Infra : Any
 
         this.BlackSlash = this.CreateSlash(blackColor, k);
         this.WhiteSlash = this.CreateSlash(whiteColor, k);
-        this.ZeroSlash = this.CreateSlash(transparentColor, k);
+        this.ZeroSlash = this.CreateSlash(zeroColor, k);
 
         this.FontAriaName = this.TextInfra.S("Segoe UI Variable");
         this.FontMonoName = this.TextInfra.S("Cascadia Mono");
