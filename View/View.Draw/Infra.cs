@@ -51,6 +51,7 @@ public class Infra : Any
         this.ZeroSlash = this.CreateSlash(transparentColor, k);
 
         this.FontSanName = this.TextInfra.S("Source Sans 3");
+        this.FontMonoName = this.TextInfra.S("Cascadia Mono");
         return true;
     }
 
@@ -60,6 +61,7 @@ public class Infra : Any
     public virtual Slash WhiteSlash { get; set; }
     public virtual Slash ZeroSlash { get; set; }
     public virtual String FontSanName { get; set; }
+    public virtual String FontMonoName { get; set; }
     protected virtual MathInfra MathInfra { get; set; }
     protected virtual TextInfra TextInfra { get; set; }
     protected virtual StorageStatusList StorageStatusList { get; set; }
