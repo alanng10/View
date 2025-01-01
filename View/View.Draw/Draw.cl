@@ -471,4 +471,18 @@ class Draw : Any
         this.Extern.Draw_ExecuteText(this.Intern, this.InternText, colAlign.Index + 1, rowAlign.Index + 1, wordWrapK, this.InternRectA, this.InternRectB);
         return true;
     }
+
+    maide private Bool TextSet(var Text text)
+    {
+        var Int count;
+        count : text.Range.Count;
+
+        var Int dataCount;
+        dataCount : count * 4;
+
+        this.InternInfra.CopyFromByteArray(this.InternTextData, text.Data.Value, 0, dataCount);
+
+        this.Extern.String_CountSet(this.InternText, count);
+        return true;
+    }
 }
