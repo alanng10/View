@@ -502,4 +502,16 @@ class Draw : Any
         a : this.Math.Value(this.MathComp);
         return a;
     }
+
+    maide private Bool InternRangeSetFromRange(var Int internRange, var Range range)
+    {
+        this.InternInfra.RangeSet(internRange, range.Index, range.Count);
+        return true;
+    }
+
+    maide private Bool InternPosSetFromPos(var Int internPos, var Pos pos)
+    {
+        this.InternInfra.PosSet(internPos, pos.Col, pos.Row);
+        return true;
+    }
 }
