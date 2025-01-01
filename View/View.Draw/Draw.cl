@@ -456,5 +456,19 @@ class Draw : Any
 
     maide prusate Bool ExecuteText(var Text text, var Align colAlign, var Align rowAlign, var Bool wordWarp, var Rect destRect)
     {
+        inf (this.TextCount < text.Range.Count)
+        {
+            return false;
+        }
+
+        this.TextSet(text);
+
+        this.InternRectSetFromRect(this.InternRectA, destRect);
+
+        var Int wordWrapK;
+        wordWrapK = this.InternInfra.Bool(wordWrap);
+
+        this.Extern.Draw_ExecuteText(this.Intern, this.InternText, colAlign.Index + 1, rowAlign.Index + 1, wordWrapK, this.InternRectA, this.InternRectB);
+        return true;
     }
 }
