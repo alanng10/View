@@ -480,14 +480,14 @@ public class Draw : Any
         kaa = (ulong)(colAlign.Index + 1);
         kab = (ulong)(rowAlign.Index + 1);
 
-        ulong wordWrapU;
-        wordWrapU = 0;
+        ulong wordWrapK;
+        wordWrapK = 0;
         if (wordWarp)
         {
-            wordWrapU = 1;
+            wordWrapK = 1;
         }
 
-        Extern.Draw_ExecuteText(this.Intern, this.InternText, kaa, kab, wordWrapU, this.InternRectA, this.InternRectB);
+        Extern.Draw_ExecuteText(this.Intern, this.InternText, kaa, kab, wordWrapK, this.InternRectA, this.InternRectB);
         return true;
     }
 
