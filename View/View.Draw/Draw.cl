@@ -514,4 +514,10 @@ class Draw : Any
         this.InternInfra.PosSet(internPos, pos.Col, pos.Row);
         return true;
     }
+
+    maide private Bool InternRectSetFromRect(var Int internRect, var Rect rect)
+    {
+        this.InternInfra.RectSet(internRect, rect.Pos.Col, rect.Pos.Row, rect.Size.Wed, rect.Size.Het);
+        return true;
+    }
 }
