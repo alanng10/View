@@ -59,8 +59,7 @@ public class IndexList : Any
         this.Digit7 = this.AddDigitIndex();
         this.Digit8 = this.AddDigitIndex();
         this.Digit9 = this.AddDigitIndex();
-        
-        this.SignSpace = this.AddSignIndex(' ');
+
         this.SignBackTick = this.AddSignIndex('`');
         this.SignNot = this.AddSignIndex('~');
         this.SignExclamate = this.AddSignIndex('!');
@@ -95,6 +94,7 @@ public class IndexList : Any
         this.SignOrn = this.AddSignIndex('|');
 
         //this.ControlEscape = this.AddControlButton();
+        this.InnSpace = this.AddSignIndex(' ');
         this.InnTab = this.AddInnIndex();
         this.InnGroupIndex = 0x03;
         this.InnRem = this.AddInnIndex();
@@ -177,7 +177,6 @@ public class IndexList : Any
     public virtual Index Digit8 { get; set; }
     public virtual Index Digit9 { get; set; }
 
-    public virtual Index SignSpace { get; set; }
     public virtual Index SignBackTick { get; set; }
     public virtual Index SignNot { get; set; }
     public virtual Index SignExclamate { get; set; }
@@ -212,6 +211,7 @@ public class IndexList : Any
     public virtual Index SignOrn { get; set; }
 
     // public virtual Button ControlEscape { get; set; }
+    public virtual Index InnSpace { get; set; }
     public virtual Index InnTab { get; set; }
     public virtual Index InnRem { get; set; }
     public virtual Index InnEnter { get; set; }
