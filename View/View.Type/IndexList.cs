@@ -75,12 +75,12 @@ public class IndexList : Any
         this.SignLine = this.AddSignIndex('_');
         this.SignSame = this.AddSignIndex('=');
         this.SignAdd = this.AddSignIndex('+');
-        this.SignBraceLite = this.AddSignIndex('{');
-        this.SignBraceRite = this.AddSignIndex('}');
-        this.SignBraceRoundLite = this.AddSignIndex('(');
-        this.SignBraceRoundRite = this.AddSignIndex(')');
-        this.SignBraceSquareLite = this.AddSignIndex('[');
-        this.SignBraceSquareRite = this.AddSignIndex(']');
+        this.SignBraceCurveLite = this.AddSignIndex('{');
+        this.SignBraceCurveRite = this.AddSignIndex('}');
+        this.SignBraceLite = this.AddSignIndex('(');
+        this.SignBraceRite = this.AddSignIndex(')');
+        this.SignBraceRightLite = this.AddSignIndex('[');
+        this.SignBraceRightRite = this.AddSignIndex(']');
         this.SignExecute = this.AddSignIndex(';');
         this.SignAre = this.AddSignIndex(':');
         this.SignTail = this.AddSignIndex('\'');
@@ -188,16 +188,16 @@ public class IndexList : Any
     public virtual Index SignExpo { get; set; }
     public virtual Index SignAnd { get; set; }
     public virtual Index SignMul { get; set; }
-    public virtual Index SignBraceRoundLite { get; set; }
-    public virtual Index SignBraceRoundRite { get; set; }
+    public virtual Index SignBraceLite { get; set; }
+    public virtual Index SignBraceRite { get; set; }
     public virtual Index SignSub { get; set; }
     public virtual Index SignLine { get; set; }
     public virtual Index SignSame { get; set; }
     public virtual Index SignAdd { get; set; }
-    public virtual Index SignBraceSquareLite { get; set; }
-    public virtual Index SignBraceLite { get; set; }
-    public virtual Index SignBraceSquareRite { get; set; }
-    public virtual Index SignBraceRite { get; set; }
+    public virtual Index SignBraceRightLite { get; set; }
+    public virtual Index SignBraceCurveLite { get; set; }
+    public virtual Index SignBraceRightRite { get; set; }
+    public virtual Index SignBraceCurveRite { get; set; }
     public virtual Index SignExecute { get; set; }
     public virtual Index SignAre { get; set; }
     public virtual Index SignTail { get; set; }
