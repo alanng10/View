@@ -492,4 +492,9 @@ class Draw : Any
         a : this.MathInfra.Int(this.MathComp, n);
         return a;
     }
+
+    maide precate Int MathValue(var Int cand, var Int expo)
+    {
+        
+    }
 }

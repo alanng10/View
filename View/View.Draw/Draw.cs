@@ -513,14 +513,11 @@ public class Draw : Any
 
     protected virtual long MathValue(long cand, long expo)
     {
-        MathComp mathComp;
-        mathComp = this.MathComp;
-
-        mathComp.Cand = cand;
-        mathComp.Expo = expo;
+        this.MathComp.Cand = cand;
+        this.MathComp.Expo = expo;
 
         long a;
-        a = this.Math.Value(mathComp);
+        a = this.Math.Value(this.MathComp);
         return a;
     }
 
