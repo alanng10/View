@@ -50,11 +50,7 @@ public class Infra : Any
         this.WhiteSlash = this.CreateSlash(whiteColor, k);
         this.ZeroSlash = this.CreateSlash(transparentColor, k);
 
-        this.Font = new Font();
-        this.Font.Name = this.TextInfra.S("Source Sans 3");
-        this.Font.Size = 10;
-        this.Font.Weight = 400;
-        this.Font.Init();
+        this.FontSanName = this.TextInfra.S("Source Sans 3");
 
         long a;
         a = 1 << 20;
@@ -67,7 +63,7 @@ public class Infra : Any
     public virtual Slash BlackSlash { get; set; }
     public virtual Slash WhiteSlash { get; set; }
     public virtual Slash ZeroSlash { get; set; }
-    public virtual Font Font { get; set; }
+    public virtual String FontSanName { get; set; }
     private long ScaleFactor { get; set; }
     protected virtual MathInfra MathInfra { get; set; }
     protected virtual TextInfra TextInfra { get; set; }
