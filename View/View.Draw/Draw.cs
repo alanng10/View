@@ -477,8 +477,8 @@ public class Draw : Any
 
         ulong kaa;
         ulong kab;
-        kaa = (ulong)colAlign.Index;
-        kab = (ulong)rowAlign.Index;
+        kaa = (ulong)(colAlign.Index + 1);
+        kab = (ulong)(rowAlign.Index + 1);
 
         ulong wordWrapU;
         wordWrapU = 0;
