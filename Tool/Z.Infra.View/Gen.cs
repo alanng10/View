@@ -7,7 +7,7 @@ public class Gen : SourceGen
         return this.AddClear().AddS("../../Module/").Add(this.Module).Add(this.TextInfra.PathCombine).Add(this.ClassName).AddS(".cl").AddResult();
     }
 
-    protected virtual String GetStatItemListFileName()
+    protected override String GetStatItemListFileName()
     {
         return this.AddClear().AddS("../../../Class/Out/net8.0/ToolData/Infra/ItemList").Add(this.StatItemClassName).AddS(".txt").AddResult();
     }
