@@ -14,7 +14,7 @@ public class Gen : SourceGen
         this.Export = true;
         this.ItemListFileName = this.S("ToolData/View/ItemListAlign.txt");
         this.AddMethodFileName = this.S("ToolData/View/AddMaideAlign.txt");
-        this.OutputFilePath = this.S("../../View/View.Draw/AlignList.cl");
+        this.OutputFilePath = this.S("../../Module/View.Draw/AlignList.cl");
         return true;
     }
 }
