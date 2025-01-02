@@ -1,4 +1,4 @@
-namespace Z.Tool.View.SlashCapList;
+namespace Z.Tool.View.SlashCapeList;
 
 class Entry : EntryEntry
 {
