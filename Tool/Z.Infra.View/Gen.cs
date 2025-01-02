@@ -1,4 +1,4 @@
-namespace Z.Infra.StatItemListSourceGen;
+namespace Z.Infra.View;
 
 public class Gen : SourceGen
 {
