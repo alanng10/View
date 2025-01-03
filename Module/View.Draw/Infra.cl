@@ -134,4 +134,15 @@ class Infra : Any
         a.Size : this.SizeCreate(wed, het);
         return a;
     }
+
+    maide prusate Image ImageCreateSize(var Size size)
+    {
+        var Image a;
+        a : new Image;
+        a.Init();
+        a.Size.Wed : size.Wed;
+        a.Size.Het : size.Het;
+        a.DataCreate();
+        return a;
+    }
 }
