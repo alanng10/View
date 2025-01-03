@@ -1,9 +1,5 @@
 @echo off
 
-call Script\View\CleanModule
-echo:
-call Script\View\CleanDemo
-echo:
-call Script\View\MakeModule
-echo:
-call Script\View\MakeDemo
+call Script\View\CleanModule Draw
+
+call Script\View\MakeModule Draw
