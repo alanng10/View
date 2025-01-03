@@ -13,7 +13,7 @@ class Infra : Any
 
         this.PixelByteCount : 4;
 
-        this.ColorCompMax : 255;
+        this.ColorCompMax : 0hff;
 
         var Color blackColor;
         blackColor : this.ColorCreate(this.ColorCompMax, 0, 0, 0);
@@ -84,5 +84,19 @@ class Infra : Any
         a.Join : this.SlashJoinList.Miter;
         a.Init();
         return a;
+    }
+
+    maide pronate Bool ColorSet(var Color color, var Int internColor)
+    {
+        color.Blue : this.ColorSetComp(internColor, 0);
+        color.Green : this.ColorSetComp(internColor, 1);
+        color.Red : this.ColorSetComp(internColor, 2);
+        color.Alpha : this.ColorSetComp(internColor, 3);
+        return true;
+    }
+
+    maide private Int ColorSetComp(var Int internColor, var Int index)
+    {
+        return bit &(bit >(internColor, index * 8), 0hff);
     }
 }
