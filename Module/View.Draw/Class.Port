@@ -4,6 +4,7 @@ View.Draw:0.00.00
 [Import]
 System.Infra
     Any Any
+    Bool Bool
     String String
     Range Range
     Data Data
