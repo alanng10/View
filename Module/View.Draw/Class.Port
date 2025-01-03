@@ -3,14 +3,43 @@ View.Draw:0.00.00
 
 [Import]
 System.Infra
+    Any Any
+    String String
+    Range Range
+    Data Data
+    InfraInfra Infra
+    Extern Extern
+    InternInfra InternInfra
 System.List
+    Array Array
 System.Math
+    Math Math
+    MathComp Comp
 System.Text
+    Text Text
 System.Stream
+    Stream Stream
 System.Storage
+    Storage Storage
+    StorageMode Mode
+    StorageStatusList StatusList
 
 [Export]
 Draw
+Pos
+Size
+Rect
+Color
+Brush
+BrushKind
+BrushKindList
+Slash
+SlashLine
+SlashLineList
+SlashCape
+SlashCapeList
+SlashJoin
+SlashJoinList
 Image
 
 [Storage]
