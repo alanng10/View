@@ -23,7 +23,7 @@ public class Infra : Any
         this.BrushInfra = BrushInfra.This;
         this.BrushKindList = BrushKindList.This;
         this.SlashLineList = SlashLineList.This;
-        this.SlashCapList = SlashCapList.This;
+        this.SlashCapeList = SlashCapeList.This;
         this.SlashJoinList = SlashJoinList.This;
 
         this.PixelByteCount = 4;
@@ -67,7 +67,7 @@ public class Infra : Any
     protected virtual StorageStatusList StorageStatusList { get; set; }
     protected virtual BrushKindList BrushKindList { get; set; }
     protected virtual SlashLineList SlashLineList { get; set; }
-    protected virtual SlashCapList SlashCapList { get; set; }
+    protected virtual SlashCapeList SlashCapeList { get; set; }
     protected virtual SlashJoinList SlashJoinList { get; set; }
     private BrushInfra BrushInfra { get; set; }
 
@@ -83,7 +83,7 @@ public class Infra : Any
         return a;
     }
 
-    private Slash SlashCreate(Color color, long wed)
+    private Slash SlashCreate(Color color, long size)
     {
         Brush ka;
         ka = new Brush();
@@ -95,8 +95,8 @@ public class Infra : Any
         a = new Slash();
         a.Brush = ka;
         a.Line = this.SlashLineList.Solid;
-        a.Wed = wed;
-        a.Cap = this.SlashCapList.Flat;
+        a.Size = size;
+        a.Cape = this.SlashCapeList.Plane;
         a.Join = this.SlashJoinList.Miter;
         a.Init();
         return a;
