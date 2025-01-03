@@ -219,8 +219,8 @@ public class Infra : Any
         storage.Mode = mode;
         storage.Open();
 
-        bool o;
-        o = false;
+        bool k;
+        k = false;
         if (storage.Status == this.StorageStatusList.NoError)
         {
             Stream stream;
@@ -232,12 +232,12 @@ public class Infra : Any
             imageWrite.Stream = stream;
             imageWrite.Binary = binary;
             imageWrite.Image = image;
-            o = imageWrite.Execute();
+            k = imageWrite.Execute();
             imageWrite.Final();
         }
         storage.Close();
         storage.Final();
-        return o;
+        return k;
     }
 
     public virtual bool BoundArea(Rect bound, Rect area)
