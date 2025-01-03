@@ -183,7 +183,7 @@ class Infra : Any
             {
                 k : ka;
             }
-            inf (!b)
+            inf (~b)
             {
                 ka.Final();
             }
