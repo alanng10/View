@@ -193,4 +193,38 @@ class Infra : Any
         storage.Final();
         return k;
     }
+
+    maide prusate Bool ImageWrite(var String path, var Image image, var ImageBinary binary)
+    {
+        var Storage storage;
+        storage : new Storage;
+        storage.Init();
+        var StorageMode mode;
+        mode : new StorageMode;
+        mode.Init();
+        mode.Write : true;
+        storage.Path : path;
+        storage.Mode : mode;
+        storage.Open();
+
+        var Bool k;
+        k : false;
+        inf (storage.Status = this.StorageStatusList.NoError)
+        {
+            var Stream stream;
+            stream : storage.Stream;
+
+            var ImageWrite imageWrite;
+            imageWrite : new ImageWrite;
+            imageWrite.Init();
+            imageWrite.Stream : stream;
+            imageWrite.Binary : binary;
+            imageWrite.Image : image;
+            k : imageWrite.Execute();
+            imageWrite.Final();
+        }
+        storage.Close();
+        storage.Final();
+        return k;
+    }
 }
