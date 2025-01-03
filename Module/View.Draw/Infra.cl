@@ -170,6 +170,28 @@ class Infra : Any
             var Image ka;
             ka : new Image;
             ka.Init();
+
+            var ImageRead imageRead;
+            imageRead : new ImageRead;
+            imageRead.Init();
+            imageRead.Stream : stream;
+            imageRead.Image : ka;
+
+            var Bool b;
+            b : imageRead.Execute();
+
+            inf (b)
+            {
+                k : ka;
+            }
+            inf (!b)
+            {
+                ka.Final();
+            }
+            imageRead.Final();
         }
+        storage.Close();
+        storage.Final();
+        return k;
     }
 }
