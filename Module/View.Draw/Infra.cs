@@ -46,9 +46,9 @@ public class Infra : Any
         long k;
         k = this.MathInfra.Int(ka, 1);
 
-        this.BlackSlash = this.CreateSlash(blackColor, k);
-        this.WhiteSlash = this.CreateSlash(whiteColor, k);
-        this.ZeroSlash = this.CreateSlash(zeroColor, k);
+        this.BlackSlash = this.SlashCreate(blackColor, k);
+        this.WhiteSlash = this.SlashCreate(whiteColor, k);
+        this.ZeroSlash = this.SlashCreate(zeroColor, k);
 
         this.FontAriaName = this.TextInfra.S("Segoe UI Variable");
         this.FontMonoName = this.TextInfra.S("Cascadia Mono");
@@ -83,7 +83,7 @@ public class Infra : Any
         return a;
     }
 
-    private Slash CreateSlash(Color color, long wed)
+    private Slash SlashCreate(Color color, long wed)
     {
         Brush ka;
         ka = new Brush();

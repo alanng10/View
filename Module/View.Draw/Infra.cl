@@ -31,9 +31,9 @@ class Infra : Any
         var Int k;
         k : this.MathInfra.Int(ka, 1);
 
-        this.BlackSlash : this.CreateSlash(blackColor, k);
-        this.WhiteSlash : this.CreateSlash(whiteColor, k);
-        this.ZeroSlash : this.CreateSlash(zeroColor, k);
+        this.BlackSlash : this.SlashCreate(blackColor, k);
+        this.WhiteSlash : this.SlashCreate(whiteColor, k);
+        this.ZeroSlash : this.SlashCreate(zeroColor, k);
 
         this.FontAriaName : "Segoe UI Variable";
         this.FontMonoName : "Cascadia Mono";
@@ -60,5 +60,10 @@ class Infra : Any
         var Color a;
         a : new Color;
         a.Init();
+        a.Alpha : alpha;
+        a.Red : red;
+        a.Green : green;
+        a.Blue : blue;
+        return a;
     }
 }
