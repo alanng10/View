@@ -39,4 +39,19 @@ class Infra : Any
         this.FontMonoName : "Cascadia Mono";
         return true;
     }
+
+    field prusate Int PixelByteCount { get { return data; } set { data : value; } }
+    field prusate Int ColorCompMax { get { return data; } set { data : value; } }
+    field prusate Slash BlackSlash { get { return data; } set { data : value; } }
+    field prusate Slash WhiteSlash { get { return data; } set { data : value; } }
+    field prusate Slash ZeroSlash { get { return data; } set { data : value; } }
+    field prusate String FontAriaName { get { return data; } set { data : value; } }
+    field prusate String FontMonoName { get { return data; } set { data : value; } }
+    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field precate StorageStatusList StorageStatusList { get { return data; } set { data : value; } }
+    field precate BrushKindList BrushKindList { get { return data; } set { data : value; } }
+    field precate SlashLineList SlashLineList { get { return data; } set { data : value; } }
+    field precate SlashCapeList SlashCapeList { get { return data; } set { data : value; } }
+    field precate SlashJoinList SlashJoinList { get { return data; } set { data : value; } }
+    field private BrushInfra BrushInfra { get { return data; } set { data : value; } }
 }
