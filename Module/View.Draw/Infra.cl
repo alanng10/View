@@ -124,4 +124,14 @@ class Infra : Any
         a.Het : het;
         return a;
     }
+
+    maide prusate Rect RectCreate(var Int col, var Int row, var Int wed, var Int het)
+    {
+        var Rect a;
+        a : new Rect;
+        a.Init();
+        a.Pos : this.PosCreate(col, row);
+        a.Size : this.SizeCreate(wed, het);
+        return a;
+    }
 }
