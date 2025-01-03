@@ -54,4 +54,11 @@ class Infra : Any
     field precate SlashCapeList SlashCapeList { get { return data; } set { data : value; } }
     field precate SlashJoinList SlashJoinList { get { return data; } set { data : value; } }
     field private BrushInfra BrushInfra { get { return data; } set { data : value; } }
+
+    maide prusate Color ColorCreate(var Int alpha, var Int red, var Int green, var Int blue)
+    {
+        var Color a;
+        a : new Color;
+        a.Init();
+    }
 }

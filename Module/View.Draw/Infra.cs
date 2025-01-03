@@ -73,14 +73,14 @@ public class Infra : Any
 
     public virtual Color ColorCreate(long alpha, long red, long green, long blue)
     {
-        Color color;
-        color = new Color();
-        color.Init();
-        color.Alpha = alpha;
-        color.Red = red;
-        color.Green = green;
-        color.Blue = blue;
-        return color;
+        Color a;
+        a = new Color();
+        a.Init();
+        a.Alpha = alpha;
+        a.Red = red;
+        a.Green = green;
+        a.Blue = blue;
+        return a;
     }
 
     private Slash CreateSlash(Color color, long wed)
