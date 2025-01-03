@@ -40,7 +40,28 @@ SlashCape
 SlashCapeList
 SlashJoin
 SlashJoinList
+Polate
+PolateKind
+PolateKindList
+PolateLinear
+PolateRadial
+PolateSpread
+PolateSpreadList
+PolateStop
+PolateStopPoint
 Image
+ImageFormat
+ImageFormatList
+ImageRead
+ImageWrite
+Comp
+CompList
+Form
+Font
+PointList
+Align
+AlignList
+Infra
 
 [Storage]
 
