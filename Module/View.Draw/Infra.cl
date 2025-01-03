@@ -114,4 +114,14 @@ class Infra : Any
         a.Row : row;
         return a;
     }
+
+    maide prusate Size SizeCreate(var Int wed, var Int het)
+    {
+        var Size a;
+        a : new Size;
+        a.Init();
+        a.Wed : wed;
+        a.Het : het;
+        return a;
+    }
 }
