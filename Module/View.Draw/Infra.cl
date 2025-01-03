@@ -227,4 +227,20 @@ class Infra : Any
         storage.Final();
         return k;
     }
+
+    maide prusate Bool BoundArea(var Rect bound, var Rect area)
+    {
+        var Int lite;
+        lite : area.Pos.Col;
+        var Int nite;
+        nite : area.Pos.Row;
+        var Int wed;
+        wed : area.Size.Wed;
+        var Int het;
+        het : area.Size.Het;
+        var Int rite;
+        rite : lite + wed;
+        var Int site;
+        site : nite + het;
+    }
 }
