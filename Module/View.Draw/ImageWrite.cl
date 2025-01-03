@@ -38,14 +38,14 @@ class ImageWrite : Any
         var Extern extern;
         extern : this.Extern;
 
-        extern.ImageWrite.StreamSet(this.Intern, streamK);
-        extern.ImageWrite.ImageSet(this.Intern, this.Image.Intern);
-        extern.ImageWrite.FormatSet(this.Intern, this.Format.Intern);
+        extern.ImageWrite_StreamSet(this.Intern, streamK);
+        extern.ImageWrite_ImageSet(this.Intern, this.Image.Intern);
+        extern.ImageWrite_FormatSet(this.Intern, this.Format.Intern);
 
         var Int k;
         k : extern.ImageWrite_Execute(this.Intern);
 
-        extern.ImageWrite.FormatSet(this.Intern, 0);
+        extern.ImageWrite_FormatSet(this.Intern, 0);
         extern.ImageWrite_ImageSet(this.Intern, 0);
         extern.ImageWrite_StreamSet(this.Intern, 0);
 
