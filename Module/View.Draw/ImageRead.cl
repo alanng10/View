@@ -36,8 +36,8 @@ class ImageRead : Any
         var Extern extern;
         extern : this.Extern;
 
-        extern.ImageRead.StreamSet(this.Intern, streamK);
-        extern.ImageRead.ImageSet(this.Intern, this.Image.Intern);
+        extern.ImageRead_StreamSet(this.Intern, streamK);
+        extern.ImageRead_ImageSet(this.Intern, this.Image.Intern);
 
         var Int k;
         k : extern.ImageRead_Execute(this.Intern);
