@@ -8,5 +8,11 @@ class Infra : Any
         this.BrushInfra : share BrushInfra;
         this.BrushKindList : share BrushKindList;
         this.SlashLineList : share SlashLineList;
+        this.SlashCapeList : share SlashCapeList;
+        this.SlashJoinList : share SlashJoinList;
+
+        this.PixelByteCount : 4;
+
+        this.ColorCompMax : 255;
     }
 }
