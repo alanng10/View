@@ -42,7 +42,7 @@ class Form : Any
 
     field private Extern Extern { get { return data; } set { data : value; } }
     field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
-    field private Int Intern { get { return data; } set { data : value; } }
+    field pronate Int Intern { get { return data; } set { data : value; } }
 
     maide prusate Int ValueGet(var Int col, var Int row)
     {
