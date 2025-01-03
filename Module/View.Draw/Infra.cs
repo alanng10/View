@@ -128,22 +128,22 @@ public class Infra : Any
 
     public virtual Size SizeCreate(long wed, long het)
     {
-        Size size;
-        size = new Size();
-        size.Init();
-        size.Wed = wed;
-        size.Het = het;
-        return size;
+        Size a;
+        a = new Size();
+        a.Init();
+        a.Wed = wed;
+        a.Het = het;
+        return a;
     }
 
     public virtual Rect RectCreate(long col, long row, long wed, long het)
     {
-        Rect rect;
-        rect = new Rect();
-        rect.Init();
-        rect.Pos = this.PosCreate(col, row);
-        rect.Size = this.SizeCreate(wed, het);
-        return rect;
+        Rect a;
+        a = new Rect();
+        a.Init();
+        a.Pos = this.PosCreate(col, row);
+        a.Size = this.SizeCreate(wed, het);
+        return a;
     }
 
     public virtual Image ImageCreateSize(Size size)
