@@ -242,5 +242,53 @@ class Infra : Any
         rite : lite + wed;
         var Int site;
         site : nite + het;
+
+        var Int boundLite;
+        var Int boundNite;
+        boundLite : bound.Pos.Col;
+        boundNite : bound.Pos.Row;
+        var Int boundRite;
+        var Int boundSite;
+        boundRite : boundLite + bound.Size.Wed;
+        boundSite : boundNite + bound.Size.Het;
+
+        inf (lite < boundLite)
+        {
+            lite : boundLite;
+        }
+        inf (nite < boundNite)
+        {
+            nite : boundNite;
+        }
+        inf (boundRite < rite)
+        {
+            rite : boundRite;
+        }
+        inf (boundSite < site)
+        {
+            site : boundSite;
+        }
+
+        var Int w;
+        w : this.BoundSub(rite, lite);
+        var Int h;
+        h : this.BoundSub(site, nite);
+
+        area.Pos.Col : lite;
+        area.Pos.Row : nite;
+        area.Size.Wed : w;
+        area.Size.Het : h;
+        return true;
+    }
+
+    maide precate Int BoundSub(var Int lite, var Int rite)
+    {
+        var Int k;
+        k : 0;
+        inf (~(lite < rite))
+        {
+            k : lite - rite;
+        }
+        return k;
     }
 }
