@@ -454,7 +454,7 @@ class Draw : Any
         return true;
     }
 
-    maide prusate Bool ExecuteText(var Text text, var Align colAlign, var Align rowAlign, var Bool wordWarp, var Rect destRect)
+    maide prusate Bool ExecuteText(var Text text, var Align colAlign, var Align rowAlign, var Bool wordWrap, var Rect destRect)
     {
         inf (this.TextCount < text.Range.Count)
         {
