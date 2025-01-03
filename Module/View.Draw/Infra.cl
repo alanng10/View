@@ -179,7 +179,6 @@ class Infra : Any
 
             var Bool b;
             b : imageRead.Execute();
-
             inf (b)
             {
                 k : ka;
