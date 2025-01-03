@@ -153,7 +153,7 @@ class Infra : Any
         var Storage storage;
         storage : new Storage;
         storage.Init();
-        StorageMode mode;
+        var StorageMode mode;
         mode : new StorageMode;
         mode.Init();
         mode.Read : true;
