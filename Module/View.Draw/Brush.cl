@@ -33,7 +33,7 @@ class Brush : Any
         this.Intern : extern.Brush_New();
         extern.Brush_KindSet(this.Intern, this.Kind.Intern);
         extern.Brush_ColorSet(this.Intern, colorK);
-        extern.Brush_ImageSet(this.Intern, ImageK);
+        extern.Brush_ImageSet(this.Intern, imageK);
         extern.Brush_PolateSet(this.Intern, polateK);
         extern.Brush_Init(this.Intern);
         return true;
