@@ -118,12 +118,12 @@ public class Infra : Any
 
     public virtual Pos PosCreate(long col, long row)
     {
-        Pos pos;
-        pos = new Pos();
-        pos.Init();
-        pos.Col = col;
-        pos.Row = row;
-        return pos;
+        Pos a;
+        a = new Pos();
+        a.Init();
+        a.Col = col;
+        a.Row = row;
+        return a;
     }
 
     public virtual Size SizeCreate(long wed, long het)

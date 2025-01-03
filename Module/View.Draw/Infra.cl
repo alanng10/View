@@ -104,4 +104,14 @@ class Infra : Any
     {
         return this.BrushInfra.InternColor(color);
     }
+
+    maide prusate Pos PosCreate(var Int col, var Int row)
+    {
+        var Pos a;
+        a : new Pos;
+        a.Init();
+        a.Col : col;
+        a.Row : row;
+        return a;
+    }
 }
