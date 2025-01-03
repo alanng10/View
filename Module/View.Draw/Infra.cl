@@ -99,4 +99,9 @@ class Infra : Any
     {
         return bit &(bit >(internColor, index * 8), 0hff);
     }
+
+    maide pronate Int InternColor(var Color color)
+    {
+        return this.BrushInfra.InternColor(color);
+    }
 }
