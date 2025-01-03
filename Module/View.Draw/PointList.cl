@@ -60,7 +60,7 @@ class PointList : Any
 
     maide prusate Bool Get(var Int index, var Pos result)
     {
-        inf (~this.InfraInfra.ValueIndex(this.Count, index))
+        inf (~this.InfraInfra.ValidIndex(this.Count, index))
         {
             return false;
         }
@@ -85,7 +85,7 @@ class PointList : Any
 
     maide prusate Bool Set(var Int index, var Pos value)
     {
-        inf (~this.InfraInfra.ValueIndex(this.Count, index))
+        inf (~this.InfraInfra.ValidIndex(this.Count, index))
         {
             return false;
         }
