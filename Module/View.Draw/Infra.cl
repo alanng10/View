@@ -66,4 +66,23 @@ class Infra : Any
         a.Blue : blue;
         return a;
     }
+
+    maide private Slash SlashCreate(var Color color, var Int size)
+    {
+        var Brush ka;
+        ka : new Brush;
+        ka.Kind : this.BrushKindList.Color;
+        ka.Color : color;
+        ka.Init();
+
+        var Slash a;
+        a : new Slash;
+        a.Brush : ka;
+        a.Line : this.SlashLineList.Solid;
+        a.Size : size;
+        a.Cape : this.SlashCapeList.Plane;
+        a.Join : this.SlashJoinList.Miter;
+        a.Init();
+        return a;
+    }
 }
