@@ -159,8 +159,8 @@ public class Infra : Any
 
     public virtual Image ImageCreateStorage(String path)
     {
-        Image image;
-        image = null;
+        Image k;
+        k = null;
         Storage storage;
         storage = new Storage();
         storage.Init();
@@ -192,7 +192,7 @@ public class Infra : Any
             b = imageRead.Execute();
             if (b)
             {
-                image = aa;
+                k = aa;
             }
             if (!b)
             {
@@ -202,7 +202,7 @@ public class Infra : Any
         }
         storage.Close();
         storage.Final();
-        return image;
+        return k;
     }
 
     public virtual bool ImageWrite(String path, Image image, ImageBinary binary)
