@@ -14,17 +14,17 @@ class Brush : Any
         {
             colorK : infra.InternColor(this.Color);
         }
-        var Int imageK;
-        imageK : 0;
-        inf (~(this.Image = null))
-        {
-            imageK : this.Image.Intern;
-        }
         var Int polateK;
         polateK : 0;
         inf (~(this.Polate = null))
         {
             polateK : this.Polate.Intern;
+        }
+        var Int imageK;
+        imageK : 0;
+        inf (~(this.Image = null))
+        {
+            imageK : this.Image.Intern;
         }
         
         var Extern extern;
@@ -33,8 +33,8 @@ class Brush : Any
         this.Intern : extern.Brush_New();
         extern.Brush_KindSet(this.Intern, this.Kind.Intern);
         extern.Brush_ColorSet(this.Intern, colorK);
-        extern.Brush_ImageSet(this.Intern, imageK);
         extern.Brush_PolateSet(this.Intern, polateK);
+        extern.Brush_ImageSet(this.Intern, imageK);
         extern.Brush_Init(this.Intern);
         return true;
     }
