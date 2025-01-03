@@ -161,6 +161,7 @@ public class Infra : Any
     {
         Image k;
         k = null;
+
         Storage storage;
         storage = new Storage();
         storage.Init();
@@ -178,25 +179,25 @@ public class Infra : Any
             Stream stream;
             stream = storage.Stream;
 
-            Image aa;
-            aa = new Image();
-            aa.Init();
+            Image ka;
+            ka = new Image();
+            ka.Init();
 
             ImageRead imageRead;
             imageRead = new ImageRead();
             imageRead.Init();
             imageRead.Stream = stream;
-            imageRead.Image = aa;
+            imageRead.Image = ka;
 
             bool b;
             b = imageRead.Execute();
             if (b)
             {
-                k = aa;
+                k = ka;
             }
             if (!b)
             {
-                aa.Final();
+                ka.Final();
             }
             imageRead.Final();
         }

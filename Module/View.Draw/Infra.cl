@@ -145,4 +145,31 @@ class Infra : Any
         a.DataCreate();
         return a;
     }
+
+    maide prusate Image ImageCreateStorage(var String path)
+    {
+        var Image k;
+
+        var Storage storage;
+        storage : new Storage;
+        storage.Init();
+        StorageMode mode;
+        mode : new StorageMode;
+        mode.Init();
+        mode.Read : true;
+        storage.Path : path;
+        storage.Mode : mode;
+
+        storage.Open();
+
+        inf (storage.Status = this.StorageStatusList.NoError)
+        {
+            var Stream stream;
+            stream : storage.Stream;
+
+            var Image ka;
+            ka : new Image;
+            ka.Init();
+        }
+    }
 }

@@ -50,7 +50,7 @@ class Image : Any
     {
         get
         {
-            return this.Extern.Image_VideoOut(this.Intern);
+            return this.Extern.Image_Out(this.Intern);
         }
         set
         {
