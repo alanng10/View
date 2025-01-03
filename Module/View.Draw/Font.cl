@@ -8,14 +8,14 @@ class Font : Any
 
         this.InternName : this.InternInfra.StringCreate(this.Name);
 
-        var Int italicK;
-        italicK : this.InternInfra.Bool(this.Italic);
+        var Int tendenK;
+        tendenK : this.InternInfra.Bool(this.Tenden);
         var Int stalineK;
         stalineK : this.InternInfra.Bool(this.Staline);
         var Int midlineK;
         midlineK : this.InternInfra.Bool(this.Midline);
         var Int endlineK;
-        endlineK : this.InternInfra.Bool(this.Overline);
+        endlineK : this.InternInfra.Bool(this.Endline);
 
         var Extern extern;
         extern : this.Extern;
@@ -23,11 +23,11 @@ class Font : Any
         this.Intern : extern.Font_New();
         extern.Font_NameSet(this.Intern, this.InternName);
         extern.Font_SizeSet(this.Intern, this.Size);
-        extern.Font_WeightSet(this.Intern, this.Weight);
-        extern.Font_ItalicSet(this.Intern, italicK);
-        extern.Font_UnderlineSet(this.Intern, stalineK);
-        extern.Font_StrikeoutSet(this.Intern, midlineK);
-        extern.Font_OverlineSet(this.Intern, endlineK);
+        extern.Font_StrongSet(this.Intern, this.Strong);
+        extern.Font_TendenSet(this.Intern, tendenK);
+        extern.Font_StalineSet(this.Intern, stalineK);
+        extern.Font_MidlineSet(this.Intern, midlineK);
+        extern.Font_EndlineSet(this.Intern, endlineK);
         extern.Font_Init(this.Intern);
         return true;
     }
@@ -46,11 +46,11 @@ class Font : Any
 
     field prusate String Name { get { return data; } set { data : value; } }
     field prusate Int Size { get { return data; } set { data : value; } }
-    field prusate Int Weight { get { return data; } set { data : value; } }
-    field prusate Bool Italic { get { return data; } set { data : value; } }
+    field prusate Int Strong { get { return data; } set { data : value; } }
+    field prusate Bool Tenden { get { return data; } set { data : value; } }
     field prusate Bool Staline { get { return data; } set { data : value; } }
     field prusate Bool Midline { get { return data; } set { data : value; } }
-    field prusate Bool Overline { get { return data; } set { data : value; } }
+    field prusate Bool Endline { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field pronate Int Intern { get { return data; } set { data : value; } }
