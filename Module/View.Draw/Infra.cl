@@ -194,7 +194,7 @@ class Infra : Any
         return k;
     }
 
-    maide prusate Bool ImageWrite(var String path, var Image image, var ImageBinary binary)
+    maide prusate Bool ImageWrite(var String path, var Image image, var ImageFormat format)
     {
         var Storage storage;
         storage : new Storage;
@@ -218,8 +218,8 @@ class Infra : Any
             imageWrite : new ImageWrite;
             imageWrite.Init();
             imageWrite.Stream : stream;
-            imageWrite.Binary : binary;
             imageWrite.Image : image;
+            imageWrite.Format : format;
             k : imageWrite.Execute();
             imageWrite.Final();
         }
