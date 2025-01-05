@@ -65,10 +65,10 @@ class Frame : Any
         this.DestRect : this.CreateDestRect();
         this.SourceRect : this.CreateSourceRect();
 
+        this.DrawImage : this.CreateDrawImage();
+
         var Int k;
         k : extern.Frame_Out(this.Intern);
-
-        this.DrawImage : this.CreateDrawImage();
         
         this.FrameDraw : new DrawDraw;
         this.FrameDraw.Init();
@@ -84,6 +84,31 @@ class Frame : Any
     maide prusate Bool Final()
     {
         this.FinalDraw(this.Draw);
+
+        this.FrameDraw.Final();
+        
+        this.FinalDrawImage(this.DrawImage);
+
+        var Extern extern;
+        extern : this.Extern;
+
+        extern.Frame_Final(this.Intern);
+        extern.Frame_Delete(this.Intern);
+
+        this.InternInfra.RectDelete(this.InternUpdateRect);
+
+        this.InternInfra.StateDelete(this.InternDrawState);
+
+        this.InternInfra.StateDelete(this.InternTypeState);
+        return true;
+    }
+
+    maide precate MathComp CreateMathComp()
+    {
+        var MathComp a;
+        a : new MathComp;
+        a.Init();
+        return a;
     }
 
     maide precate DrawImage CreateDrawImage()
@@ -95,10 +120,5 @@ class Frame : Any
         a.Size.Het : this.Size.Het;
         a.DataCreate();
         return a;
-    }
-
-    maide precate DrawDraw CreateFrameDraw()
-    {
-        
     }
 }
