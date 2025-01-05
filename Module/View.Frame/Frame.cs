@@ -116,31 +116,6 @@ public class Frame : Any
         return true;
     }
 
-    public virtual DrawSize Size { get; set; }
-    public virtual String Title { get; set; }
-    public virtual TypeType Type { get; set; }
-    public virtual DrawImage DrawImage { get; set; }
-
-    private InternIntern InternIntern { get; set; }
-    private InternInfra InternInfra { get; set; }
-    protected virtual MathInfra MathInfra { get; set; }
-    protected virtual TextInfra TextInfra { get; set; }
-    protected virtual DrawInfra DrawInfra { get; set; }
-    protected virtual MathMath Math { get; set; }
-    protected virtual MathComp MathComp { get; set; }
-    protected virtual DrawDraw Draw { get; set; }
-    protected virtual DrawRect DestRect { get; set; }
-    protected virtual DrawRect SourceRect { get; set; }
-    protected virtual VideoColor DrawClearColor { get; set; }
-    private Infra FrameInfra { get; set; }
-    private ulong Intern { get; set; }
-    private ulong InternTitle { get; set; }
-    private ulong InternUpdateRect { get; set; }
-    private ulong InternDrawState { get; set; }
-    private ulong InternTypeState { get; set; }
-    private Handle InternHandle { get; set; }
-    private DrawDraw FrameDraw { get; set; }
-
     protected virtual MathComp CreateMathComp()
     {
         MathComp a;
@@ -183,6 +158,30 @@ public class Frame : Any
         a = this.DrawInfra.ColorCreate(ou, ou, ou, ou);
         return a;
     }
+
+    public virtual DrawSize Size { get; set; }
+    public virtual String Title { get; set; }
+    public virtual TypeType Type { get; set; }
+    public virtual DrawImage DrawImage { get; set; }
+    private InternIntern InternIntern { get; set; }
+    private InternInfra InternInfra { get; set; }
+    protected virtual MathInfra MathInfra { get; set; }
+    protected virtual TextInfra TextInfra { get; set; }
+    protected virtual DrawInfra DrawInfra { get; set; }
+    protected virtual MathMath Math { get; set; }
+    protected virtual MathComp MathComp { get; set; }
+    protected virtual DrawDraw Draw { get; set; }
+    protected virtual DrawRect DestRect { get; set; }
+    protected virtual DrawRect SourceRect { get; set; }
+    protected virtual VideoColor DrawClearColor { get; set; }
+    private Infra FrameInfra { get; set; }
+    private ulong Intern { get; set; }
+    private ulong InternTitle { get; set; }
+    private ulong InternUpdateRect { get; set; }
+    private ulong InternDrawState { get; set; }
+    private ulong InternTypeState { get; set; }
+    private Handle InternHandle { get; set; }
+    private DrawDraw FrameDraw { get; set; }
 
     public virtual bool TitleSet()
     {
