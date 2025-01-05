@@ -76,7 +76,7 @@ public class Frame : Any
         this.SourceRect = this.CreateFrameRect();
 
         ulong kk;
-        kk = Extern.Frame_VideoOut(this.Intern);
+        kk = Extern.Frame_Out(this.Intern);
 
         DrawImage image;
         image = new DrawImage();
