@@ -35,7 +35,7 @@ class Infra : Any
         this.WhiteSlash : this.SlashCreate(whiteColor, k);
         this.ZeroSlash : this.SlashCreate(zeroColor, k);
 
-        this.FontAriaName : "Segoe UI Variable";
+        this.FontAriaName : "Inter";
         this.FontMonoName : "Cascadia Mono";
         return true;
     }
