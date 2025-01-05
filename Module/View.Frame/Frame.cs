@@ -78,11 +78,7 @@ public class Frame : Any
         ulong k;
         k = Extern.Frame_Out(this.Intern);
 
-        this.DrawImage = new DrawImage();
-        this.DrawImage.Init();
-        this.DrawImage.Size.Wed = wed;
-        this.DrawImage.Size.Het = het;
-        this.DrawImage.DataCreate();
+        this.DrawImage = this.CreateDrawImage();
 
         this.FrameDraw = new DrawDraw();
         this.FrameDraw.Init();
@@ -101,7 +97,7 @@ public class Frame : Any
 
         this.FrameDraw.Final();
 
-        this.DrawImage.Final();
+        this.FinalDrawImage(this.DrawImage);
 
         Extern.Frame_Final(this.Intern);
         Extern.Frame_Delete(this.Intern);
@@ -146,6 +142,23 @@ public class Frame : Any
     protected virtual DrawRect CreateSourceRect()
     {
         return this.CreateFrameRect();
+    }
+
+    protected virtual DrawImage CreateDrawImage()
+    {
+        DrawImage a;
+        a = new DrawImage();
+        a.Init();
+        a.Size.Wed = this.Size.Wed;
+        a.Size.Het = this.Size.Het;
+        a.DataCreate();
+        return a;
+    }
+
+    protected virtual bool FinalDrawImage(DrawImage a)
+    {
+        a.Final();
+        return true;
     }
 
     protected virtual VideoColor CreateDrawClearColor()
