@@ -75,18 +75,17 @@ public class Frame : Any
         this.DestRect = this.CreateDestRect();
         this.SourceRect = this.CreateSourceRect();
 
+        this.DrawImage = this.CreateDrawImage();
+
         ulong k;
         k = Extern.Frame_Out(this.Intern);
-
-        this.DrawImage = this.CreateDrawImage();
 
         this.FrameDraw = new DrawDraw();
         this.FrameDraw.Init();
         this.DrawSet(this.FrameDraw, k);
 
         this.Draw = this.CreateDraw();
-        this.DrawSet(this.Draw, this.DrawImage.Out);
-
+ 
         this.DrawClearColor = this.CreateDrawClearColor();
         return true;
     }
@@ -120,20 +119,6 @@ public class Frame : Any
         return a;
     }
 
-    protected virtual DrawDraw CreateDraw()
-    {
-        DrawDraw a;
-        a = new DrawDraw();
-        a.Init();
-        return a;
-    }
-
-    protected virtual bool FinalDraw(DrawDraw a)
-    {
-        a.Final();
-        return true;
-    }
-
     protected virtual DrawRect CreateDestRect()
     {
         return this.CreateFrameRect();
@@ -156,6 +141,21 @@ public class Frame : Any
     }
 
     protected virtual bool FinalDrawImage(DrawImage a)
+    {
+        a.Final();
+        return true;
+    }
+
+    protected virtual DrawDraw CreateDraw()
+    {
+        DrawDraw a;
+        a = new DrawDraw();
+        a.Init();
+        this.DrawSet(this.Draw, this.DrawImage.Out);
+        return a;
+    }
+
+    protected virtual bool FinalDraw(DrawDraw a)
     {
         a.Final();
         return true;
