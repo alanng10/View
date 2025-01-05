@@ -2,6 +2,26 @@ namespace View.Frame;
 
 public class Frame : Any
 {
+    private bool PrivateTypeEvent(ulong index, ulong value)
+    {
+        long indexA;
+        indexA = (long)index;
+        bool b;
+        b = (!(value == 0));
+
+        long indexB;
+        indexB = this.InternIntern.TypeIndexFromInternIndex(indexA);
+
+        this.TypeEvent(indexB, b);
+        return true;
+    }
+
+    private bool PrivateDrawEvent()
+    {
+        this.DrawEvent();
+        return true;
+    }
+
     public override bool Init()
     {
         base.Init();
@@ -183,26 +203,12 @@ public class Frame : Any
 
         Frame a;
         a = (Frame)ao;
-        a.TypeChangeHandle(index, value);
+        a.PrivateTypeEvent(index, value);
 
         return 1;
     }
 
-    private bool TypeChangeHandle(ulong index, ulong value)
-    {
-        long indexA;
-        indexA = (long)index;
-        bool b;
-        b = (!(value == 0));
-
-        long indexB;
-        indexB = this.InternIntern.TypeIndexFromInternIndex(indexA);
-
-        this.TypeChange(indexB, b);
-        return true;
-    }
-
-    protected virtual bool TypeChange(long index, bool value)
+    protected virtual bool TypeEvent(long index, bool value)
     {
         if (!(this.Type == null))
         {
@@ -221,11 +227,11 @@ public class Frame : Any
 
         Frame a;
         a = (Frame)ao;
-        a.ExecuteFrameDraw();
+        a.PrivateDrawEvent();
         return 1;
     }
 
-    private bool ExecuteFrameDraw()
+    protected virtual bool DrawEvent()
     {
         DrawDraw draw;
         draw = this.FrameDraw;
@@ -234,7 +240,7 @@ public class Frame : Any
 
         this.ExecuteDraw();
 
-        draw.ExecuteVideo(this.DrawImage, this.DestRect, this.SourceRect);
+        draw.ExecuteImage(this.DrawImage, this.DestRect, this.SourceRect);
 
         draw.End();
         return true;
@@ -253,7 +259,7 @@ public class Frame : Any
         return true;
     }
 
-    public virtual bool EventDraw(DrawRect rect)
+    public virtual bool Update(DrawRect rect)
     {
         this.InternInfra.RectSet(this.InternUpdateRect,
             rect.Pos.Col, rect.Pos.Row, rect.Size.Wed, rect.Size.Het
