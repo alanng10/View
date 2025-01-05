@@ -75,25 +75,21 @@ public class Frame : Any
         this.DestRect = this.CreateDestRect();
         this.SourceRect = this.CreateSourceRect();
 
-        ulong kk;
-        kk = Extern.Frame_Out(this.Intern);
+        ulong k;
+        k = Extern.Frame_Out(this.Intern);
 
-        DrawImage image;
-        image = new DrawImage();
-        image.Init();
-        image.Size.Wed = wed;
-        image.Size.Het = het;
-        image.DataCreate();
-        this.DrawImage = image;
+        this.DrawImage = new DrawImage();
+        this.DrawImage.Init();
+        this.DrawImage.Size.Wed = wed;
+        this.DrawImage.Size.Het = het;
+        this.DrawImage.DataCreate();
 
-        DrawDraw frameDraw;
-        frameDraw = new DrawDraw();
-        frameDraw.Init();
-        this.FrameDraw = frameDraw;
-        this.DrawSet(frameDraw, kk);
+        this.FrameDraw = new DrawDraw();
+        this.FrameDraw.Init();
+        this.DrawSet(this.FrameDraw, k);
 
         this.Draw = this.CreateDraw();
-        this.DrawSet(this.Draw, image.Out);
+        this.DrawSet(this.Draw, this.DrawImage.Out);
 
         this.DrawClearColor = this.CreateDrawClearColor();
         return true;
