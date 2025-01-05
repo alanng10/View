@@ -17,4 +17,15 @@ class Frame : Any
         this.DrawEvent();
         return true;
     }
+
+    maide prusate Bool Init()
+    {
+        base.Init();
+        this.Extern : share Extern;
+        this.InternInfra : share InternInfra;
+        this.MathInfra : share MathInfra;
+        this.TextInfra : share TextInfra;
+        this.DrawInfra : share DrawInfra;
+        this.Math : share Math;
+    }
 }

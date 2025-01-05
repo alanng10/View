@@ -31,8 +31,8 @@ public class Frame : Any
         this.TextInfra = TextInfra.This;
         this.DrawInfra = DrawInfra.This;
         this.FrameInfra = Infra.This;
-
         this.Math = MathMath.This;
+
         this.MathComp = this.CreateMathComp();
 
         this.InternHandle = new Handle();
