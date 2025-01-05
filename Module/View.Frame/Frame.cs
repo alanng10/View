@@ -9,10 +9,10 @@ public class Frame : Any
         bool b;
         b = !(value == 0);
 
-        long indexB;
-        indexB = this.InternIntern.TypeIndexFromInternIndex(indexA);
+        long indexK;
+        indexK = this.InternInfra.TypeIndexFromInternIndex(indexA);
 
-        this.TypeEvent(indexB, b);
+        this.TypeEvent(indexK, b);
         return true;
     }
 

@@ -6,5 +6,15 @@ class Frame : Any
         b : ~(value = 0);
 
         var Int indexK;
+        indexK : this.InternInfra.TypeIndexFromInternIndex(index);
+
+        this.TypeEvent(indexK, b);
+        return true;
+    }
+
+    maide private Bool PrivateDrawEvent()
+    {
+        this.DrawEvent();
+        return true;
     }
 }
