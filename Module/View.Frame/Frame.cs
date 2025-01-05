@@ -72,8 +72,8 @@ public class Frame : Any
         Extern.Frame_TypeStateSet(this.Intern, this.InternTypeState);
         Extern.Frame_DrawStateSet(this.Intern, this.InternDrawState);
 
-        this.DestRect = this.CreateFrameRect();
-        this.SourceRect = this.CreateFrameRect();
+        this.DestRect = this.CreateDestRect();
+        this.SourceRect = this.CreateSourceRect();
 
         ulong kk;
         kk = Extern.Frame_Out(this.Intern);
