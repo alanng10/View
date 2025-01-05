@@ -68,11 +68,7 @@ class Frame : Any
         var Int k;
         k : extern.Frame_Out(this.Intern);
 
-        this.DrawImage : new DrawImage;
-        this.DrawImage.Init();
-        this.DrawImage.Size.Wed : wed;
-        this.DrawImage.Size.Het : het;
-        this.DrawImage.DataCreate();
+        this.DrawImage : this.CreateDrawImage();
         
         this.FrameDraw : new DrawDraw;
         this.FrameDraw.Init();
@@ -83,5 +79,26 @@ class Frame : Any
 
         this.DrawClearColor : this.CreateDrawClearColor();
         return true;
+    }
+
+    maide prusate Bool Final()
+    {
+        this.FinalDraw(this.Draw);
+    }
+
+    maide precate DrawImage CreateDrawImage()
+    {
+        var DrawImage a;
+        a : new DrawImage;
+        a.Init();
+        a.Size.Wed : this.Size.Wed;
+        a.Size.Het : this.Size.Het;
+        a.DataCreate();
+        return a;
+    }
+
+    maide precate DrawDraw CreateFrameDraw()
+    {
+        
     }
 }
