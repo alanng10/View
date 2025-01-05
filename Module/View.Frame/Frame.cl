@@ -58,5 +58,10 @@ class Frame : Any
         wed : extern.Size_WedGet(size);
         het : extern.Size_HetGet(size);
         this.Size : this.DrawInfra.SizeCreate(wed, het);
+
+        extern.Frame_TypeStateSet(this.Intern, this.InternTypeState);
+        extern.Frame_DrawStateSet(this.Intern, this.InternDrawState);
+
+        this.DestRect : this.CreateDestRect();
     }
 }

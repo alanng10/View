@@ -133,6 +133,8 @@ public class Frame : Any
     protected virtual MathMath Math { get; set; }
     protected virtual MathComp MathComp { get; set; }
     protected virtual DrawDraw Draw { get; set; }
+    protected virtual DrawRect DestRect { get; set; }
+    protected virtual DrawRect SourceRect { get; set; }
     protected virtual VideoColor DrawClearColor { get; set; }
     private Infra FrameInfra { get; set; }
     private ulong Intern { get; set; }
@@ -142,8 +144,6 @@ public class Frame : Any
     private ulong InternTypeState { get; set; }
     private Handle InternHandle { get; set; }
     private DrawDraw FrameDraw { get; set; }
-    private DrawRect DestRect { get; set; }
-    private DrawRect SourceRect { get; set; }
 
     protected virtual MathComp CreateMathComp()
     {
@@ -165,6 +165,16 @@ public class Frame : Any
     {
         a.Final();
         return true;
+    }
+
+    protected virtual DrawRect CreateDestRect()
+    {
+        return this.CreateFrameRect();
+    }
+
+    protected virtual DrawRect CreateSourceRect()
+    {
+        return this.CreateFrameRect();
     }
 
     protected virtual VideoColor CreateDrawClearColor()
@@ -316,7 +326,7 @@ public class Frame : Any
         return a;
     }
 
-    private DrawRect CreateFrameRect()
+    protected virtual DrawRect CreateFrameRect()
     {
         DrawSize size;
         size = this.Size;
