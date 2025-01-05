@@ -41,5 +41,14 @@ class Frame : Any
         this.InternDrawState : this.InternInfra.StateCreate(kb, arg);
 
         this.InternUpdateRect : this.InternInfra.RectCreate();
+
+        var Extern extern;
+        extern : this.Extern;
+
+        this.Intern : extern.Frame_New();
+        extern.Frame_Init(this.Intern);
+
+        this.Title : "Frame";
+        this.TitleSet();
     }
 }

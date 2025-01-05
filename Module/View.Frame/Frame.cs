@@ -57,20 +57,17 @@ public class Frame : Any
         this.Title = this.TextInfra.S("Frame");
         this.TitleSet();
 
-        ulong sizeU;
-        sizeU = Extern.Frame_SizeGet(this.Intern);
+        ulong size;
+        size = Extern.Frame_SizeGet(this.Intern);
         ulong w;
-        w = Extern.Size_WedGet(sizeU);
+        w = Extern.Size_WedGet(size);
         ulong h;
-        h = Extern.Size_HetGet(sizeU);
+        h = Extern.Size_HetGet(size);
         long wed;
         wed = (long)w;
         long het;
         het = (long)h;
-        this.Size = new DrawSize();
-        this.Size.Init();
-        this.Size.Wed = wed;
-        this.Size.Het = het;
+        this.Size = this.DrawInfra.SizeCreate(wed, het);
 
         Extern.Frame_TypeStateSet(this.Intern, this.InternTypeState);
         Extern.Frame_DrawStateSet(this.Intern, this.InternDrawState);
