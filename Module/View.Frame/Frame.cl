@@ -50,5 +50,13 @@ class Frame : Any
 
         this.Title : "Frame";
         this.TitleSet();
+
+        var Int size;
+        size : extern.Frame_SizeGet(this.Intern);
+        var Int wed;
+        var Int het;
+        wed : extern.Size_WedGet(size);
+        het : extern.Size_HetGet(size);
+        this.Size : this.DrawInfra.SizeCreate(wed, het);
     }
 }
