@@ -63,5 +63,25 @@ class Frame : Any
         extern.Frame_DrawStateSet(this.Intern, this.InternDrawState);
 
         this.DestRect : this.CreateDestRect();
+        this.SourceRect : this.CreateSourceRect();
+
+        var Int k;
+        k : extern.Frame_Out(this.Intern);
+
+        this.DrawImage : new DrawImage;
+        this.DrawImage.Init();
+        this.DrawImage.Size.Wed : wed;
+        this.DrawImage.Size.Het : het;
+        this.DrawImage.DataCreate();
+        
+        this.FrameDraw : new DrawDraw;
+        this.FrameDraw.Init();
+        this.DrawSet(this.FrameDraw, k);
+
+        this.Draw : this.CreateDraw();
+        this.DrawSet(this.Draw, this.DrawImage.Out);
+
+        this.DrawClearColor : this.CreateDrawClearColor();
+        return true;
     }
 }
