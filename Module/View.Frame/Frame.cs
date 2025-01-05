@@ -7,7 +7,7 @@ public class Frame : Any
         long indexA;
         indexA = (long)index;
         bool b;
-        b = (!(value == 0));
+        b = !(value == 0);
 
         long indexB;
         indexB = this.InternIntern.TypeIndexFromInternIndex(indexA);
