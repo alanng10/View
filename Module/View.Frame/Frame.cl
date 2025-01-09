@@ -14,7 +14,18 @@ class Frame : Any
 
     maide private Bool PrivateDrawEvent()
     {
+        var DrawDraw draw;
+        draw : this.FrameDraw;
+
+        draw.Start();
+
+        draw.Clear(this.DrawClearColor);
+
         this.DrawEvent();
+
+        draw.ExecuteImage(this.DrawImage, this.DestRect, this.SourceRect);
+
+        draw.End();
         return true;
     }
 
@@ -194,5 +205,18 @@ class Frame : Any
 
         this.InternInfra.StringDelete(this.InternTitle);
         return true;
+    }
+
+    maide precate Bool TypeEvent(var Int index, var Bool value)
+    {
+        inf (~(this.Type = null))
+        {
+            this.Type.Set(index, value);
+        }
+        return true;
+    }
+
+    maide precate Bool DrawEvent()
+    {
     }
 }

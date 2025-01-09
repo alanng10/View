@@ -18,7 +18,18 @@ public class Frame : Any
 
     private bool PrivateDrawEvent()
     {
+        DrawDraw draw;
+        draw = this.FrameDraw;
+
+        draw.Start();
+
+        draw.Clear(this.DrawClearColor);
+
         this.DrawEvent();
+
+        draw.ExecuteImage(this.DrawImage, this.DestRect, this.SourceRect);
+
+        draw.End();
         return true;
     }
 
@@ -244,32 +255,7 @@ public class Frame : Any
 
     protected virtual bool DrawEvent()
     {
-        DrawDraw draw;
-        draw = this.FrameDraw;
-
-        draw.Start();
-
-        draw.Clear(this.DrawClearColor);
-
-        this.ExecuteDraw();
-
-        draw.ExecuteImage(this.DrawImage, this.DestRect, this.SourceRect);
-
-        draw.End();
-        return true;
-    }
-
-    protected virtual bool ExecuteDraw()
-    {
-        DrawDraw draw;
-        draw = this.Draw;
-
-        draw.Start();
-
-        draw.Clear(this.DrawClearColor);
-
-        draw.End();
-        return true;
+        return false;
     }
 
     public virtual bool Update(DrawRect rect)
