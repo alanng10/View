@@ -175,16 +175,17 @@ class Frame : Any
     field prusate String Title { get { return data; } set { data : value; } }
     field prusate Type Type { get { return data; } set { data : value; } }
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
-    field private Intern InternIntern { get { return data; } set { data : value; } }
-    field private InternInfra InternInfra { get { return data; } set { data : value; } }
-    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
-    field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
-    field precate Math Math { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field precate DrawDraw Draw { get { return data; } set { data : value; } }
     field precate DrawRect DestRect { get { return data; } set { data : value; } }
     field precate DrawRect SourceRect { get { return data; } set { data : value; } }
     field precate DrawColor DrawClearColor { get { return data; } set { data : value; } }
+    field private Intern InternIntern { get { return data; } set { data : value; } }
+    field private Extern Extern { get { return data; } set { data : value; } }
+    field private InternInfra InternInfra { get { return data; } set { data : value; } }
+    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field precate Math Math { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
     field private Int InternTitle { get { return data; } set { data : value; } }
     field private Int InternUpdateRect { get { return data; } set { data : value; } }
@@ -218,5 +219,15 @@ class Frame : Any
 
     maide precate Bool DrawEvent()
     {
+    }
+
+    maide prusate Bool Update(var DrawRect rect)
+    {
+        this.InternInfra.RectSet(this.InternUpdateRect, 
+            rect.Pos.Col, rect.Pos.Row, rect.Size.Wed, rect.Size.Het
+        );
+
+        this.Extern.Frame_Update(this.Intern, this.InternUpdateRect);
+        return true;
     }
 }
