@@ -161,9 +161,9 @@ public class Frame : Any
         return true;
     }
 
-    protected virtual VideoColor CreateDrawClearColor()
+    protected virtual DrawColor CreateDrawClearColor()
     {
-        VideoColor a;
+        DrawColor a;
 
         byte ou;
         ou = byte.MaxValue;

@@ -137,4 +137,24 @@ class Frame : Any
         a.Final();
         return true;
     }
+
+    maide precate DrawDraw CreateDraw()
+    {
+        var DrawDraw a;
+        a : new DrawDraw;
+        a.Init();
+        this.DrawSet(this.Draw, this.DrawImage.Out);
+        return a;
+    }
+
+    maide precate Bool FinalDraw(var DrawDraw a)
+    {
+        a.Final();
+        return true;
+    }
+
+    maide precate DrawColor CreateDrawClearColor()
+    {
+        
+    }
 }
