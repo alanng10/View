@@ -164,11 +164,7 @@ public class Frame : Any
     protected virtual DrawColor CreateDrawClearColor()
     {
         DrawColor a;
-
-        byte ou;
-        ou = byte.MaxValue;
-
-        a = this.DrawInfra.ColorCreate(ou, ou, ou, ou);
+        a = this.DrawInfra.WhiteSlash.Brush.Color;
         return a;
     }
 
