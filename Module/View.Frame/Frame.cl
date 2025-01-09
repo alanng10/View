@@ -159,4 +159,11 @@ class Frame : Any
         a : this.DrawInfra.WhiteSlash.Brush.Color;
         return a;
     }
+
+    field prusate DrawSize Size { get { return data; } set { data : value; } }
+    field prusate String Title { get { return data; } set { data : value; } }
+    field prusate Type Type { get { return data; } set { data : value; } }
+    field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
+    field private Intern InternIntern { get { return data; } set { data : value; } }
+    field private InternInfra InternInfra { get { return data; } set { data : value; } }
 }
