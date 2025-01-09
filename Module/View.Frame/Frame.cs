@@ -182,7 +182,7 @@ public class Frame : Any
     protected virtual DrawDraw Draw { get; set; }
     protected virtual DrawRect DestRect { get; set; }
     protected virtual DrawRect SourceRect { get; set; }
-    protected virtual VideoColor DrawClearColor { get; set; }
+    protected virtual DrawColor DrawClearColor { get; set; }
     private Infra FrameInfra { get; set; }
     private ulong Intern { get; set; }
     private ulong InternTitle { get; set; }

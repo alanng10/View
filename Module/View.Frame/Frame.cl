@@ -171,4 +171,13 @@ class Frame : Any
     field precate Math Math { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field precate DrawDraw Draw { get { return data; } set { data : value; } }
+    field precate DrawRect DestRect { get { return data; } set { data : value; } }
+    field precate DrawRect SourceRect { get { return data; } set { data : value; } }
+    field precate DrawColor DrawClearColor { get { return data; } set { data : value; } }
+    field private Int Intern { get { return data; } set { data : value; } }
+    field private Int InternTitle { get { return data; } set { data : value; } }
+    field private Int InternUpdateRect { get { return data; } set { data : value; } }
+    field private Int InternDrawState { get { return data; } set { data : value; } }
+    field private Int InternTypeState { get { return data; } set { data : value; } }
+    field private DrawDraw FrameDraw { get { return data; } set { data : value; } }
 }
