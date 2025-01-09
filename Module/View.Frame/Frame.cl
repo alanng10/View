@@ -180,4 +180,19 @@ class Frame : Any
     field private Int InternDrawState { get { return data; } set { data : value; } }
     field private Int InternTypeState { get { return data; } set { data : value; } }
     field private DrawDraw FrameDraw { get { return data; } set { data : value; } }
+
+    maide prusate Bool TitleSet()
+    {
+        this.InternTitle : this.InternInfra.StringCreate(this.Title);
+
+        var Extern extern;
+        extern : this.Extern;
+
+        extern.Frame_TitleSet(this.Intern, this.InternTitle);
+        extern.Frame_TitleThisSet(this.Intern);
+        extern.Frame_TitleSet(this.Intern, 0);
+
+        this.InternInfra.StringDelete(this.InternTitle);
+        return true;
+    }
 }
