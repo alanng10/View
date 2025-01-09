@@ -111,6 +111,16 @@ class Frame : Any
         return a;
     }
 
+    maide precate DrawRect CreateDestRect()
+    {
+        return this.CreateFrameRect();
+    }
+
+    maide precate DrawRect CreateSourceRect()
+    {
+        return this.CreateFrameRect();
+    }
+
     maide precate DrawImage CreateDrawImage()
     {
         var DrawImage a;
@@ -120,5 +130,11 @@ class Frame : Any
         a.Size.Het : this.Size.Het;
         a.DataCreate();
         return a;
+    }
+
+    maide precate Bool FinalDrawImage(var DrawImage a)
+    {
+        a.Final();
+        return true;
     }
 }
