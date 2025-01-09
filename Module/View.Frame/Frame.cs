@@ -249,6 +249,8 @@ public class Frame : Any
 
         draw.Start();
 
+        draw.Clear(this.DrawClearColor);
+
         this.ExecuteDraw();
 
         draw.ExecuteImage(this.DrawImage, this.DestRect, this.SourceRect);
