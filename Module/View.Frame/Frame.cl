@@ -166,4 +166,9 @@ class Frame : Any
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
     field private Intern InternIntern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
+    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field precate Math Math { get { return data; } set { data : value; } }
+    field precate MathComp MathComp { get { return data; } set { data : value; } }
+    field precate DrawDraw Draw { get { return data; } set { data : value; } }
 }
