@@ -175,6 +175,24 @@ class Frame : Any
     field prusate String Title { get { return data; } set { data : value; } }
     field prusate Type Type { get { return data; } set { data : value; } }
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
+    
+    field prusate Bool Shown
+    {
+        get
+        {
+            var Int k;
+            k : this.Extern.Frame_ShownGet(this.Intern);
+            var Bool a;
+            a : ~(k = 0);
+            return a;
+        }
+        set
+        {
+            var Int k;
+            k : this.InternInfra.Bool(value);
+        }
+    }
+    
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field precate DrawDraw Draw { get { return data; } set { data : value; } }
     field precate DrawRect DestRect { get { return data; } set { data : value; } }

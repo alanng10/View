@@ -196,9 +196,9 @@ public class Frame : Any
         }
         set
         {
-            ulong u;
-            u = (ulong)(value ? 1 : 0);
-            Extern.Frame_ShownSet(this.Intern, u);
+            ulong k;
+            k = this.InternInfra.Bool(value);
+            Extern.Frame_ShownSet(this.Intern, k);
         }
     }
 
