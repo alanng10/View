@@ -183,6 +183,25 @@ public class Frame : Any
     public virtual String Title { get; set; }
     public virtual TypeType Type { get; set; }
     public virtual DrawImage DrawImage { get; set; }
+
+    public virtual bool Shown
+    {
+        get
+        {
+            ulong k;
+            k = Extern.Frame_ShownGet(this.Intern);
+            bool a;
+            a = !(k == 0);
+            return a;
+        }
+        set
+        {
+            ulong u;
+            u = (ulong)(value ? 1 : 0);
+            Extern.Frame_ShownSet(this.Intern, u);
+        }
+    }
+
     private InternIntern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
     protected virtual MathInfra MathInfra { get; set; }
@@ -266,24 +285,6 @@ public class Frame : Any
 
         Extern.Frame_Update(this.Intern, this.InternUpdateRect);
         return true;
-    }
-
-    public virtual bool Shown
-    {
-        get
-        {
-            ulong k;
-            k = Extern.Frame_ShownGet(this.Intern);
-            bool a;
-            a = !(k == 0);
-            return a;
-        }
-        set
-        {
-            ulong u;
-            u = (ulong)(value ? 1 : 0);
-            Extern.Frame_ShownSet(this.Intern, u);
-        }
     }
 
     public virtual bool Close()
