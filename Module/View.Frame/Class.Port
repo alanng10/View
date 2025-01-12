@@ -1,0 +1,26 @@
+[Module]
+View.Frame:0.00.00
+
+[Import]
+System.Infra
+    Any Any
+    Bool Bool
+    Int Int
+    String String
+    Intern Intern
+    Extern Extern
+    InternInfra InternInfra
+System.Math
+    Math Math
+    MathComp Comp
+    MathInfra Infra
+View.Draw:0.00.00
+    DrawImage Image
+    DrawColor Color
+
+[Export]
+Frame
+
+[Storage]
+
+[Entry]
