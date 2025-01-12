@@ -15,8 +15,11 @@ System.Math
     MathComp Comp
     MathInfra Infra
 View.Draw:0.00.00
+    Draw Draw
     DrawImage Image
     DrawColor Color
+    DrawRect Rect
+    DrawInfra Infra
 
 [Export]
 Frame
