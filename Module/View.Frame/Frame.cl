@@ -80,13 +80,12 @@ class Frame : Any
 
         var Int k;
         k : extern.Frame_Out(this.Intern);
-        
+
         this.FrameDraw : new DrawDraw;
         this.FrameDraw.Init();
         this.DrawSet(this.FrameDraw, k);
 
         this.Draw : this.CreateDraw();
-        this.DrawSet(this.Draw, this.DrawImage.Out);
 
         this.DrawClearColor : this.CreateDrawClearColor();
         return true;
@@ -279,4 +278,6 @@ class Frame : Any
         a : this.DrawInfra.RectCreate(0, 0, this.MathInt(this.Size.Wed), this.MathInt(this.Size.Het));
         return a;
     }
+
+    maide private Bool DrawSet()
 }
