@@ -249,4 +249,27 @@ class Frame : Any
         this.Extern.Frame_Update(this.Intern, this.InternUpdateRect);
         return true;
     }
+
+    maide prusate Bool Close()
+    {
+        this.Extern.Frame_Close(this.Intern);
+        return true;
+    }
+
+    maide precate Int MathInt(var Int n)
+    {
+        var Int a;
+        a : this.MathInfra.Int(this.MathComp, n);
+        return a;
+    }
+
+    maide precate Int MathValue(var Int cand, var Int expo)
+    {
+        this.MathComp.Cand : cand;
+        this.MathComp.Expo : expo;
+
+        var Int a;
+        a : this.Math.Value(this.MathComp);
+        return a;
+    }
 }
