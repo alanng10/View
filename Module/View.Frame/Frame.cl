@@ -272,4 +272,11 @@ class Frame : Any
         a : this.Math.Value(this.MathComp);
         return a;
     }
+
+    maide precate DrawRect CreateFrameRect()
+    {
+        var DrawRect a;
+        a : this.DrawInfra.RectCreate(0, 0, this.MathInt(this.Size.Wed), this.MathInt(this.Size.Het));
+        return a;
+    }
 }
