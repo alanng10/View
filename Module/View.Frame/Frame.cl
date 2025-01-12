@@ -190,6 +190,7 @@ class Frame : Any
         {
             var Int k;
             k : this.InternInfra.Bool(value);
+            this.Extern.Frame_ShownSet(this.Intern, k);
         }
     }
     
