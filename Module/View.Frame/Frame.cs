@@ -202,17 +202,17 @@ public class Frame : Any
         }
     }
 
+    protected virtual MathComp MathComp { get; set; }
+    protected virtual DrawDraw Draw { get; set; }
+    protected virtual DrawRect DestRect { get; set; }
+    protected virtual DrawRect SourceRect { get; set; }
+    protected virtual DrawColor DrawClearColor { get; set; }
     private InternIntern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
     protected virtual MathInfra MathInfra { get; set; }
     protected virtual TextInfra TextInfra { get; set; }
     protected virtual DrawInfra DrawInfra { get; set; }
     protected virtual MathMath Math { get; set; }
-    protected virtual MathComp MathComp { get; set; }
-    protected virtual DrawDraw Draw { get; set; }
-    protected virtual DrawRect DestRect { get; set; }
-    protected virtual DrawRect SourceRect { get; set; }
-    protected virtual DrawColor DrawClearColor { get; set; }
     private Infra FrameInfra { get; set; }
     private ulong Intern { get; set; }
     private ulong InternTitle { get; set; }
