@@ -81,7 +81,7 @@ class Frame : Any
         var Int k;
         k : extern.Frame_Out(this.Intern);
 
-        this.FrameDraw : new DrawDraw;
+        this.FrameDraw : new Draw;
         this.FrameDraw.Init();
         this.DrawSet(this.FrameDraw, k);
 
@@ -148,16 +148,16 @@ class Frame : Any
         return true;
     }
 
-    maide precate DrawDraw CreateDraw()
+    maide precate Draw CreateDraw()
     {
-        var DrawDraw a;
-        a : new DrawDraw;
+        var Draw a;
+        a : new Draw;
         a.Init();
         this.DrawSet(this.Draw, this.DrawImage.Out);
         return a;
     }
 
-    maide precate Bool FinalDraw(var DrawDraw a)
+    maide precate Bool FinalDraw(var Draw a)
     {
         a.Final();
         return true;
@@ -194,7 +194,7 @@ class Frame : Any
     }
     
     field precate MathComp MathComp { get { return data; } set { data : value; } }
-    field precate DrawDraw Draw { get { return data; } set { data : value; } }
+    field precate Draw Draw { get { return data; } set { data : value; } }
     field precate DrawRect DestRect { get { return data; } set { data : value; } }
     field precate DrawRect SourceRect { get { return data; } set { data : value; } }
     field precate DrawColor DrawClearColor { get { return data; } set { data : value; } }
@@ -209,7 +209,7 @@ class Frame : Any
     field private Int InternUpdateRect { get { return data; } set { data : value; } }
     field private Int InternDrawState { get { return data; } set { data : value; } }
     field private Int InternTypeState { get { return data; } set { data : value; } }
-    field private DrawDraw FrameDraw { get { return data; } set { data : value; } }
+    field private Draw FrameDraw { get { return data; } set { data : value; } }
 
     maide prusate Bool TitleSet()
     {
