@@ -279,5 +279,12 @@ class Frame : Any
         return a;
     }
 
-    maide private Bool DrawSet()
+    maide private Bool DrawSet(DrawDraw draw, var Int drawOut)
+    {
+        draw.Out : drawOut;
+        draw.Size.Wed : this.Size.Wed;
+        draw.Size.Het : this.Size.Het;
+        draw.SizeSet();
+        return true;
+    }
 }

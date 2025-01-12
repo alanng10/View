@@ -321,24 +321,17 @@ public class Frame : Any
 
     protected virtual DrawRect CreateFrameRect()
     {
-        DrawSize size;
-        size = this.Size;
-
         DrawRect a;
-        a = this.DrawInfra.RectCreate(0, 0, this.MathInt(size.Wed), this.MathInt(size.Het));
+        a = this.DrawInfra.RectCreate(0, 0, this.MathInt(this.Size.Wed), this.MathInt(this.Size.Het));
         return a;
     }
 
-    private bool DrawSet(DrawDraw draw, ulong videoOut)
+    private bool DrawSet(DrawDraw draw, ulong drawOut)
     {
-        DrawSize size;
-        size = this.Size;
-
-        draw.Out = videoOut;
-        draw.Size.Wed = size.Wed;
-        draw.Size.Het = size.Het;
+        draw.Out = drawOut;
+        draw.Size.Wed = this.Size.Wed;
+        draw.Size.Het = this.Size.Het;
         draw.SizeSet();
-
         return true;
     }
 }
