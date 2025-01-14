@@ -75,8 +75,8 @@ public class IndexList : Any
         this.SignLine = this.AddSignIndex('_');
         this.SignSame = this.AddSignIndex('=');
         this.SignAdd = this.AddSignIndex('+');
-        this.SignBraceLite = this.AddSignIndex('(');
-        this.SignBraceRite = this.AddSignIndex(')');
+        this.SignBraceRoundLite = this.AddSignIndex('(');
+        this.SignBraceRoundRite = this.AddSignIndex(')');
         this.SignBraceCurveLite = this.AddSignIndex('{');
         this.SignBraceCurveRite = this.AddSignIndex('}');
         this.SignBraceRightLite = this.AddSignIndex('[');
@@ -188,8 +188,8 @@ public class IndexList : Any
     public virtual Index SignExpo { get; set; }
     public virtual Index SignAnd { get; set; }
     public virtual Index SignMul { get; set; }
-    public virtual Index SignBraceLite { get; set; }
-    public virtual Index SignBraceRite { get; set; }
+    public virtual Index SignBraceRoundLite { get; set; }
+    public virtual Index SignBraceRoundRite { get; set; }
     public virtual Index SignSub { get; set; }
     public virtual Index SignLine { get; set; }
     public virtual Index SignSame { get; set; }
