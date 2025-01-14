@@ -33,5 +33,16 @@ class IndexList : Any
         this.AlphaX : this.AddAlphaIndex();
         this.AlphaY : this.AddAlphaIndex();
         this.AlphaZ : this.AddAlphaIndex();
+
+        this.Digit0 : this.AddDigitIndex();
+        this.Digit1 : this.AddDigitIndex();
+        this.Digit2 : this.AddDigitIndex();
+        this.Digit3 : this.AddDigitIndex();
+        this.Digit4 : this.AddDigitIndex();
+        this.Digit5 : this.AddDigitIndex();
+        this.Digit6 : this.AddDigitIndex();
+        this.Digit7 : this.AddDigitIndex();
+        this.Digit8 : this.AddDigitIndex();
+        this.Digit9 : this.AddDigitIndex();
     }
 }
