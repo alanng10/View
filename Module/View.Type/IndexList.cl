@@ -21,17 +21,17 @@ class IndexList : Any
         this.AlphaL : this.AddAlphaIndex();
         this.AlphaM : this.AddAlphaIndex();
         this.AlphaN : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
-        this.AlphaA : this.AddAlphaIndex();
+        this.AlphaO : this.AddAlphaIndex();
+        this.AlphaP : this.AddAlphaIndex();
+        this.AlphaQ : this.AddAlphaIndex();
+        this.AlphaR : this.AddAlphaIndex();
+        this.AlphaS : this.AddAlphaIndex();
+        this.AlphaT : this.AddAlphaIndex();
+        this.AlphaU : this.AddAlphaIndex();
+        this.AlphaV : this.AddAlphaIndex();
+        this.AlphaW : this.AddAlphaIndex();
+        this.AlphaX : this.AddAlphaIndex();
+        this.AlphaY : this.AddAlphaIndex();
+        this.AlphaZ : this.AddAlphaIndex();
     }
 }
