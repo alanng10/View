@@ -48,5 +48,10 @@ class IndexList : Any
         this.SignBackTick : this.AddSignIndex("`");
         this.SignNot : this.AddSignIndex("~");
         this.SignExclamate : this.AddSignIndex("!");
+        this.SignAt : this.AddSignIndex("@");
+        this.SignHash : this.AddSignIndex("#");
+        this.SignDollar : this.AddSignIndex("$");
+        this.SignPercent : this.AddSignIndex("%");
+        this.SignExpo : this.AddSignIndex("^");
     }
 }
