@@ -59,5 +59,11 @@ class IndexList : Any
         this.SignLine : this.AddSignIndex("_");
         this.SignSame : this.AddSignIndex("=");
         this.SignAdd : this.AddSignIndex("+");
+        this.SignBraceRoundLite : this.AddSignIndex("(");
+        this.SignBraceRoundRite : this.AddSignIndex(")");
+        this.SignBraceCurveLite : this.AddSignIndex("{");
+        this.SignBraceCurveRite : this.AddSignIndex("}");
+        this.SignBraceRightLite : this.AddSignIndex("[");
+        this.SignBraceRightRite : this.AddSignIndex("]");
     }
 }
