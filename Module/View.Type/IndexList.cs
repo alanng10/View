@@ -75,10 +75,10 @@ public class IndexList : Any
         this.SignLine = this.AddSignIndex('_');
         this.SignSame = this.AddSignIndex('=');
         this.SignAdd = this.AddSignIndex('+');
-        this.SignBraceCurveLite = this.AddSignIndex('{');
-        this.SignBraceCurveRite = this.AddSignIndex('}');
         this.SignBraceLite = this.AddSignIndex('(');
         this.SignBraceRite = this.AddSignIndex(')');
+        this.SignBraceCurveLite = this.AddSignIndex('{');
+        this.SignBraceCurveRite = this.AddSignIndex('}');
         this.SignBraceRightLite = this.AddSignIndex('[');
         this.SignBraceRightRite = this.AddSignIndex(']');
         this.SignExecute = this.AddSignIndex(';');
