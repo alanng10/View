@@ -53,5 +53,11 @@ class IndexList : Any
         this.SignDollar : this.AddSignIndex("$");
         this.SignPercent : this.AddSignIndex("%");
         this.SignExpo : this.AddSignIndex("^");
+        this.SignAnd : this.AddSignIndex("&");
+        this.SignMul : this.AddSignIndex("*");
+        this.SignSub : this.AddSignIndex("-");
+        this.SignLine : this.AddSignIndex("_");
+        this.SignSame : this.AddSignIndex("=");
+        this.SignAdd : this.AddSignIndex("+");
     }
 }
