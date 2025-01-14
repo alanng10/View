@@ -44,5 +44,9 @@ class IndexList : Any
         this.Digit7 : this.AddDigitIndex();
         this.Digit8 : this.AddDigitIndex();
         this.Digit9 : this.AddDigitIndex();
+
+        this.SignBackTick : this.AddSignIndex("`");
+        this.SignNot : this.AddSignIndex("~");
+        this.SignExclamate : this.AddSignIndex("!");
     }
 }
