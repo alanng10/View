@@ -17,6 +17,7 @@ public class IndexList : Any
     public override bool Init()
     {
         base.Init();
+        this.ListInfra = ListInfra.This;
         this.TextInfra = TextInfra.This;
         this.Array = new Array();
         this.Array.Count = this.Count;
@@ -246,6 +247,7 @@ public class IndexList : Any
     // public virtual Button ControlF11 { get; set; }
     // public virtual Button ControlF12 { get; set; }
 
+    protected virtual ListInfra ListInfra { get; set; }
     protected virtual TextInfra TextInfra { get; set; }
 
     protected virtual Index AddAlphaIndex()
