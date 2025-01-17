@@ -156,4 +156,8 @@ class IndexList : Any
     field prusate Index SignQuest { get { return data; } set { data : value; } }
     field prusate Index SignNext { get { return data; } set { data : value; } }
     field prusate Index SignOrn { get { return data; } set { data : value; } }
+    field prusate Index InnSpace { get { return data; } set { data : value; } }
+    field prusate Index InnTab { get { return data; } set { data : value; } }
+    field prusate Index InnEnter { get { return data; } set { data : value; } }
+    field prusate Index InnShift { get { return data; } set { data : value; } }
 }
