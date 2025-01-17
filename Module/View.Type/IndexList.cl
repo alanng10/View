@@ -154,4 +154,6 @@ class IndexList : Any
     field prusate Index SignStop { get { return data; } set { data : value; } }
     field prusate Index SignDiv { get { return data; } set { data : value; } }
     field prusate Index SignQuest { get { return data; } set { data : value; } }
+    field prusate Index SignNext { get { return data; } set { data : value; } }
+    field prusate Index SignOrn { get { return data; } set { data : value; } }
 }
