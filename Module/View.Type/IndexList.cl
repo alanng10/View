@@ -174,12 +174,24 @@ class IndexList : Any
     maide precate Index AddAlphaIndex()
     {
         var Int index;
-        index : this.AlphaIndex + this.Char("A");
+        index : this.AlphaIndex + this.TextInfra.Char("A");
 
         var Index a;
         a : this.AddIndex(index, index);
 
         this.AlphaIndex : this.AlphaIndex + 1;
+        return a;
+    }
+
+    maide precate Index AddDigitIndex()
+    {
+        var Int index;
+        index : this.DigitIndex + this.TextInfra.Char("0");
+
+        var Index a;
+        a : this.AddIndex(index, index);
+
+        this.DigitIndex : this.DigitIndex + 1;
         return a;
     }
 }
