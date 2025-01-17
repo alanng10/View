@@ -70,5 +70,7 @@ class IndexList : Any
         this.SignTail : this.AddSignIndex("'");
         this.SignQuote : this.AddSignIndex("\"");
         this.SignPause : this.AddSignIndex(",");
+        this.SignLessNite : this.AddSignIndex("<");
+        this.SignLessSite : this.AddSignIndex(">");
     }
 }
