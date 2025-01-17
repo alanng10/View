@@ -173,7 +173,7 @@ class Frame : Any
     field prusate DrawSize Size { get { return data; } set { data : value; } }
     field prusate String Title { get { return data; } set { data : value; } }
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
-    
+
     field prusate Bool Shown
     {
         get
@@ -191,7 +191,7 @@ class Frame : Any
             this.Extern.Frame_ShownSet(this.Intern, k);
         }
     }
-    
+
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field precate Draw Draw { get { return data; } set { data : value; } }
     field precate DrawRect DestRect { get { return data; } set { data : value; } }
