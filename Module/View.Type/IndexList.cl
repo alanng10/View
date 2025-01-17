@@ -87,4 +87,19 @@ class IndexList : Any
         this.InnShift : this.AddInnIndex();
         return true;
     }
+
+    field prusate Index AlphaA { get { return data; } set { data : value; } }
+    field prusate Index AlphaB { get { return data; } set { data : value; } }
+    field prusate Index AlphaC { get { return data; } set { data : value; } }
+    field prusate Index AlphaD { get { return data; } set { data : value; } }
+    field prusate Index AlphaE { get { return data; } set { data : value; } }
+    field prusate Index AlphaF { get { return data; } set { data : value; } }
+    field prusate Index AlphaG { get { return data; } set { data : value; } }
+    field prusate Index AlphaH { get { return data; } set { data : value; } }
+    field prusate Index AlphaI { get { return data; } set { data : value; } }
+    field prusate Index AlphaJ { get { return data; } set { data : value; } }
+    field prusate Index AlphaK { get { return data; } set { data : value; } }
+    field prusate Index AlphaL { get { return data; } set { data : value; } }
+    field prusate Index AlphaM { get { return data; } set { data : value; } }
+    field prusate Index AlphaN { get { return data; } set { data : value; } }
 }
