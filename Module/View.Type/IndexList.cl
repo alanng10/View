@@ -140,4 +140,11 @@ class IndexList : Any
     field prusate Index SignLine { get { return data; } set { data : value; } }
     field prusate Index SignSame { get { return data; } set { data : value; } }
     field prusate Index SignAdd { get { return data; } set { data : value; } }
+    field prusate Index SignBraceCurveLite { get { return data; } set { data : value; } }
+    field prusate Index SignBraceCurveRite { get { return data; } set { data : value; } }
+    field prusate Index SignBraceRightLite { get { return data; } set { data : value; } }
+    field prusate Index SignBraceRightRite { get { return data; } set { data : value; } }
+    field prusate Index SignExecute { get { return data; } set { data : value; } }
+    field prusate Index SignAre { get { return data; } set { data : value; } }
+    field prusate Index SignTail { get { return data; } set { data : value; } }
 }
