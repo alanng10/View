@@ -5,19 +5,19 @@ public class Type : Any
     public override bool Init()
     {
         base.Init();
-        this.Index = IndexList.This;
+        this.IndexList = IndexList.This;
 
         this.InitFieldList();
         return true;
     }
 
-    public virtual IndexList Index { get; set; }
+    public virtual IndexList IndexList { get; set; }
     protected virtual Data FieldData { get; set; }
 
     protected virtual bool InitFieldList()
     {
         this.FieldData = new Data();
-        this.FieldData.Count = this.Index.Count;
+        this.FieldData.Count = this.IndexList.Count;
         this.FieldData.Init();
         return true;
     }
@@ -36,7 +36,7 @@ public class Type : Any
     public virtual bool Set(long index, bool value)
     {
         Index k;
-        k = this.Index.Get(index);
+        k = this.IndexList.Get(index);
 
         if (k == null)
         {
