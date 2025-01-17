@@ -181,7 +181,6 @@ public class Frame : Any
 
     public virtual DrawSize Size { get; set; }
     public virtual String Title { get; set; }
-    public virtual TypeType Type { get; set; }
     public virtual DrawImage DrawImage { get; set; }
 
     public virtual bool Shown
@@ -251,11 +250,7 @@ public class Frame : Any
 
     protected virtual bool TypeEvent(long index, bool value)
     {
-        if (!(this.Type == null))
-        {
-            this.Type.Set(index, value);
-        }
-        return true;
+        return false;
     }
 
     internal static ulong InternDraw(ulong frame, ulong arg)
