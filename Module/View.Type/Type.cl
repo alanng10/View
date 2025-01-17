@@ -19,4 +19,11 @@ class Type : Any
         this.Field : this.ListInfra.ArrayCreate(this.Index.Count);
         return true;
     }
+
+    maide prusate Bool Get(var Int index)
+    {
+        var Bool a;
+        a : cast Bool(this.Field.Get(index));
+        return a;
+    }
 }
