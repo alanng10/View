@@ -245,13 +245,6 @@ public class IndexList : Any
     // public virtual Button ControlF10 { get; set; }
     // public virtual Button ControlF11 { get; set; }
     // public virtual Button ControlF12 { get; set; }
-    protected virtual ListInfra ListInfra { get; set; }
-    protected virtual TextInfra TextInfra { get; set; }
-    protected virtual Array Array { get; set; }
-    protected virtual long AlphaIndex { get; set; }
-    protected virtual long DigitIndex { get; set; }
-    protected virtual long InnGroupIndex { get; set; }
-
     public virtual long InnStart
     {
         get
@@ -262,6 +255,12 @@ public class IndexList : Any
         {
         }
     }
+    protected virtual ListInfra ListInfra { get; set; }
+    protected virtual TextInfra TextInfra { get; set; }
+    protected virtual Array Array { get; set; }
+    protected virtual long AlphaIndex { get; set; }
+    protected virtual long DigitIndex { get; set; }
+    protected virtual long InnGroupIndex { get; set; }
 
     protected virtual Index AddAlphaIndex()
     {
