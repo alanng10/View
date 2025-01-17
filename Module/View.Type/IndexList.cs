@@ -97,15 +97,16 @@ public class IndexList : Any
         //this.ControlEscape = this.AddControlButton();
         this.InnSpace = this.AddSpaceIndex();
         this.InnTab = this.AddInnIndex();
-        this.InnGroupIndex = 0x03;
-        this.InnRem = this.AddInnIndex();
+        //this.InnGroupIndex = 0x03;
+        // this.InnRem = this.AddInnIndex();
+        this.InnGroupIndex = 0x04;
         this.InnEnter = this.AddInnIndex();
-        this.InnGroupIndex = 0x06;
+        // this.InnGroupIndex = 0x06;
         //this.ControlInsert = this.AddControlButton();
         //this.ControlDelete = this.AddControlButton();
         //this.ControlPause = this.AddControlButton();
         //this.ControlPrint = this.AddControlButton();
-        this.InnGroupIndex = 0x10;
+        // this.InnGroupIndex = 0x10;
         //this.ControlHome = this.AddControlButton();
         //this.ControlEnd = this.AddControlButton();
         //this.ControlLeft = this.AddControlButton();
@@ -117,14 +118,14 @@ public class IndexList : Any
 
         this.InnGroupIndex = 0x20;
         this.InnShift = this.AddInnIndex();
-        this.InnIndex = this.AddInnIndex();
-        this.InnGroupIndex = 0x23;
+        // this.InnIndex = this.AddInnIndex();
+        // this.InnGroupIndex = 0x23;
         //this.ControlAlt = this.AddControlButton();
         //this.ControlCapsLock = this.AddControlButton();
         //this.ControlNumLock = this.AddControlButton();
         //this.ControlScrollLock = this.AddControlButton();
 
-        this.InnGroupIndex = 0x30;
+        // this.InnGroupIndex = 0x30;
         // this.ControlF1 = this.AddControlButton();
         // this.ControlF2 = this.AddControlButton();
         // this.ControlF3 = this.AddControlButton();
