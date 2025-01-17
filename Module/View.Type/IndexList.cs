@@ -289,10 +289,8 @@ public class IndexList : Any
     {
         long index;
         index = this.InnGroupIndex + this.InnStart;
-        long oc;
-        oc = 0;
         Index a;
-        a = this.AddIndex(index, oc);
+        a = this.AddIndex(index, 0);
         this.InnGroupIndex = this.InnGroupIndex + 1;
         return a;
     }
