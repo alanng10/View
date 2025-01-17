@@ -64,7 +64,7 @@ public class Type : Any
         return true;
     }
 
-    public virtual bool Event(Index index, bool field)
+    public virtual bool Event(Index index, bool value)
     {
         return false;
     }
