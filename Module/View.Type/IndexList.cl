@@ -237,4 +237,32 @@ class IndexList : Any
         this.Array.Set(a.Index, a);
         return a; 
     }
+
+    maide prusate Index Get(var Int index)
+    {
+        return cast Index(this.Array.Get(index));
+    }
+
+    maide prusate Index Alpha(var Int index)
+    {
+        var Int start;
+        start : this.TextInfra.Char("A");
+        return this.PosIndex(index, start);
+    }
+
+    maide prusate Index Digit(var Int index)
+    {
+        var Int start;
+        start : this.TextInfra.Char("0");
+        return this.PosIndex(index, start);
+    }
+
+    maide precate Index PosIndex(var Int index, var Int start)
+    {
+        var Int k;
+        k : start + index;
+        var Index a;
+        a : this.Get(k);
+        return a;
+    }
 }
