@@ -172,7 +172,6 @@ class Frame : Any
 
     field prusate DrawSize Size { get { return data; } set { data : value; } }
     field prusate String Title { get { return data; } set { data : value; } }
-    field prusate Type Type { get { return data; } set { data : value; } }
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
     
     field prusate Bool Shown
@@ -228,11 +227,6 @@ class Frame : Any
 
     maide precate Bool TypeEvent(var Int index, var Bool value)
     {
-        inf (~(this.Type = null))
-        {
-            this.Type.Set(index, value);
-        }
-        return true;
     }
 
     maide precate Bool DrawEvent()
