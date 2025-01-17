@@ -124,4 +124,7 @@ class IndexList : Any
     field prusate Index Digit7 { get { return data; } set { data : value; } }
     field prusate Index Digit8 { get { return data; } set { data : value; } }
     field prusate Index Digit9 { get { return data; } set { data : value; } }
+    field prusate Index SignBackTick { get { return data; } set { data : value; } }
+    field prusate Index SignNot { get { return data; } set { data : value; } }
+    field prusate Index SignExclamate { get { return data; } set { data : value; } }
 }

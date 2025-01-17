@@ -64,7 +64,7 @@ public class IndexList : Any
         this.SignBackTick = this.AddSignIndex('`');
         this.SignNot = this.AddSignIndex('~');
         this.SignExclamate = this.AddSignIndex('!');
-        this.SignAt = this.AddSignIndex('@');
+        this.SignAte = this.AddSignIndex('@');
         this.SignHash = this.AddSignIndex('#');
         this.SignDollar = this.AddSignIndex('$');
         this.SignPercent = this.AddSignIndex('%');
@@ -183,7 +183,7 @@ public class IndexList : Any
     public virtual Index SignBackTick { get; set; }
     public virtual Index SignNot { get; set; }
     public virtual Index SignExclamate { get; set; }
-    public virtual Index SignAt { get; set; }
+    public virtual Index SignAte { get; set; }
     public virtual Index SignHash { get; set; }
     public virtual Index SignDollar { get; set; }
     public virtual Index SignPercent { get; set; }
