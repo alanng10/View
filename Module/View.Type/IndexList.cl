@@ -114,4 +114,14 @@ class IndexList : Any
     field prusate Index AlphaX { get { return data; } set { data : value; } }
     field prusate Index AlphaY { get { return data; } set { data : value; } }
     field prusate Index AlphaZ { get { return data; } set { data : value; } }
+    field prusate Index Digit0 { get { return data; } set { data : value; } }
+    field prusate Index Digit1 { get { return data; } set { data : value; } }
+    field prusate Index Digit2 { get { return data; } set { data : value; } }
+    field prusate Index Digit3 { get { return data; } set { data : value; } }
+    field prusate Index Digit4 { get { return data; } set { data : value; } }
+    field prusate Index Digit5 { get { return data; } set { data : value; } }
+    field prusate Index Digit6 { get { return data; } set { data : value; } }
+    field prusate Index Digit7 { get { return data; } set { data : value; } }
+    field prusate Index Digit8 { get { return data; } set { data : value; } }
+    field prusate Index Digit9 { get { return data; } set { data : value; } }
 }
