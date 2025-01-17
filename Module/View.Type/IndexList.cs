@@ -19,9 +19,8 @@ public class IndexList : Any
         base.Init();
         this.ListInfra = ListInfra.This;
         this.TextInfra = TextInfra.This;
-        this.Array = new Array();
-        this.Array.Count = this.Count;
-        this.Array.Init();
+        this.InnStart = 0x80;
+        this.Array = this.ListInfra.ArrayCreate(this.Count);
         
         this.AlphaA = this.AddAlphaIndex();
         this.AlphaB = this.AddAlphaIndex();
@@ -245,16 +244,7 @@ public class IndexList : Any
     // public virtual Button ControlF10 { get; set; }
     // public virtual Button ControlF11 { get; set; }
     // public virtual Button ControlF12 { get; set; }
-    public virtual long InnStart
-    {
-        get
-        {
-            return 0x80;
-        }
-        set
-        {
-        }
-    }
+    public virtual long InnStart { get; set; }
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual TextInfra TextInfra { get; set; }
     protected virtual Array Array { get; set; }
