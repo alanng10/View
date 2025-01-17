@@ -279,9 +279,9 @@ public class IndexList : Any
     protected virtual Index AddSignIndex(long varChar)
     {
         long index;
-        index = varChar;
+        index = index;
         Index a;
-        a = this.AddIndex(index, varChar);
+        a = this.AddIndex(index, index);
         return a;
     }
 
