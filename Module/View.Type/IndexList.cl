@@ -77,5 +77,14 @@ class IndexList : Any
         this.SignQuest : this.AddSignIndex("?");
         this.SignNext : this.AddSignIndex("\\");
         this.SignOrn : this.AddSignIndex("|");
+
+        this.InnSpace : this.AddSpaceIndex();
+        this.InnGroupIndex : 0h01;
+        this.InnTab : this.AddInnIndex();
+        this.InnGroupIndex : 0h04;
+        this.InnEnter : this.AddInnIndex();
+        this.InnGroupIndex : 0h20;
+        this.InnShift : this.AddInnIndex();
+        return true;
     }
 }
