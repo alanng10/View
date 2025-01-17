@@ -9,6 +9,7 @@ System.Infra
     String String
 System.List
     Array Array
+    ListInfra Infra
 System.Text
     TextInfra Infra
 
