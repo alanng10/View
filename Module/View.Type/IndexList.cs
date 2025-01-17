@@ -324,16 +324,6 @@ public class IndexList : Any
         return this.Array.GetAt(index) as Index;
     }
 
-    public virtual bool IsAlphaIndex(long index)
-    {
-        return this.TextInfra.Alpha(index, true);
-    }
-
-    public virtual bool IsDigitIndex(long index)
-    {
-        return this.TextInfra.Digit(index);
-    }
-
     public virtual Index Alpha(long index)
     {
         long start;
