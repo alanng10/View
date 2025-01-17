@@ -102,4 +102,16 @@ class IndexList : Any
     field prusate Index AlphaL { get { return data; } set { data : value; } }
     field prusate Index AlphaM { get { return data; } set { data : value; } }
     field prusate Index AlphaN { get { return data; } set { data : value; } }
+    field prusate Index AlphaO { get { return data; } set { data : value; } }
+    field prusate Index AlphaP { get { return data; } set { data : value; } }
+    field prusate Index AlphaQ { get { return data; } set { data : value; } }
+    field prusate Index AlphaR { get { return data; } set { data : value; } }
+    field prusate Index AlphaS { get { return data; } set { data : value; } }
+    field prusate Index AlphaT { get { return data; } set { data : value; } }
+    field prusate Index AlphaU { get { return data; } set { data : value; } }
+    field prusate Index AlphaV { get { return data; } set { data : value; } }
+    field prusate Index AlphaW { get { return data; } set { data : value; } }
+    field prusate Index AlphaX { get { return data; } set { data : value; } }
+    field prusate Index AlphaY { get { return data; } set { data : value; } }
+    field prusate Index AlphaZ { get { return data; } set { data : value; } }
 }
