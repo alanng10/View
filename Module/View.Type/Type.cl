@@ -50,4 +50,8 @@ class Type : Any
         this.Event(k, value);
         return true;
     }
+
+    maide prusate Bool Event(var Index index, var Bool value)
+    {
+    }
 }
