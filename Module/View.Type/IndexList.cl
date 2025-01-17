@@ -66,5 +66,7 @@ class IndexList : Any
         this.SignBraceRightLite : this.AddSignIndex("[");
         this.SignBraceRightRite : this.AddSignIndex("]");
         this.SignExecute : this.AddSignIndex(";");
+        this.SignAre : this.AddSignIndex(":");
+        this.SignTail : this.AddSignIndex("'");
     }
 }
