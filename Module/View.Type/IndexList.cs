@@ -168,7 +168,6 @@ public class IndexList : Any
     public virtual Index AlphaX { get; set; }
     public virtual Index AlphaY { get; set; }
     public virtual Index AlphaZ { get; set; }
-
     public virtual Index Digit0 { get; set; }
     public virtual Index Digit1 { get; set; }
     public virtual Index Digit2 { get; set; }
@@ -179,7 +178,6 @@ public class IndexList : Any
     public virtual Index Digit7 { get; set; }
     public virtual Index Digit8 { get; set; }
     public virtual Index Digit9 { get; set; }
-
     public virtual Index SignBackTick { get; set; }
     public virtual Index SignNot { get; set; }
     public virtual Index SignExclamate { get; set; }
@@ -212,11 +210,10 @@ public class IndexList : Any
     public virtual Index SignQuest { get; set; }
     public virtual Index SignNext { get; set; }
     public virtual Index SignOrn { get; set; }
-
     // public virtual Button ControlEscape { get; set; }
     public virtual Index InnSpace { get; set; }
     public virtual Index InnTab { get; set; }
-    public virtual Index InnRem { get; set; }
+    // public virtual Index InnRem { get; set; }
     public virtual Index InnEnter { get; set; }
     // public virtual Button ControlInsert { get; set; }
     // public virtual Button ControlDelete { get; set; }
@@ -231,7 +228,7 @@ public class IndexList : Any
     // public virtual Button ControlPageUp { get; set; }
     // public virtual Button ControlPageDown { get; set; }
     public virtual Index InnShift { get; set; }
-    public virtual Index InnIndex { get; set; }
+    // public virtual Index InnIndex { get; set; }
     // public virtual Button ControlAlt { get; set; }
     // public virtual Button ControlCapsLock { get; set; }
     // public virtual Button ControlNumLock { get; set; }
@@ -248,9 +245,23 @@ public class IndexList : Any
     // public virtual Button ControlF10 { get; set; }
     // public virtual Button ControlF11 { get; set; }
     // public virtual Button ControlF12 { get; set; }
-
     protected virtual ListInfra ListInfra { get; set; }
     protected virtual TextInfra TextInfra { get; set; }
+    protected virtual Array Array { get; set; }
+    protected virtual long AlphaIndex { get; set; }
+    protected virtual long DigitIndex { get; set; }
+    protected virtual long InnGroupIndex { get; set; }
+
+    public virtual long InnStart
+    {
+        get
+        {
+            return 0x80;
+        }
+        set
+        {
+        }
+    }
 
     protected virtual Index AddAlphaIndex()
     {
@@ -362,22 +373,6 @@ public class IndexList : Any
         get
         {
             return 0x100;
-        }
-        set
-        {
-        }
-    }
-
-    protected virtual Array Array { get; set; }
-    protected virtual long AlphaIndex { get; set; }
-    protected virtual long DigitIndex { get; set; }
-    protected virtual long InnGroupIndex { get; set; }
-
-    public virtual long InnStart
-    {
-        get
-        {
-            return 0x80;
         }
         set
         {
