@@ -222,4 +222,17 @@ class IndexList : Any
         a : this.AddIndex(index, 0);
         return a;
     }
+
+    maide precate Index AddIndex(var Int index, var Int char)
+    {
+        char : bit &(char, 0hff);
+
+        var Index a;
+        a : new Index;
+        a.Init();
+        a.Index : index;
+        a.Char : char;
+        this.Array.Set(a.Index, a);
+        return a; 
+    }
 }
