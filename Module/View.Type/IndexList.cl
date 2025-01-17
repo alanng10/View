@@ -6,6 +6,7 @@ class IndexList : Any
         this.ListInfra : share ListInfra;
         this.TextInfra : share TextInfra;
         this.InnStart : 0h80;
+        this.Count : 0h100;
         this.AlphaIndex : 0;
         this.DigitIndex : 0;
         this.Array : this.ListInfra.ArrayCreate(this.Count);
@@ -164,6 +165,7 @@ class IndexList : Any
     field prusate Index InnEnter { get { return data; } set { data : value; } }
     field prusate Index InnShift { get { return data; } set { data : value; } }
     field prusate Int InnStart { get { return data; } set { data : value; } }
+    field prusate Int Count { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate Array Array { get { return data; } set { data : value; } }
