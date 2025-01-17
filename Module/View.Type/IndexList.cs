@@ -196,10 +196,10 @@ public class IndexList : Any
     public virtual Index SignLine { get; set; }
     public virtual Index SignSame { get; set; }
     public virtual Index SignAdd { get; set; }
-    public virtual Index SignBraceRightLite { get; set; }
     public virtual Index SignBraceCurveLite { get; set; }
-    public virtual Index SignBraceRightRite { get; set; }
     public virtual Index SignBraceCurveRite { get; set; }
+    public virtual Index SignBraceRightLite { get; set; }
+    public virtual Index SignBraceRightRite { get; set; }
     public virtual Index SignExecute { get; set; }
     public virtual Index SignAre { get; set; }
     public virtual Index SignTail { get; set; }
