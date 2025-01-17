@@ -272,7 +272,7 @@ class Frame : Any
         return a;
     }
 
-    maide private Bool DrawSet(var Draw draw, var Int drawOut)
+    maide private Bool DrawSet(var Draw draw, var Any drawOut)
     {
         draw.Out : drawOut;
         draw.Size.Wed : this.Size.Wed;
