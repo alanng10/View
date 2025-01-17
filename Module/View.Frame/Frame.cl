@@ -152,7 +152,7 @@ class Frame : Any
         var Draw a;
         a : new Draw;
         a.Init();
-        this.DrawSet(this.Draw, this.DrawImage.Out);
+        this.DrawSet(a, this.DrawImage.Out);
         return a;
     }
 
