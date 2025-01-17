@@ -194,4 +194,13 @@ class IndexList : Any
         this.DigitIndex : this.DigitIndex + 1;
         return a;
     }
+
+    maide precate Index AddSignIndex(var String char)
+    {
+        var Int index;
+        index : this.TextInfra.Char(char);
+        var Index a;
+        a : this.AddIndex(index, index);
+        return a;
+    }
 }
