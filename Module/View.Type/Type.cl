@@ -26,4 +26,28 @@ class Type : Any
         a : cast Bool(this.Field.Get(index));
         return a;
     }
+
+    maide prusate Bool Set(var Int index, var Bool value)
+    {
+        var Index k;
+        k : this.Index.Get(index);
+
+        inf (k = null)
+        {
+            return true;
+        }
+
+        var Bool ka;
+        ka : this.Get(index);
+
+        inf (ka = value)
+        {
+            return true;
+        }
+
+        this.Field.Set(index, value);
+
+        this.Event(k, value);
+        return true;
+    }
 }
