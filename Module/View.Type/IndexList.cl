@@ -203,4 +203,14 @@ class IndexList : Any
         a : this.AddIndex(index, index);
         return a;
     }
+
+    maide precate Index AddInnIndex()
+    {
+        var Int index;
+        index : this.InnGroupIndex + this.InnStart;
+        var Index a;
+        a : this.AddIndex(index, 0);
+        this.InnGroupIndex : this.InnGroupIndex + 1;
+        return a;
+    }
 }
