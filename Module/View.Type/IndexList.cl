@@ -127,4 +127,17 @@ class IndexList : Any
     field prusate Index SignBackTick { get { return data; } set { data : value; } }
     field prusate Index SignNot { get { return data; } set { data : value; } }
     field prusate Index SignExclamate { get { return data; } set { data : value; } }
+    field prusate Index SignAte { get { return data; } set { data : value; } }
+    field prusate Index SignHash { get { return data; } set { data : value; } }
+    field prusate Index SignDollar { get { return data; } set { data : value; } }
+    field prusate Index SignPercent { get { return data; } set { data : value; } }
+    field prusate Index SignExpo { get { return data; } set { data : value; } }
+    field prusate Index SignAnd { get { return data; } set { data : value; } }
+    field prusate Index SignMul { get { return data; } set { data : value; } }
+    field prusate Index SignBraceRoundLite { get { return data; } set { data : value; } }
+    field prusate Index SignBraceRoundRite { get { return data; } set { data : value; } }
+    field prusate Index SignSub { get { return data; } set { data : value; } }
+    field prusate Index SignLine { get { return data; } set { data : value; } }
+    field prusate Index SignSame { get { return data; } set { data : value; } }
+    field prusate Index SignAdd { get { return data; } set { data : value; } }
 }
