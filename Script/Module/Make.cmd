@@ -1,7 +1,7 @@
 @echo off
 
-call Script\View\CleanModule Type
-call Script\View\CleanModule Draw
+call Script\Module\CleanModule Type
+call Script\Module\CleanModule Draw
 
-call Script\View\MakeModule Type
-call Script\View\MakeModule Draw
+call Script\Module\MakeModule Type
+call Script\Module\MakeModule Draw
