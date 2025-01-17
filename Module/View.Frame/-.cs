@@ -11,7 +11,6 @@ global using MathMath = Avalon.Math.Math;
 global using MathComp = Avalon.Math.Comp;
 global using MathInfra = Avalon.Math.Infra;
 global using TextInfra = Avalon.Text.Infra;
-global using TypeType = View.Type.Type;
 global using DrawDraw = View.Draw.Draw;
 global using DrawImage = View.Draw.Image;
 global using DrawColor = View.Draw.Color;
