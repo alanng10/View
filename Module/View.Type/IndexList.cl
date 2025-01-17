@@ -213,4 +213,13 @@ class IndexList : Any
         this.InnGroupIndex : this.InnGroupIndex + 1;
         return a;
     }
+
+    maide precate Index AddSpaceIndex()
+    {
+        var Int index;
+        index : this.TextInfra.Char(" ");
+        var Index a;
+        a : this.AddIndex(index, 0);
+        return a;
+    }
 }
