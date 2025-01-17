@@ -19,6 +19,7 @@ View.Draw:0.00.00
     DrawImage Image
     DrawColor Color
     DrawRect Rect
+    DrawSize Size
     DrawInfra Infra
 
 [Export]
