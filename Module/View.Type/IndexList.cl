@@ -5,6 +5,9 @@ class IndexList : Any
         base.Init();
         this.ListInfra : share ListInfra;
         this.TextInfra : share TextInfra;
+        this.InnStart : 0h80;
+        this.AlphaIndex : 0;
+        this.DigitIndex : 0;
         this.Array : this.ListInfra.ArrayCreate(this.Count);
 
         this.AlphaA : this.AddAlphaIndex();
@@ -160,20 +163,23 @@ class IndexList : Any
     field prusate Index InnTab { get { return data; } set { data : value; } }
     field prusate Index InnEnter { get { return data; } set { data : value; } }
     field prusate Index InnShift { get { return data; } set { data : value; } }
-    field prusate Int InnStart
-    {
-        get
-        {
-            return 0h80;
-        }
-        set
-        {
-        }
-    }
+    field prusate Int InnStart { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate Array Array { get { return data; } set { data : value; } }
     field precate Int AlphaIndex { get { return data; } set { data : value; } }
     field precate Int DigitIndex { get { return data; } set { data : value; } }
     field precate Int InnGroupIndex { get { return data; } set { data : value; } }
+
+    maide precate Index AddAlphaIndex()
+    {
+        var Int index;
+        index : this.AlphaIndex + this.Char("A");
+
+        var Index a;
+        a : this.AddIndex(index, index);
+
+        this.AlphaIndex : this.AlphaIndex + 1;
+        return a;
+    }
 }
