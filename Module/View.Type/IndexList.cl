@@ -68,5 +68,7 @@ class IndexList : Any
         this.SignExecute : this.AddSignIndex(";");
         this.SignAre : this.AddSignIndex(":");
         this.SignTail : this.AddSignIndex("'");
+        this.SignQuote : this.AddSignIndex("\"");
+        this.SignPause : this.AddSignIndex(",");
     }
 }
