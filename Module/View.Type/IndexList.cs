@@ -96,6 +96,7 @@ public class IndexList : Any
 
         //this.ControlEscape = this.AddControlButton();
         this.InnSpace = this.AddSpaceIndex();
+        this.InnGroupIndex = 0x01;
         this.InnTab = this.AddInnIndex();
         //this.InnGroupIndex = 0x03;
         // this.InnRem = this.AddInnIndex();
