@@ -160,4 +160,20 @@ class IndexList : Any
     field prusate Index InnTab { get { return data; } set { data : value; } }
     field prusate Index InnEnter { get { return data; } set { data : value; } }
     field prusate Index InnShift { get { return data; } set { data : value; } }
+    field prusate Int InnStart
+    {
+        get
+        {
+            return 0h80;
+        }
+        set
+        {
+        }
+    }
+    field precate ListInfra ListInfra { get { return data; } set { data : value; } }
+    field precate TextInfra TextInfra { get { return data; } set { data : value; } }
+    field precate Array Array { get { return data; } set { data : value; } }
+    field precate Int AlphaIndex { get { return data; } set { data : value; } }
+    field precate Int DigitIndex { get { return data; } set { data : value; } }
+    field precate Int InnGroupIndex { get { return data; } set { data : value; } }
 }
