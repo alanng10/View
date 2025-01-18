@@ -26,7 +26,7 @@ class Brush : Any
         {
             imageK : this.Image.Intern;
         }
-        
+
         var Extern extern;
         extern : this.Extern;
 
