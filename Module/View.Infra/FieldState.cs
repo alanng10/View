@@ -7,7 +7,7 @@ public class FieldState : State
     public override bool Execute()
     {
         Mod mod;
-        mod = (Mod)this.Arg;
+        mod = this.Arg as Mod;
         this.Field.Comp.Mod(this.Field, mod);
         return true;
     }
