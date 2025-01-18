@@ -9,4 +9,9 @@ class ListIter : Iter
     }
 
     field pronate Iter Iter { get { return data; } set { data : value; } }
+
+    maide prusate Bool Next()
+    {
+        return this.Iter.Next();
+    }
 }
