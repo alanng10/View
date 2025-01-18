@@ -6,6 +6,7 @@ class FieldState : State
     {
         var Mod mod;
         mod : cast Mod(this.Arg);
+
         this.Field.Comp.Mod(this.Field, mod);
         return true;
     }

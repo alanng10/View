@@ -8,6 +8,7 @@ public class StateTable : Table
         less = new RefLess();
         less.Init();
         this.Less = less;
+
         base.Init();
         return true;
     }
