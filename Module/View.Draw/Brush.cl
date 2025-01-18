@@ -46,7 +46,7 @@ class Brush : Any
 
         extern.Brush_Final(this.Intern);
         extern.Brush_Delete(this.Intern);
-        return true;        
+        return true;
     }
 
     field prusate BrushKind Kind { get { return data; } set { data : value; } }
