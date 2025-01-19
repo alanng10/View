@@ -24,7 +24,7 @@ public class Event : Any
         while (iter.Next())
         {
             State state;
-            state = (State)iter.Value;
+            state = iter.Value as State;
             state.Arg = arg;
             state.Execute();
             state.Arg = null;
