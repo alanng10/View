@@ -14,8 +14,8 @@ public class Comp : Any
         return true;
     }
 
-    public virtual Mod ModArg { get; set; }
     public virtual Event ModEvent { get; set; }
+    public virtual Mod ModArg { get; set; }
     protected virtual MathInfra MathInfra { get; set; }
     protected virtual MathMath Math { get; set; }
     protected virtual MathComp MathComp { get; set; }
