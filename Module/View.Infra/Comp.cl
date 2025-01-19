@@ -41,4 +41,19 @@ class Comp : Any
         a.Init();
         return a;
     }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        return true;
+    }
+
+    maide precate Bool Event(var Field varField)
+    {
+        this.ModArg.Comp : this;
+        this.ModArg.Field : varField;
+        this.ModEvent.Execute(this.ModArg);
+        this.ModArg.Field : null;
+        this.ModArg.Comp : null;
+        return true;
+    }
 }
