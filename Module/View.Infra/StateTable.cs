@@ -10,17 +10,15 @@ public class StateTable : Table
         this.Less = less;
 
         base.Init();
+        this.ListInfra = ListInfra.This;
         return true;
     }
 
+    protected virtual ListInfra ListInfra { get; set; }
+
     public virtual bool AddState(State state)
     {
-        Entry entry;
-        entry = new Entry();
-        entry.Init();
-        entry.Index = state;
-        entry.Value = state;
-        this.Add(entry);
+        this.ListInfra.TableAdd(this, state, state);
         return true;
     }
 
