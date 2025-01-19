@@ -22,5 +22,6 @@ class StateTable : Table
 
     maide prusate Bool RemState(var State a)
     {
+        return this.Rem(a);
     }
 }
