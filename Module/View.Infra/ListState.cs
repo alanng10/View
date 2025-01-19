@@ -7,7 +7,7 @@ public class ListState : State
     public override bool Execute()
     {
         Mod mod;
-        mod = (Mod)this.Arg;
+        mod = this.Arg as Mod;
         Comp item;
         item = mod.Comp;
         this.List.ItemChange(item);
