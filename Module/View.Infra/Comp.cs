@@ -8,9 +8,9 @@ public class Comp : Any
         this.MathInfra = MathInfra.This;
         this.Math = MathMath.This;
 
+        this.MathComp = this.CreateMathComp();
         this.ModEvent = this.CreateModEvent();
         this.ModArg = this.CreateModArg();
-        this.MathComp = this.CreateMathComp();
         return true;
     }
 
@@ -19,6 +19,14 @@ public class Comp : Any
     protected virtual MathInfra MathInfra { get; set; }
     protected virtual MathMath Math { get; set; }
     protected virtual MathComp MathComp { get; set; }
+
+    protected virtual MathComp CreateMathComp()
+    {
+        MathComp a;
+        a = new MathComp();
+        a.Init();
+        return a;
+    }
 
     protected virtual Event CreateModEvent()
     {
@@ -36,13 +44,6 @@ public class Comp : Any
         return a;
     }
 
-    protected virtual MathComp CreateMathComp()
-    {
-        MathComp a;
-        a = new MathComp();
-        a.Init();
-        return a;
-    }
 
     public virtual bool Mod(Field varField, Mod mod)
     {
