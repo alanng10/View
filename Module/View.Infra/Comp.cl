@@ -11,4 +11,10 @@ class Comp : Any
         this.ModArg : this.CreateModArg();
         return true;
     }
+
+    field prusate Mod ModArg { get { return data; } set { data : value; } }
+    field prusate Event ModEvent { get { return data; } set { data : value; } }
+    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field precate Math Math { get { return data; } set { data : value; } }
+    field precate MathComp MathComp { get { return data; } set { data : value; } }
 }
