@@ -25,4 +25,20 @@ class Comp : Any
         a.Init();
         return a;
     }
+
+    maide precate Event CreateModEvent()
+    {
+        var Event a;
+        a : new Event;
+        a.Init();
+        return a;
+    }
+
+    maide precate Mod CreateModArg()
+    {
+        var Mod a;
+        a : new Mod;
+        a.Init();
+        return a;
+    }
 }
