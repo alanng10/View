@@ -40,8 +40,6 @@ public class Field : Any
         {
             this.Value.ModEvent.State.AddState(this.State);
         }
-
-        this.SetMod();
         return true;
     }
 
