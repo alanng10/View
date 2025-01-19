@@ -16,15 +16,14 @@ public class StateTable : Table
 
     protected virtual ListInfra ListInfra { get; set; }
 
-    public virtual bool AddState(State state)
+    public virtual bool AddState(State a)
     {
-        this.ListInfra.TableAdd(this, state, state);
+        this.ListInfra.TableAdd(this, a, a);
         return true;
     }
 
-    public virtual bool RemState(State state)
+    public virtual bool RemState(State a)
     {
-        this.Rem(state);
-        return true;
+        return this.Rem(a);
     }
 }

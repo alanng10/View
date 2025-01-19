@@ -14,8 +14,13 @@ class StateTable : Table
 
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
 
-    maide prusate Bool AddState(var State state)
+    maide prusate Bool AddState(var State a)
     {
+        this.ListInfra.TableAdd(this, a, a);
         return true;
+    }
+
+    maide prusate Bool RemState(var State a)
+    {
     }
 }
