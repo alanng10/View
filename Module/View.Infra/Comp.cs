@@ -54,6 +54,8 @@ public class Comp : Any
         this.ModArg.Comp = this;
         this.ModArg.Field = varField;
         this.ModEvent.Execute(this.ModArg);
+        this.ModArg.Field = null;
+        this.ModArg.Comp = null;
         return true;
     }
 
