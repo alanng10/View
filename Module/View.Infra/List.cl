@@ -162,4 +162,14 @@ class List : Comp
         this.ListEvent();
         return true;
     }
+
+    maide prusate Bool Valid(var Comp index)
+    {
+        return this.ItemTable.Valid(index);
+    }
+
+    maide prusate Comp Get(var Comp index)
+    {
+        return cast Comp(this.ItemTable.Get(index));
+    }
 }
