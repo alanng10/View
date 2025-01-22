@@ -6,6 +6,9 @@ class Rect : Comp
         this.ViewInfra : share Infra;
         this.PosField : this.CreatePosField();
         this.SizeField : this.CreaetSizeField();
+
+        this.Pos : this.CreatePos();
+        this.Size : this.CreateSize();
         return true;
     }
 
