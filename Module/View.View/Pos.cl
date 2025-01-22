@@ -33,4 +33,24 @@ class Pos : Comp
         }
         return true;
     }
+
+    field prusate Field ColField { get { return data; } set { data : value; } }
+
+    field prusate Int Col
+    {
+        get
+        {
+            return cast Int(this.ColField.GetAny());
+        }
+        set
+        {
+            this.ColField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModCol(var Mod mod)
+    {
+        this.Event(this.ColField);
+        return true;
+    }
 }
