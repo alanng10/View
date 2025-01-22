@@ -172,4 +172,20 @@ class List : Comp
     {
         return cast Comp(this.ItemTable.Get(index));
     }
+
+    maide prusate Iter IterCreate()
+    {
+        var ListIter a;
+        a : new ListIter;
+        a.Init();
+        return a;
+    }
+
+    maide prusate Bool IterSet(var Iter iter)
+    {
+        var ListIter a;
+        a : cast ListIter(iter);
+        this.ItemTable.IterSet(a.Iter);
+        return true;
+    }
 }
