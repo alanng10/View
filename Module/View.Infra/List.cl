@@ -144,4 +144,22 @@ class List : Comp
         this.ListEvent();
         return true;
     }
+
+    maide prusate Bool Clear()
+    {
+        var Iter iter;
+        iter : this.ItemIter;
+        this.ItemTable.IterSet(iter);
+        while (iter.Next())
+        {
+            var Comp item;
+            item : cast Comp(iter.Value);
+            item.ModEvent.State.RemState(this.EventState);
+        }
+
+        this.ItemTable.Clear();
+
+        this.ListEvent();
+        return true;
+    }
 }
