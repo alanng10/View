@@ -16,7 +16,7 @@ class Rect : Comp
         return this.ViewInfra.FieldCreate(this);
     }
 
-    maide precate Field CreaetSizeField()
+    maide precate Field CreateSizeField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
