@@ -10,4 +10,14 @@ class Pos : Comp
     }
 
     field precate Infra ViewInfra { get { return data; } set { data : value; } }
+
+    maide precate Field CreateColField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateRowField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
 }
