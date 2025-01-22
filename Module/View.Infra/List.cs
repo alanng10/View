@@ -9,9 +9,7 @@ public class List : Comp
         this.ItemTable = this.CreateItemTable();
         this.ItemIter = this.CreateItemIter();
 
-        this.EventState = new ListState();
-        this.EventState.Init();
-        this.EventState.List = this;
+        this.EventState = this.CreateEventState();
 
         this.ListTriggerArg = (ListMod)this.ModArg;
         return true;
@@ -30,7 +28,7 @@ public class List : Comp
 
     protected virtual Table ItemTable { get; set; }
     protected virtual Iter ItemIter { get; set; }
-    protected virtual ListState EventState { get; set; }
+    protected virtual State EventState { get; set; }
     protected virtual ListMod ListTriggerArg { get; set; }
 
     protected override Mod CreateModArg()
@@ -56,6 +54,15 @@ public class List : Comp
     protected virtual Iter CreateItemIter()
     {
         return this.ItemTable.IterCreate();
+    }
+
+    protected virtual State CreateEventState()
+    {
+        ListState a;
+        a = new ListState();
+        a.Init();
+        a.List = this;
+        return a;
     }
 
     public virtual bool ItemChange(Comp item)
