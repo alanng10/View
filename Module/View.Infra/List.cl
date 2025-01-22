@@ -49,4 +49,9 @@ class List : Comp
         a.Init();
         return a;
     }
+
+    maide precate Iter CreateItemIter()
+    {
+        return this.ItemTable.IterCreate();
+    }
 }
