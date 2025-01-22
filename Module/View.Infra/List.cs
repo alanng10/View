@@ -9,7 +9,6 @@ public class List : Comp
 
         this.ItemTable = this.CreateItemTable();
         this.ItemIter = this.CreateItemIter();
-
         this.EventState = this.CreateEventState();
 
         this.ListModArg = this.ModArg as ListMod;
