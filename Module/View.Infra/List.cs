@@ -92,24 +92,6 @@ public class List : Comp
         return true;
     }
 
-    public virtual bool Clear()
-    {
-        Iter iter;
-        iter = this.ItemIter;
-        this.ItemTable.IterSet(iter);
-        while (iter.Next())
-        {
-            Comp item;
-            item = iter.Value as Comp;
-            item.ModEvent.State.RemState(this.EventState);
-        }
-
-        this.ItemTable.Clear();
-
-        this.ListEvent();
-        return true;
-    }
-
     public virtual bool Ins(Comp index, Comp item)
     {
         if (!this.Valid(index))
@@ -148,6 +130,24 @@ public class List : Comp
         this.ItemTable.Rem(item);
 
         item.ModEvent.State.RemState(this.EventState);
+
+        this.ListEvent();
+        return true;
+    }
+
+    public virtual bool Clear()
+    {
+        Iter iter;
+        iter = this.ItemIter;
+        this.ItemTable.IterSet(iter);
+        while (iter.Next())
+        {
+            Comp item;
+            item = iter.Value as Comp;
+            item.ModEvent.State.RemState(this.EventState);
+        }
+
+        this.ItemTable.Clear();
 
         this.ListEvent();
         return true;
