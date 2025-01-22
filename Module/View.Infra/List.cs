@@ -69,7 +69,7 @@ public class List : Comp
     {
         this.ListModArg.Item = item;
 
-        this.TriggerList();
+        this.ListEvent();
 
         this.ListModArg.Item = null;
         return true;
@@ -92,7 +92,7 @@ public class List : Comp
 
         item.ModEvent.State.AddState(this.EventState);
 
-        this.TriggerList();
+        this.ListEvent();
         return true;
     }
 
@@ -110,7 +110,7 @@ public class List : Comp
 
         this.ItemTable.Clear();
 
-        this.TriggerList();
+        this.ListEvent();
         return true;
     }
 
@@ -136,7 +136,7 @@ public class List : Comp
 
         item.ModEvent.State.AddState(this.EventState);
 
-        this.TriggerList();
+        this.ListEvent();
         return true;
     }
 
@@ -153,7 +153,7 @@ public class List : Comp
 
         item.ModEvent.State.RemState(this.EventState);
 
-        this.TriggerList();
+        this.ListEvent();
         return true;
     }
 
@@ -175,7 +175,7 @@ public class List : Comp
         return true;
     }
 
-    protected virtual bool TriggerList()
+    protected virtual bool ListEvent()
     {
         this.Event(null);
         return true;
