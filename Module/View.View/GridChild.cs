@@ -5,11 +5,14 @@ public class GridChild : Comp
     public override bool Init()
     {
         base.Init();
+        this.ViewInfra = Infra.This;
         this.ViewField = this.CreateViewField();
         this.RectField = this.CreateRectField();
         this.Rect = this.CreateRect();
         return true;
     }
+
+    protected virtual Infra ViewInfra { get; set; }
 
     protected virtual Field CreateViewField()
     {

@@ -5,6 +5,7 @@ public class Rect : Comp
     public override bool Init()
     {
         base.Init();
+        this.ViewInfra = Infra.This;
         this.PosField = this.CreatePosField();
         this.SizeField = this.CreateSizeField();
 
@@ -12,6 +13,8 @@ public class Rect : Comp
         this.Size = this.CreateSize();
         return true;
     }
+
+    protected virtual Infra ViewInfra { get; set; }
 
     protected virtual Field CreatePosField()
     {

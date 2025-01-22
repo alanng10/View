@@ -5,10 +5,13 @@ public class Count : Comp
     public override bool Init()
     {
         base.Init();
+        this.ViewInfra = Infra.This;
         this.ValueField = this.CreateValueField();
         this.Value = 0;
         return true;
     }
+
+    protected virtual Infra ViewInfra { get; set; }
 
     protected virtual Field CreateValueField()
     {
