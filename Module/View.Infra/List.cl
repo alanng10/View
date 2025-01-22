@@ -73,4 +73,9 @@ class List : Comp
         this.ListModArg.Item : null;
         return true;
     }
+
+    maide precate Bool ListEvent()
+    {
+        return this.Event(null);
+    }
 }

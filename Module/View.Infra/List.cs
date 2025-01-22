@@ -78,8 +78,7 @@ public class List : Comp
 
     protected virtual bool ListEvent()
     {
-        this.Event(null);
-        return true;
+        return this.Event(null);
     }
 
     public virtual bool Add(Comp item)
