@@ -81,7 +81,12 @@ public class List : Comp
     {
         if (item == null)
         {
-            return true;
+            return false;
+        }
+
+        if (this.Valid(item))
+        {
+            return false;
         }
 
         this.ListInfra.TableAdd(this.ItemTable, item, item);
@@ -96,12 +101,17 @@ public class List : Comp
     {
         if (!this.Valid(index))
         {
-            return true;
+            return false;
         }
 
         if (item == null)
         {
-            return true;
+            return false;
+        }
+
+        if (this.Valid(item))
+        {
+            return false;
         }
 
         Entry entry;
@@ -122,7 +132,7 @@ public class List : Comp
     {
         if (!this.Valid(item))
         {
-            return true;
+            return false;
         }
 
         this.ItemTable.Rem(item);
