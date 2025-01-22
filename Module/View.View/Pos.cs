@@ -5,10 +5,13 @@ public class Pos : Comp
     public override bool Init()
     {
         base.Init();
+        this.ViewInfra = Infra.This;
         this.ColField = this.CreateColField();
         this.RowField = this.CreateRowField();
         return true;
     }
+
+    protected virtual Infra ViewInfra { get; set; }
 
     protected virtual Field CreateColField()
     {
