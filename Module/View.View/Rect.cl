@@ -53,43 +53,43 @@ class Rect : Comp
         return true;
     }
 
-    field prusate Field ColField { get { return data; } set { data : value; } }
+    field prusate Field PosField { get { return data; } set { data : value; } }
 
-    field prusate Int Col
+    field prusate Pos Pos
     {
         get
         {
-            return cast Int(this.ColField.GetAny());
+            return cast Pos(this.PosField.Get());
         }
         set
         {
-            this.ColField.SetAny(value);
+            this.PosField.Set(value);
         }
     }
 
-    maide precate Bool ModCol(var Mod mod)
+    maide precate Bool ModPos(var Mod mod)
     {
-        this.Event(this.ColField);
+        this.Event(this.PosField);
         return true;
     }
 
-    field prusate Field RowField { get { return data; } set { data : value; } }
+    field prusate Field SizeField { get { return data; } set { data : value; } }
 
-    field prusate Int Row
+    field prusate Size Size
     {
         get
         {
-            return cast Int(this.RowField.GetAny());
+            return cast Size(this.SizeField.Get());
         }
         set
         {
-            this.RowField.SetAny(value);
+            this.SizeField.Set(value);
         }
     }
 
-    maide precate Bool ModRow(var Mod mod)
+    maide precate Bool ModSize(var Mod mod)
     {
-        this.Event(this.RowField);
+        this.Event(this.SizeField);
         return true;
     }
 }
