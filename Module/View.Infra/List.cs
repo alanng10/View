@@ -118,11 +118,9 @@ public class List : Comp
         return true;
     }
 
-    public virtual bool Rem(Comp comp)
+    public virtual bool Rem(Comp item)
     {
-        Comp item;
-        item = this.Get(comp);
-        if (item == null)
+        if (!this.Valid(item))
         {
             return true;
         }
