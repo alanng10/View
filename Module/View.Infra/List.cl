@@ -98,4 +98,35 @@ class List : Comp
         this.ListEvent();
         return true;
     }
+
+    maide prusate Bool Ins(var Comp index, var Comp item)
+    {
+        inf (~this.Valid(index))
+        {
+            return false;
+        }
+
+        inf (item = null)
+        {
+            return false;
+        }
+
+        inf (this.Valid(item))
+        {
+            return false;
+        }
+
+        var Entry entry;
+        entry : new Entry;
+        entry.Init();
+        entry.Index : item;
+        entry.Value : item;
+
+        this.ItemTable.Ins(index, entry);
+
+        item.ModEvent.State.AddState(this.EventState);
+
+        this.ListEvent();
+        return true;
+    }
 }
