@@ -129,4 +129,19 @@ class List : Comp
         this.ListEvent();
         return true;
     }
+
+    maide prusate Bool Rem(var Comp item)
+    {
+        inf (~this.Valid(item))
+        {
+            return false;
+        }
+
+        this.ItemTable.Rem(item);
+
+        item.ModEvent.State.RemState(this.EventState);
+
+        this.ListEvent();
+        return true;
+    }
 }
