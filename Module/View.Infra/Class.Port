@@ -1,0 +1,28 @@
+[Module]
+View.Infra:0.00.00
+
+[Import]
+System.Infra
+    Any Any
+    Bool Bool
+    Int Int
+    State State
+    Less Less
+    RefLess RefLess
+System.List
+    Array Array
+    Table Table
+    Entry Entry
+    Iter Iter
+    TableIter TableIter
+    ListInfra Infra
+System.Math
+    Math Math
+    MathComp Comp
+    MathInfra Infra
+
+[Export]
+
+[Storage]
+
+[Entry]
