@@ -3,11 +3,8 @@ class Field : Any
     maide prusate Bool Init()
     {
         base.Init();
-        this.State : new FieldState;
-        this.State.Init();
-        this.State.Field : this;
-        this.SetModArg : new Mod;
-        this.SetModArg.Init();
+        this.State : this.CreateFieldState();
+        this.SetModArg : this.CreateSetModArg();
         return true;
     }
 
@@ -16,6 +13,23 @@ class Field : Any
     field prusate Mod SetModArg { get { return data; } set { data : value; } }
     field precate Comp Value { get { return data; } set { data : value; } }
     field precate Any ValueAny { get { return data; } set { data : value; } }
+
+    maide precate FieldState CreateFieldState()
+    {
+        var FieldState a;
+        a : new FieldState;
+        a.Init();
+        a.Field : this;
+        return a;
+    }
+
+    maide precate Mod CreateSetModArg()
+    {
+        var Mode a;
+        a : new Mod;
+        a.Init();
+        return a;
+    }
 
     maide prusate Comp Get()
     {
