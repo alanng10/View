@@ -65,7 +65,7 @@ public class List : Comp
         return a;
     }
 
-    public virtual bool ItemChange(Comp item)
+    public virtual bool ListMod(Comp item)
     {
         this.ListModArg.Item = item;
 

@@ -8,7 +8,7 @@ class ListState : State
         mod : cast Mod(this.Arg);
         var Comp item;
         item : mod.Comp;
-        this.List.ItemChange(item);
+        this.List.ListMod(item);
         return true;
     }
 }
