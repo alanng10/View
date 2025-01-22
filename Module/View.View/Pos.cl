@@ -23,5 +23,14 @@ class Pos : Comp
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {
+        inf (this.ColField = varField)
+        {
+            this.ModCol(mod);
+        }
+        inf (this.RowField = varField)
+        {
+            this.ModRow(mod);
+        }
+        return true;
     }
 }
