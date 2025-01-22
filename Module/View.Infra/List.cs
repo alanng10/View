@@ -153,6 +153,16 @@ public class List : Comp
         return true;
     }
 
+    public virtual bool Valid(Comp index)
+    {
+        return this.ItemTable.Valid(index);
+    }
+
+    public virtual Comp Get(Comp index)
+    {
+        return this.ItemTable.Get(index) as Comp;
+    }
+
     public virtual Iter IterCreate()
     {
         ListIter a;
@@ -173,15 +183,5 @@ public class List : Comp
     {
         this.Event(null);
         return true;
-    }
-
-    public virtual bool Valid(Comp index)
-    {
-        return !(this.Get(index) == null);
-    }
-
-    public virtual Comp Get(Comp index)
-    {
-        return (Comp)this.ItemTable.Get(index);
     }
 }
