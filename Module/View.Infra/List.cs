@@ -7,7 +7,7 @@ public class List : Comp
         base.Init();
 
         this.ItemTable = this.CreateItemTable();
-        this.ItemIter = this.ItemTable.IterCreate();
+        this.ItemIter = this.CreateItemIter();
 
         this.EventState = new ListState();
         this.EventState.Init();
@@ -51,6 +51,11 @@ public class List : Comp
         a.Less = less;
         a.Init();
         return a;
+    }
+
+    protected virtual Iter CreateItemIter()
+    {
+        return this.ItemTable.IterCreate();
     }
 
     public virtual bool ItemChange(Comp item)
