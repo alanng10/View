@@ -3,16 +3,22 @@ class Event : Any
     maide prusate Bool Init()
     {
         base.Init();
-        var StateTable state;
-        state : new StateTable;
-        state.Init();
-        this.State : state;
+
+        this.State : this.CreateState();
         this.StateIter : this.State.IterCreate();
         return true;
     }
 
     field prusate StateTable State { get { return data; } set { data : value; } }
     field precate Iter StateIter { get { return data; } set { data : value; } }
+
+    maide precate StateTable CreateState()
+    {
+        var StateTable a;
+        a : new StateTable;
+        a.Init();
+        return a;
+    }
 
     maide prusate Bool Execute(var Any arg)
     {
