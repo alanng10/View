@@ -76,6 +76,12 @@ public class List : Comp
         return true;
     }
 
+    protected virtual bool ListEvent()
+    {
+        this.Event(null);
+        return true;
+    }
+
     public virtual bool Add(Comp item)
     {
         if (item == null)
@@ -183,12 +189,6 @@ public class List : Comp
         ListIter a;
         a = iter as ListIter;
         this.ItemTable.IterSet(a.Iter);
-        return true;
-    }
-
-    protected virtual bool ListEvent()
-    {
-        this.Event(null);
         return true;
     }
 }
