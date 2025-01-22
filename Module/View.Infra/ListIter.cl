@@ -3,12 +3,11 @@ class ListIter : Iter
     maide prusate Bool Init()
     {
         base.Init();
-        this.Iter : new TableIter;
-        this.Iter.Init();
+        this.Iter : this.CreateIter(): 
         return true;
     }
 
-    field pronate Iter Iter { get { return data; } set { data : value; } }
+    field prusate Iter Iter { get { return data; } set { data : value; } }
 
     maide prusate Any Index
     {
@@ -30,6 +29,14 @@ class ListIter : Iter
         set
         {
         }
+    }
+
+    maide precate Iter CreateIter()
+    {
+        var Iter a;
+        a : new TableIter;
+        a.Init();
+        return a;
     }
 
     maide prusate Bool Next()
