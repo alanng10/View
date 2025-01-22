@@ -21,4 +21,22 @@ class Field : Any
     {
         return this.Value;
     }
+
+    maide prusate Bool Set(var Comp value)
+    {
+        inf (~(this.Value = null))
+        {
+            this.Value.ModEvent.State.RemState(this.State);
+        }
+
+        this.Value : value;
+
+        inf (~(this.Value = null))
+        {
+            this.Value.ModEvent.State.AddState(this.State);
+        }
+
+        this.SetMod();
+        return true;
+    }
 }
