@@ -6,6 +6,9 @@ class Size : Comp
         this.ViewInfra : share Infra;
         this.WedField : this.CreateWedField();
         this.HetField : this.CreaetHetField();
+
+        this.Wed : 0;
+        this.Het : 0;
         return true;
     }
 

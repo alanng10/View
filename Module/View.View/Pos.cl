@@ -6,6 +6,9 @@ class Pos : Comp
         this.ViewInfra : share Infra;
         this.ColField : this.CreateColField();
         this.RowField : this.CreaetRowField();
+
+        this.Col : 0;
+        this.Row : 0;
         return true;
     }
 
