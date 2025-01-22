@@ -8,4 +8,6 @@ class Pos : Comp
         this.RowField : this.CreaetRowField();
         return true;
     }
+
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
 }
