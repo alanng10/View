@@ -155,18 +155,16 @@ public class List : Comp
 
     public virtual Iter IterCreate()
     {
-        ListIter iter;
-        iter = new ListIter();
-        iter.Init();
-        Iter a;
-        a = iter;
+        ListIter a;
+        a = new ListIter();
+        a.Init();
         return a;
     }
 
     public virtual bool IterSet(Iter iter)
     {
         ListIter a;
-        a = (ListIter)iter;
+        a = iter as ListIter;
         this.ItemTable.IterSet(a.Iter);
         return true;
     }
