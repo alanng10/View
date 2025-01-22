@@ -54,4 +54,13 @@ class List : Comp
     {
         return this.ItemTable.IterCreate();
     }
+
+    maide precate State CreateEventState()
+    {
+        var ListState a;
+        a : new ListState;
+        a.Init();
+        a.List : this;
+        return a;
+    }
 }
