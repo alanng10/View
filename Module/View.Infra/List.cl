@@ -63,4 +63,14 @@ class List : Comp
         a.List : this;
         return a;
     }
+
+    maide prusate Bool ListMod(var Comp item)
+    {
+        this.ListModArg.Item : item;
+
+        this.ListEvent();
+
+        this.ListModArg.Item : null;
+        return true;
+    }
 }
