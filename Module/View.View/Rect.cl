@@ -29,6 +29,14 @@ class Rect : Comp
         return a;
     }
 
+    maide precate Size CreateSize()
+    {
+        var Size a;
+        a : new Size;
+        a.Init();
+        return a;
+    }
+
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {
         inf (this.PosField = varField)
