@@ -3,7 +3,7 @@ class ListIter : Iter
     maide prusate Bool Init()
     {
         base.Init();
-        this.Iter : this.CreateIter(): 
+        this.Iter : this.CreateIter();
         return true;
     }
 
