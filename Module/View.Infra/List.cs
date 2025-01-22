@@ -5,13 +5,8 @@ public class List : Comp
     public override bool Init()
     {
         base.Init();
-        RefLess less;
-        less = new RefLess();
-        less.Init();
-        this.ItemTable = new Table();
-        this.ItemTable.Less = less;
-        this.ItemTable.Init();
 
+        this.ItemTable = this.CreateItemTable();
         this.ItemIter = this.ItemTable.IterCreate();
 
         this.EventState = new ListState();
@@ -20,6 +15,17 @@ public class List : Comp
 
         this.ListTriggerArg = (ListMod)this.ModArg;
         return true;
+    }
+
+    public virtual long Count
+    {
+        get
+        {
+            return this.ItemTable.Count;
+        }
+        set
+        {
+        }
     }
 
     protected virtual Table ItemTable { get; set; }
@@ -35,15 +41,16 @@ public class List : Comp
         return a;
     }
 
-    public virtual long Count
+    protected virtual Table CreateItemTable()
     {
-        get
-        {
-            return this.ItemTable.Count;
-        }
-        set
-        {
-        }
+        RefLess less;
+        less = new RefLess();
+        less.Init();
+        Table a;
+        a = new Table();
+        a.Less = less;
+        a.Init();
+        return a;
     }
 
     public virtual bool ItemChange(Comp item)
