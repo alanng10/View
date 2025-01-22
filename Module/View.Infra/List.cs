@@ -100,7 +100,7 @@ public class List : Comp
         while (iter.Next())
         {
             Comp item;
-            item = (Comp)iter.Value;
+            item = iter.Value as Comp;
             item.ModEvent.State.RemState(this.EventState);
         }
 
