@@ -78,4 +78,24 @@ class List : Comp
     {
         return this.Event(null);
     }
+
+    maide prusate Bool Add(var Comp item)
+    {
+        inf (item = null)
+        {
+            return false;
+        }
+
+        inf (this.Valid(item))
+        {
+            return false;
+        }
+
+        this.ListInfra.TableAdd(this.ItemTable, item, item);
+
+        item.ModEvent.State.AddState(this.EventState);
+
+        this.ListEvent();
+        return true;
+    }
 }
