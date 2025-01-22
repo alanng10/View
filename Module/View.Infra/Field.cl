@@ -25,7 +25,7 @@ class Field : Any
 
     maide precate Mod CreateSetModArg()
     {
-        var Mode a;
+        var Mod a;
         a : new Mod;
         a.Init();
         return a;
