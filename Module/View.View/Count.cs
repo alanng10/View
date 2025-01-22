@@ -18,6 +18,15 @@ public class Count : Comp
         return this.ViewInfra.FieldCreate(this);
     }
 
+    public override bool Mod(Field varField, Mod mod)
+    {
+        if (this.ValueField == varField)
+        {
+            this.ModValue(mod);
+        }
+        return true;
+    }
+
     public virtual Field ValueField { get; set; }
 
     public virtual long Value
@@ -36,15 +45,6 @@ public class Count : Comp
     protected virtual bool ModValue(Mod change)
     {
         this.Event(this.ValueField);
-        return true;
-    }
-
-    public override bool Mod(Field varField, Mod mod)
-    {
-        if (this.ValueField == varField)
-        {
-            this.ModValue(mod);
-        }
         return true;
     }
 }
