@@ -5,6 +5,7 @@ public class List : Comp
     public override bool Init()
     {
         base.Init();
+        this.ListInfra = ListInfra.This;
 
         this.ItemTable = this.CreateItemTable();
         this.ItemIter = this.CreateItemIter();
@@ -26,6 +27,7 @@ public class List : Comp
         }
     }
 
+    protected virtual ListInfra ListInfra { get; set; }
     protected virtual Table ItemTable { get; set; }
     protected virtual Iter ItemIter { get; set; }
     protected virtual State EventState { get; set; }
@@ -82,13 +84,7 @@ public class List : Comp
             return true;
         }
 
-        Entry entry;
-        entry = new Entry();
-        entry.Init();
-        entry.Index = item;
-        entry.Value = item;
-
-        this.ItemTable.Add(entry);
+        this.ListInfra.TableAdd(this.ItemTable, item, item);
 
         item.ModEvent.State.AddState(this.EventState);
 
