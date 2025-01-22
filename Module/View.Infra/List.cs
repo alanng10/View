@@ -11,7 +11,7 @@ public class List : Comp
 
         this.EventState = this.CreateEventState();
 
-        this.ListTriggerArg = (ListMod)this.ModArg;
+        this.ListModArg = this.ModArg as ListMod;
         return true;
     }
 
@@ -29,7 +29,7 @@ public class List : Comp
     protected virtual Table ItemTable { get; set; }
     protected virtual Iter ItemIter { get; set; }
     protected virtual State EventState { get; set; }
-    protected virtual ListMod ListTriggerArg { get; set; }
+    protected virtual ListMod ListModArg { get; set; }
 
     protected override Mod CreateModArg()
     {
@@ -67,11 +67,11 @@ public class List : Comp
 
     public virtual bool ItemChange(Comp item)
     {
-        this.ListTriggerArg.Item = item;
+        this.ListModArg.Item = item;
 
         this.TriggerList();
 
-        this.ListTriggerArg.Item = null;
+        this.ListModArg.Item = null;
         return true;
     }
 
