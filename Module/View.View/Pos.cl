@@ -20,4 +20,8 @@ class Pos : Comp
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+    }
 }

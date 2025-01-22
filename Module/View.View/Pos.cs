@@ -23,13 +23,13 @@ public class Pos : Comp
         return this.ViewInfra.FieldCreate(this);
     }
 
-    public override bool Mod(Field field, Mod mod)
+    public override bool Mod(Field varField, Mod mod)
     {
-        if (this.ColField == field)
+        if (this.ColField == varField)
         {
             this.ModCol(mod);
         }
-        if (this.RowField == field)
+        if (this.RowField == varField)
         {
             this.ModRow(mod);
         }
