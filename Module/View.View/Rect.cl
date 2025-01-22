@@ -21,6 +21,14 @@ class Rect : Comp
         return this.ViewInfra.FieldCreate(this);
     }
 
+    maide precate Pos CreatePos()
+    {
+        var Pos a;
+        a : new Pos;
+        a.Init();
+        return a;
+    }
+
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {
         inf (this.PosField = varField)

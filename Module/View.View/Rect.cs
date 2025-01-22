@@ -31,8 +31,6 @@ public class Rect : Comp
         Pos a;
         a = new Pos();
         a.Init();
-        a.Col = 0;
-        a.Row = 0;
         return a;
     }
 
@@ -41,8 +39,6 @@ public class Rect : Comp
         Size a;
         a = new Size();
         a.Init();
-        a.Wed = 0;
-        a.Het = 0;
         return a;
     }
 
