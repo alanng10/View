@@ -5,7 +5,7 @@ class Event : Any
         base.Init();
 
         this.State : this.CreateState();
-        this.StateIter : this.State.IterCreate();
+        this.StateIter : this.CreateStateIter();
         return true;
     }
 
@@ -18,6 +18,11 @@ class Event : Any
         a : new StateTable;
         a.Init();
         return a;
+    }
+
+    maide precate Iter CreateStateIter()
+    {
+        return this.State.IterCreate();
     }
 
     maide prusate Bool Execute(var Any arg)
