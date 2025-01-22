@@ -39,4 +39,22 @@ class Field : Any
         this.SetMod();
         return true;
     }
+
+    maide prusate Any GetAny()
+    {
+        return this.ValueAny;
+    }
+
+    maide prusate Bool SetAny(var Any value)
+    {
+        this.ValueAny : value;
+        this.SetMod();
+        return true;
+    }
+
+    maide precate Bool SetMod()
+    {
+        this.Comp.Mod(this, this.SetModArg);
+        return true;
+    }
 }
