@@ -29,4 +29,24 @@ class List : Comp
     field precate Iter ItemIter { get { return data; } set { data : value; } }
     field precate State EventState { get { return data; } set { data : value; } }
     field precate ListMod ListModArg { get { return data; } set { data : value; } }
+
+    maide precate Mod CreateModArg()
+    {
+        var Mod a;
+        a : new ListMod;
+        a.Init();
+        return a;
+    }
+
+    maide precate Table CreateItemTable()
+    {
+        var RefLess less;
+        less : new RefLess;
+        less.Init();
+        var Table a;
+        a : new Table;
+        a.Less : less;
+        a.Init();
+        return a;
+    }
 }
