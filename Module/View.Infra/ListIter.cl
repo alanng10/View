@@ -9,7 +9,7 @@ class ListIter : Iter
 
     field prusate Iter Iter { get { return data; } set { data : value; } }
 
-    maide prusate Any Index
+    field prusate Any Index
     {
         get
         {
@@ -20,7 +20,7 @@ class ListIter : Iter
         }
     }
 
-    maide prusate Any Value
+    field prusate Any Value
     {
         get
         {
