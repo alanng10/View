@@ -84,16 +84,12 @@ class Frame : Any
         this.FrameDraw.Init();
         this.DrawSet(this.FrameDraw, k);
 
-        this.Draw : this.CreateDraw();
-
         this.DrawClearColor : this.CreateDrawClearColor();
         return true;
     }
 
     maide prusate Bool Final()
     {
-        this.FinalDraw(this.Draw);
-
         this.FrameDraw.Final();
         
         this.FinalDrawImage(this.DrawImage);
@@ -147,21 +143,6 @@ class Frame : Any
         return true;
     }
 
-    maide precate Draw CreateDraw()
-    {
-        var Draw a;
-        a : new Draw;
-        a.Init();
-        this.DrawSet(a, this.DrawImage.Out);
-        return a;
-    }
-
-    maide precate Bool FinalDraw(var Draw a)
-    {
-        a.Final();
-        return true;
-    }
-
     maide precate DrawColor CreateDrawClearColor()
     {
         var DrawColor a;
@@ -192,7 +173,6 @@ class Frame : Any
     }
 
     field precate MathComp MathComp { get { return data; } set { data : value; } }
-    field precate Draw Draw { get { return data; } set { data : value; } }
     field precate DrawRect DestRect { get { return data; } set { data : value; } }
     field precate DrawRect SourceRect { get { return data; } set { data : value; } }
     field precate DrawColor DrawClearColor { get { return data; } set { data : value; } }
