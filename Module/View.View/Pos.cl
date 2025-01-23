@@ -12,8 +12,6 @@ class Pos : Comp
         return true;
     }
 
-    field precate Infra ViewInfra { get { return data; } set { data : value; } }
-
     maide precate Field CreateColField()
     {
         return this.ViewInfra.FieldCreate(this);
@@ -23,6 +21,8 @@ class Pos : Comp
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {

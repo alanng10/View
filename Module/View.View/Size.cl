@@ -12,8 +12,6 @@ class Size : Comp
         return true;
     }
 
-    field precate Infra ViewInfra { get { return data; } set { data : value; } }
-
     maide precate Field CreateWedField()
     {
         return this.ViewInfra.FieldCreate(this);
@@ -23,6 +21,8 @@ class Size : Comp
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {

@@ -12,8 +12,6 @@ class Rect : Comp
         return true;
     }
 
-    field precate Infra ViewInfra { get { return data; } set { data : value; } }
-
     maide precate Field CreatePosField()
     {
         return this.ViewInfra.FieldCreate(this);
@@ -39,6 +37,8 @@ class Rect : Comp
         a.Init();
         return a;
     }
+
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {

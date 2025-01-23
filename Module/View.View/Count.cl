@@ -9,12 +9,12 @@ class Count : Comp
         return true;
     }
 
-    field precate Infra ViewInfra { get { return data; } set { data : value; } }
-
     maide precate Field CreateValueField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {
