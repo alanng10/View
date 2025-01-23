@@ -66,4 +66,15 @@ class Frame : FrameFrame
         draw.End();
         return true;
     }
+
+    maide precate Bool ValidDrawView()
+    {
+        return ~(this.View = null);
+    }
+
+    maide precate Bool ExecuteDrawView(var Draw draw)
+    {
+        this.View.ExecuteDraw(draw);
+        return true;
+    }
 }
