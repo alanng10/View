@@ -33,13 +33,13 @@ public class GridChild : Comp
         return a;
     }
 
-    public override bool Mod(Field field, Mod mod)
+    public override bool Mod(Field varField, Mod mod)
     {
-        if (this.ViewField == field)
+        if (this.ViewField == varField)
         {
             this.ModView(mod);
         }
-        if (this.RectField == field)
+        if (this.RectField == varField)
         {
             this.ModRect(mod);
         }
