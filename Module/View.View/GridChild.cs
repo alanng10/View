@@ -8,6 +8,7 @@ public class GridChild : Comp
         this.ViewInfra = Infra.This;
         this.ViewField = this.CreateViewField();
         this.RectField = this.CreateRectField();
+
         this.Rect = this.CreateRect();
         return true;
     }
@@ -32,13 +33,26 @@ public class GridChild : Comp
         return a;
     }
 
+    public override bool Mod(Field field, Mod mod)
+    {
+        if (this.ViewField == field)
+        {
+            this.ModView(mod);
+        }
+        if (this.RectField == field)
+        {
+            this.ModRect(mod);
+        }
+        return true;
+    }
+
     public virtual Field ViewField { get; set; }
 
     public virtual View View
     {
         get
         {
-            return (View)this.ViewField.Get();
+            return this.ViewField.Get() as View;
         }
         set
         {
@@ -58,7 +72,7 @@ public class GridChild : Comp
     {
         get
         {
-            return (Rect)this.RectField.Get();
+            return this.RectField.Get() as Rect;
         }
         set
         {
@@ -69,19 +83,6 @@ public class GridChild : Comp
     protected virtual bool ModRect(Mod mod)
     {
         this.Event(this.RectField);
-        return true;
-    }
-
-    public override bool Mod(Field field, Mod mod)
-    {
-        if (this.ViewField == field)
-        {
-            this.ModView(mod);
-        }
-        if (this.RectField == field)
-        {
-            this.ModRect(mod);
-        }
         return true;
     }
 }
