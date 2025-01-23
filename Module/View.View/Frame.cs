@@ -42,6 +42,15 @@ public class Frame : FrameFrame
     protected virtual Infra ViewInfra { get; set; }
     protected virtual DrawDraw Draw { get; set; }
 
+    protected override bool TypeEvent(long index, bool value)
+    {
+        if (!(this.Type == null))
+        {
+            this.Type.Set(index, value);
+        }
+        return true;
+    }
+
     protected override bool DrawEvent()
     {
         DrawDraw draw;
