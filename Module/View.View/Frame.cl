@@ -34,4 +34,9 @@ class Frame : FrameFrame
         a.Final();
         return true;
     }
+
+    field prusate View View { get { return data; } set { data : value; } }
+    field prusate Type Type { get { return data; } set { data : value; } }
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
+    field precate Draw Draw { get { return data; } set { data : value; } }
 }
