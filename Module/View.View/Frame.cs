@@ -9,11 +9,18 @@ public class Frame : FrameFrame
         return true;
     }
 
-    protected virtual Infra ViewInfra { get; set; }
+    public override bool Final()
+    {
+        base.Final();
+        return true;
+    }
 
     public virtual View View { get; set; }
+    public virtual TypeType Type { get; set; }
+    protected virtual Infra ViewInfra { get; set; }
+    protected virtual DrawDraw Draw { get; set; }
 
-    protected override bool ExecuteDraw()
+    protected override bool DrawEvent()
     {
         DrawDraw draw;
         draw = this.Draw;
