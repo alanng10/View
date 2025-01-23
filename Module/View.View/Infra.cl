@@ -17,4 +17,11 @@ class Infra : Any
         a.Comp : comp;
         return a;
     }
+
+    maide prusate Bool AssignDrawRectValue(var DrawRect dest, var DrawRect source)
+    {
+        this.AssignDrawPosValue(dest.Pos, source.Pos);
+        this.AssignDrawSizeValue(dest.Size, source.Size);
+        return true;
+    }
 }
