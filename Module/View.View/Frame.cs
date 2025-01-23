@@ -6,12 +6,34 @@ public class Frame : FrameFrame
     {
         base.Init();
         this.ViewInfra = Infra.This;
+
+        this.Draw = this.CreateDraw();
         return true;
     }
 
     public override bool Final()
     {
+        this.FinalDraw(this.Draw);
+
         base.Final();
+        return true;
+    }
+
+    protected virtual DrawDraw CreateDraw()
+    {
+        DrawDraw a;
+        a = new DrawDraw();
+        a.Init();
+        a.Out = this.DrawImage.Out;
+        a.Size.Wed = this.Size.Wed;
+        a.Size.Het = this.Size.Het;
+        a.SizeSet();
+        return a;
+    }
+
+    protected virtual bool FinalDraw(DrawDraw a)
+    {
+        a.Final();
         return true;
     }
 
