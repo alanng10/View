@@ -39,4 +39,13 @@ class Frame : FrameFrame
     field prusate Type Type { get { return data; } set { data : value; } }
     field precate Infra ViewInfra { get { return data; } set { data : value; } }
     field precate Draw Draw { get { return data; } set { data : value; } }
+
+    maide precate Bool TypeEvent(var Int index, var Bool value)
+    {
+        inf (~(this.Type = null))
+        {
+            this.Type.Set(index, value);
+        }
+        return true;
+    }
 }
