@@ -48,4 +48,22 @@ class Frame : FrameFrame
         }
         return true;
     }
+
+    maide precate Bool DrawEvent()
+    {
+        var Draw draw;
+        draw : this.Draw;
+
+        draw.Start();
+
+        draw.Clear(this.DrawClearColor);
+
+        inf (this.ValidDrawView())
+        {
+            this.ExecuteDrawView(draw);
+        }
+
+        draw.End();
+        return true;
+    }
 }
