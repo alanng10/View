@@ -9,11 +9,10 @@ public class Grid : View
         this.RowField = this.CreateRowField();
         this.ColField = this.CreateColField();
         this.ChildListField = this.CreateGridChildField();
-        this.DestField = this.CreateDestField();
+
         this.Row = this.CreateRow();
         this.Col = this.CreateCol();
         this.ChildList = this.CreateChildList();
-        this.Dest = this.CreateDest();
 
         this.Back = this.DrawInfra.ZeroSlash.Brush;
 
@@ -42,11 +41,6 @@ public class Grid : View
         return this.ViewInfra.FieldCreate(this);
     }
 
-    protected virtual Field CreateDestField()
-    {
-        return this.ViewInfra.FieldCreate(this);
-    }
-
     protected virtual List CreateRow()
     {
         List a;
@@ -67,14 +61,6 @@ public class Grid : View
     {
         List a;
         a = new List();
-        a.Init();
-        return a;
-    }
-
-    protected virtual Rect CreateDest()
-    {
-        Rect a;
-        a = new Rect();
         a.Init();
         return a;
     }
@@ -121,10 +107,6 @@ public class Grid : View
         if (this.ChildListField == varField)
         {
             this.ModChildList(mod);
-        }
-        if (this.DestField == varField)
-        {
-            this.ModDest(mod);
         }
         return true;
     }
@@ -203,26 +185,6 @@ public class Grid : View
             return true;
         }
         this.Event(this.ChildListField);
-        return true;
-    }
-
-    public virtual Field DestField { get; set; }
-
-    public virtual Rect Dest
-    {
-        get
-        {
-            return (Rect)this.DestField.Get();
-        }
-        set
-        {
-            this.DestField.Set(value);
-        }
-    }
-
-    protected virtual bool ModDest(Mod change)
-    {
-        this.Event(this.DestField);
         return true;
     }
 
