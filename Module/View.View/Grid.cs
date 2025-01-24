@@ -143,7 +143,7 @@ public class Grid : View
     {
         get
         {
-            return (List)this.ColField.Get();
+            return this.ColField.Get() as List;
         }
 
         set
@@ -169,7 +169,7 @@ public class Grid : View
     {
         get
         {
-            return (List)this.ChildListField.Get();
+            return this.ChildListField.Get() as List;
         }
 
         set
