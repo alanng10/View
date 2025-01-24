@@ -106,24 +106,25 @@ public class Grid : View
     protected virtual DrawRect StackGridRect { get; set; }
     protected virtual DrawPos StackGridPos { get; set; }
 
-    public override bool Mod(Field varField, Mod change)
+    public override bool Mod(Field varField, Mod mod)
     {
-        base.Mod(varField, change);
+        base.Mod(varField, mod);
+
         if (this.RowField == varField)
         {
-            this.ChangeRow(change);
+            this.ModRow(mod);
         }
         if (this.ColField == varField)
         {
-            this.ChangeCol(change);
+            this.ModCol(mod);
         }
         if (this.ChildListField == varField)
         {
-            this.ChangeChildList(change);
+            this.ModChildList(mod);
         }
         if (this.DestField == varField)
         {
-            this.ChangeDest(change);
+            this.ModDest(mod);
         }
         return true;
     }
@@ -143,7 +144,7 @@ public class Grid : View
         }
     }
 
-    protected virtual bool ChangeRow(Mod change)
+    protected virtual bool ModRow(Mod change)
     {
         if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
         {
@@ -169,7 +170,7 @@ public class Grid : View
         }
     }
 
-    protected virtual bool ChangeCol(Mod change)
+    protected virtual bool ModCol(Mod change)
     {
         if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
         {
@@ -195,7 +196,7 @@ public class Grid : View
         }
     }
 
-    protected virtual bool ChangeChildList(Mod change)
+    protected virtual bool ModChildList(Mod change)
     {
         if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
         {
@@ -219,7 +220,7 @@ public class Grid : View
         }
     }
 
-    protected virtual bool ChangeDest(Mod change)
+    protected virtual bool ModDest(Mod change)
     {
         this.Event(this.DestField);
         return true;
