@@ -294,19 +294,14 @@ public class Grid : View
         Rect gridRect;
         gridRect = child.Rect;
 
-        Pos gridPos;
-        gridPos = gridRect.Pos;
-        Size gridSize;
-        gridSize = gridRect.Size;
-
         long startCol;
-        startCol = gridPos.Col;
-        long endCol;
-        endCol = startCol + gridSize.Wed;
         long startRow;
-        startRow = gridPos.Row;
+        startCol = gridRect.Pos.Col;
+        startRow = gridRect.Pos.Row;
+        long endCol;
         long endRow;
-        endRow = startRow + gridSize.Het;
+        endCol = startCol + gridRect.Size.Wed;
+        endRow = startRow + gridRect.Size.Het;
 
         long lite;
         long nite;
