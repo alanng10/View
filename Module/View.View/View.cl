@@ -179,4 +179,24 @@ class View : Comp
         this.Event(this.SizeField);
         return true;
     }
+
+    field prusate Field BackField { get { return data; } set { data : value; } }
+
+    field prusate DrawBrush Back
+    {
+        get
+        {
+            return cast DrawBrush(this.BackField.GetAny());
+        }
+        set
+        {
+            this.BackField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModBack(var Mod mod)
+    {
+        this.Event(this.BackField);
+        return true;
+    }
 }
