@@ -311,6 +311,18 @@ public class Grid : View
 
     protected virtual bool ExecuteDrawGridChild(DrawDraw draw, GridChild child)
     {
+        this.SetGridChildArea(this.DrawRectA);
+
+        this.ViewInfra.StackPushChild(draw, this.StackGridRect, this.StackGridPos, this.DrawRectA, this.DrawPosA);
+
+        this.ExecuteGridChildDraw(draw, child);
+
+        this.ViewInfra.StackPopChild(draw, this.StackGridRect, this.StackGridPos);
+        return true;
+    }
+
+    protected virtual bool SetGridChildArea(DrawRect dest, DrawDraw draw)
+    {
         Rect gridRect;
         gridRect = child.Rect;
 
@@ -347,20 +359,10 @@ public class Grid : View
         wed = rite - lite;
         het = site - nite;
 
-        DrawRect rect;
-        rect = this.DrawRectA;
-        rect.Pos.Col = col;
-        rect.Pos.Row = row;
-        rect.Size.Wed = wed;
-        rect.Size.Het = het;
-
-        this.SetChildArea(rect);
-
-        this.ViewInfra.StackPushChild(draw, this.StackGridRect, this.StackGridPos, rect, this.DrawPosA);
-
-        this.ExecuteGridChildDraw(draw, child);
-
-        this.ViewInfra.StackPopChild(draw, this.StackGridRect, this.StackGridPos);
+        dest.Pos.Col = col;
+        dest.Pos.Row = row;
+        dest.Size.Wed = wed;
+        dest.Size.Het = het;
         return true;
     }
 
