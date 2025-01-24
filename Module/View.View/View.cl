@@ -92,4 +92,14 @@ class View : Comp
     {
         return this.DrawInfra.PosCreate(0, 0);
     }
+
+    maide precate DrawRect CreateStackRect()
+    {
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
+    }
+
+    maide precate DrawRect CreateStackPos()
+    {
+        return this.DrawInfra.PosCreate(0, 0);
+    }
 }
