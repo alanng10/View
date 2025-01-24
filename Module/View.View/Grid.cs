@@ -362,25 +362,25 @@ public class Grid : View
     {
         long t;
         t = pos;
-        bool b;
-        long u;
-        u = 0;
 
-        b = (t < 1);
-        if (!b)
+        if (t < 1)
         {
-            t = t - 1;
-            long index;
-            index = start + t;
-            long byteIndex;
-            byteIndex = this.IntByteIndex(index);
-
-            ulong uu;
-            uu = this.InfraInfra.DataIntGet(this.ChildPosData, byteIndex);
-            u = (long)uu;
+            return 0;
         }
+
+        t = t - 1;
+
+        long index;
+        index = start + t;
+
+        long ka;
+        ka = this.IntByteIndex(index);
+
+        long k;
+        k = this.InfraInfra.DataIntGet(this.ChildPosData, ka);
+
         long a;
-        a = u;
+        a = k;
         return a;
     }
 
@@ -406,10 +406,11 @@ public class Grid : View
 
             long index;
             index = start + i;
-            long byteIndex;
-            byteIndex = this.IntByteIndex(index);
 
-            this.InfraInfra.DataIntSet(this.ChildPosData, byteIndex, k);
+            long ka;
+            ka = this.IntByteIndex(index);
+
+            this.InfraInfra.DataIntSet(this.ChildPosData, ka, k);
 
             i = i + 1;
         }
