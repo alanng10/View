@@ -29,4 +29,19 @@ class View : Comp
         this.StackPos : this.CreateStackPos();
         return true;
     }
+
+    maide precate Field CreatePosField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateSizeField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateBackField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
 }
