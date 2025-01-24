@@ -269,31 +269,16 @@ public class View : Comp
 
     protected virtual bool ExecuteDrawThis(DrawDraw draw)
     {
-        long col;
-        long row;
-        col = this.Pos.Col;
-        row = this.Pos.Row;
-        long wed;
-        long het;
-        wed = this.Size.Wed;
-        het = this.Size.Het;
+        this.ViewInfra.AssignDrawPosValue(this.DrawRectA.Pos, this.Pos);
+        this.ViewInfra.AssignDrawSizeValue(this.DrawRectA.Size, this.Size);
 
-        this.DrawRectA.Pos.Col = col;
-        this.DrawRectA.Pos.Row = row;
-        this.DrawRectA.Size.Wed = wed;
-        this.DrawRectA.Size.Het = het;
+        draw.Fill = this.Back;
 
-        DrawRect rect;
-        rect = this.DrawRectA;
-        DrawBrush brush;
-        brush = this.Back;
-        draw.Fill = brush;
-
-        draw.FillPos.Col = this.MathInt(col);
-        draw.FillPos.Row = this.MathInt(row);
+        draw.FillPos.Col = this.MathInt(this.Pos.Col);
+        draw.FillPos.Row = this.MathInt(this.Pos.Row);
         draw.FillPosSet();
 
-        draw.ExecuteRect(rect);
+        draw.ExecuteRect(this.DrawRectA);
 
         draw.FillPos.Col = 0;
         draw.FillPos.Row = 0;
