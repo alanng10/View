@@ -8,7 +8,7 @@ public class Grid : View
         this.InfraInfra = InfraInfra.This;
         this.RowField = this.CreateRowField();
         this.ColField = this.CreateColField();
-        this.ChildListField = this.CreateGridChildField();
+        this.ChildListField = this.CreateChildListField();
 
         this.Row = this.CreateRow();
         this.Col = this.CreateCol();
@@ -36,7 +36,7 @@ public class Grid : View
         return this.ViewInfra.FieldCreate(this);
     }
 
-    protected virtual Field CreateGridChildField()
+    protected virtual Field CreateChildListField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
