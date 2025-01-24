@@ -4,6 +4,7 @@ class View : Comp
     {
         base.Init();
         this.DrawInfra : share DrawInfra;
+        this.ViewInfra : share Infra;
 
         this.PosField : this.CreatePosField();
         this.SizeField : this.CreateSizeField();
@@ -102,4 +103,15 @@ class View : Comp
     {
         return this.DrawInfra.PosCreate(0, 0);
     }
+
+    field prusate DrawRect Area { get { return data; } set { data : value; } }
+    field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field precate Infra ViewInfra { get { return data; } set { data : value; } }
+    field precate DrawRect DrawRectA { get { return data; } set { data : value; } }
+    field precate DrawRect DrawRectB { get { return data; } set { data : value; } }
+    field precate DrawRect DrawRectC { get { return data; } set { data : value; } }
+    field precate DrawRect DrawRectD { get { return data; } set { data : value; } }
+    field precate DrawPos DrawPosA { get { return data; } set { data : value; } }
+    field precate DrawRect StackRect { get { return data; } set { data : value; } }
+    field precate DrawPos StackPos { get { return data; } set { data : value; } }
 }
