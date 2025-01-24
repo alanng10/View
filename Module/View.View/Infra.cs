@@ -58,9 +58,9 @@ public class Infra : Any
     {
         this.AssignDrawPosValue(pos, rect.Pos);
 
-        this.AssignDrawRectValue(stackRect, draw.Area);
+        this.DrawInfra.BoundArea(draw.Area, rect);
 
-        this.DrawInfra.BoundArea(stackRect, rect);
+        this.AssignDrawRectValue(stackRect, draw.Area);
 
         this.AssignDrawRectValue(draw.Area, rect);
 
