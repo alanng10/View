@@ -29,17 +29,6 @@ public class Grid : View
         return true;
     }
 
-    protected virtual InfraInfra InfraInfra { get; set; }
-    protected virtual Iter RowIter { get; set; }
-    protected virtual Iter ColIter { get; set; }
-    protected virtual Iter ChildListIter { get; set; }
-    protected virtual Data ChildPosData { get; set; }
-
-    protected virtual DrawRect StackGridChildListRect { get; set; }
-    protected virtual DrawPos StackGridChildListPos { get; set; }
-    protected virtual DrawRect StackGridChildRect { get; set; }
-    protected virtual DrawPos StackGridChildPos { get; set; }
-
     protected virtual Field CreateRowField()
     {
         return this.ViewInfra.FieldCreate(this);
@@ -140,6 +129,17 @@ public class Grid : View
         pos.Init();
         return pos;
     }
+
+    protected virtual InfraInfra InfraInfra { get; set; }
+    protected virtual Iter RowIter { get; set; }
+    protected virtual Iter ColIter { get; set; }
+    protected virtual Iter ChildListIter { get; set; }
+    protected virtual Data ChildPosData { get; set; }
+
+    protected virtual DrawRect StackGridChildListRect { get; set; }
+    protected virtual DrawPos StackGridChildListPos { get; set; }
+    protected virtual DrawRect StackGridChildRect { get; set; }
+    protected virtual DrawPos StackGridChildPos { get; set; }
 
     public virtual Field RowField { get; set; }
 
