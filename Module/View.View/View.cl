@@ -114,4 +114,29 @@ class View : Comp
     field precate DrawPos DrawPosA { get { return data; } set { data : value; } }
     field precate DrawRect StackRect { get { return data; } set { data : value; } }
     field precate DrawPos StackPos { get { return data; } set { data : value; } }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        inf (this.PosField = varField)
+        {
+            this.ModPos(mod);
+        }
+        inf (this.SizeField = varField)
+        {
+            this.ModSize(mod);
+        }
+        inf (this.BackField = varField)
+        {
+            this.ModBack(mod);
+        }
+        inf (this.ShownField = varField)
+        {
+            this.ModShown(mod);
+        }
+        inf (this.ChildField = varField)
+        {
+            this.ModChild(mod);
+        }
+        return true;
+    }
 }
