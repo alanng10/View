@@ -22,8 +22,8 @@ public class Grid : View
         this.ColIter = this.Col.IterCreate();
         this.ChildListIter = this.ChildList.IterCreate();
 
-        this.StackGridChildRect = this.CreateStackGridChildRect();
-        this.StackGridChildPos = this.CreateStackGridChildPos();
+        this.StackGridRect = this.CreateStackGridRect();
+        this.StackGridPos = this.CreateStackGridPos();
         return true;
     }
 
@@ -88,7 +88,7 @@ public class Grid : View
         return a;
     }
 
-    protected virtual DrawRect CreateStackGridChildRect()
+    protected virtual DrawRect CreateStackGridRect()
     {
         DrawRect rect;
         rect = new DrawRect();
@@ -100,7 +100,7 @@ public class Grid : View
         return rect;
     }
 
-    protected virtual DrawPos CreateStackGridChildPos()
+    protected virtual DrawPos CreateStackGridPos()
     {
         DrawPos pos;
         pos = new DrawPos();
@@ -113,8 +113,8 @@ public class Grid : View
     protected virtual Iter ColIter { get; set; }
     protected virtual Iter ChildListIter { get; set; }
     protected virtual Data ChildPosData { get; set; }
-    protected virtual DrawRect StackGridChildRect { get; set; }
-    protected virtual DrawPos StackGridChildPos { get; set; }
+    protected virtual DrawRect StackGridRect { get; set; }
+    protected virtual DrawPos StackGridPos { get; set; }
 
     public override bool Mod(Field varField, Mod change)
     {
@@ -365,11 +365,11 @@ public class Grid : View
 
         this.SetChildArea(rect);
 
-        this.ViewInfra.StackPushChild(draw, this.StackGridChildRect, this.StackGridChildPos, rect, this.DrawPosA);
+        this.ViewInfra.StackPushChild(draw, this.StackGridRect, this.StackGridPos, rect, this.DrawPosA);
 
         this.ExecuteGridChildDraw(draw, child);
 
-        this.ViewInfra.StackPopChild(draw, this.StackGridChildRect, this.StackGridChildPos);
+        this.ViewInfra.StackPopChild(draw, this.StackGridRect, this.StackGridPos);
         return true;
     }
 
