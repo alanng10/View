@@ -70,4 +70,11 @@ class View : Comp
         a.Init();
         return a;
     }
+
+    maide precate DrawBrush CreateBack()
+    {
+        var DrawBrush a;
+        a : this.DrawInfra.WhiteSlash.Brush;
+        return a;
+    }
 }
