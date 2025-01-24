@@ -32,17 +32,6 @@ public class View : Comp
         return true;
     }
 
-    public virtual DrawRect Area { get; set; }
-
-    protected virtual DrawInfra DrawInfra { get; set; }
-    protected virtual DrawRect DrawRectA { get; set; }
-    protected virtual DrawRect DrawRectB { get; set; }
-    protected virtual DrawRect DrawRectC { get; set; }
-    protected virtual DrawRect DrawRectD { get; set; }
-    protected virtual DrawPos DrawPosA { get; set; }
-    protected virtual DrawRect StackRect { get; set; }
-    protected virtual DrawPos StackPos { get; set; }
-
     protected virtual Field CreatePosField()
     {
         return this.ViewInfra.FieldCreate(this);
@@ -129,6 +118,17 @@ public class View : Comp
         pos = this.DrawInfra.PosCreate(0, 0);
         return pos;
     }
+
+    public virtual DrawRect Area { get; set; }
+
+    protected virtual DrawInfra DrawInfra { get; set; }
+    protected virtual DrawRect DrawRectA { get; set; }
+    protected virtual DrawRect DrawRectB { get; set; }
+    protected virtual DrawRect DrawRectC { get; set; }
+    protected virtual DrawRect DrawRectD { get; set; }
+    protected virtual DrawPos DrawPosA { get; set; }
+    protected virtual DrawRect StackRect { get; set; }
+    protected virtual DrawPos StackPos { get; set; }
 
     public virtual Field PosField { get; set; }
 
