@@ -320,18 +320,13 @@ public class Grid : View
 
     protected virtual bool ValidDrawGridChild(GridChild child)
     {
-        return !(child.View == null);
+        return !(child.View == null) & this.ValidGridRect(child.Rect);
     }
 
     protected virtual bool ExecuteDrawGridChild(DrawDraw draw, GridChild child)
     {
         Rect gridRect;
         gridRect = child.Rect;
-
-        if (!this.ValidGridRect(gridRect))
-        {
-            return false;
-        }
 
         Pos gridPos;
         gridPos = gridRect.Pos;
