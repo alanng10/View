@@ -264,4 +264,25 @@ class View : Comp
         this.ExecuteDrawChild(draw);
         return true;
     }
+
+    maide precate Bool ExecuteDrawThis(var Draw draw)
+    {
+        this.ViewInfra.AssignDrawPosValue(this.DrawRectA.Pos, this.Pos);
+        this.ViewInfra.AssignDrawSizeValue(this.DrawRectA.Size, this.Size);
+
+        draw.Fill : this.Back;
+
+        draw.FillPos.Col : this.MathInt(this.Pos.Col);
+        draw.FillPos.Row : this.MathInt(this.Pos.Row);
+        draw.FillPosSet();
+
+        draw.ExecuteRect(this.DrawRectA);
+
+        draw.FillPos.Col : 0;
+        draw.FillPos.Row : 0;
+        draw.FillPosSet();
+
+        draw.Fill : null;
+        return true;
+    }
 }
