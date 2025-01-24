@@ -6,19 +6,19 @@ public class Grid : View
     {
         base.Init();
         this.InfraInfra = InfraInfra.This;
-        this.RowField = this.CreateRowField();
         this.ColField = this.CreateColField();
+        this.RowField = this.CreateRowField();
         this.ChildListField = this.CreateChildListField();
 
-        this.Row = this.CreateRow();
         this.Col = this.CreateCol();
+        this.Row = this.CreateRow();
         this.ChildList = this.CreateChildList();
 
         this.Back = this.DrawInfra.ZeroSlash.Brush;
 
         this.ChildPosData = this.CreateChildPosList();
-        this.RowIter = this.Row.IterCreate();
         this.ColIter = this.Col.IterCreate();
+        this.RowIter = this.Row.IterCreate();
         this.ChildListIter = this.ChildList.IterCreate();
 
         this.StackGridRect = this.CreateStackGridRect();
@@ -26,12 +26,12 @@ public class Grid : View
         return true;
     }
 
-    protected virtual Field CreateRowField()
+    protected virtual Field CreateColField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
 
-    protected virtual Field CreateColField()
+    protected virtual Field CreateRowField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
@@ -41,7 +41,7 @@ public class Grid : View
         return this.ViewInfra.FieldCreate(this);
     }
 
-    protected virtual List CreateRow()
+    protected virtual List CreateCol()
     {
         List a;
         a = new List();
@@ -49,7 +49,7 @@ public class Grid : View
         return a;
     }
 
-    protected virtual List CreateCol()
+    protected virtual List CreateRow()
     {
         List a;
         a = new List();
@@ -85,8 +85,8 @@ public class Grid : View
     }
 
     protected virtual InfraInfra InfraInfra { get; set; }
-    protected virtual Iter RowIter { get; set; }
     protected virtual Iter ColIter { get; set; }
+    protected virtual Iter RowIter { get; set; }
     protected virtual Iter ChildListIter { get; set; }
     protected virtual Data ChildPosData { get; set; }
     protected virtual DrawRect StackGridRect { get; set; }
