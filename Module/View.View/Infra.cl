@@ -58,4 +58,16 @@ class Infra : Any
         draw.PosSet();
         return true;
     }
+
+    maide prusate Bool StackPopChild(var Draw draw, var DrawRect stackRect, var DrawPos stackPos)
+    {
+        this.AssignDrawPosValue(draw.Pos, stackPos);
+
+        draw.PosSet();
+
+        this.AssignDrawRectValue(draw.Area, stackRect);
+
+        draw.AreaSet();
+        return true;
+    }
 }
