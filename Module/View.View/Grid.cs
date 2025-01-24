@@ -224,7 +224,7 @@ public class Grid : View
         while (iter.Next())
         {
             GridChild child;
-            child = (GridChild)iter.Value;
+            child = iter.Value as GridChild;
 
             if (this.ValidDrawGridChild(child))
             {
