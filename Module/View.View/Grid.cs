@@ -96,44 +96,18 @@ public class Grid : View
     {
         base.Mod(varField, mod);
 
-        if (this.RowField == varField)
-        {
-            this.ModRow(mod);
-        }
         if (this.ColField == varField)
         {
             this.ModCol(mod);
+        }
+        if (this.RowField == varField)
+        {
+            this.ModRow(mod);
         }
         if (this.ChildListField == varField)
         {
             this.ModChildList(mod);
         }
-        return true;
-    }
-
-    public virtual Field RowField { get; set; }
-
-    public virtual List Row
-    {
-        get
-        {
-            return this.RowField.Get() as List;
-        }
-
-        set
-        {
-            this.RowField.Set(value);
-        }
-    }
-
-    protected virtual bool ModRow(Mod change)
-    {
-        if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
-        {
-            return true;
-        }
-        this.UpdateLayout();
-        this.Event(this.RowField);
         return true;
     }
 
@@ -160,6 +134,32 @@ public class Grid : View
         }
         this.UpdateLayout();
         this.Event(this.ColField);
+        return true;
+    }
+
+    public virtual Field RowField { get; set; }
+
+    public virtual List Row
+    {
+        get
+        {
+            return this.RowField.Get() as List;
+        }
+
+        set
+        {
+            this.RowField.Set(value);
+        }
+    }
+
+    protected virtual bool ModRow(Mod change)
+    {
+        if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
+        {
+            return true;
+        }
+        this.UpdateLayout();
+        this.Event(this.RowField);
         return true;
     }
 
