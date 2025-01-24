@@ -141,6 +141,28 @@ public class Grid : View
     protected virtual DrawRect StackGridChildRect { get; set; }
     protected virtual DrawPos StackGridChildPos { get; set; }
 
+    public override bool Mod(Field varField, Mod change)
+    {
+        base.Mod(varField, change);
+        if (this.RowField == varField)
+        {
+            this.ChangeRow(change);
+        }
+        if (this.ColField == varField)
+        {
+            this.ChangeCol(change);
+        }
+        if (this.ChildListField == varField)
+        {
+            this.ChangeChildList(change);
+        }
+        if (this.DestField == varField)
+        {
+            this.ChangeDest(change);
+        }
+        return true;
+    }
+
     public virtual Field RowField { get; set; }
 
     public virtual List Row
@@ -460,28 +482,6 @@ public class Grid : View
 
             infraInfra.DataIntSet(this.ChildPosData, byteIndex, k);
             i = i + 1;
-        }
-        return true;
-    }
-
-    public override bool Mod(Field varField, Mod change)
-    {
-        base.Mod(varField, change);
-        if (this.RowField == varField)
-        {
-            this.ChangeRow(change);
-        }
-        if (this.ColField == varField)
-        {
-            this.ChangeCol(change);
-        }
-        if (this.ChildListField == varField)
-        {
-            this.ChangeChildList(change);
-        }
-        if (this.DestField == varField)
-        {
-            this.ChangeDest(change);
         }
         return true;
     }
