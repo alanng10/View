@@ -286,6 +286,11 @@ class View : Comp
         return true;
     }
 
+    maide precate Bool ValidDrawChild()
+    {
+        return ~(this.Child = null);
+    }
+
     maide precate Bool ExecuteDrawChild(var Draw draw)
     {
         this.SetChildArea(this.DrawRectA, draw);
@@ -309,6 +314,12 @@ class View : Comp
         dest.Pos.Row : row;
 
         this.ViewInfra.AssignDrawSizeValue(dest.Size, this.Size);
+        return true;
+    }
+
+    maide precate Bool ExecuteChildDraw(var Draw draw)
+    {
+        this.Child.ExecuteDraw(draw);
         return true;
     }
 }
