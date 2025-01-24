@@ -38,4 +38,24 @@ class Infra : Any
         dest.Het : source.Het;
         return true;
     }
+
+    maide prusate Bool StackPushChild(var Draw draw, var DrawRect stackRect, var DrawPos stackPos, var DrawRect rect, var DrawPos pos)
+    {
+        this.AssignDrawPosValue(pos, rect.Pos);
+
+        this.DrawInfra.BoundArea(draw.Area, rect);
+
+        this.AssignDrawRectValue(stackRect, draw.Area);
+
+        this.AssignDrawRectValue(draw.Area, rect);
+
+        draw.AreaSet();
+
+        this.AssignDrawPosValue(stackPos, draw.Pos);
+
+        this.AssignDrawPosValue(draw.Pos, pos);
+
+        draw.PosSet();
+        return true;
+    }
 }
