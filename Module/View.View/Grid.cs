@@ -22,8 +22,6 @@ public class Grid : View
         this.ColIter = this.Col.IterCreate();
         this.ChildListIter = this.ChildList.IterCreate();
 
-        this.StackGridChildListRect = this.CreateStackGridChildListRect();
-        this.StackGridChildListPos = this.CreateStackGridChildListPos();
         this.StackGridChildRect = this.CreateStackGridChildRect();
         this.StackGridChildPos = this.CreateStackGridChildPos();
         return true;
@@ -110,33 +108,11 @@ public class Grid : View
         return pos;
     }
 
-    protected virtual DrawRect CreateStackGridChildListRect()
-    {
-        DrawRect rect;
-        rect = new DrawRect();
-        rect.Init();
-        rect.Pos = new DrawPos();
-        rect.Pos.Init();
-        rect.Size = new DrawSize();
-        rect.Size.Init();
-        return rect;
-    }
-
-    protected virtual DrawPos CreateStackGridChildListPos()
-    {
-        DrawPos pos;
-        pos = new DrawPos();
-        pos.Init();
-        return pos;
-    }
-
     protected virtual InfraInfra InfraInfra { get; set; }
     protected virtual Iter RowIter { get; set; }
     protected virtual Iter ColIter { get; set; }
     protected virtual Iter ChildListIter { get; set; }
     protected virtual Data ChildPosData { get; set; }
-    protected virtual DrawRect StackGridChildListRect { get; set; }
-    protected virtual DrawPos StackGridChildListPos { get; set; }
     protected virtual DrawRect StackGridChildRect { get; set; }
     protected virtual DrawPos StackGridChildPos { get; set; }
 
@@ -297,11 +273,11 @@ public class Grid : View
     {
         this.SetGridChildListArea(this.DrawRectA, draw);
 
-        this.ViewInfra.StackPushChild(draw, this.StackGridChildListRect, this.StackGridChildListPos, this.DrawRectA, this.DrawPosA);
+        this.ViewInfra.StackPushChild(draw, this.StackRect, this.StackPos, this.DrawRectA, this.DrawPosA);
 
         this.ExecuteGridChildListDraw(draw);
 
-        this.ViewInfra.StackPopChild(draw, this.StackGridChildListRect, this.StackGridChildListPos);
+        this.ViewInfra.StackPopChild(draw, this.StackRect, this.StackPos);
         return true;
     }
 
