@@ -33,6 +33,15 @@ public class Infra : Any
         return a;
     }
 
+    public virtual Count CountCreate(long value)
+    {
+        Count a;
+        a = new Count();
+        a.Init();
+        a.Value = value;
+        return a;
+    }
+
     public virtual bool AssignDrawRectValue(DrawRect dest, DrawRect source)
     {
         this.AssignDrawPosValue(dest.Pos, source.Pos);
@@ -84,14 +93,5 @@ public class Infra : Any
 
         draw.AreaSet();
         return true;
-    }
-
-    public virtual Count CountCreate(long value)
-    {
-        Count a;
-        a = new Count();
-        a.Init();
-        a.Value = value;
-        return a;
     }
 }
