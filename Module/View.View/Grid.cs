@@ -426,19 +426,22 @@ public class Grid : View
 
     protected virtual bool SetChildCountArray(List list, Iter iter, long start)
     {
-        InfraInfra infraInfra;
-        infraInfra = this.InfraInfra;
-
         list.IterSet(iter);
+
         long k;
         k = 0;
 
+        long count;
+        count = list.Count;
+
         long i;
         i = 0;
-        while (iter.Next())
+        while (i < count)
         {
+            iter.Next();
+
             Count count;
-            count = (Count)iter.Value;
+            count = iter.Value as Count;
             k = k + count.Value;
 
             long index;
@@ -446,7 +449,8 @@ public class Grid : View
             long byteIndex;
             byteIndex = this.IntByteIndex(index);
 
-            infraInfra.DataIntSet(this.ChildPosData, byteIndex, k);
+            this.InfraInfra.DataIntSet(this.ChildPosData, byteIndex, k);
+
             i = i + 1;
         }
         return true;
