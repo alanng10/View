@@ -297,20 +297,13 @@ public class View : Comp
     {
         long col;
         long row;
-        col = this.Pos.Col;
-        col = col + draw.Pos.Col;
-        row = this.Pos.Row;
-        row = row + draw.Pos.Row;
-
-        long wed;
-        long het;
-        wed = this.Size.Wed;
-        het = this.Size.Het;
+        col = this.Pos.Col + draw.Pos.Col;
+        row = this.Pos.Row + draw.Pos.Row;
 
         this.DrawRectA.Pos.Col = col;
         this.DrawRectA.Pos.Row = row;
-        this.DrawRectA.Size.Wed = wed;
-        this.DrawRectA.Size.Het = het;
+
+        this.ViewInfra.AssignDrawSizeValue(this.DrawRectA.Size, this.Size);
 
         this.SetChildArea(this.DrawRectA);
 
