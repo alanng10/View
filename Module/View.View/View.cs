@@ -106,7 +106,6 @@ public class View : Comp
     }
 
     public virtual DrawRect Area { get; set; }
-
     protected virtual DrawInfra DrawInfra { get; set; }
     protected virtual DrawRect DrawRectA { get; set; }
     protected virtual DrawRect DrawRectB { get; set; }
