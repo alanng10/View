@@ -199,4 +199,24 @@ class View : Comp
         this.Event(this.BackField);
         return true;
     }
+
+    field prusate Field ShownField { get { return data; } set { data : value; } }
+
+    field prusate Bool Shown
+    {
+        get
+        {
+            return cast Bool(this.ShownField.GetAny());
+        }
+        set
+        {
+            this.ShownField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModShown(var Mod mod)
+    {
+        this.Event(this.ShownField);
+        return true;
+    }
 }
