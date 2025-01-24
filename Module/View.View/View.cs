@@ -117,6 +117,31 @@ public class View : Comp
     protected virtual DrawRect StackRect { get; set; }
     protected virtual DrawPos StackPos { get; set; }
 
+    public override bool Mod(Field field, Mod mod)
+    {
+        if (this.SizeField == field)
+        {
+            this.ModSize(mod);
+        }
+        if (this.PosField == field)
+        {
+            this.ModPos(mod);
+        }
+        if (this.BackField == field)
+        {
+            this.ModBack(mod);
+        }
+        if (this.VisibleField == field)
+        {
+            this.ModVisible(mod);
+        }
+        if (this.ChildField == field)
+        {
+            this.ModChild(mod);
+        }
+        return true;
+    }
+
     public virtual Field PosField { get; set; }
 
     public virtual Pos Pos
@@ -214,31 +239,6 @@ public class View : Comp
     protected virtual bool ModChild(Mod mod)
     {
         this.Event(this.ChildField);
-        return true;
-    }
-
-    public override bool Mod(Field field, Mod mod)
-    {
-        if (this.SizeField == field)
-        {
-            this.ModSize(mod);
-        }
-        if (this.PosField == field)
-        {
-            this.ModPos(mod);
-        }
-        if (this.BackField == field)
-        {
-            this.ModBack(mod);
-        }
-        if (this.VisibleField == field)
-        {
-            this.ModVisible(mod);
-        }
-        if (this.ChildField == field)
-        {
-            this.ModChild(mod);
-        }
         return true;
     }
 
