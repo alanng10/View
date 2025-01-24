@@ -90,22 +90,12 @@ public class Grid : View
 
     protected virtual DrawRect CreateStackGridRect()
     {
-        DrawRect rect;
-        rect = new DrawRect();
-        rect.Init();
-        rect.Pos = new DrawPos();
-        rect.Pos.Init();
-        rect.Size = new DrawSize();
-        rect.Size.Init();
-        return rect;
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
     }
 
     protected virtual DrawPos CreateStackGridPos()
     {
-        DrawPos pos;
-        pos = new DrawPos();
-        pos.Init();
-        return pos;
+        return this.DrawInfra.PosCreate(0, 0);
     }
 
     protected virtual InfraInfra InfraInfra { get; set; }
