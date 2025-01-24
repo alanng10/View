@@ -24,4 +24,11 @@ class Infra : Any
         this.AssignDrawSizeValue(dest.Size, source.Size);
         return true;
     }
+
+    maide prusate Bool AssignDrawPosValue(var DrawPos dest, var DrawPos source)
+    {
+        dest.Col : source.Col;
+        dest.Row : source.Row;
+        return true;
+    }
 }
