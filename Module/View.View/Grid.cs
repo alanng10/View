@@ -256,38 +256,6 @@ public class Grid : View
 
     protected override bool ExecuteChildDraw(DrawDraw draw)
     {
-        this.ExecuteDrawChildList(draw);
-        return true;
-    }
-
-    protected virtual bool ExecuteDrawChildList(DrawDraw draw)
-    {
-        this.SetChildListArea(this.DrawRectA, draw);
-
-        this.ViewInfra.StackPushChild(draw, this.StackRect, this.StackPos, this.DrawRectA, this.DrawPosA);
-
-        this.ExecuteChildListDraw(draw);
-
-        this.ViewInfra.StackPopChild(draw, this.StackRect, this.StackPos);
-        return true;
-    }
-
-    protected virtual bool SetChildListArea(DrawRect dest, DrawDraw draw)
-    {
-        long col;
-        long row;
-        col = this.Dest.Pos.Col + draw.Pos.Col;
-        row = this.Dest.Pos.Row + draw.Pos.Row;
-
-        dest.Pos.Col = col;
-        dest.Pos.Row = row;
-
-        this.ViewInfra.AssignDrawSizeValue(dest.Size, this.Dest.Size);
-        return true;
-    }
-
-    protected virtual bool ExecuteChildListDraw(DrawDraw draw)
-    {
         Iter iter;
         iter = this.ChildListIter;
         this.ChildList.IterSet(iter);
