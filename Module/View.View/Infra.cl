@@ -18,6 +18,15 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Count CountCreate(var Int value)
+    {
+        var Count a;
+        a : new Count;
+        a.Init();
+        a.Value : value;
+        return a;
+    }
+
     maide prusate Bool AssignDrawRectValue(var DrawRect dest, var DrawRect source)
     {
         this.AssignDrawPosValue(dest.Pos, source.Pos);
