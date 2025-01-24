@@ -253,17 +253,14 @@ public class Grid : View
 
     protected virtual bool SetGridChildArea(DrawRect dest, DrawDraw draw)
     {
-        Rect gridRect;
-        gridRect = child.Rect;
-
         long startCol;
         long startRow;
-        startCol = gridRect.Pos.Col;
-        startRow = gridRect.Pos.Row;
+        startCol = child.Rect.Pos.Col;
+        startRow = child.Rect.Pos.Row;
         long endCol;
         long endRow;
-        endCol = startCol + gridRect.Size.Wed;
-        endRow = startRow + gridRect.Size.Het;
+        endCol = startCol + child.Rect.Size.Wed;
+        endRow = startRow + child.Rect.Size.Het;
 
         long lite;
         long nite;
