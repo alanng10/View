@@ -188,7 +188,7 @@ public class View : Comp
     {
         get
         {
-            return (DrawBrush)this.BackField.GetAny();
+            return this.BackField.GetAny() as DrawBrush;
         }
         set
         {
