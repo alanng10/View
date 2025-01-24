@@ -256,23 +256,23 @@ public class Grid : View
 
     protected override bool ExecuteChildDraw(DrawDraw draw)
     {
-        this.ExecuteDrawGridChildList(draw);
+        this.ExecuteDrawChildList(draw);
         return true;
     }
 
-    protected virtual bool ExecuteDrawGridChildList(DrawDraw draw)
+    protected virtual bool ExecuteDrawChildList(DrawDraw draw)
     {
-        this.SetGridChildListArea(this.DrawRectA, draw);
+        this.SetChildListArea(this.DrawRectA, draw);
 
         this.ViewInfra.StackPushChild(draw, this.StackRect, this.StackPos, this.DrawRectA, this.DrawPosA);
 
-        this.ExecuteGridChildListDraw(draw);
+        this.ExecuteChildListDraw(draw);
 
         this.ViewInfra.StackPopChild(draw, this.StackRect, this.StackPos);
         return true;
     }
 
-    protected virtual bool SetGridChildListArea(DrawRect dest, DrawDraw draw)
+    protected virtual bool SetChildListArea(DrawRect dest, DrawDraw draw)
     {
         long col;
         long row;
@@ -286,7 +286,7 @@ public class Grid : View
         return true;
     }
 
-    protected virtual bool ExecuteGridChildListDraw(DrawDraw draw)
+    protected virtual bool ExecuteChildListDraw(DrawDraw draw)
     {
         Iter iter;
         iter = this.ChildListIter;
