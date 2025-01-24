@@ -241,7 +241,7 @@ public class Grid : View
 
     protected virtual bool ExecuteDrawGridChild(DrawDraw draw, GridChild child)
     {
-        this.SetGridChildArea(this.DrawRectA);
+        this.SetGridChildArea(this.DrawRectA, draw, child);
 
         this.ViewInfra.StackPushChild(draw, this.StackGridRect, this.StackGridPos, this.DrawRectA, this.DrawPosA);
 
@@ -251,7 +251,7 @@ public class Grid : View
         return true;
     }
 
-    protected virtual bool SetGridChildArea(DrawRect dest, DrawDraw draw)
+    protected virtual bool SetGridChildArea(DrawRect dest, DrawDraw draw, GridChild child)
     {
         long startCol;
         long startRow;
