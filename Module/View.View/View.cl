@@ -219,4 +219,24 @@ class View : Comp
         this.Event(this.ShownField);
         return true;
     }
+
+    field prusate Field ChildField { get { return data; } set { data : value; } }
+
+    field prusate View Child
+    {
+        get
+        {
+            return cast View(this.ChildField.Get());
+        }
+        set
+        {
+            this.ChildField.Set(value);
+        }
+    }
+
+    maide precate Bool ModChild(var Mod mod)
+    {
+        this.Event(this.ChildField);
+        return true;
+    }
 }
