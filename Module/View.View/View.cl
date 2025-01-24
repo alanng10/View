@@ -54,4 +54,20 @@ class View : Comp
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    maide precate Pos CreatePos()
+    {
+        var Pos a;
+        a : new Pos;
+        a.Init();
+        return a;
+    }
+
+    maide precate Size CreateSize()
+    {
+        var Size a;
+        a : new Size;
+        a.Init();
+        return a;
+    }
 }
