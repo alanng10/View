@@ -77,4 +77,19 @@ class View : Comp
         a : this.DrawInfra.WhiteSlash.Brush;
         return a;
     }
+
+    maide precate DrawRect CreateArea()
+    {
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
+    }
+
+    maide precate DrawRect CreateDrawRect()
+    {
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
+    }
+
+    maide precate DrawRect CreateDrawPos()
+    {
+        return this.DrawInfra.PosCreate(0, 0);
+    }
 }
