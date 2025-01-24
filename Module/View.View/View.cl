@@ -44,4 +44,14 @@ class View : Comp
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    maide precate Field CreateVisibleField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateChildField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
 }
