@@ -274,29 +274,27 @@ public class Grid : View
 
     protected virtual bool ExecuteDrawGridChildList(DrawDraw draw)
     {
-        long col;
-        col = this.Dest.Pos.Col;
-        col = col + draw.Pos.Col;
-        long row;
-        row = this.Dest.Pos.Row;
-        row = row + draw.Pos.Row;
-        long wed;
-        wed = this.Dest.Size.Wed;
-        long het;
-        het = this.Dest.Size.Het;
-
-        this.DrawRectA.Pos.Col = col;
-        this.DrawRectA.Pos.Row = row;
-        this.DrawRectA.Size.Wed = wed;
-        this.DrawRectA.Size.Het = het;
-
-        this.SetChildArea(this.DrawRectA);
+        this.SetGridChildListArea(this.DrawRectA, draw);
 
         this.ViewInfra.StackPushChild(draw, this.StackGridChildListRect, this.StackGridChildListPos, this.DrawRectA, this.DrawPosA);
 
         this.ExecuteGridChildListDraw(draw);
 
         this.ViewInfra.StackPopChild(draw, this.StackGridChildListRect, this.StackGridChildListPos);
+        return true;
+    }
+
+    protected virtual bool SetGridChildListArea(DrawRect dest, DrawDraw draw)
+    {
+        long col;
+        long row;
+        col = this.Dest.Pos.Col + draw.Pos.Col;
+        row = this.Dest.Pos.Row + draw.Pos.Row;
+
+        dest.Pos.Col = col;
+        dest.Pos.Row = row;
+
+        this.ViewInfra.AssignDrawSizeValue(dest.Size, this.Dest.Size);
         return true;
     }
 
