@@ -135,7 +135,7 @@ public class Grid : View
     {
         get
         {
-            return (List)this.RowField.Get();
+            return this.RowField.Get() as List;
         }
 
         set
