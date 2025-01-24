@@ -239,4 +239,29 @@ class View : Comp
         this.Event(this.ChildField);
         return true;
     }
+
+    maide precate Bool ValidDraw()
+    {
+        return this.Shown;
+    }
+
+    maide prusate Bool ExecuteDraw(var Draw draw)
+    {
+        this.ViewInfra.AssignDrawRectValue(this.Area, draw.Area);
+
+        inf (~this.ValidDraw())
+        {
+            return true;
+        }
+
+        this.ExecuteDrawThis(draw);
+
+        inf (~this.ValidDrawChild())
+        {
+            return true;
+        }
+
+        this.ExecuteDrawChild(draw);
+        return true;
+    }
 }
