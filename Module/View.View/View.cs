@@ -82,37 +82,27 @@ public class View : Comp
 
     protected virtual DrawRect CreateArea()
     {
-        DrawRect rect;
-        rect = this.DrawInfra.RectCreate(0, 0, 0, 0);
-        return rect;
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
     }
 
     protected virtual DrawRect CreateDrawRect()
     {
-        DrawRect rect;
-        rect = this.DrawInfra.RectCreate(0, 0, 0, 0);
-        return rect;
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
     }
 
     protected virtual DrawPos CreateDrawPos()
     {
-        DrawPos pos;
-        pos = this.DrawInfra.PosCreate(0, 0);
-        return pos;
+        return this.DrawInfra.PosCreate(0, 0);
     }
 
     protected virtual DrawRect CreateStackRect()
     {
-        DrawRect rect;
-        rect = this.DrawInfra.RectCreate(0, 0, 0, 0);
-        return rect;
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
     }
 
     protected virtual DrawPos CreateStackPos()
     {
-        DrawPos pos;
-        pos = this.DrawInfra.PosCreate(0, 0);
-        return pos;
+        return this.DrawInfra.PosCreate(0, 0);
     }
 
     public virtual DrawRect Area { get; set; }
