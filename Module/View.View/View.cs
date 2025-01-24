@@ -228,7 +228,7 @@ public class View : Comp
     {
         get
         {
-            return (View)this.ChildField.Get();
+            return this.ChildField.Get() as View;
         }
         set
         {
