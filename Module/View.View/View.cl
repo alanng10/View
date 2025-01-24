@@ -139,4 +139,44 @@ class View : Comp
         }
         return true;
     }
+
+    field prusate Field PosField { get { return data; } set { data : value; } }
+
+    field prusate Pos Pos
+    {
+        get
+        {
+            return cast Pos(this.PosField.Get());
+        }
+        set
+        {
+            this.PosField.Set(value);
+        }
+    }
+
+    maide precate Bool ModPos(var Mod mod)
+    {
+        this.Event(this.PosField);
+        return true;
+    }
+
+    field prusate Field SizeField { get { return data; } set { data : value; } }
+
+    field prusate Size Size
+    {
+        get
+        {
+            return cast Size(this.SizeField.Get());
+        }
+        set
+        {
+            this.SizeField.Set(value);
+        }
+    }
+
+    maide precate Bool ModSize(var Mod mod)
+    {
+        this.Event(this.SizeField);
+        return true;
+    }
 }
