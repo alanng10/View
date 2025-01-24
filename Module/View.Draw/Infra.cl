@@ -228,7 +228,7 @@ class Infra : Any
         return k;
     }
 
-    maide prusate Bool BoundArea(var Rect bound, var Rect area)
+    maide prusate Bool BoundArea(var Rect area, var Rect bound)
     {
         var Int lite;
         lite : area.Pos.Col;
