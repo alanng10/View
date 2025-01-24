@@ -337,16 +337,11 @@ public class Grid : View
 
     protected virtual bool ValidGridRect(Rect rect)
     {
-        Pos pos;
-        pos = rect.Pos;
-        Size size;
-        size = rect.Size;
-
         bool ba;
-        ba = this.InfraInfra.ValidRange(this.Col.Count, pos.Col, size.Wed);
+        ba = this.InfraInfra.ValidRange(this.Col.Count, rect.Pos.Col, rect.Size.Wed);
 
         bool bb;
-        bb = this.InfraInfra.ValidRange(this.Row.Count, pos.Row, size.Het);
+        bb = this.InfraInfra.ValidRange(this.Row.Count, rect.Pos.Row, rect.Size.Het);
 
         bool a;
         a = ba & bb;
