@@ -295,17 +295,7 @@ public class View : Comp
 
     protected virtual bool ExecuteDrawChild(DrawDraw draw)
     {
-        long col;
-        long row;
-        col = this.Pos.Col + draw.Pos.Col;
-        row = this.Pos.Row + draw.Pos.Row;
-
-        this.DrawRectA.Pos.Col = col;
-        this.DrawRectA.Pos.Row = row;
-
-        this.ViewInfra.AssignDrawSizeValue(this.DrawRectA.Size, this.Size);
-
-        this.SetChildArea(this.DrawRectA);
+        this.SetChildArea(draw, this.DrawRectA);
 
         this.ViewInfra.StackPushChild(draw, this.StackRect, this.StackPos, this.DrawRectA, this.DrawPosA);
 
@@ -315,8 +305,17 @@ public class View : Comp
         return true;
     }
 
-    protected virtual bool SetChildArea(DrawRect thisRect)
+    protected virtual bool SetChildArea(DrawDraw draw, DrawRect rect)
     {
+        long col;
+        long row;
+        col = this.Pos.Col + draw.Pos.Col;
+        row = this.Pos.Row + draw.Pos.Row;
+
+        rect.Pos.Col = col;
+        rect.Pos.Row = row;
+
+        this.ViewInfra.AssignDrawSizeValue(rect.Size, this.Size);
         return true;
     }
 
