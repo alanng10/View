@@ -31,4 +31,11 @@ class Infra : Any
         dest.Row : source.Row;
         return true;
     }
+
+    maide prusate Bool AssignDrawSizeValue(var DrawSize dest, var DrawSize source)
+    {
+        dest.Wed : source.Wed;
+        dest.Het : source.Het;
+        return true;
+    }
 }
