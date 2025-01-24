@@ -11,13 +11,13 @@ public class View : Comp
         this.PosField = this.CreatePosField();
         this.SizeField = this.CreateSizeField();
         this.BackField = this.CreateBackField();
-        this.VisibleField = this.CreateVisibleField();
+        this.ShownField = this.CreateShownField();
         this.ChildField = this.CreateChildField();
 
         this.Pos = this.CreatePos();
         this.Size = this.CreateSize();
         this.Back = this.CreateBack();
-        this.Visible = true;
+        this.Shown = true;
 
         this.Area = this.CreateArea();
 
@@ -48,7 +48,7 @@ public class View : Comp
         return this.ViewInfra.FieldCreate(this);
     }
 
-    protected virtual Field CreateVisibleField()
+    protected virtual Field CreateShownField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
@@ -131,9 +131,9 @@ public class View : Comp
         {
             this.ModBack(mod);
         }
-        if (this.VisibleField == field)
+        if (this.ShownField == field)
         {
-            this.ModVisible(mod);
+            this.ModShown(mod);
         }
         if (this.ChildField == field)
         {
@@ -202,23 +202,23 @@ public class View : Comp
         return true;
     }
 
-    public virtual Field VisibleField { get; set; }
+    public virtual Field ShownField { get; set; }
 
-    public virtual bool Visible
+    public virtual bool Shown
     {
         get
         {
-            return this.VisibleField.GetBool();
+            return this.ShownField.GetBool();
         }
         set
         {
-            this.VisibleField.SetBool(value);
+            this.ShownField.SetBool(value);
         }
     }
 
-    protected virtual bool ModVisible(Mod mod)
+    protected virtual bool ModShown(Mod mod)
     {
-        this.Event(this.VisibleField);
+        this.Event(this.ShownField);
         return true;
     }
 
@@ -244,7 +244,7 @@ public class View : Comp
 
     protected virtual bool CheckDraw()
     {
-        return this.Visible;
+        return this.Shown;
     }
 
     public virtual bool ExecuteDraw(DrawDraw draw)
