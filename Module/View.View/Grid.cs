@@ -135,7 +135,6 @@ public class Grid : View
     protected virtual Iter ColIter { get; set; }
     protected virtual Iter ChildListIter { get; set; }
     protected virtual Data ChildPosData { get; set; }
-
     protected virtual DrawRect StackGridChildListRect { get; set; }
     protected virtual DrawPos StackGridChildListPos { get; set; }
     protected virtual DrawRect StackGridChildRect { get; set; }
