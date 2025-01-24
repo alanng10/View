@@ -285,4 +285,30 @@ class View : Comp
         draw.Fill : null;
         return true;
     }
+
+    maide precate Bool ExecuteDrawChild(var Draw draw)
+    {
+        this.SetChildArea(this.DrawRectA, draw);
+
+        this.ViewInfra.StackPushChild(draw, this.StackRect, this.StackPos, this.DrawRectA, this.DrawPosA);
+
+        this.ExecuteChildDraw(draw);
+
+        this.ViewInfra.StackPopChild(draw, this.StackRect, this.StackPos);
+        return true;
+    }
+
+    maide precate Bool SetChildArea(var DrawRect dest, var Draw draw)
+    {
+        var Int col;
+        var Int row;
+        col : this.Pos.Col + draw.Pos.Col;
+        row : this.Pos.Row + draw.Pos.Row;
+
+        dest.Pos.Col : col;
+        dest.Pos.Row : row;
+
+        this.ViewInfra.AssignDrawSizeValue(dest.Size, this.Size);
+        return true;
+    }
 }
