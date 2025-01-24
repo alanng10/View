@@ -262,7 +262,7 @@ public class Grid : View
 
     protected virtual bool ExecuteDrawChildList(DrawDraw draw)
     {
-        this.SetChildArea(this.DrawRectA, draw);
+        this.SetChildListArea(this.DrawRectA, draw);
 
         this.ViewInfra.StackPushChild(draw, this.StackRect, this.StackPos, this.DrawRectA, this.DrawPosA);
 
@@ -272,7 +272,7 @@ public class Grid : View
         return true;
     }
 
-    protected override bool SetChildArea(DrawRect dest, DrawDraw draw)
+    protected virtual bool SetChildListArea(DrawRect dest, DrawDraw draw)
     {
         long col;
         long row;
