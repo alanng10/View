@@ -148,7 +148,7 @@ public class View : Comp
     {
         get
         {
-            return (Pos)this.PosField.Get();
+            return this.PosField.Get() as Pos;
         }
         set
         {
@@ -168,7 +168,7 @@ public class View : Comp
     {
         get
         {
-            return (Size)this.SizeField.Get();
+            return this.SizeField.Get() as Size;
         }
         set
         {
