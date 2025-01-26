@@ -267,8 +267,10 @@ class View : Comp
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
-        this.ViewInfra.AssignDrawPosValue(this.DrawRectA.Pos, this.Pos);
-        this.ViewInfra.AssignDrawSizeValue(this.DrawRectA.Size, this.Size);
+        this.DrawRectA.Pos.Row : this.Pos.Row;
+        this.DrawRectA.Pos.Col : this.Pos.Col;
+        this.DrawRectA.Size.Wed : this.Size.Wed;
+        this.DrawRectA.Size.Het : this.Size.Het;
 
         draw.Fill : this.Back;
 
