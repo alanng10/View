@@ -23,4 +23,19 @@ class Grid : View
         this.StackGridPos : this.CreateStackGridPos();
         return true;
     }
+
+    maide precate Field CreateColField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateRowField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateChildListField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
 }
