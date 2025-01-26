@@ -315,7 +315,8 @@ class View : Comp
         dest.Pos.Col : col;
         dest.Pos.Row : row;
 
-        this.ViewInfra.AssignDrawSizeValue(dest.Size, this.Size);
+        dest.Size.Wed : this.Size.Wed;
+        dest.Size.Het : this.Size.Het;
         return true;
     }
 
