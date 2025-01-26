@@ -69,4 +69,14 @@ class Grid : View
         a : this.ListInfra.ArrayCreate(0);
         return a;
     }
+
+    maide precate DrawRect CreateStackGridRect()
+    {
+        return this.DrawInfra.RectCreate(0, 0, 0, 0);
+    }
+
+    maide precate DrawPos CreateStackGridPos()
+    {
+        return this.DrawInfra.PosCreate(0, 0);
+    }
 }
