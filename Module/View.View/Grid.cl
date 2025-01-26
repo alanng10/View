@@ -88,4 +88,23 @@ class Grid : View
     field precate Array ChildPosList { get { return data; } set { data : value; } }
     field precate DrawRect StackGridRect { get { return data; } set { data : value; } }
     field precate DrawPos StackGridPos { get { return data; } set { data : value; } }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        base.Mod(varField, mod);
+
+        inf (this.ColField = varField)
+        {
+            this.ModCol(mod);
+        }
+        inf (this.RowField = varField)
+        {
+            this.ModRow(mod);
+        }
+        inf (this.ChildListField = varField)
+        {
+            this.ModChildList(mod);
+        }
+        return true;
+    }
 }
