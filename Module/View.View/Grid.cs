@@ -272,6 +272,7 @@ public class Grid : View
         long nite;
         lite = this.GridColPixel(startCol);
         nite = this.GridRowPixel(startRow);
+
         long col;
         long row;
         col = lite + draw.Pos.Col;
