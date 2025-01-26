@@ -45,8 +45,17 @@ class ImageRead : Any
         extern.ImageRead_ImageSet(this.Intern, 0);
         extern.ImageRead_StreamSet(this.Intern, 0);
 
+        var Bool b;
+        b : ~(k = 0);
+
+        inf (b)
+        {
+            this.Size.Wed : extern.Size_WedGet(this.InternSize);
+            this.Size.Het : extern.Size_HetGet(this.InternSize);
+        }
+
         var Bool a;
-        a : ~(k = 0);
+        a : b;
         return a;
     }
 }
