@@ -5,7 +5,7 @@ class Pos : Comp
         base.Init();
         this.ViewInfra : share Infra;
         this.ColField : this.CreateColField();
-        this.RowField : this.CreaetRowField();
+        this.RowField : this.CreateRowField();
 
         this.Col : 0;
         this.Row : 0;
