@@ -258,6 +258,7 @@ class Grid : View
         var Int nite;
         lite : this.GridColPixel(startCol);
         nite : this.GridRowPixel(startRow);
+
         var Int col;
         var Int row;
         col : lite + draw.Pos.Col;
