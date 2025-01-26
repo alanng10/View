@@ -128,7 +128,7 @@ public class Grid : View
 
     protected virtual bool ModCol(Mod change)
     {
-        if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
+        if ((this.Col == null) | (this.Row == null) | (this.ChildList == null))
         {
             return true;
         }
@@ -156,7 +156,7 @@ public class Grid : View
 
     protected virtual bool ModRow(Mod change)
     {
-        if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
+        if ((this.Col == null) | (this.Row == null) | (this.ChildList == null))
         {
             return true;
         }
@@ -184,7 +184,7 @@ public class Grid : View
 
     protected virtual bool ModChildList(Mod change)
     {
-        if ((this.Row == null) | (this.Col == null) | (this.ChildList == null))
+        if ((this.Col == null) | (this.Row == null) | (this.ChildList == null))
         {
             return true;
         }
