@@ -364,9 +364,9 @@ public class Grid : View
         {
             iter.Next();
 
-            Count count;
-            count = iter.Value as Count;
-            k = k + count.Value;
+            Count kh;
+            kh = iter.Value as Count;
+            k = k + kh.Value;
 
             long index;
             index = start + i;
