@@ -201,4 +201,27 @@ class Grid : View
         this.SetChildCountArray(this.Row, this.RowIter, this.Col.Count);
         return true;
     }
+
+    maide precate Int GridPosPixel(var Int pos, var Int start)
+    {
+        var Int t;
+        t : pos;
+
+        inf (t < 1)
+        {
+            return 0;
+        }
+
+        t : t - 1;
+
+        var Int index;
+        index : start + t;
+
+        var Int k;
+        k : cast Int(this.ChildPosList.Get(index));
+
+        var Int a;
+        a : k;
+        return a;
+    }
 }
