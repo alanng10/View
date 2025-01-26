@@ -231,6 +231,18 @@ class Grid : View
         return ~(this.View = null) & this.ValidGridRect(child.Rect);
     }
 
+    maide precate Bool ExecuteDrawGridChild(var Draw draw, var GridChild child)
+    {
+        this.SetGridChildArea(this.DrawRectA, draw, child);
+
+        this.ViewInfra.StackPushChild(draw, this.StackGridRect, this.StackGridPos, this.DrawRectA, this.DrawPosA);
+
+        this.ExecuteGridChildDraw(draw, child);
+
+        this.ViewInfra.StackPopChild(draw, this.StackGridRect, this.StackGridPos);
+        return true;
+    }
+
     maide precate Int GridColPixel(var Int col)
     {
         return this.GridPosPixel(col, 0);
