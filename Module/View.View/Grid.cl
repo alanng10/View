@@ -189,7 +189,7 @@ class Grid : View
         return true;
     }
 
-    maide precate bool UpdateLayout()
+    maide precate Bool UpdateLayout()
     {
         var Int count;
         count : this.Col.Count + this.Row.Count;
