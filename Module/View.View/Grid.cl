@@ -202,6 +202,30 @@ class Grid : View
         return true;
     }
 
+    maide precate Bool ValidDrawChild()
+    {
+        return true;
+    }
+
+    maide precate Bool ExecuteChildDraw(var Draw draw)
+    {
+        var Iter iter;
+        iter : this.ChildListIter;
+        this.ChildList.IterSet(iter);
+
+        while (iter.Next())
+        {
+            var GridChild child;
+            child : cast GridChild(iter.Value);
+
+            inf (this.ValidDrawGridChild(child))
+            {
+                this.ExecuteDrawGridChild(draw, child);
+            }
+        }
+        return true;
+    }
+
     maide precate Int GridColPixel(var Int col)
     {
         return this.GridPosPixel(col, 0);
