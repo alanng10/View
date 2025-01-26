@@ -89,7 +89,7 @@ class View : Comp
         return this.DrawInfra.RectCreate(0, 0, 0, 0);
     }
 
-    maide precate DrawRect CreateDrawPos()
+    maide precate DrawPos CreateDrawPos()
     {
         return this.DrawInfra.PosCreate(0, 0);
     }
@@ -99,7 +99,7 @@ class View : Comp
         return this.DrawInfra.RectCreate(0, 0, 0, 0);
     }
 
-    maide precate DrawRect CreateStackPos()
+    maide precate DrawPos CreateStackPos()
     {
         return this.DrawInfra.PosCreate(0, 0);
     }
