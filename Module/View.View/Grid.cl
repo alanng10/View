@@ -124,7 +124,7 @@ class Grid : View
 
     maide precate Bool ModCol(var Mod mod)
     {
-        inf (this.Row = null | this.Col = null | this.ChildList = null)
+        inf (this.Col = null | this.Row = null | this.ChildList = null)
         {
             return true;
         }
@@ -151,7 +151,7 @@ class Grid : View
 
     maide precate Bool ModRow(var Mod mod)
     {
-        inf (this.Row = null | this.Col = null | this.ChildList = null)
+        inf (this.Col = null | this.Row = null | this.ChildList = null)
         {
             return true;
         }
@@ -159,6 +159,31 @@ class Grid : View
         this.UpdateLayout();
 
         this.Event(this.RowField);
+        return true;
+    }
+
+    field prusate Field ChildListField { get { return data; } set { data : value; } }
+
+    field prusate List ChildList
+    {
+        get
+        {
+            return cast List(this.ChildListField.Get());
+        }
+        set
+        {
+            this.ChildListField.Set(value);
+        }
+    }
+
+    maide precate Bool ModChildList(var Mod mod)
+    {
+        inf (this.Col = null | this.Row = null | this.ChildList = null)
+        {
+            return true;
+        }
+
+        this.Event(this.ChildListField);
         return true;
     }
 }
