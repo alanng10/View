@@ -5,7 +5,7 @@ class Rect : Comp
         base.Init();
         this.ViewInfra : share Infra;
         this.PosField : this.CreatePosField();
-        this.SizeField : this.CreaetSizeField();
+        this.SizeField : this.CreateSizeField();
 
         this.Pos : this.CreatePos();
         this.Size : this.CreateSize();
