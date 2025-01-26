@@ -52,7 +52,6 @@ public class VideoOut : Any
     private InternIntern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
     private Infra MediaInfra { get; set; }
-
     internal virtual ulong Intern { get; set; }
     internal virtual ulong InternFrame { get; set; }
     private ulong InternFrameState { get; set; }
