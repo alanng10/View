@@ -79,4 +79,7 @@ class Grid : View
     {
         return this.DrawInfra.PosCreate(0, 0);
     }
+
+    field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
+    field precate ListInfra ListInfra { get { return data; } set { data : value; } }
 }
