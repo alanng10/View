@@ -226,6 +226,7 @@ public class Grid : View
         Iter iter;
         iter = this.ChildListIter;
         this.ChildList.IterSet(iter);
+
         while (iter.Next())
         {
             GridChild child;
