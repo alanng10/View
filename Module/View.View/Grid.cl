@@ -281,6 +281,25 @@ class Grid : View
         return true;
     }
 
+    maide precate Bool ExecuteGridChildDraw(var Draw draw, var GridChild child)
+    {
+        child.View.ExecuteDraw(draw);
+        return true;
+    }
+
+    maide precate Bool ValidGridRect(var Rect rect)
+    {
+        var Bool ba;
+        ba : this.InfraInfra.ValidRange(this.Col.Count, rect.Pos.Col, rect.Size.Wed);
+
+        var Bool bb;
+        bb : this.InfraInfra.ValidRange(this.Row.Count, rect.Pos.Row, rect.Size.Het);
+    
+        var Bool a;
+        a : ba & bb;
+        return a;
+    }
+
     maide precate Int GridColPixel(var Int col)
     {
         return this.GridPosPixel(col, 0);
