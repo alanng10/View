@@ -107,4 +107,58 @@ class Grid : View
         }
         return true;
     }
+
+    field prusate Field ColField { get { return data; } set { data : value; } }
+
+    field prusate List Col
+    {
+        get
+        {
+            return cast List(this.ColField.Get());
+        }
+        set
+        {
+            this.ColField.Set(value);
+        }
+    }
+
+    maide precate Bool ModCol(var Mod mod)
+    {
+        inf (this.Row = null | this.Col = null | this.ChildList = null)
+        {
+            return true;
+        }
+
+        this.UpdateLayout();
+
+        this.Event(this.ColField);
+        return true;
+    }
+
+    field prusate Field RowField { get { return data; } set { data : value; } }
+
+    field prusate List Row
+    {
+        get
+        {
+            return cast List(this.RowField.Get());
+        }
+        set
+        {
+            this.RowField.Set(value);
+        }
+    }
+
+    maide precate Bool ModRow(var Mod mod)
+    {
+        inf (this.Row = null | this.Col = null | this.ChildList = null)
+        {
+            return true;
+        }
+
+        this.UpdateLayout();
+
+        this.Event(this.RowField);
+        return true;
+    }
 }
