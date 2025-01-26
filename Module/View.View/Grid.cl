@@ -202,6 +202,16 @@ class Grid : View
         return true;
     }
 
+    maide precate Int GridColPixel(var Int col)
+    {
+        return this.GridPosPixel(col, 0);
+    }
+
+    maide precate Int GridRowPixel(var Int row)
+    {
+        return this.GridPosPixel(row, this.Col.Count);
+    }
+
     maide precate Int GridPosPixel(var Int pos, var Int start)
     {
         var Int t;
