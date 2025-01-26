@@ -224,4 +224,35 @@ class Grid : View
         a : k;
         return a;
     }
+
+    maide precate Bool SetChildCountArray(var List list, var Iter iter, var Int start)
+    {
+        list.IterSet(iter);
+
+        var Int k;
+        k : 0;
+
+        var Int count;
+        count : list.Count;
+
+        var Int i;
+        i : 0;
+        while (i < count)
+        {
+            iter.Next();
+
+            var Count ka;
+            ka : cast Count(iter.Value);
+
+            k : k + ka.Value;
+
+            var Int index;
+            index : start + i;
+
+            this.ChildPosList.Set(index, k);
+
+            i : i + 1;
+        }
+        return true;
+    }
 }
