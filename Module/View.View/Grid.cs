@@ -6,6 +6,7 @@ public class Grid : View
     {
         base.Init();
         this.InfraInfra = InfraInfra.This;
+
         this.ColField = this.CreateColField();
         this.RowField = this.CreateRowField();
         this.ChildListField = this.CreateChildListField();
