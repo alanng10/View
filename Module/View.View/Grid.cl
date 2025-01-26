@@ -226,6 +226,11 @@ class Grid : View
         return true;
     }
 
+    maide precate Bool ValidDrawGridChild(var GridChild child)
+    {
+        return ~(this.View = null) & this.ValidGridRect(child.Rect);
+    }
+
     maide precate Int GridColPixel(var Int col)
     {
         return this.GridPosPixel(col, 0);
