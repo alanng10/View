@@ -243,6 +243,18 @@ class Grid : View
         return true;
     }
 
+    maide precate Bool SetGridChildArea(var DrawRect dest, var Draw draw, var GridChild child)
+    {
+        var Int startCol;
+        var Int startRow;
+        startCol : child.Rect.Pos.Col;
+        startRow : child.Rect.Pos.Row;
+        var Int endCol;
+        var Int endRow;
+        endCol : startCol + child.Rect.Size.Wed;
+        endRow : startRow + child.Rect.Size.Het;
+    }
+
     maide precate Int GridColPixel(var Int col)
     {
         return this.GridPosPixel(col, 0);
