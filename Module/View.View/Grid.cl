@@ -253,6 +253,31 @@ class Grid : View
         var Int endRow;
         endCol : startCol + child.Rect.Size.Wed;
         endRow : startRow + child.Rect.Size.Het;
+
+        var Int lite;
+        var Int nite;
+        lite : this.GridColPixel(startCol);
+        nite : this.GridRowPixel(startRow);
+        var Int col;
+        var Int row;
+        col : lite + draw.Pos.Col;
+        row : nite + draw.Pos.Row;
+
+        var Int rite;
+        var Int site;
+        rite : this.GridColPixel(endCol);
+        site : this.GridRowPixel(endRow);
+
+        var Int wed;
+        var Int het;
+        wed : rite - lite;
+        het : site - nite;
+
+        dest.Pos.Col : col;
+        dest.Pos.Row : row;
+        dest.Size.Wed : wed;
+        dest.Size.Het : het;
+        return true;
     }
 
     maide precate Int GridColPixel(var Int col)
