@@ -38,4 +38,28 @@ class Grid : View
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    maide precate List CreateCol()
+    {
+        var List a;
+        a : new List;
+        a.Init();
+        return a;
+    }
+
+    maide precate List CreateRow()
+    {
+        var List a;
+        a : new List;
+        a.Init();
+        return a;
+    }
+
+    maide precate List CreateChildList()
+    {
+        var List a;
+        a : new List;
+        a.Init();
+        return a;
+    }
 }
