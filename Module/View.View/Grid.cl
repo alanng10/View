@@ -62,4 +62,11 @@ class Grid : View
         a.Init();
         return a;
     }
+
+    maide precate Array CreateChildPosList()
+    {
+        var Array a;
+        a : this.ListInfra.ArrayCreate(0);
+        return a;
+    }
 }
