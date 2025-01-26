@@ -82,4 +82,10 @@ class Grid : View
 
     field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
+    field precate Iter ColIter { get { return data; } set { data : value; } }
+    field precate Iter RowIter { get { return data; } set { data : value; } }
+    field precate Iter ChildListIter { get { return data; } set { data : value; } }
+    field precate Array ChildPosList { get { return data; } set { data : value; } }
+    field precate DrawRect StackGridRect { get { return data; } set { data : value; } }
+    field precate DrawPos StackGridPos { get { return data; } set { data : value; } }
 }
