@@ -79,6 +79,12 @@ public class VideoOut : Any
     public virtual bool Image(Image image)
     {
         Extern.VideoFrame_Image(this.InternFrame, image.Ident);
+
+        ulong k;
+        k = Extern.Image_SizeGet(image.Ident);
+
+        image.Size.Wed = (long)Extern.Size_WedGet(k);
+        image.Size.Het = (long)Extern.Size_HetGet(k);
         return true;
     }
 }
