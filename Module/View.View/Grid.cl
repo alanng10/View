@@ -230,7 +230,7 @@ class Grid : View
 
     maide precate Bool ValidDrawGridChild(var GridChild child)
     {
-        return ~(this.View = null) & this.ValidGridRect(child.Rect);
+        return ~(child.View = null) & this.ValidGridRect(child.Rect);
     }
 
     maide precate Bool ExecuteDrawGridChild(var Draw draw, var GridChild child)
