@@ -2,6 +2,12 @@ namespace View.Media;
 
 public class VideoOut : Any
 {
+    private bool PrivateFrameEvent()
+    {
+        this.FrameEvent();
+        return true;
+    }
+
     public override bool Init()
     {
         base.Init();
@@ -43,8 +49,6 @@ public class VideoOut : Any
         return true;
     }
 
-    public virtual State FrameState { get; set; }
-
     private InternIntern InternIntern { get; set; }
     private InternInfra InternInfra { get; set; }
     private Infra MediaInfra { get; set; }
@@ -64,17 +68,13 @@ public class VideoOut : Any
 
         VideoOut a;
         a = (VideoOut)ao;
-        a.FrameStateExecute();
+        a.PrivateFrameEvent();
         return 1;
     }
 
-    private bool FrameStateExecute()
+    protected virtual bool FrameEvent()
     {
-        if (!(this.FrameState == null))
-        {
-            this.FrameState.Execute();
-        }
-        return true;
+        return false;
     }
 
     public virtual bool Image(VideoVideo video)
