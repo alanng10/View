@@ -4,6 +4,8 @@ class Grid : View
     {
         base.Init();
         this.InfraInfra : share InfraInfra;
+        this.ListInfra : share ListInfra;
+
         this.ColField : this.CreateColField();
         this.RowField : this.CreateRowField();
         this.ChildListField : this.CreateChildListField();
