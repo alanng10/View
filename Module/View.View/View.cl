@@ -9,13 +9,13 @@ class View : Comp
         this.PosField : this.CreatePosField();
         this.SizeField : this.CreateSizeField();
         this.BackField : this.CreateBackField();
-        this.VisibleField : this.CreateVisibleField();
+        this.ShownField : this.CreateShownField();
         this.ChildField : this.CreateChildField();
 
         this.Pos : this.CreatePos();
         this.Size : this.CreateSize();
         this.Back : this.CreateBack();
-        this.Visible : true;
+        this.Shown : true;
 
         this.Area : this.CreateArea();
 
@@ -46,7 +46,7 @@ class View : Comp
         return this.ViewInfra.FieldCreate(this);
     }
 
-    maide precate Field CreateVisibleField()
+    maide precate Field CreateShownField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
