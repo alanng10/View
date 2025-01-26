@@ -132,7 +132,9 @@ public class Grid : View
         {
             return true;
         }
+
         this.UpdateLayout();
+
         this.Event(this.ColField);
         return true;
     }
@@ -158,7 +160,9 @@ public class Grid : View
         {
             return true;
         }
+
         this.UpdateLayout();
+
         this.Event(this.RowField);
         return true;
     }
@@ -184,6 +188,7 @@ public class Grid : View
         {
             return true;
         }
+
         this.Event(this.ChildListField);
         return true;
     }
