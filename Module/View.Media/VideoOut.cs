@@ -23,7 +23,7 @@ public class VideoOut : Any
 
         this.Intern = Extern.VideoOut_New();
         Extern.VideoOut_Init(this.Intern);
-        Extern.VideoOut_FrameStateSet(this.Intern, this.InternFrameState);
+        Extern.VideoOut_FrameEventStateSet(this.Intern, this.InternFrameState);
 
         Extern.VideoOut_FrameSet(this.Intern, this.InternFrame);
         return true;
