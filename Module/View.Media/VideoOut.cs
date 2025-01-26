@@ -76,9 +76,9 @@ public class VideoOut : Any
         return false;
     }
 
-    public virtual bool Image(VideoVideo video)
+    public virtual bool Image(Image image)
     {
-        Extern.VideoFrame_Image(this.InternFrame, video.Ident);
+        Extern.VideoFrame_Image(this.InternFrame, image.Ident);
         return true;
     }
 }
