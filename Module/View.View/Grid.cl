@@ -186,4 +186,19 @@ class Grid : View
         this.Event(this.ChildListField);
         return true;
     }
+
+    maide precate bool UpdateLayout()
+    {
+        var Int count;
+        count : this.Col.Count + this.Row.Count;
+
+        inf (this.ChildPosList.Count < count)
+        {
+            this.ChildPosList : this.ListInfra.ArrayCreate(count);
+        }
+
+        this.SetChildCountArray(this.Col, this.ColIter, 0);
+        this.SetChildCountArray(this.Row, this.RowIter, this.Col.Count);
+        return true;
+    }
 }
