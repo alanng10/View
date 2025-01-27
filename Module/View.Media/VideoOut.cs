@@ -22,14 +22,14 @@ public class VideoOut : Any
         ua = this.MediaInfra.VideoOutFrameMaideAddress;
         ulong arg;
         arg = this.InternHandle.ULong();
-        this.InternFrameEventState = this.InternInfra.StateCreate(ua, arg);
+        this.InternFrameState = this.InternInfra.StateCreate(ua, arg);
 
         this.InternFrame = Extern.VideoFrame_New();
         Extern.VideoFrame_Init(this.InternFrame);
 
         this.Intern = Extern.VideoOut_New();
         Extern.VideoOut_Init(this.Intern);
-        Extern.VideoOut_FrameEventStateSet(this.Intern, this.InternFrameEventState);
+        Extern.VideoOut_FrameEventStateSet(this.Intern, this.InternFrameState);
 
         Extern.VideoOut_FrameSet(this.Intern, this.InternFrame);
         return true;
@@ -43,7 +43,7 @@ public class VideoOut : Any
         Extern.VideoFrame_Final(this.InternFrame);
         Extern.VideoFrame_Delete(this.InternFrame);
 
-        this.InternInfra.StateDelete(this.InternFrameEventState);
+        this.InternInfra.StateDelete(this.InternFrameState);
 
         this.InternHandle.Final();
         return true;
@@ -54,7 +54,7 @@ public class VideoOut : Any
     private Infra MediaInfra { get; set; }
     internal virtual ulong Intern { get; set; }
     internal virtual ulong InternFrame { get; set; }
-    private ulong InternFrameEventState { get; set; }
+    private ulong InternFrameState { get; set; }
     private Handle InternHandle { get; set; }
 
     internal static ulong InternFrameEvent(ulong videoOut, ulong frame, ulong arg)
