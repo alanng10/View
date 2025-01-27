@@ -45,5 +45,13 @@ class VideoOut : Any
         extern.VideoFrame_Delete(this.InternFrame);
 
         this.InternInfra.StateDelete(this.InternFrameState);
+        return true;
     }
+
+    field private Intern InternIntern { get { return data; } set { data : value; } }
+    field private Extern Extern { get { return data; } set { data : value; } }
+    field private InternInfra InternInfra { get { return data; } set { data : value; } }
+    field private Int Intern { get { return data; } set { data : value; } }
+    field private Int InternFrame { get { return data; } set { data : value; } }
+    field private Int InternFrameState { get { return data; } set { data : value; } }
 }
