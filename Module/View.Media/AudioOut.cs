@@ -5,6 +5,8 @@ public class AudioOut : Any
     public override bool Init()
     {
         base.Init();
+        this.InternInfra = InternInfra.This;
+
         this.Intern = Extern.AudioOut_New();
         Extern.AudioOut_Init(this.Intern);
         return true;
@@ -22,7 +24,7 @@ public class AudioOut : Any
         get
         {
             ulong u;
-            u = Extern.AudioOut_MutedGet(this.Intern);
+            u = Extern.AudioOut_MuteGet(this.Intern);
             bool a;
             a = !(u == 0);
             return a;
@@ -30,8 +32,8 @@ public class AudioOut : Any
         set
         {
             ulong u;
-            u = (ulong)(value ? 1 : 0);
-            Extern.AudioOut_MutedSet(this.Intern, u);
+            u = this.InternInfra.Bool(value);
+            Extern.AudioOut_MuteSet(this.Intern, u);
         }
     }
 
@@ -53,5 +55,6 @@ public class AudioOut : Any
         }
     }
 
+    private InternInfra InternInfra { get; set; }
     internal virtual ulong Intern { get; set; }
 }
