@@ -51,7 +51,7 @@ class VideoOut : Any
     field private Intern InternIntern { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
-    field private Int Intern { get { return data; } set { data : value; } }
+    field pronate Int Intern { get { return data; } set { data : value; } }
     field private Int InternFrame { get { return data; } set { data : value; } }
     field private Int InternFrameState { get { return data; } set { data : value; } }
 
