@@ -23,17 +23,17 @@ public class AudioOut : Any
     {
         get
         {
-            ulong u;
-            u = Extern.AudioOut_MuteGet(this.Intern);
+            ulong k;
+            k = Extern.AudioOut_MuteGet(this.Intern);
             bool a;
-            a = !(u == 0);
+            a = !(k == 0);
             return a;
         }
         set
         {
-            ulong u;
-            u = this.InternInfra.Bool(value);
-            Extern.AudioOut_MuteSet(this.Intern, u);
+            ulong k;
+            k = this.InternInfra.Bool(value);
+            Extern.AudioOut_MuteSet(this.Intern, k);
         }
     }
 
