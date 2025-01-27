@@ -17,8 +17,6 @@ public class AudioOut : Any
         return true;
     }
 
-    internal virtual ulong Intern { get; set; }
-
     public virtual bool Mute
     {
         get
@@ -54,4 +52,6 @@ public class AudioOut : Any
             Extern.AudioOut_VolumeSet(this.Intern, u);
         }
     }
+
+    internal virtual ulong Intern { get; set; }
 }
