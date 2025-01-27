@@ -41,17 +41,17 @@ public class AudioOut : Any
     {
         get
         {
-            ulong u;
-            u = Extern.AudioOut_VolumeGet(this.Intern);
+            ulong k;
+            k = Extern.AudioOut_VolumeGet(this.Intern);
             long a;
-            a = (long)u;
+            a = (long)k;
             return a;
         }
         set
         {
-            ulong u;
-            u = (ulong)value;
-            Extern.AudioOut_VolumeSet(this.Intern, u);
+            ulong k;
+            k = (ulong)value;
+            Extern.AudioOut_VolumeSet(this.Intern, k);
         }
     }
 
