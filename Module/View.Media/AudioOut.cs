@@ -19,7 +19,7 @@ public class AudioOut : Any
 
     internal virtual ulong Intern { get; set; }
 
-    public virtual bool Muted
+    public virtual bool Mute
     {
         get
         {
