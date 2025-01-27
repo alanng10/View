@@ -54,4 +54,26 @@ class VideoOut : Any
     field private Int Intern { get { return data; } set { data : value; } }
     field private Int InternFrame { get { return data; } set { data : value; } }
     field private Int InternFrameState { get { return data; } set { data : value; } }
+
+    maide precate Bool FrameEvent()
+    {
+    }
+
+    maide prusate Bool Image(var Image image)
+    {
+        var Extern extern;
+        extern : this.Extern;
+
+        var Int k;
+        k : cast Int(image.Ident);
+
+        extern.VideoFrame_Image(this.InternFrame, k);
+
+        var Int ka;
+        ka : extern.Image_SizeGet(k);
+
+        image.Size.Wed : extern.Size_WedGet(ka);
+        image.Size.Het : extern.Size_HetGet(ka);
+        return true;
+    }
 }
