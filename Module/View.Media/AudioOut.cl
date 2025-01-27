@@ -43,6 +43,20 @@ class AudioOut : Any
         }
     }
 
+    field prusate Int Volume
+    {
+        get
+        {
+            var Int a;
+            a : this.Extern.AudioOut_VolumeGet(this.Intern);
+            return a;
+        }
+        set
+        {
+            this.Extern.AudioOut_VolumeSet(this.Intern, value);
+        }
+    }
+
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field pronate Int Intern { get { return data; } set { data : value; } }
