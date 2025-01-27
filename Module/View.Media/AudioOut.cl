@@ -4,6 +4,7 @@ class AudioOut : Any
     {
         base.Init();
         this.Extern : share Extern;
+        this.InternInfra : share InternInfra;
 
         var Extern extern;
         extern : this.Extern;
@@ -23,6 +24,26 @@ class AudioOut : Any
         return true;
     }
 
+    field prusate Bool Mute
+    {
+        get
+        {
+            var Int k;
+            k : this.Extern.AudioOut_MuteGet(this.Intern);
+
+            var Bool a;
+            a : ~(k = 0);
+            return a;
+        }
+        set
+        {
+            var Int k;
+            k : this.InternInfra.Bool(value);
+            this.Extern.AudioOut_MuteSet(this.Intern, k);
+        }
+    }
+
     field private Extern Extern { get { return data; } set { data : value; } }
+    field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field pronate Int Intern { get { return data; } set { data : value; } }
 }
