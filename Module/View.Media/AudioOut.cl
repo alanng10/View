@@ -22,4 +22,7 @@ class AudioOut : Any
         extern.AudioOUt_Delete(this.Intern);
         return true;
     }
+
+    field private Extern Extern { get { return data; } set { data : value; } }
+    field pronate Int Intern { get { return data; } set { data : value; } }
 }
