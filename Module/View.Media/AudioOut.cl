@@ -20,7 +20,7 @@ class AudioOut : Any
         extern : this.Extern;
 
         extern.AudioOut_Final(this.Intern);
-        extern.AudioOUt_Delete(this.Intern);
+        extern.AudioOut_Delete(this.Intern);
         return true;
     }
 
