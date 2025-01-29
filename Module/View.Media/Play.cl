@@ -28,4 +28,18 @@ class Play : Any
     field prusate AudioOut AudioOut { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
+
+    maide prusate Bool SourceSet()
+    {
+        var Int k;
+        k : cast Int(this.Source.Ident);
+
+        var Extern extern;
+        extern : this.Extern;
+
+        extern.Play_SourceSet(this.Intern, k);
+        extern.Play_SourceThisSet(this.Intern);
+        extern.Play_SourceSet(this.Intern, 0);
+        return true;
+    }
 }
