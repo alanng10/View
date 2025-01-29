@@ -60,4 +60,28 @@ class Play : Any
         this.Extern.Play_Stop(this.Intern);
         return true;
     }
+
+    maide prusate Bool VideoOutSet()
+    {
+        var Int k;
+        k : 0;
+        inf (~(this.VideoOut = null))
+        {
+            k : this.VideoOut.Intern;
+        }
+        this.Extern.Play_VideoOutSet(this.Intern, k);
+        return true;
+    }
+
+    maide prusate Bool AudioOutSet()
+    {
+        var Int k;
+        k : 0;
+        inf (~(this.AudioOut = null))
+        {
+            k : this.AudioOut.Intern;
+        }
+        this.Extern.Play_AudioOutSet(this.Intern, k);
+        return true;
+    }
 }
