@@ -84,4 +84,17 @@ class Play : Any
         this.Extern.Play_AudioOutSet(this.Intern, k);
         return true;
     }
+
+    maide prusate Int Time
+    {
+        get
+        {
+            var Int a;
+            a : this.Extern.Play_TimeGet(this.Intern);
+            return a;
+        }
+        set
+        {
+        }
+    }
 }
