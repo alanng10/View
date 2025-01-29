@@ -59,7 +59,7 @@ class VideoOut : Any
     {
     }
 
-    maide prusate Bool Image(var Image image)
+    maide prusate Bool Image(var DrawImage image)
     {
         var Extern extern;
         extern : this.Extern;
