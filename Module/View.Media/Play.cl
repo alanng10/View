@@ -42,4 +42,22 @@ class Play : Any
         extern.Play_SourceSet(this.Intern, 0);
         return true;
     }
+
+    maide prusate Bool Execute()
+    {
+        this.Extern.Play_Execute(this.Intern);
+        return true;
+    }
+
+    maide prusate Bool Pause()
+    {
+        this.Extern.Play_Pause(this.Intern);
+        return true;
+    }
+
+    maide prusate Bool Stop()
+    {
+        this.Extern.Play_Stop(this.Intern);
+        return true;
+    }
 }
