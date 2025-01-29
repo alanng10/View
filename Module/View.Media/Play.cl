@@ -97,4 +97,18 @@ class Play : Any
         {
         }
     }
+
+    maide prusate Int Pos
+    {
+        get
+        {
+            var Int a;
+            a : this.Extern.Play_PosGet(this.Intern);
+            return a;
+        }
+        set
+        {
+            this.Extern.Play_PosSet(this.Intern, value);
+        }
+    }
 }
