@@ -22,4 +22,10 @@ class Play : Any
         extern.Play_Delete(this.Intern);
         return true;
     }
+
+    field prusate Stream Source { get { return data; } set { data : value; } }
+    field prusate VideoOut VideoOut { get { return data; } set { data : value; } }
+    field prusate AudioOut AudioOut { get { return data; } set { data : value; } }
+    field private Extern Extern { get { return data; } set { data : value; } }
+    field private Int Intern { get { return data; } set { data : value; } }
 }
