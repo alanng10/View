@@ -50,8 +50,11 @@ class ImageRead : Any
 
         inf (b)
         {
-            this.Size.Wed : extern.Size_WedGet(this.InternSize);
-            this.Size.Het : extern.Size_HetGet(this.InternSize);
+            var Int ka;
+            ka : extern.Image_SizeGet(this.Image.Intern);
+
+            this.Image.Size.Wed : extern.Size_WedGet(ka);
+            this.Image.Size.Het : extern.Size_HetGet(ka);
         }
 
         var Bool a;
