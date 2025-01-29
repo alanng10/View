@@ -51,27 +51,27 @@ public class Play : Any
         return true;
     }
 
-    public virtual bool AudioOutSet()
+    public virtual bool VideoOutSet()
     {
-        ulong u;
-        u = 0;
-        if (!(this.AudioOut == null))
+        ulong k;
+        k = 0;
+        if (!(this.VideoOut == null))
         {
-            u = this.AudioOut.Intern;
+            k = this.VideoOut.Intern;
         }
-        Extern.Play_AudioOutSet(this.Intern, u);
+        Extern.Play_VideoOutSet(this.Intern, k);
         return true;
     }
 
-    public virtual bool VideoOutSet()
+    public virtual bool AudioOutSet()
     {
-        ulong u;
-        u = 0;
-        if (!(this.VideoOut == null))
+        ulong k;
+        k = 0;
+        if (!(this.AudioOut == null))
         {
-            u = this.VideoOut.Intern;
+            k = this.AudioOut.Intern;
         }
-        Extern.Play_VideoOutSet(this.Intern, u);
+        Extern.Play_AudioOutSet(this.Intern, k);
         return true;
     }
 
