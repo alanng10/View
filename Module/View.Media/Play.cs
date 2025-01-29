@@ -5,8 +5,6 @@ public class Play : Any
     public override bool Init()
     {
         base.Init();
-        this.InternIntern = InternIntern.This;
-        this.InternInfra = InternInfra.This;
         this.Intern = Extern.Play_New();
         Extern.Play_Init(this.Intern);
         return true;
@@ -20,9 +18,8 @@ public class Play : Any
     }
 
     public virtual Stream Source { get; set; }
-
-    private InternIntern InternIntern { get; set; }
-    private InternInfra InternInfra { get; set; }
+    public virtual VideoOut VideoOut { get; set; }
+    public virtual AudioOut AudioOut { get; set; }
     private ulong Intern { get; set; }
 
     public virtual bool SourceSet()
@@ -54,8 +51,6 @@ public class Play : Any
         return true;
     }
 
-    public virtual AudioOut AudioOut { get; set; }
-
     public virtual bool AudioOutSet()
     {
         ulong u;
@@ -67,8 +62,6 @@ public class Play : Any
         Extern.Play_AudioOutSet(this.Intern, u);
         return true;
     }
-
-    public virtual VideoOut VideoOut { get; set; }
 
     public virtual bool VideoOutSet()
     {
@@ -86,10 +79,10 @@ public class Play : Any
     {
         get
         {
-            ulong u;
-            u = Extern.Play_TimeGet(this.Intern);
+            ulong k;
+            k = Extern.Play_TimeGet(this.Intern);
             long a;
-            a = (long)u;
+            a = (long)k;
             return a;
         }
         set
@@ -101,18 +94,18 @@ public class Play : Any
     {
         get
         {
-            ulong u;
-            u = Extern.Play_PosGet(this.Intern);
+            ulong k;
+            k = Extern.Play_PosGet(this.Intern);
             long a;
-            a = (long)u;
+            a = (long)k;
             return a;
         }
         set
         {
-            ulong u;
-            u = (ulong)value;
+            ulong k;
+            k = (ulong)value;
 
-            Extern.Play_PosSet(this.Intern, u);
+            Extern.Play_PosSet(this.Intern, k);
         }
     }
 }
