@@ -33,16 +33,10 @@ class Demo : ClassBase
     public virtual DrawSlashJoinList SlashJoinList { get; set; }
     public virtual Console Console { get; set; }
     protected virtual MathComp MathComp { get; set; }
-    private StringAdd StringAdd { get; set; }
-    private TextFormat TextFormat { get; set; }
-    private TextFormatArg TextFormatArg { get; set; }
     private Stream MediaStream { get; set; }
 
     public bool Execute()
     {
-        this.StringAdd = new StringAdd();
-        this.StringAdd.Init();
-
         ThreadThis varThis;
         varThis = new ThreadThis();
         varThis.Init();
@@ -595,39 +589,6 @@ class Demo : ClassBase
     {
         a.Final();
         return true;
-    }
-
-    public virtual Demo Add(String a)
-    {
-        this.TextInfra.AddString(this.StringAdd, a);
-        return this;
-    }
-
-    public virtual Demo AddLine()
-    {
-        return this.Add(this.TextInfra.NewLine);
-    }
-
-    public virtual Demo AddS(string o)
-    {
-        this.Add(this.S(o));
-        return this;
-    }
-
-    public virtual Demo AddClear()
-    {
-        this.StringAdd.Clear();
-        return this;
-    }
-
-    public virtual String AddResult()
-    {
-        return this.StringAdd.Result();
-    }
-
-    public virtual String S(string o)
-    {
-        return this.TextInfra.S(o);
     }
 
     public virtual long MathInt(long n)
