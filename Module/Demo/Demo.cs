@@ -313,27 +313,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private DrawFace FaceCreate()
-    {
-        DrawFace a;
-        a = new DrawFace();
-        a.Name = this.S("Source Code Pro");
-        a.Size = 20;
-        a.Weight = 400;
-        a.Italic = true;
-        a.Underline = true;
-        a.Overline = true;
-        a.Strikeout = true;
-        a.Init();
-        return a;
-    }
-
-    private bool FaceFinal(DrawFace a)
-    {
-        a.Final();
-        return true;
-    }
-
     private ViewC ViewCCreate()
     {
 

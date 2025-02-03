@@ -75,6 +75,27 @@ class ViewC : ViewView
         return true;
     }
 
+    private DrawFont FontCreate()
+    {
+        DrawFont a;
+        a = new DrawFont();
+        a.Name = this.Demo.DrawInfra.FontMono;
+        a.Size = 20;
+        a.Weight = 400;
+        a.Italic = true;
+        a.Underline = true;
+        a.Overline = true;
+        a.Strikeout = true;
+        a.Init();
+        return a;
+    }
+
+    private bool FontFinal(DrawFont a)
+    {
+        a.Final();
+        return true;
+    }
+
     public virtual Demo Demo { get; set; }
     public DrawRect EllipseRect { get; set; }
     public DrawBrush EllipseBrush { get; set; }
