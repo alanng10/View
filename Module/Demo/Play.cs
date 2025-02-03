@@ -42,4 +42,14 @@ class Play : MediaPlay
         this.AudioOutSet();
         return true;
     }
+
+    public virtual bool Final()
+    {
+        this.AudioOut.Final();
+
+        this.VideoOut.Final();
+
+        base.Final();
+        return true;
+    }
 }

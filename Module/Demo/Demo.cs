@@ -287,22 +287,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private bool PlayFinal(Play a)
-    {
-        VideoOut videoOut;
-        videoOut = a.VideoOut;
-
-        AudioOut audioOut;
-        audioOut = a.AudioOut;
-
-        a.Final();
-
-        audioOut.Final();
-
-        videoOut.Final();
-        return true;
-    }
-
     private DrawImage PlayImageCreate()
     {
         DrawImage a;
