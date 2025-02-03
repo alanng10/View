@@ -184,7 +184,9 @@ class Demo : ClassBase
 
         this.PlayImage = this.PlayImageCreate();
 
-        this.Play = this.PlayCreate();
+        this.Play = new Play();
+        this.Play.Demo = this;
+        this.Play.Init();
 
         this.ViewA = viewA;
         this.View = view;
@@ -198,7 +200,7 @@ class Demo : ClassBase
         
         thread.ExecuteMain();
 
-        this.PlayFinal(this.Play);
+        this.Play.Final();
 
         this.PlayImageFinal(this.PlayImage);
 
