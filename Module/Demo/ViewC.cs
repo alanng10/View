@@ -79,13 +79,13 @@ class ViewC : ViewView
     {
         DrawFont a;
         a = new DrawFont();
-        a.Name = this.Demo.DrawInfra.FontMono;
+        a.Name = this.Demo.DrawInfra.FontMonoName;
         a.Size = 20;
-        a.Weight = 400;
-        a.Italic = true;
-        a.Underline = true;
-        a.Overline = true;
-        a.Strikeout = true;
+        a.Strong = 400;
+        a.Tenden = true;
+        a.Staline = true;
+        a.Midline = true;
+        a.Endline = true;
         a.Init();
         return a;
     }
