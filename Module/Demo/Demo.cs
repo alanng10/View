@@ -299,22 +299,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private DrawBrush EllipseBrushCreate()
-    {
-        DrawBrush a;
-        a = new DrawBrush();
-        a.Kind = this.BrushKindList.Color;
-        a.Color = this.DrawInfra.ColorCreate(0xff, 0, 0xff, 0xff);
-        a.Init();
-        return a;
-    }
-
-    private bool EllipseBrushFinal(DrawBrush a)
-    {
-        a.Final();
-        return true;
-    }
-
     private Play PlayCreate()
     {
         VideoFrameState frameState;

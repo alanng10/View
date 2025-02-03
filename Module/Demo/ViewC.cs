@@ -141,6 +141,22 @@ class ViewC : ViewView
         return true;
     }
 
+    private DrawBrush EllipseBrushCreate()
+    {
+        DrawBrush a;
+        a = new DrawBrush();
+        a.Kind = this.Demo.BrushKindList.Color;
+        a.Color = this.Demo.DrawInfra.ColorCreate(0xff, 0, 0xff, 0xff);
+        a.Init();
+        return a;
+    }
+
+    private bool EllipseBrushFinal(DrawBrush a)
+    {
+        a.Final();
+        return true;
+    }
+
     public virtual Demo Demo { get; set; }
     public DrawRect EllipseRect { get; set; }
     public DrawBrush EllipseBrush { get; set; }
