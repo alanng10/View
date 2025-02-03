@@ -16,14 +16,14 @@ class Demo : ClassBase
         return true;
     }
 
-    public Frame Frame { get; set; }
-    public ViewView View { get; set; }
-    public ViewA ViewA { get; set; }
-    public ViewC ViewC { get; set; }
-    public DrawRect UpdateRect { get; set; }
-    public DrawImage ThreadDrawImage { get; set; }
-    public Play Play { get; set; }
-    public DrawImage PlayImage { get; set; }
+    public virtual Frame Frame { get; set; }
+    public virtual ViewView View { get; set; }
+    public virtual ViewA ViewA { get; set; }
+    public virtual ViewC ViewC { get; set; }
+    public virtual DrawRect UpdateRect { get; set; }
+    public virtual DrawImage ThreadDrawImage { get; set; }
+    public virtual Play Play { get; set; }
+    public virtual DrawImage PlayImage { get; set; }
     public virtual MathInfra MathInfra { get; set; }
     public virtual DrawInfra DrawInfra { get; set; }
     public virtual MathMath Math { get; set; }
