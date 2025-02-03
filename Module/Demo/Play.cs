@@ -4,8 +4,6 @@ class Play : MediaPlay
 {
     public override bool Init()
     {
-        base.Init();
-
         StorageMode mediaStorageMode;
         mediaStorageMode = new StorageMode();
         mediaStorageMode.Init();
@@ -34,6 +32,7 @@ class Play : MediaPlay
         audioOut.Init();
         audioOut.Volume = volume;
 
+        base.Init();
         this.Source = mediaStorage.Stream;
         this.SourceSet();
         this.VideoOut = videoOut;
@@ -45,11 +44,11 @@ class Play : MediaPlay
 
     public virtual bool Final()
     {
+        base.Final();
+
         this.AudioOut.Final();
 
         this.VideoOut.Final();
-
-        base.Final();
         return true;
     }
 
