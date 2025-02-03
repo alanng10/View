@@ -15,6 +15,7 @@ class Demo : ClassBase
         this.SlashJoinList = DrawSlashJoinList.This;
         this.PolateKindList = DrawPolateKindList.This;
         this.PolateSpreadList = DrawPolateSpreadList.This;
+        this.AlignList = DrawAlignList.This;
         return true;
     }
 
@@ -36,6 +37,7 @@ class Demo : ClassBase
     public virtual DrawSlashJoinList SlashJoinList { get; set; }
     public virtual DrawPolateKindList PolateKindList { get; set; }
     public virtual DrawPolateSpreadList PolateSpreadList { get; set; }
+    public virtual DrawAlignList AlignList { get; set; }
     protected virtual MathComp MathComp { get; set; }
     private Stream MediaStream { get; set; }
 
