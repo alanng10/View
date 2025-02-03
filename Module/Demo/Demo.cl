@@ -14,5 +14,15 @@ class Demo : ClassBase
         return true;
     }
 
-    
+    field prusate Frame Frame { get { return data; } set { data : value; } }
+    field prusate View View { get { return data; } set { data : value; } }
+    field prusate ViewA ViewA { get { return data; } set { data : value; } }
+    field prusate ViewC ViewC { get { return data; } set { data : value; } }
+    field prusate DrawRect UpdateRect { get { return data; } set { data : value; } }
+    field prusate DrawImage ThreadDrawImage { get { return data; } set { data : value; } }
+    field prusate Play Play { get { return data; } set { data : value; } }
+    field prusate DrawImage PlayImage { get { return data; } set { data : value; } }
+    field prusate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field prusate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field prusate Math Math { get { return data; } set { data : value; } }
 }
