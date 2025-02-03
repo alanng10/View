@@ -111,6 +111,6 @@ class Demo : ClassBase
         viewA.Size.Het : 400;
         viewA.Back : brushA;
         viewA.Form : viewAForm;
-        viewA.Demo : this; 
+        viewA.Demo : this;
     }
 }
