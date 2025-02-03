@@ -330,7 +330,7 @@ class Demo : ClassBase
 
         long aa;
         aa = thread.Status;
-        this.Console.Out.Write(this.S("Demo.ExecuteDemoThread Thread Status: 0h" + aa.ToString("x8") + "\n"));
+        this.Console.Out.Write(this.AddClear().AddS("Demo.ExecuteDemoThread Thread Status: 0h").AddStringIntHex(aa).AddLine().AddResult());
 
         thread.Final();
 
