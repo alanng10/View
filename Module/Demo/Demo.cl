@@ -64,5 +64,26 @@ class Demo : ClassBase
         brush.Kind : this.BrushKindList.Color;
         brush.Color : this.DrawInfra.ColorCreate(0hff, 0, 0hff, 0);
         brush.Init();
+
+        var View view;
+        view : new View;
+        view.Init();
+        view.Pos.Col : 100;
+        view.Pos.Row : 100;
+        view.Size.Wed : 1600;
+        view.Size.Het : 900;
+        view.Back : brush;
+
+        var DrawBrush brushA;
+        brushA : new DrawBrush;
+        brushA.Kind : this.BrushKindList.Color;
+        brushA.Color : this.DrawInfra.ColorCreate(0hff, 0, 0, 0hff);
+        brushA.Init();
+
+        var DrawBrush penBrush;
+        penBrush : new DrawBrush;
+        penBrush.Kind : this.BrushKindList.Color;
+        penBrush.Color : this.DrawInfra.ColorCreate(0hff, 0hff, 0, 0hff);
+        penBrush.Init();
     }
 }
