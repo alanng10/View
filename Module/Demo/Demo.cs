@@ -315,16 +315,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private ViewC ViewCCreate()
-    {
-
-    }
-
-    private bool ViewCFinal(ViewC a)
-    {
-
-    }
-
     private DrawSlash TextPenCreate()
     {
         DrawBrush ka;
