@@ -92,7 +92,7 @@ class Demo : ClassBase
         slash = new DrawSlash();
         slash.Brush = slashBrush;
         slash.Line = this.SlashLineList.DashDotDot;
-        slash.Wed = this.MathInt(11);
+        slash.Size = this.MathInt(11);
         slash.Cape = this.SlashCapeList.Round;
         slash.Join = this.SlashJoinList.Bevel;
         slash.Init();
