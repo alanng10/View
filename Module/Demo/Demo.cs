@@ -83,7 +83,9 @@ class Demo : ClassBase
         view.Back = brush;
 
         ViewC viewC;
-        viewC = this.ViewCCreate();
+        viewC = new ViewC();
+        viewC.Demo = this;
+        viewC.Init();
 
         ViewA viewA;
         viewA = new ViewA();
@@ -226,7 +228,7 @@ class Demo : ClassBase
 
         viewA.Final();
 
-        this.ViewCFinal(viewC);
+        viewC.Final();
 
         brush.Final();
 
