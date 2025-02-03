@@ -7,40 +7,37 @@ class ViewC : ViewView
         base.Init();
         this.Rect = this.Demo.DrawInfra.RectCreate(0, 0, 0, 0);
 
-        DrawPolateLinear gradientLinear;
-        gradientLinear = new DrawPolateLinear();
-        gradientLinear.StartPos = this.Demo.DrawInfra.PosCreate(this.MathInt(300), 0);
-        gradientLinear.EndPos = this.Demo.DrawInfra.PosCreate(this.MathInt(300), this.MathInt(400));
-        gradientLinear.Init();
+        DrawPolateLinear polateLinear;
+        polateLinear = new DrawPolateLinear();
+        polateLinear.StartPos = this.Demo.DrawInfra.PosCreate(this.MathInt(300), 0);
+        polateLinear.EndPos = this.Demo.DrawInfra.PosCreate(this.MathInt(300), this.MathInt(400));
+        polateLinear.Init();
 
-        DrawGradientStop gradientStop;
-        gradientStop = new DrawGradientStop();
-        gradientStop.Count = 3;
-        gradientStop.Init();
+        DrawPolateStop polateStop;
+        polateStop = new DrawPolateStop();
+        polateStop.Count = 3;
+        polateStop.Init();
 
-        DrawGradientStopPoint aa;
-        aa = new DrawGradientStopPoint();
+        DrawPolateStopPoint aa;
+        aa = new DrawPolateStopPoint();
         aa.Init();
 
-        this.GradientStopSetPoint(gradientStop, aa, 0, 0, this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0));
-        this.GradientStopSetPoint(gradientStop, aa, 1, this.MathValue(1, -1), this.DrawInfra.ColorCreate(0xff, 0, 0xff, 0));
-        this.GradientStopSetPoint(gradientStop, aa, 2, this.MathInt(1), this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff));
+        this.PolateStopSetPoint(polateStop, aa, 0, 0, this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0));
+        this.PolateStopSetPoint(polateStop, aa, 1, this.MathValue(1, -1), this.DrawInfra.ColorCreate(0xff, 0, 0xff, 0));
+        this.PolateStopSetPoint(polateStop, aa, 2, this.MathInt(1), this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff));
 
-        DrawGradientSpreadList spreadList;
-        spreadList = DrawGradientSpreadList.This;
-
-        DrawGradient gradient;
-        gradient = new DrawGradient();
-        gradient.Kind = gradientKindList.Linear;
-        gradient.Linear = gradientLinear;
-        gradient.Stop = gradientStop;
-        gradient.Spread = spreadList.Pad;
-        gradient.Init();
+        DrawPolate polate;
+        polate = new DrawPolate();
+        polate.Kind = this.Demo.PolateKindList.Linear;
+        polate.Linear = polateLinear;
+        polate.Stop = polateStop;
+        polate.Spread = this.Demo.PolateSpreadList.Pad;
+        polate.Init();
 
         DrawBrush brush;
         brush = new DrawBrush();
         brush.Kind = this.BrushKindList.Polate;
-        brush.Polate = gradient;
+        brush.Polate = polate;
         brush.Init();
 
         DrawBrush ellipseBrush;
