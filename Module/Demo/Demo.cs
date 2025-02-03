@@ -5,8 +5,6 @@ class Demo : ClassBase
     public override bool Init()
     {
         base.Init();
-        this.InfraInfra = InfraInfra.This;
-        this.ListInfra = ListInfra.This;
         this.MathInfra = MathInfra.This;
         this.DrawInfra = DrawInfra.This;
         this.Math = MathMath.This;
@@ -26,9 +24,6 @@ class Demo : ClassBase
     public DrawImage ThreadDrawImage { get; set; }
     public Play Play { get; set; }
     public DrawImage PlayImage { get; set; }
-
-    public virtual InfraInfra InfraInfra { get; set; }
-    public virtual ListInfra ListInfra { get; set; }
     public virtual MathInfra MathInfra { get; set; }
     public virtual DrawInfra DrawInfra { get; set; }
     public virtual MathMath Math { get; set; }
@@ -37,7 +32,6 @@ class Demo : ClassBase
     public virtual DrawSlashCapList SlashCapList { get; set; }
     public virtual DrawSlashJoinList SlashJoinList { get; set; }
     public virtual Console Console { get; set; }
-
     protected virtual MathComp MathComp { get; set; }
     private StringAdd StringAdd { get; set; }
     private TextFormat TextFormat { get; set; }
