@@ -49,12 +49,6 @@ class ViewC : ViewView
         DrawSlash textPen;
         textPen = this.TextPenCreate();
 
-        DrawTextAlign align;
-        align = new DrawTextAlign();
-        align.Init();
-        align.Horiz = 2;
-        align.Vert = 1;
-
         String oa;
         oa = this.S("G L 的哈gd@行 o #");
 
@@ -70,7 +64,6 @@ class ViewC : ViewView
         this.EllipseRect = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
         this.Font = font;
         this.Text = text;
-        this.TextAlign = align;
         this.TextPen = textPen;
         return true;
     }
@@ -100,7 +93,6 @@ class ViewC : ViewView
     public DrawRect EllipseRect { get; set; }
     public DrawBrush EllipseBrush { get; set; }
     public DrawFont Font { get; set; }
-    public DrawTextAlign TextAlign { get; set; }
     public Text Text { get; set; }
     public DrawSlash TextPen { get; set; }
     private DrawRect Rect { get; set; }
@@ -127,7 +119,7 @@ class ViewC : ViewView
         draw.Font = this.Font;
         draw.Line = this.TextPen;
 
-        draw.ExecuteText(this.Text, this.TextAlign, false, rect);
+        draw.ExecuteText(this.Text, this.Demo.AlignList.Mid, this.Demo.AlignList.Start, false, rect);
 
         draw.Line = null;
         draw.Font = null;
