@@ -29,7 +29,7 @@ class Demo : ClassBase
     public virtual MathMath Math { get; set; }
     public virtual DrawBrushKindList BrushKindList { get; set; }
     public virtual DrawSlashLineList SlashLineList { get; set; }
-    public virtual DrawSlashCapList SlashCapList { get; set; }
+    public virtual DrawSlashCapList SlashCapeList { get; set; }
     public virtual DrawSlashJoinList SlashJoinList { get; set; }
     public virtual Console Console { get; set; }
     protected virtual MathComp MathComp { get; set; }
