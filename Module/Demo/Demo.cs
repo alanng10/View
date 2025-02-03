@@ -13,6 +13,7 @@ class Demo : ClassBase
         this.SlashLineList = DrawSlashLineList.This;
         this.SlashCapeList = DrawSlashCapeList.This;
         this.SlashJoinList = DrawSlashJoinList.This;
+        this.PolateKindList = DrawPolateKindList.This;
         return true;
     }
 
@@ -32,6 +33,7 @@ class Demo : ClassBase
     public virtual DrawSlashLineList SlashLineList { get; set; }
     public virtual DrawSlashCapList SlashCapeList { get; set; }
     public virtual DrawSlashJoinList SlashJoinList { get; set; }
+    public virtual DrawPolateKindList PolateKindList { get; set; }
     protected virtual MathComp MathComp { get; set; }
     private Stream MediaStream { get; set; }
 
@@ -332,81 +334,7 @@ class Demo : ClassBase
 
     private ViewC ViewCCreate()
     {
-        DrawGradientKindList gradientKindList;
-        gradientKindList = DrawGradientKindList.This;
 
-        DrawGradientLinear gradientLinear;
-        gradientLinear = new DrawGradientLinear();
-        gradientLinear.StartPos = this.DrawInfra.PosCreate(this.MathInt(300), 0);
-        gradientLinear.EndPos = this.DrawInfra.PosCreate(this.MathInt(300), this.MathInt(400));
-        gradientLinear.Init();
-
-        DrawGradientStop gradientStop;
-        gradientStop = new DrawGradientStop();
-        gradientStop.Count = 3;
-        gradientStop.Init();
-
-        DrawGradientStopPoint aa;
-        aa = new DrawGradientStopPoint();
-        aa.Init();
-
-        this.GradientStopSetPoint(gradientStop, aa, 0, 0, this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0));
-        this.GradientStopSetPoint(gradientStop, aa, 1, this.MathValue(1, -1), this.DrawInfra.ColorCreate(0xff, 0, 0xff, 0));
-        this.GradientStopSetPoint(gradientStop, aa, 2, this.MathInt(1), this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff));
-
-        DrawGradientSpreadList spreadList;
-        spreadList = DrawGradientSpreadList.This;
-
-        DrawGradient gradient;
-        gradient = new DrawGradient();
-        gradient.Kind = gradientKindList.Linear;
-        gradient.Linear = gradientLinear;
-        gradient.Stop = gradientStop;
-        gradient.Spread = spreadList.Pad;
-        gradient.Init();
-
-        DrawBrush brush;
-        brush = new DrawBrush();
-        brush.Kind = this.BrushKindList.Polate;
-        brush.Polate = gradient;
-        brush.Init();
-
-        DrawBrush ellipseBrush;
-        ellipseBrush = this.EllipseBrushCreate();
-
-        DrawFace face;
-        face = this.FaceCreate();
-
-        DrawSlash textPen;
-        textPen = this.TextPenCreate();
-
-        DrawTextAlign align;
-        align = new DrawTextAlign();
-        align.Init();
-        align.Horiz = 2;
-        align.Vert = 1;
-
-        String oa;
-        oa = this.S("G L 的哈gd@行 o #");
-
-        Text text;
-        text = this.TextInfra.TextCreateStringData(oa, null);
-
-        ViewC viewC;
-        viewC = new ViewC();
-        viewC.Init();
-        viewC.Pos.Col = -300;
-        viewC.Pos.Row = 0;
-        viewC.Size.Wed = 500;
-        viewC.Size.Het = 400;
-        viewC.Back = brush;
-        viewC.EllipseBrush = ellipseBrush;
-        viewC.EllipseRect = this.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
-        viewC.Face = face;
-        viewC.Text = text;
-        viewC.TextAlign = align;
-        viewC.TextPen = textPen;
-        return viewC;
     }
 
     private bool ViewCFinal(ViewC a)
