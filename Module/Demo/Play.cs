@@ -52,4 +52,6 @@ class Play : MediaPlay
         base.Final();
         return true;
     }
+
+    public virtual Demo Demo { get; set; }
 }
