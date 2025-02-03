@@ -287,53 +287,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private Play PlayCreate()
-    {
-        StorageMode mediaStorageMode;
-        mediaStorageMode = new StorageMode();
-        mediaStorageMode.Init();
-        mediaStorageMode.Read = true;
-
-        Storage mediaStorage;
-        mediaStorage = new Storage();
-        mediaStorage.Init();
-        mediaStorage.Path = this.S("ViewDemoData/Video.mp4");
-        mediaStorage.Mode = mediaStorageMode;
-        mediaStorage.Open();
-        
-        VideoFrameState frameState;
-        frameState = new VideoFrameState();
-        frameState.Init();
-        frameState.Demo = this;
-
-        VideoOut videoOut;
-        videoOut = new VideoOut();
-        videoOut.Init();
-        videoOut.FrameState = frameState;
-
-        long scaleFactor;        
-        scaleFactor = 1 << 20;
-
-        long volume;
-        volume = this.MathValue(scaleFactor / 8, -20);
-
-        AudioOut audioOut;
-        audioOut = new AudioOut();
-        audioOut.Init();
-        audioOut.Volume = volume;
-
-        Play a;
-        a = new Play();
-        a.Init();
-        a.Source = mediaStorage.Stream;
-        a.SourceSet();
-        a.VideoOut = videoOut;
-        a.AudioOut = audioOut;
-        a.VideoOutSet();
-        a.AudioOutSet();
-        return a;
-    }
-
     private bool PlayFinal(Play a)
     {
         VideoOut videoOut;
