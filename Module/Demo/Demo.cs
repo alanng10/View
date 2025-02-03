@@ -82,10 +82,9 @@ class Demo : ClassBase
         view.Size.Het = 900;
         view.Back = brush;
 
-        ViewC viewC;
-        viewC = new ViewC();
-        viewC.Demo = this;
-        viewC.Init();
+        this.ViewC = new ViewC();
+        this.ViewC.Demo = this;
+        this.ViewC.Init();
 
         ViewA viewA;
         viewA = new ViewA();
@@ -141,7 +140,6 @@ class Demo : ClassBase
 
         this.ViewA = viewA;
         this.View = view;
-        this.ViewC = viewC;
 
         this.Frame.View = this.View;
         this.Frame.Shown = true;
@@ -163,7 +161,7 @@ class Demo : ClassBase
 
         viewA.Final();
 
-        viewC.Final();
+        this.ViewC.Final();
 
         brush.Final();
 
@@ -208,7 +206,7 @@ class Demo : ClassBase
         GridChild childB;
         childB = new GridChild();
         childB.Init();
-        childB.View = viewC;
+        childB.View = this.ViewC;
         childB.Rect.Pos.Col = 1;
         childB.Rect.Size.Wed = 1;
         childB.Rect.Size.Het = 1;
