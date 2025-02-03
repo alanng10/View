@@ -22,9 +22,9 @@ class ViewC : ViewView
         aa = new DrawPolateStopPoint();
         aa.Init();
 
-        this.PolateStopSetPoint(polateStop, aa, 0, 0, this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0));
-        this.PolateStopSetPoint(polateStop, aa, 1, this.MathValue(1, -1), this.DrawInfra.ColorCreate(0xff, 0, 0xff, 0));
-        this.PolateStopSetPoint(polateStop, aa, 2, this.MathInt(1), this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff));
+        this.PolateStopSetPoint(polateStop, aa, 0, 0, this.Demo.DrawInfra.ColorCreate(0xff, 0xff, 0, 0));
+        this.PolateStopSetPoint(polateStop, aa, 1, this.MathValue(1, -1), this.Demo.DrawInfra.ColorCreate(0xff, 0, 0xff, 0));
+        this.PolateStopSetPoint(polateStop, aa, 2, this.MathInt(1), this.Demo.DrawInfra.ColorCreate(0xff, 0, 0, 0xff));
 
         DrawPolate polate;
         polate = new DrawPolate();
@@ -36,7 +36,7 @@ class ViewC : ViewView
 
         DrawBrush brush;
         brush = new DrawBrush();
-        brush.Kind = this.BrushKindList.Polate;
+        brush.Kind = this.Demo.BrushKindList.Polate;
         brush.Polate = polate;
         brush.Init();
 
@@ -59,7 +59,7 @@ class ViewC : ViewView
         oa = this.S("G L 的哈gd@行 o #");
 
         Text text;
-        text = this.TextInfra.TextCreateStringData(oa, null);
+        text = this.Demo.TextCreate(oa);
 
         ViewC viewC;
         viewC = new ViewC();
