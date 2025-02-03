@@ -110,6 +110,7 @@ class Demo : ClassBase
         viewA.Size.Wed : 600;
         viewA.Size.Het : 400;
         viewA.Back : brushA;
+        viewA.DrawSlash : slash;
         viewA.Form : viewAForm;
         viewA.Demo : this;
     }
