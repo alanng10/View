@@ -74,7 +74,7 @@ class ViewC : ViewView
         DrawGradientLinear gradientLinear;
         gradientLinear = gradient.Linear;
 
-        this.TextPenFinal(textPen);
+        this.TextSlashFinal(textPen);
 
         this.FontFinal(this.Font);
 
@@ -108,6 +108,36 @@ class ViewC : ViewView
     private bool FontFinal(DrawFont a)
     {
         a.Final();
+        return true;
+    }
+
+    private DrawSlash TextSlashCreate()
+    {
+        DrawBrush ka;
+        ka = new DrawBrush();
+        ka.Kind = this.Demo.BrushKindList.Color;
+        ka.Color = this.Demo.DrawInfra.ColorCreate(0xff, 0, 0, 0xff);
+        ka.Init();
+
+        DrawSlash a;
+        a = new DrawSlash();
+        a.Brush = ka;
+        a.Line = this.Demo.SlashLineList.DashDotDot;
+        a.Size = this.MathInt(14);
+        a.Cape = this.Demo.SlashCapList.Round;
+        a.Join = this.Demo.SlashJoinList.Bevel;
+        a.Init();
+        return a;
+    }
+
+    private bool TextSlashFinal(DrawSlash a)
+    {
+        DrawBrush ka;
+        ka = a.Brush;
+
+        a.Final();
+
+        ka.Final();
         return true;
     }
 

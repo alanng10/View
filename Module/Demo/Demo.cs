@@ -315,36 +315,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private DrawSlash TextPenCreate()
-    {
-        DrawBrush ka;
-        ka = new DrawBrush();
-        ka.Kind = this.BrushKindList.Color;
-        ka.Color = this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff);
-        ka.Init();
-
-        DrawSlash a;
-        a = new DrawSlash();
-        a.Brush = ka;
-        a.Line = this.SlashLineList.DashDotDot;
-        a.Wed = this.MathInt(14);
-        a.Cap = this.SlashCapList.Round;
-        a.Join = this.SlashJoinList.Bevel;
-        a.Init();
-        return a;
-    }
-
-    private bool TextPenFinal(DrawSlash a)
-    {
-        DrawBrush ka;
-        ka = a.Brush;
-
-        a.Final();
-
-        ka.Final();
-        return true;
-    }
-
     private Play PlayCreate()
     {
         VideoFrameState frameState;
