@@ -43,8 +43,8 @@ class ViewC : ViewView
         DrawBrush ellipseBrush;
         ellipseBrush = this.EllipseBrushCreate();
 
-        DrawFace face;
-        face = this.FaceCreate();
+        DrawFont font;
+        font = this.FontCreate();
 
         DrawSlash textPen;
         textPen = this.TextPenCreate();
@@ -68,7 +68,7 @@ class ViewC : ViewView
         this.Back = brush;
         this.EllipseBrush = ellipseBrush;
         this.EllipseRect = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
-        this.Font = face;
+        this.Font = font;
         this.Text = text;
         this.TextAlign = align;
         this.TextPen = textPen;
@@ -124,7 +124,7 @@ class ViewC : ViewView
         rect.Size.Wed = this.MathInt(300);
         rect.Size.Het = this.MathInt(100);
 
-        draw.Font = this.Face;
+        draw.Font = this.Font;
         draw.Line = this.TextPen;
 
         draw.ExecuteText(this.Text, this.TextAlign, false, rect);
