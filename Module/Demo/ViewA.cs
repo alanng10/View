@@ -26,9 +26,9 @@ class ViewA : ViewView
         slash.Join = this.Demo.SlashJoinList.Bevel;
         slash.Init();
 
-        DrawForm viewAForm;
-        viewAForm = new DrawForm();
-        viewAForm.Init();
+        DrawForm form;
+        form = new DrawForm();
+        form.Init();
 
         this.Pos.Col = 0;
         this.Pos.Row = 0;
@@ -36,13 +36,22 @@ class ViewA : ViewView
         this.Size.Het = 400;
         this.Back = brushA;
         this.DrawSlash = slash;
-        this.Form = viewAForm;
+        this.Form = form;
         return true;
     }
 
     public virtual bool Final()
     {
+        this.Form.Final();
 
+        DrawBrush k;
+        k = this.DrawSlash.Brush;
+
+        this.DrawSlash.Final();
+
+        k.Final();
+
+        this.Back.Final();
         return true;
     }
 

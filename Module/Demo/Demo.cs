@@ -218,15 +218,8 @@ class Demo : ClassBase
 
         gridBrush.Final();
 
-        viewAForm.Final();
 
         this.ViewCFinal(viewC);
-
-        slash.Final();
-
-        slashBrush.Final();
-
-        brushA.Final();
 
         brush.Final();
 
