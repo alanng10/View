@@ -4,15 +4,15 @@ class Play : MediaPlay
 {
     public override bool Init()
     {
-        StorageMode mediaStorageMode;
-        mediaStorageMode = new StorageMode();
-        mediaStorageMode.Init();
-        mediaStorageMode.Read = true;
+        StorageMode mod;
+        mod = new StorageMode();
+        mod.Init();
+        mod.Read = true;
 
         this.MediaStorage = new Storage();
         this.MediaStorage.Init();
         this.MediaStorage.Path = this.S("ViewDemoData/Video.mp4");
-        this.MediaStorage.Mode = mediaStorageMode;
+        this.MediaStorage.Mode = mod;
         this.MediaStorage.Open();
 
         VideoOut videoOut;
