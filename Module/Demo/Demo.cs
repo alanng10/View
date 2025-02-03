@@ -200,10 +200,6 @@ class Demo : ClassBase
 
         this.PlayFinal(this.Play);
 
-        mediaStorage.Close();
-
-        mediaStorage.Final();
-
         this.PlayImageFinal(this.PlayImage);
 
         formA.Final();

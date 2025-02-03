@@ -9,12 +9,11 @@ class Play : MediaPlay
         mediaStorageMode.Init();
         mediaStorageMode.Read = true;
 
-        Storage mediaStorage;
-        mediaStorage = new Storage();
-        mediaStorage.Init();
-        mediaStorage.Path = this.S("ViewDemoData/Video.mp4");
-        mediaStorage.Mode = mediaStorageMode;
-        mediaStorage.Open();
+        this.MediaStorage = new Storage();
+        this.MediaStorage.Init();
+        this.MediaStorage.Path = this.S("ViewDemoData/Video.mp4");
+        this.MediaStorage.Mode = mediaStorageMode;
+        this.MediaStorage.Open();
 
         VideoOut videoOut;
         videoOut = new VideoOut();
@@ -33,7 +32,7 @@ class Play : MediaPlay
         audioOut.Volume = volume;
 
         base.Init();
-        this.Source = mediaStorage.Stream;
+        this.Source = this.MediaStorage.Stream;
         this.SourceSet();
         this.VideoOut = videoOut;
         this.AudioOut = audioOut;
@@ -49,8 +48,13 @@ class Play : MediaPlay
         this.AudioOut.Final();
 
         this.VideoOut.Final();
+
+        this.MediaStorage.Close();
+
+        this.MediaStorage.Final();
         return true;
     }
 
     public virtual Demo Demo { get; set; }
+    private Storage MediaStorage { get; set; }
 }
