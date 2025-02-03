@@ -92,57 +92,8 @@ class Demo : ClassBase
         viewA.Demo = this;
         viewA.Init();
 
-        DrawBrush gridBrush;
-        gridBrush = new DrawBrush();
-        gridBrush.Kind = this.BrushKindList.Color;
-        gridBrush.Color = this.DrawInfra.ColorCreate(0x80, 0, 0, 0);
-        gridBrush.Init();
-
         Grid grid;
-        grid = new Grid();
-        grid.Init();
-
-        grid.Back = gridBrush;
-
-        ViewCount colA;
-        colA = new ViewCount();
-        colA.Init();
-        colA.Value = 600;
-        ViewCount colB;
-        colB = new ViewCount();
-        colB.Init();
-        colB.Value = 600;
-        ViewCount rowA;
-        rowA = new ViewCount();
-        rowA.Init();
-        rowA.Value = 600;
-        GridChild childA;
-        childA = new GridChild();
-        childA.Init();
-        childA.View = viewA;
-        childA.Rect.Size.Wed = 1;
-        childA.Rect.Size.Het = 1;
-        GridChild childB;
-        childB = new GridChild();
-        childB.Init();
-        childB.View = viewC;
-        childB.Rect.Pos.Col = 1;
-        childB.Rect.Size.Wed = 1;
-        childB.Rect.Size.Het = 1;
-
-        grid.Pos.Col = 50;
-        grid.Pos.Row = 50;
-        grid.Size.Wed = 1500;
-        grid.Size.Het = 800;
-        grid.Dest.Pos.Col = 0;
-        grid.Dest.Pos.Row = 0;
-        grid.Dest.Size.Wed = 1500;
-        grid.Dest.Size.Het = 800;
-        grid.Row.Add(rowA);
-        grid.Col.Add(colA);
-        grid.Col.Add(colB);
-        grid.ChildList.Add(childA);
-        grid.ChildList.Add(childB);
+        grid = this.GridCreate();
 
         view.Child = grid;
 
@@ -208,7 +159,7 @@ class Demo : ClassBase
 
         this.ImageFinal(image);
 
-        gridBrush.Final();
+        this.GridFinal(grid);
 
         viewA.Final();
 
@@ -219,6 +170,68 @@ class Demo : ClassBase
         this.Frame.Final();
 
         this.ThreadDrawImageFinal(this.ThreadDrawImage);
+        return true;
+    }
+
+    private Grid GridCreate()
+    {
+        DrawBrush gridBrush;
+        gridBrush = new DrawBrush();
+        gridBrush.Kind = this.BrushKindList.Color;
+        gridBrush.Color = this.DrawInfra.ColorCreate(0x80, 0, 0, 0);
+        gridBrush.Init();
+
+        Grid grid;
+        grid = new Grid();
+        grid.Init();
+
+        grid.Back = gridBrush;
+
+        ViewCount colA;
+        colA = new ViewCount();
+        colA.Init();
+        colA.Value = 600;
+        ViewCount colB;
+        colB = new ViewCount();
+        colB.Init();
+        colB.Value = 600;
+        ViewCount rowA;
+        rowA = new ViewCount();
+        rowA.Init();
+        rowA.Value = 600;
+        GridChild childA;
+        childA = new GridChild();
+        childA.Init();
+        childA.View = viewA;
+        childA.Rect.Size.Wed = 1;
+        childA.Rect.Size.Het = 1;
+        GridChild childB;
+        childB = new GridChild();
+        childB.Init();
+        childB.View = viewC;
+        childB.Rect.Pos.Col = 1;
+        childB.Rect.Size.Wed = 1;
+        childB.Rect.Size.Het = 1;
+
+        grid.Pos.Col = 50;
+        grid.Pos.Row = 50;
+        grid.Size.Wed = 1500;
+        grid.Size.Het = 800;
+        grid.Dest.Pos.Col = 0;
+        grid.Dest.Pos.Row = 0;
+        grid.Dest.Size.Wed = 1500;
+        grid.Dest.Size.Het = 800;
+        grid.Row.Add(rowA);
+        grid.Col.Add(colA);
+        grid.Col.Add(colB);
+        grid.ChildList.Add(childA);
+        grid.ChildList.Add(childB);
+        return grid;
+    }
+
+    private bool GridFinal(Grid a)
+    {
+        a.Back.Final();
         return true;
     }
 
