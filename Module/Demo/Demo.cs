@@ -218,6 +218,7 @@ class Demo : ClassBase
 
         gridBrush.Final();
 
+        viewA.Final();
 
         this.ViewCFinal(viewC);
 
