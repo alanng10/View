@@ -67,11 +67,11 @@ class ViewC : ViewView
         ellipseBrush = this.EllipseBrush;
         DrawBrush brush;
         brush = this.Back;
-        DrawGradient gradient;
+        DrawPolate gradient;
         gradient = brush.Polate;
-        DrawGradientStop gradientStop;
+        DrawPolateStop gradientStop;
         gradientStop = gradient.Stop;
-        DrawGradientLinear gradientLinear;
+        DrawPolateLinear gradientLinear;
         gradientLinear = gradient.Linear;
 
         this.TextSlashFinal(textPen);
