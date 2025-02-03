@@ -53,14 +53,7 @@ class Demo : ClassBase
         this.Frame.Title = this.S("View Demo");
         this.Frame.TitleSet();
 
-        this.UpdateRect = new DrawRect();
-        this.UpdateRect.Init();
-        this.UpdateRect.Pos = new DrawPos();
-        this.UpdateRect.Pos.Init();
-        this.UpdateRect.Size = new DrawSize();
-        this.UpdateRect.Size.Init();
-        this.UpdateRect.Size.Wed = this.Frame.Size.Wed;
-        this.UpdateRect.Size.Het = this.Frame.Size.Het;
+        this.UpdateRect = this.DrawInfra.RectCreate(0, 0, this.Frame.Size.Wed, this.Frame.Size.Het);
 
         TypeA type;
         type = new TypeA();
