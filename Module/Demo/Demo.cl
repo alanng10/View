@@ -6,11 +6,11 @@ class Demo : ClassBase
         this.MathInfra : share MathInfra;
         this.DrawInfra : share DrawInfra;
         this.Math : share Math;
+        this.Console : share Console;
         this.BrushKindList : share DrawBrushKindList;
         this.SlashLineList : share DrawSlashLineList;
         this.SlashCapeList : share DrawSlashCapeList;
         this.SlashJoinList : share DrawSlashJoinList;
-        this.Console : share Console;
         return true;
     }
 
@@ -25,7 +25,9 @@ class Demo : ClassBase
     field prusate MathInfra MathInfra { get { return data; } set { data : value; } }
     field prusate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field prusate Math Math { get { return data; } set { data : value; } }
+    field prusate Console Console { get { return data; } set { data : value; } }
     field prusate DrawBrushKindList BrushKindList { get { return data; } set { data : value; } }
     field prusate DrawSlashLineList SlashLineList { get { return data; } set { data : value; } }
     field prusate DrawSlashCapeList SlashCapeList { get { return data; } set { data : value; } }
+    field prusate DrawSlashJoinList SlashJoinList { get { return data; } set { data : value; } }
 }
