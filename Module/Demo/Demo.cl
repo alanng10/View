@@ -30,4 +30,6 @@ class Demo : ClassBase
     field prusate DrawSlashLineList SlashLineList { get { return data; } set { data : value; } }
     field prusate DrawSlashCapeList SlashCapeList { get { return data; } set { data : value; } }
     field prusate DrawSlashJoinList SlashJoinList { get { return data; } set { data : value; } }
+    field precate MathComp MathComp { get { return data; } set { data : value; } }
+    field private Stream MediaStream { get { return data; } set { data : value; } }
 }
