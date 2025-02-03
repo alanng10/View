@@ -184,20 +184,6 @@ class Demo : ClassBase
 
         this.PlayImage = this.PlayImageCreate();
 
-        StorageMode mediaStorageMode;
-        mediaStorageMode = new StorageMode();
-        mediaStorageMode.Init();
-        mediaStorageMode.Read = true;
-
-        Storage mediaStorage;
-        mediaStorage = new Storage();
-        mediaStorage.Init();
-        mediaStorage.Path = this.S("ViewDemoData/Video.mp4");
-        mediaStorage.Mode = mediaStorageMode;
-        mediaStorage.Open();
-
-        this.MediaStream = mediaStorage.Stream;
-
         this.Play = this.PlayCreate();
 
         this.ViewA = viewA;
@@ -303,6 +289,18 @@ class Demo : ClassBase
 
     private Play PlayCreate()
     {
+        StorageMode mediaStorageMode;
+        mediaStorageMode = new StorageMode();
+        mediaStorageMode.Init();
+        mediaStorageMode.Read = true;
+
+        Storage mediaStorage;
+        mediaStorage = new Storage();
+        mediaStorage.Init();
+        mediaStorage.Path = this.S("ViewDemoData/Video.mp4");
+        mediaStorage.Mode = mediaStorageMode;
+        mediaStorage.Open();
+        
         VideoFrameState frameState;
         frameState = new VideoFrameState();
         frameState.Init();
@@ -327,7 +325,7 @@ class Demo : ClassBase
         Play a;
         a = new Play();
         a.Init();
-        a.Source = this.MediaStream;
+        a.Source = mediaStorage.Stream;
         a.SourceSet();
         a.VideoOut = videoOut;
         a.AudioOut = audioOut;

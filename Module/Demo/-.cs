@@ -75,6 +75,7 @@ global using DrawForm = View.Draw.Form;
 global using DrawInfra = View.Draw.Infra;
 global using VideoOut = View.Media.VideoOut;
 global using AudioOut = View.Media.AudioOut;
+global using MediaPlay = View.Media.Play;
 global using ViewCount = View.View.Count;
 global using ViewInfra = View.View.Infra;
 global using ViewView = View.View.View;
