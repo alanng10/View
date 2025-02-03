@@ -40,15 +40,6 @@ class ViewC : ViewView
         brush.Polate = polate;
         brush.Init();
 
-        DrawBrush ellipseBrush;
-        ellipseBrush = this.EllipseBrushCreate();
-
-        DrawFont font;
-        font = this.FontCreate();
-
-        DrawSlash textPen;
-        textPen = this.TextPenCreate();
-
         String oa;
         oa = this.S("G L 的哈gd@行 o #");
 
@@ -60,11 +51,42 @@ class ViewC : ViewView
         this.Size.Wed = 500;
         this.Size.Het = 400;
         this.Back = brush;
-        this.EllipseBrush = ellipseBrush;
+        this.EllipseBrush = this.EllipseBrushCreate();
         this.EllipseRect = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
-        this.Font = font;
+        this.Font = this.FontCreate();
         this.Text = text;
-        this.TextPen = textPen;
+        this.TextPen = this.TextSlashCreate();
+        return true;
+    }
+
+    public virtual bool Final()
+    {
+        DrawSlash textPen;
+        textPen = this.TextPen;
+        DrawBrush ellipseBrush;
+        ellipseBrush = this.EllipseBrush;
+        DrawBrush brush;
+        brush = this.Back;
+        DrawGradient gradient;
+        gradient = brush.Polate;
+        DrawGradientStop gradientStop;
+        gradientStop = gradient.Stop;
+        DrawGradientLinear gradientLinear;
+        gradientLinear = gradient.Linear;
+
+        this.TextPenFinal(textPen);
+
+        this.FontFinal(this.Font);
+
+        this.EllipseBrushFinal(ellipseBrush);
+
+        brush.Final();
+
+        gradient.Final();
+
+        gradientStop.Final();
+
+        gradientLinear.Final();
         return true;
     }
 

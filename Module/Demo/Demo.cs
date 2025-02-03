@@ -322,36 +322,7 @@ class Demo : ClassBase
 
     private bool ViewCFinal(ViewC a)
     {
-        DrawSlash textPen;
-        textPen = a.TextPen;
-        DrawBrush ellipseBrush;
-        ellipseBrush = a.EllipseBrush;
-        DrawBrush brush;
-        brush = a.Back;
-        DrawGradient gradient;
-        gradient = brush.Polate;
-        DrawGradientStop gradientStop;
-        gradientStop = gradient.Stop;
-        DrawGradientLinear gradientLinear;
-        gradientLinear = gradient.Linear;
 
-        DrawFace font;
-        font = a.Face;
-
-        this.TextPenFinal(textPen);
-
-        this.FaceFinal(font);
-
-        this.EllipseBrushFinal(ellipseBrush);
-
-        brush.Final();
-
-        gradient.Final();
-
-        gradientStop.Final();
-
-        gradientLinear.Final();
-        return true;
     }
 
     private DrawSlash TextPenCreate()
