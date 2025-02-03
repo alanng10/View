@@ -61,27 +61,24 @@ class ViewC : ViewView
         Text text;
         text = this.Demo.TextCreate(oa);
 
-        ViewC viewC;
-        viewC = new ViewC();
-        viewC.Init();
-        viewC.Pos.Col = -300;
-        viewC.Pos.Row = 0;
-        viewC.Size.Wed = 500;
-        viewC.Size.Het = 400;
-        viewC.Back = brush;
-        viewC.EllipseBrush = ellipseBrush;
-        viewC.EllipseRect = this.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
-        viewC.Face = face;
-        viewC.Text = text;
-        viewC.TextAlign = align;
-        viewC.TextPen = textPen;
+        this.Pos.Col = -300;
+        this.Pos.Row = 0;
+        this.Size.Wed = 500;
+        this.Size.Het = 400;
+        this.Back = brush;
+        this.EllipseBrush = ellipseBrush;
+        this.EllipseRect = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
+        this.Font = face;
+        this.Text = text;
+        this.TextAlign = align;
+        this.TextPen = textPen;
         return true;
     }
 
     public virtual Demo Demo { get; set; }
     public DrawRect EllipseRect { get; set; }
     public DrawBrush EllipseBrush { get; set; }
-    public DrawFace Face { get; set; }
+    public DrawFont Font { get; set; }
     public DrawTextAlign TextAlign { get; set; }
     public Text Text { get; set; }
     public DrawSlash TextPen { get; set; }
