@@ -1,20 +1,15 @@
 namespace Demo;
 
-class Demo : Any
+class Demo : ClassBase
 {
     public override bool Init()
     {
         base.Init();
         this.InfraInfra = InfraInfra.This;
         this.ListInfra = ListInfra.This;
-        this.TextInfra = TextInfra.This;
         this.MathInfra = MathInfra.This;
         this.DrawInfra = DrawInfra.This;
-        this.StringComp = StringComp.This;
         this.Math = MathMath.This;
-        this.TextCodeKindList = TextCodeKindList.This;
-        this.StorageStatusList = StorageStatusList.This;
-        this.StorageComp = StorageComp.This;
         this.BrushKindList = DrawBrushKindList.This;
         this.SlashLineList = DrawSlashLineList.This;
         this.SlashCapeList = DrawSlashCapeList.This;
@@ -37,11 +32,7 @@ class Demo : Any
     public virtual MathInfra MathInfra { get; set; }
     public virtual TextInfra TextInfra { get; set; }
     public virtual DrawInfra DrawInfra { get; set; }
-    public virtual StringComp StringComp { get; set; }
     public virtual MathMath Math { get; set; }
-    public virtual TextCodeKindList TextCodeKindList { get; set; }
-    public virtual StorageStatusList StorageStatusList { get; set; }
-    public virtual StorageComp StorageComp { get; set; }
     public virtual DrawBrushKindList BrushKindList { get; set; }
     public virtual DrawSlashLineList SlashLineList { get; set; }
     public virtual DrawSlashCapList SlashCapList { get; set; }
@@ -50,8 +41,8 @@ class Demo : Any
 
     protected virtual MathComp MathComp { get; set; }
     private StringAdd StringAdd { get; set; }
-    private TextWrite TextWrite { get; set; }
-    private TextWriteArg TextWriteArg { get; set; }
+    private TextFormat TextFormat { get; set; }
+    private TextFormatArg TextFormatArg { get; set; }
     private Stream MediaStream { get; set; }
 
     public bool Execute()
