@@ -2,6 +2,50 @@ namespace Demo;
 
 class ViewA : ViewView
 {
+    public override bool Init()
+    {
+        base.Init();
+        DrawBrush brushA;
+        brushA = new DrawBrush();
+        brushA.Kind = this.Demo.BrushKindList.Color;
+        brushA.Color = this.Demo.DrawInfra.ColorCreate(0xff, 0, 0, 0xff);
+        brushA.Init();
+
+        DrawBrush slashBrush;
+        slashBrush = new DrawBrush();
+        slashBrush.Kind = this.Demo.BrushKindList.Color;
+        slashBrush.Color = this.Demo.DrawInfra.ColorCreate(0xff, 0xff, 0, 0xff);
+        slashBrush.Init();
+
+        DrawSlash slash;
+        slash = new DrawSlash();
+        slash.Brush = slashBrush;
+        slash.Line = this.Demo.SlashLineList.DashDotDot;
+        slash.Size = this.Demo.MathInt(11);
+        slash.Cape = this.Demo.SlashCapeList.Round;
+        slash.Join = this.Demo.SlashJoinList.Bevel;
+        slash.Init();
+
+        DrawForm viewAForm;
+        viewAForm = new DrawForm();
+        viewAForm.Init();
+
+        this.Pos.Col = 0;
+        this.Pos.Row = 0;
+        this.Size.Wed = 600;
+        this.Size.Het = 400;
+        this.Back = brushA;
+        this.DrawSlash = slash;
+        this.Form = viewAForm;
+        return true;
+    }
+
+    public virtual bool Final()
+    {
+
+        return true;
+    }
+
     public virtual DrawSlash DrawPen { get; set; }
     public virtual Demo Demo { get; set; }
     public virtual DrawForm Form { get; set; }

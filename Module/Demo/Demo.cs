@@ -76,45 +76,13 @@ class Demo : ClassBase
         view.Size.Het = 900;
         view.Back = brush;
 
-        DrawBrush brushA;
-        brushA = new DrawBrush();
-        brushA.Kind = this.BrushKindList.Color;
-        brushA.Color = this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff);
-        brushA.Init();
-
-        DrawBrush slashBrush;
-        slashBrush = new DrawBrush();
-        slashBrush.Kind = this.BrushKindList.Color;
-        slashBrush.Color = this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0xff);
-        slashBrush.Init();
-
-        DrawSlash slash;
-        slash = new DrawSlash();
-        slash.Brush = slashBrush;
-        slash.Line = this.SlashLineList.DashDotDot;
-        slash.Size = this.MathInt(11);
-        slash.Cape = this.SlashCapeList.Round;
-        slash.Join = this.SlashJoinList.Bevel;
-        slash.Init();
-
         ViewC viewC;
         viewC = this.ViewCCreate();
 
-        DrawForm viewAForm;
-        viewAForm = new DrawForm();
-        viewAForm.Init();
-
         ViewA viewA;
         viewA = new ViewA();
-        viewA.Init();
-        viewA.Pos.Col = 0;
-        viewA.Pos.Row = 0;
-        viewA.Size.Wed = 600;
-        viewA.Size.Het = 400;
-        viewA.Back = brushA;
-        viewA.DrawSlash = slash;
-        viewA.Form = viewAForm;
         viewA.Demo = this;
+        viewA.Init();
 
         DrawBrush gridBrush;
         gridBrush = new DrawBrush();
