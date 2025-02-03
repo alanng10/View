@@ -354,14 +354,6 @@ class Demo : ClassBase
         return true;
     }
 
-    private bool GradientStopSetPoint(DrawGradientStop stop, DrawGradientStopPoint aa, long index, long pos, DrawColor color)
-    {
-        aa.Pos = pos;
-        aa.Color = color;
-        stop.PointSet(index, aa);
-        return true;
-    }
-
     private DrawSlash TextPenCreate()
     {
         DrawBrush ka;

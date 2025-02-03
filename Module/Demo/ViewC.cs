@@ -125,4 +125,12 @@ class ViewC : ViewView
         draw.Font = null;
         return true;
     }
+
+    private bool PolateStopSetPoint(DrawPolateStop stop, DrawPolateStopPoint aa, long index, long pos, DrawColor color)
+    {
+        aa.Pos = pos;
+        aa.Color = color;
+        stop.PointSet(index, aa);
+        return true;
+    }
 }
