@@ -94,5 +94,23 @@ class Demo : ClassBase
         slash.Cape : this.SlashCapeList.Round;
         slash.Join : this.SlashJoinList.Bevel;
         slash.Init();
+
+        var ViewC viewC;
+        viewC : this.ViewCCreate();
+
+        var DrawForm viewAForm;
+        viewAForm : new DrawForm;
+        viewAForm.Init();
+
+        var ViewA viewA;
+        viewA : new ViewA;
+        viewA.Init();
+        viewA.Pos.Col : 0;
+        viewA.Pos.Row : 0;
+        viewA.Size.Wed : 600;
+        viewA.Size.Het : 400;
+        viewA.Back : brushA;
+        viewA.Form : viewAForm;
+        viewA.Demo : this;
     }
 }
