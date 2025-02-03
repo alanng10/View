@@ -2,6 +2,27 @@ namespace Demo;
 
 class Demo : Any
 {
+    public override bool Init()
+    {
+        base.Init();
+        this.InfraInfra = InfraInfra.This;
+        this.ListInfra = ListInfra.This;
+        this.TextInfra = TextInfra.This;
+        this.MathInfra = MathInfra.This;
+        this.DrawInfra = DrawInfra.This;
+        this.StringComp = StringComp.This;
+        this.Math = MathMath.This;
+        this.TextCodeKindList = TextCodeKindList.This;
+        this.StorageStatusList = StorageStatusList.This;
+        this.StorageComp = StorageComp.This;
+        this.BrushKindList = DrawBrushKindList.This;
+        this.SlashLineList = DrawSlashLineList.This;
+        this.SlashCapeList = DrawSlashCapeList.This;
+        this.SlashJoinList = DrawSlashJoinList.This;
+        this.Console = Console.This;
+        return true;
+    }
+
     public Frame Frame { get; set; }
     public ViewView View { get; set; }
     public ViewA ViewA { get; set; }
@@ -35,22 +56,6 @@ class Demo : Any
 
     public bool Execute()
     {
-        this.InfraInfra = InfraInfra.This;
-        this.ListInfra = ListInfra.This;
-        this.TextInfra = TextInfra.This;
-        this.MathInfra = MathInfra.This;
-        this.DrawInfra = DrawInfra.This;
-        this.StringComp = StringComp.This;
-        this.Math = MathMath.This;
-        this.TextCodeKindList = TextCodeKindList.This;
-        this.StorageStatusList = StorageStatusList.This;
-        this.StorageComp = StorageComp.This;
-        this.BrushKindList = DrawBrushKindList.This;
-        this.SlashLineList = DrawSlashLineList.This;
-        this.SlashCapList = DrawSlashCapList.This;
-        this.SlashJoinList = DrawSlashJoinList.This;
-        this.Console = Console.This;
-
         this.StringAdd = new StringAdd();
         this.StringAdd.Init();
 
