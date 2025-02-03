@@ -8,11 +8,11 @@ class Demo : ClassBase
         this.MathInfra = MathInfra.This;
         this.DrawInfra = DrawInfra.This;
         this.Math = MathMath.This;
+        this.Console = Console.This;
         this.BrushKindList = DrawBrushKindList.This;
         this.SlashLineList = DrawSlashLineList.This;
         this.SlashCapeList = DrawSlashCapeList.This;
         this.SlashJoinList = DrawSlashJoinList.This;
-        this.Console = Console.This;
         return true;
     }
 
@@ -27,11 +27,11 @@ class Demo : ClassBase
     public virtual MathInfra MathInfra { get; set; }
     public virtual DrawInfra DrawInfra { get; set; }
     public virtual MathMath Math { get; set; }
+    public virtual Console Console { get; set; }
     public virtual DrawBrushKindList BrushKindList { get; set; }
     public virtual DrawSlashLineList SlashLineList { get; set; }
     public virtual DrawSlashCapList SlashCapeList { get; set; }
     public virtual DrawSlashJoinList SlashJoinList { get; set; }
-    public virtual Console Console { get; set; }
     protected virtual MathComp MathComp { get; set; }
     private Stream MediaStream { get; set; }
 
