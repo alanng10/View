@@ -82,20 +82,20 @@ class Demo : ClassBase
         brushA.Color = this.DrawInfra.ColorCreate(0xff, 0, 0, 0xff);
         brushA.Init();
 
-        DrawBrush penBrush;
-        penBrush = new DrawBrush();
-        penBrush.Kind = this.BrushKindList.Color;
-        penBrush.Color = this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0xff);
-        penBrush.Init();
+        DrawBrush slashBrush;
+        slashBrush = new DrawBrush();
+        slashBrush.Kind = this.BrushKindList.Color;
+        slashBrush.Color = this.DrawInfra.ColorCreate(0xff, 0xff, 0, 0xff);
+        slashBrush.Init();
 
-        DrawSlash pen;
-        pen = new DrawSlash();
-        pen.Brush = penBrush;
-        pen.Line = this.SlashLineList.DashDotDot;
-        pen.Wed = this.MathInt(11);
-        pen.Cap = this.SlashCapList.Round;
-        pen.Join = this.SlashJoinList.Bevel;
-        pen.Init();
+        DrawSlash slash;
+        slash = new DrawSlash();
+        slash.Brush = slashBrush;
+        slash.Line = this.SlashLineList.DashDotDot;
+        slash.Wed = this.MathInt(11);
+        slash.Cap = this.SlashCapList.Round;
+        slash.Join = this.SlashJoinList.Bevel;
+        slash.Init();
 
         ViewC viewC;
         viewC = this.ViewCCreate();
@@ -112,7 +112,7 @@ class Demo : ClassBase
         viewA.Size.Wed = 600;
         viewA.Size.Het = 400;
         viewA.Back = brushA;
-        viewA.DrawPen = pen;
+        viewA.DrawPen = slash;
         viewA.Form = viewAForm;
         viewA.Demo = this;
 
@@ -254,9 +254,9 @@ class Demo : ClassBase
 
         this.ViewCFinal(viewC);
 
-        pen.Final();
+        slash.Final();
 
-        penBrush.Final();
+        slashBrush.Final();
 
         brushA.Final();
 
