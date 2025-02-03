@@ -32,4 +32,37 @@ class Demo : ClassBase
     field prusate DrawSlashJoinList SlashJoinList { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field private Stream MediaStream { get { return data; } set { data : value; } }
+
+    maide prusate Bool Execute()
+    {
+        var ThreadThis varThis;
+        varThis : new ThreadThis;
+        varThis.Init();
+
+        this.MathComp : new MathComp;
+        this.MathComp.Init();
+
+        this.ThreadDrawImage : this.ThreadDrawImageCreate();
+
+        this.ExecuteDemoThread();
+
+        this.Frame : new Frame;
+        this.Frame.Init();
+        this.Frame.Title : "View Demo";
+        this.Frame.TitleSet();
+
+        this.UpdateRect : this.DrawInfra.RectCreate(0, 0, this.Frame.Size.Wed, this.Frame.Size.Het);
+
+        var TypeA type;
+        type : new TypeA;
+        type.Init();
+        type.Demo : this;
+        this.Frame.Type : type;
+
+        var DrawBrush brush;
+        brush : new DrawBrush;
+        brush.Kind : this.BrushKindList.Color;
+        brush.Color : this.DrawInfra.ColorCreate(0hff, 0, 0hff, 0);
+        brush.Init();
+    }
 }
