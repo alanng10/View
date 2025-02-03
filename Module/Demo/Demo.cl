@@ -80,10 +80,19 @@ class Demo : ClassBase
         brushA.Color : this.DrawInfra.ColorCreate(0hff, 0, 0, 0hff);
         brushA.Init();
 
-        var DrawBrush penBrush;
-        penBrush : new DrawBrush;
-        penBrush.Kind : this.BrushKindList.Color;
-        penBrush.Color : this.DrawInfra.ColorCreate(0hff, 0hff, 0, 0hff);
-        penBrush.Init();
+        var DrawBrush slashBrush;
+        slashBrush : new DrawBrush;
+        slashBrush.Kind : this.BrushKindList.Color;
+        slashBrush.Color : this.DrawInfra.ColorCreate(0hff, 0hff, 0, 0hff);
+        slashBrush.Init();
+
+        var DrawSlash slash;
+        slash : new DrawSlash;
+        slash.Brush : slashBrush;
+        slash.Line : this.SlashLineList.DashDotDot;
+        slash.Size : this.MathInt(11);
+        slash.Cape : this.SlashCapeList.Round;
+        slash.Join : this.SlashJoinList.Bevel;
+        slash.Init();
     }
 }
