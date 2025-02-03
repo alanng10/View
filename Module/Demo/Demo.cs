@@ -30,7 +30,6 @@ class Demo : ClassBase
     public virtual InfraInfra InfraInfra { get; set; }
     public virtual ListInfra ListInfra { get; set; }
     public virtual MathInfra MathInfra { get; set; }
-    public virtual TextInfra TextInfra { get; set; }
     public virtual DrawInfra DrawInfra { get; set; }
     public virtual MathMath Math { get; set; }
     public virtual DrawBrushKindList BrushKindList { get; set; }
