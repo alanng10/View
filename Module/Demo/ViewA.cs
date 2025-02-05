@@ -35,7 +35,7 @@ class ViewA : ViewView
         this.Size.Wed = 600;
         this.Size.Het = 400;
         this.Back = brushA;
-        this.DrawSlash = slash;
+        this.Slash = slash;
         this.Form = form;
         return true;
     }
@@ -45,9 +45,9 @@ class ViewA : ViewView
         this.Form.Final();
 
         DrawBrush k;
-        k = this.DrawSlash.Brush;
+        k = this.Slash.Brush;
 
-        this.DrawSlash.Final();
+        this.Slash.Final();
 
         k.Final();
 
@@ -55,7 +55,7 @@ class ViewA : ViewView
         return true;
     }
 
-    public virtual DrawSlash DrawPen { get; set; }
+    public virtual DrawSlash Slash { get; set; }
     public virtual Demo Demo { get; set; }
     public virtual DrawForm Form { get; set; }
     public virtual long RotateValue { get; set; }
@@ -71,44 +71,33 @@ class ViewA : ViewView
         long het;
         het = this.Size.Het;
 
-        DrawRect rect;
-        rect = this.DrawRectA;
-        rect.Pos.Col = this.MathInt(col);
-        rect.Pos.Row = this.MathInt(row);
-        rect.Size.Wed = this.MathInt(wed);
-        rect.Size.Het = this.MathInt(het);
+        this.DrawRectA.Pos.Col = this.MathInt(col);
+        this.DrawRectA.Pos.Row = this.MathInt(row);
+        this.DrawRectA.Size.Wed = this.MathInt(wed);
+        this.DrawRectA.Size.Het = this.MathInt(het);
 
-        DrawBrush brush;
-        brush = this.Back;
-        draw.Fill = brush;
-        DrawSlash pen;
-        pen = this.DrawPen;
-        draw.Line = pen;
+        draw.Fill = this.Back;
+        draw.Line = this.Slash;
 
         draw.FillPos.Col = this.MathInt(col);
         draw.FillPos.Row = this.MathInt(row);
         draw.FillPosSet();
         
-        draw.ExecuteRectRound(rect, this.MathInt(40), this.MathInt(30));
+        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(40), this.MathInt(30));
 
-        DrawImage playImage;
-        playImage = this.Demo.PlayImage;
+        this.DrawRectA.Pos.Col = 0;
+        this.DrawRectA.Pos.Row = 0;
 
-        rect.Pos.Col = 0;
-        rect.Pos.Row = 0;
-
-        DrawRect rectB;
-        rectB = this.DrawRectB;
-        rectB.Pos.Col = 0;
-        rectB.Pos.Row = 0;
-        rectB.Size.Wed = this.MathInt(playImage.Size.Wed);
-        rectB.Size.Het = this.MathInt(playImage.Size.Het);
+        this.DrawRectB.Pos.Col = 0;
+        this.DrawRectB.Pos.Row = 0;
+        this.DrawRectB.Size.Wed = this.MathInt(this.Demo.PlayImage.Size.Wed);
+        this.DrawRectB.Size.Het = this.MathInt(this.Demo.PlayImage.Size.Het);
 
         long ooa;
-        ooa = this.MathInt(left);
+        ooa = this.MathInt(col);
 
         long oob;
-        oob = this.MathInt(up);
+        oob = this.MathInt(row);
 
         long oa;
         oa = this.RotateValue * 10;
@@ -129,7 +118,7 @@ class ViewA : ViewView
         draw.Form = this.Form;
         draw.FormSet();
 
-        draw.ExecuteImage(playImage, rect, rectB);
+        draw.ExecuteImage(this.Demo.PlayImage, this.DrawRectA, this.DrawRectB);
 
         draw.Form = null;
         draw.FormSet();
