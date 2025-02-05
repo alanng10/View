@@ -73,28 +73,26 @@ class Demo : ClassBase
         brush.Color = this.DrawInfra.ColorCreate(0xff, 0, 0xff, 0);
         brush.Init();
 
-        ViewView view;
-        view = new ViewView();
-        view.Init();
-        view.Pos.Col = 100;
-        view.Pos.Row = 100;
-        view.Size.Wed = 1600;
-        view.Size.Het = 900;
-        view.Back = brush;
+        this.View = new ViewView();
+        this.View.Init();
+        this.View.Pos.Col = 100;
+        this.View.Pos.Row = 100;
+        this.View.Size.Wed = 1600;
+        this.View.Size.Het = 900;
+        this.View.Back = brush;
 
         this.ViewC = new ViewC();
         this.ViewC.Demo = this;
         this.ViewC.Init();
 
-        ViewA viewA;
-        viewA = new ViewA();
-        viewA.Demo = this;
-        viewA.Init();
+        this.ViewA = new ViewA();
+        this.ViewA.Demo = this;
+        this.ViewA.Init();
 
         Grid grid;
         grid = this.GridCreate();
 
-        view.Child = grid;
+        this.View.Child = grid;
 
         DrawImage image;
         image = this.ImageCreate();
@@ -137,9 +135,6 @@ class Demo : ClassBase
         this.Play = new Play();
         this.Play.Demo = this;
         this.Play.Init();
-
-        this.ViewA = viewA;
-        this.View = view;
 
         this.Frame.View = this.View;
         this.Frame.Shown = true;
