@@ -91,5 +91,38 @@ class Demo : ClassBase
         viewB.Init();
 
         this.ViewA.Child : viewB;
+
+        this.PlayImage : this.PlayImageCreate();
+
+        this.Play : new Play;
+        this.Play.Demo : this;
+        this.Play.Init();
+
+        this.Frame.View : this.View;
+        this.Frame.Shown : true;
+
+        var Thread thread;
+        thread : varThis.Thread;
+
+        thread.ExecuteMain();
+
+        this.Play.Final();
+
+        this.PlayImageFinal(this.PlayImage);
+
+        viewB.Final();
+
+        this.GridFinal(grid);
+
+        this.ViewA.Final();
+
+        this.ViewC.Final();
+
+        brush.Final();
+
+        this.Frame.Final();
+
+        this.ThreadDrawImageFinal(this.ThreadDrawImage);
+        return true;
     }
 }
