@@ -65,53 +65,12 @@ class Demo : ClassBase
         brush.Color : this.DrawInfra.ColorCreate(0hff, 0, 0hff, 0);
         brush.Init();
 
-        var View view;
-        view : new View;
-        view.Init();
-        view.Pos.Col : 100;
-        view.Pos.Row : 100;
-        view.Size.Wed : 1600;
-        view.Size.Het : 900;
-        view.Back : brush;
-
-        var DrawBrush brushA;
-        brushA : new DrawBrush;
-        brushA.Kind : this.BrushKindList.Color;
-        brushA.Color : this.DrawInfra.ColorCreate(0hff, 0, 0, 0hff);
-        brushA.Init();
-
-        var DrawBrush slashBrush;
-        slashBrush : new DrawBrush;
-        slashBrush.Kind : this.BrushKindList.Color;
-        slashBrush.Color : this.DrawInfra.ColorCreate(0hff, 0hff, 0, 0hff);
-        slashBrush.Init();
-
-        var DrawSlash slash;
-        slash : new DrawSlash;
-        slash.Brush : slashBrush;
-        slash.Line : this.SlashLineList.DashDotDot;
-        slash.Size : this.MathInt(11);
-        slash.Cape : this.SlashCapeList.Round;
-        slash.Join : this.SlashJoinList.Bevel;
-        slash.Init();
-
-        var ViewC viewC;
-        viewC : this.ViewCCreate();
-
-        var DrawForm viewAForm;
-        viewAForm : new DrawForm;
-        viewAForm.Init();
-
-        var ViewA viewA;
-        viewA : new ViewA;
-        viewA.Init();
-        viewA.Pos.Col : 0;
-        viewA.Pos.Row : 0;
-        viewA.Size.Wed : 600;
-        viewA.Size.Het : 400;
-        viewA.Back : brushA;
-        viewA.DrawSlash : slash;
-        viewA.Form : viewAForm;
-        viewA.Demo : this;
+        this.View : new View;
+        this.View.Init();
+        this.View.Pos.Col : 100;
+        this.View.Pos.Row : 100;
+        this.View.Size.Wed : 1600;
+        this.View.Size.Het : 900;
+        this.View.Back : brush;
     }
 }
