@@ -99,12 +99,6 @@ class ThreadState : State
         Text text;
         text = this.Demo.TextInfra.TextCreateStringData(this.S("C hr"), null);
 
-        DrawTextAlign textAlign;
-        textAlign = new DrawTextAlign();
-        textAlign.Init();
-        textAlign.Horiz = 1;
-        textAlign.Vert = 1;
-
         DrawSlash slash;
         slash = new DrawSlash();
         slash.Brush = brushA;
@@ -128,7 +122,7 @@ class ThreadState : State
         draw.Font = face;
         draw.Line = slash;
         draw.Comp = compList.DestOut;
-        draw.ExecuteText(text, textAlign, false, rectA);
+        draw.ExecuteText(text, this.Demo.AlignList.Start, this.Demo.AlignList.Start, false, rectA);
 
         draw.End();
 
