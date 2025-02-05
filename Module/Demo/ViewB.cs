@@ -67,54 +67,49 @@ class ViewB : ViewView
 
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
-        long left;
-        left = this.Pos.Col;
-        long up;
-        up = this.Pos.Row;
+        long col;
+        col = this.Pos.Col;
+        long row;
+        row = this.Pos.Row;
         long wed;
         wed = this.Size.Wed;
         long het;
         het = this.Size.Het;
 
-        DrawRect rect;
-        rect = this.DrawRectA;
-        rect.Pos.Col = this.MathInt(left);
-        rect.Pos.Row = this.MathInt(up);
-        rect.Size.Wed = this.MathInt(wed);
-        rect.Size.Het = this.MathInt(het);
-
-        DrawRect sourceRect;
-        sourceRect = this.SourceRect;
+        this.DrawRectA.Pos.Col = this.MathInt(col);
+        this.DrawRectA.Pos.Row = this.MathInt(row);
+        this.DrawRectA.Size.Wed = this.MathInt(wed);
+        this.DrawRectA.Size.Het = this.MathInt(het);
 
         long angle;
         angle = this.MathInt(20);
     
-        long horizScale;
-        horizScale = this.MathValue(3, -1);
+        long colScale;
+        colScale = this.MathValue(3, -1);
 
-        long vertScale;
-        vertScale = this.MathInt(1);
+        long rowScale;
+        rowScale = this.MathInt(1);
 
         this.Form.Reset();
 
         this.Form.Angle(angle);
 
-        this.Form.Scale(horizScale, vertScale);
+        this.Form.Scale(colScale, rowScale);
 
         draw.Form = this.Form;
         draw.FormSet();
 
-        draw.ExecuteVideo(this.DrawImage, rect, sourceRect);
+        draw.ExecuteImage(this.DrawImage, this.DrawRectA, this.SourceRect);
 
         draw.Form = null;
         draw.FormSet();
 
-        this.DestRectA.Pos.Col = this.MathInt(left);
-        this.DestRectA.Pos.Row = this.MathInt(up + 150);
+        this.DestRectA.Pos.Col = this.MathInt(col);
+        this.DestRectA.Pos.Row = this.MathInt(row + 150);
 
         draw.Comp = this.DrawComp.SourceOver;
 
-        draw.ExecuteVideo(this.ThreadDrawImage, this.DestRectA, this.SourceRectA);
+        draw.ExecuteImage(this.ThreadDrawImage, this.DestRectA, this.SourceRectA);
 
         draw.Comp = null;
         return true;
