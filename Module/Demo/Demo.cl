@@ -80,5 +80,16 @@ class Demo : ClassBase
         this.ViewA : new ViewA;
         this.ViewA.Demo : this;
         this.ViewA.Init();
+
+        var Grid grid;
+        grid : this.GridCreate();
+
+        this.View.Child : grid;
+
+        var ViewB viewB;
+        viewB : new ViewB;
+        viewB.Init();
+
+        this.ViewA.Child : viewB;
     }
 }
