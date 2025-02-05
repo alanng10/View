@@ -196,4 +196,29 @@ class Demo : ClassBase
         a.Final();
         return true;
     }
+
+    maide private Bool ExecuteDemoThread()
+    {
+        var ThreadState state;
+        state : new ThreadState;
+        state.Init();
+        state.Demo : this;
+        state.Image : this.ThreadDrawImage;
+
+        var Thread thread;
+        thread : new Thread;
+        thread.Init();
+        thread.ExecuteState : state;
+        thread.Execute();
+
+        thread.Wait();
+
+        var Int aa;
+        aa : thread.Status;
+        this.Console.Out.Write(this.AddClear().Add("Demo.ExecuteDemoThread Thread Status: 0h").Add(this.StringIntHex(aa)).AddLine().AddResult());
+ 
+        thread.Final();
+
+        return true;
+    }
 }
