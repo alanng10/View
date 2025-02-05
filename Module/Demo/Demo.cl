@@ -125,4 +125,19 @@ class Demo : ClassBase
         this.ThreadDrawImageFinal(this.ThreadDrawImage);
         return true;
     }
+
+    maide private Grid GridCreate()
+    {
+        var DrawBrush gridBrush;
+        gridBrush : new DrawBrush;
+        gridBrush.Kind : this.BrushKindList.Color;
+        gridBrush.Color : this.DrawInfra.ColorCreate(0h80, 0, 0, 0);
+        gridBrush.Init();
+
+        var Grid grid;
+        grid : new Grid;
+        grid.Init();
+
+        grid.Back : gridBrush;
+    }
 }
