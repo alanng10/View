@@ -52,12 +52,6 @@ class ThreadState : State
         brush.Color = drawInfra.ColorCreate(0xff, 0xff, 0xff, 0);
         brush.Init();
 
-        DrawBrush brushA;
-        brushA = new DrawBrush();
-        brushA.Kind = brushKindList.Color;
-        brushA.Color = drawInfra.ColorCreate(0xff, 0, 0, 0);
-        brushA.Init();
-
         long left;
         long up;
         long wed;
@@ -101,9 +95,9 @@ class ThreadState : State
 
         DrawSlash slash;
         slash = new DrawSlash();
-        slash.Brush = brushA;
+        slash.Brush = this.Demo.DrawInfra.BlackSlash.Brush;
         slash.Line = this.Demo.SlashLineList.DashDotDot;
-        slash.Cap = this.Demo.SlashCapList.Round;
+        slash.Cap = this.Demo.SlashCapeList.Round;
         slash.Join = this.Demo.SlashJoinList.Miter;
         slash.Wed = this.MathInt(5);
         slash.Init();
@@ -131,8 +125,6 @@ class ThreadState : State
         face.Final();
 
         slash.Final();
-
-        brushA.Final();
 
         brush.Final();
         return true;
