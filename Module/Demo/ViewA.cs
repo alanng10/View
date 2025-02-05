@@ -62,10 +62,10 @@ class ViewA : ViewView
 
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
-        long left;
-        left = this.Pos.Col;
-        long up;
-        up = this.Pos.Row;
+        long col;
+        col = this.Pos.Col;
+        long row;
+        row = this.Pos.Row;
         long wed;
         wed = this.Size.Wed;
         long het;
@@ -73,8 +73,8 @@ class ViewA : ViewView
 
         DrawRect rect;
         rect = this.DrawRectA;
-        rect.Pos.Col = this.MathInt(left);
-        rect.Pos.Row = this.MathInt(up);
+        rect.Pos.Col = this.MathInt(col);
+        rect.Pos.Row = this.MathInt(row);
         rect.Size.Wed = this.MathInt(wed);
         rect.Size.Het = this.MathInt(het);
 
@@ -85,8 +85,8 @@ class ViewA : ViewView
         pen = this.DrawPen;
         draw.Line = pen;
 
-        draw.FillPos.Col = this.MathInt(left);
-        draw.FillPos.Row = this.MathInt(up);
+        draw.FillPos.Col = this.MathInt(col);
+        draw.FillPos.Row = this.MathInt(row);
         draw.FillPosSet();
         
         draw.ExecuteRectRound(rect, this.MathInt(40), this.MathInt(30));
