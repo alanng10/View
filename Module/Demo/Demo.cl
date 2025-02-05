@@ -72,5 +72,13 @@ class Demo : ClassBase
         this.View.Size.Wed : 1600;
         this.View.Size.Het : 900;
         this.View.Back : brush;
+
+        this.ViewC : new ViewC;
+        this.ViewC.Demo : this;
+        this.ViewC.Init();
+
+        this.ViewA : new ViewA;
+        this.ViewA.Demo : this;
+        this.ViewA.Init();
     }
 }
