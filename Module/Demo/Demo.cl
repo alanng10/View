@@ -139,5 +139,24 @@ class Demo : ClassBase
         grid.Init();
 
         grid.Back : gridBrush;
+
+        var ViewCount colA;
+        colA : new ViewCount;
+        colA.Init();
+        colA.Value : 600;
+        var ViewCount colB;
+        colB : new ViewCount;
+        colB.Init();
+        colB.Value : 600;
+        var ViewCount rowA;
+        rowA : new ViewCount;
+        rowA.Init();
+        rowA.Value : 600;
+        var GridChild childA;
+        childA : new GridChild;
+        childA.Init();
+        childA.View : this.ViewA;
+        childA.Rect.Size.Wed : 1;
+        childA.Rect.Size.Het : 1;
     }
 }
