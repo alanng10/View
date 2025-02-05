@@ -2,17 +2,7 @@ namespace Demo;
 
 class TypeA : Type
 {
-    public override bool Init()
-    {
-        base.Init();
-        this.ViewInfra = ViewInfra.This;
-        this.Console = Console.This;
-        return true;
-    }
-
     public Demo Demo { get; set; }
-    protected virtual ViewInfra ViewInfra { get; set; }
-    protected virtual Console Console { get; set; }
     public long TitleIndex { get; set; }
 
     public override bool Event(Button index, bool field)
@@ -198,14 +188,14 @@ class TypeA : Type
 
         if (b)
         {
-            this.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewA.Area);
+            this.Demo.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewA.Area);
 
             this.Demo.Frame.EventDraw(this.Demo.UpdateRect);
         }
 
         if (ba)
         {
-            this.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewC.Area);
+            this.Demo.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewC.Area);
 
             this.Demo.Frame.EventDraw(this.Demo.UpdateRect);
         }
