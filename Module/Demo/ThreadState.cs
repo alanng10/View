@@ -39,17 +39,13 @@ class ThreadState : State
 
     private bool Draw()
     {
-        DrawBrushKindList brushKindList;
-        brushKindList = DrawBrushKindList.This;
         DrawCompList compList;
         compList = DrawCompList.This;
-        DrawInfra drawInfra;
-        drawInfra = DrawInfra.This;
 
         DrawBrush brush;
         brush = new DrawBrush();
-        brush.Kind = brushKindList.Color;
-        brush.Color = drawInfra.ColorCreate(0xff, 0xff, 0xff, 0);
+        brush.Kind = this.Demo.BrushKindList.Color;
+        brush.Color = this.Demo.DrawInfra.ColorCreate(0xff, 0xff, 0xff, 0);
         brush.Init();
 
         long left;
@@ -62,7 +58,7 @@ class ThreadState : State
         het = this.Image.Size.Het - 50;
 
         DrawRect rectA;
-        rectA = drawInfra.RectCreate(this.MathInt(left), this.MathInt(up), this.MathInt(wed), this.MathInt(het));
+        rectA = this.Demo.DrawInfra.RectCreate(this.MathInt(left), this.MathInt(up), this.MathInt(wed), this.MathInt(het));
 
         DrawDraw draw;
         draw = new DrawDraw();
