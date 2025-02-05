@@ -182,10 +182,6 @@ class Demo : ClassBase
         grid.Pos.Row = 50;
         grid.Size.Wed = 1500;
         grid.Size.Het = 800;
-        grid.Dest.Pos.Col = 0;
-        grid.Dest.Pos.Row = 0;
-        grid.Dest.Size.Wed = 1500;
-        grid.Dest.Size.Het = 800;
         grid.Row.Add(rowA);
         grid.Col.Add(colA);
         grid.Col.Add(colB);
