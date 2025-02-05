@@ -7,6 +7,7 @@ class Demo : ClassBase
         base.Init();
         this.MathInfra = MathInfra.This;
         this.DrawInfra = DrawInfra.This;
+        this.ViewInfra = ViewInfra.This;
         this.Math = MathMath.This;
         this.Console = Console.This;
         this.BrushKindList = DrawBrushKindList.This;
@@ -29,6 +30,7 @@ class Demo : ClassBase
     public virtual DrawImage PlayImage { get; set; }
     public virtual MathInfra MathInfra { get; set; }
     public virtual DrawInfra DrawInfra { get; set; }
+    public virtual ViewInfra ViewInfra { get; set; }
     public virtual MathMath Math { get; set; }
     public virtual Console Console { get; set; }
     public virtual DrawBrushKindList BrushKindList { get; set; }
