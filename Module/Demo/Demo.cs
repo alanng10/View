@@ -94,41 +94,11 @@ class Demo : ClassBase
 
         this.View.Child = grid;
 
-        DrawImage image;
-        image = this.ImageCreate();
-
-        long wedA;
-        long hetA;
-        wedA = 400;
-        hetA = 200;
-        DrawRect sourceRect;
-        sourceRect = this.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(wedA), this.MathInt(hetA));
-
-        DrawForm formA;
-        formA = new DrawForm();
-        formA.Init();
-
-        DrawRect destRectA;
-        destRectA = this.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
-
-        DrawRect sourceRectA;
-        sourceRectA = this.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
-
         ViewB viewB;
         viewB = new ViewB();
         viewB.Init();
-        viewB.Pos.Col = 60;
-        viewB.Pos.Row = 40;
-        viewB.Size.Wed = wedA;
-        viewB.Size.Het = hetA;
-        viewB.DrawImage = image;
-        viewB.SourceRect = sourceRect;
-        viewB.Form = formA;
-        viewB.ThreadDrawImage = this.ThreadDrawImage;
-        viewB.DestRectA = destRectA;
-        viewB.SourceRectA = sourceRectA;
 
-        viewA.Child = viewB;
+        this.ViewA.Child = viewB;
 
         this.PlayImage = this.PlayImageCreate();
 
@@ -148,13 +118,11 @@ class Demo : ClassBase
 
         this.PlayImageFinal(this.PlayImage);
 
-        formA.Final();
-
-        this.ImageFinal(image);
+        viewB.Final();
 
         this.GridFinal(grid);
 
-        viewA.Final();
+        this.ViewA.Final();
 
         this.ViewC.Final();
 
@@ -225,19 +193,6 @@ class Demo : ClassBase
     private bool GridFinal(Grid a)
     {
         a.Back.Final();
-        return true;
-    }
-
-    private DrawImage ImageCreate()
-    {
-        DrawImage image;
-        image = this.DrawInfra.ImageCreateStorage(this.S("ViewDemoData/image.jpg"));
-        return image;
-    }
-
-    private bool ImageFinal(DrawImage image)
-    {
-        image.Final();
         return true;
     }
 
