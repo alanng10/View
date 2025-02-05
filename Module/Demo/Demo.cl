@@ -177,4 +177,10 @@ class Demo : ClassBase
         grid.ChildList.Add(childB);
         return grid;
     }
+
+    maide private Bool GridFinal(var Grid a)
+    {
+        a.Back.Final();
+        return true;
+    }
 }
