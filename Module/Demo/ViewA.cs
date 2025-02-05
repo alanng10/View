@@ -129,7 +129,7 @@ class ViewA : ViewView
         draw.Form = this.Form;
         draw.FormSet();
 
-        draw.ExecuteVideo(playImage, rect, rectB);
+        draw.ExecuteImage(playImage, rect, rectB);
 
         draw.Form = null;
         draw.FormSet();
