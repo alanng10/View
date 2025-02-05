@@ -53,7 +53,7 @@ class ViewC : ViewView
         this.EllipseRect = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
         this.Font = this.FontCreate();
         this.Text = text;
-        this.TextPen = this.TextSlashCreate();
+        this.TextSlash = this.TextSlashCreate();
         return true;
     }
 
@@ -68,7 +68,7 @@ class ViewC : ViewView
         DrawPolateLinear polateLinear;
         polateLinear = polate.Linear;
 
-        this.TextSlashFinal(this.TextPen);
+        this.TextSlashFinal(this.TextSlash);
 
         this.FontFinal(this.Font);
 
@@ -118,7 +118,7 @@ class ViewC : ViewView
         a.Brush = ka;
         a.Line = this.Demo.SlashLineList.DashDotDot;
         a.Size = this.MathInt(14);
-        a.Cape = this.Demo.SlashCapList.Round;
+        a.Cape = this.Demo.SlashCapeList.Round;
         a.Join = this.Demo.SlashJoinList.Bevel;
         a.Init();
         return a;
@@ -156,7 +156,7 @@ class ViewC : ViewView
     public DrawBrush EllipseBrush { get; set; }
     public DrawFont Font { get; set; }
     public Text Text { get; set; }
-    public DrawSlash TextPen { get; set; }
+    public DrawSlash TextSlash { get; set; }
 
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
@@ -176,7 +176,7 @@ class ViewC : ViewView
         this.DrawRectA.Size.Het = this.MathInt(100);
 
         draw.Font = this.Font;
-        draw.Line = this.TextPen;
+        draw.Line = this.TextSlash;
 
         draw.ExecuteText(this.Text, this.Demo.AlignList.Mid, this.Demo.AlignList.Start, false, this.DrawRectA);
 
