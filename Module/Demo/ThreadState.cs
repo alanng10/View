@@ -5,8 +5,6 @@ class ThreadState : State
     public override bool Init()
     {
         base.Init();
-        this.MathInfra = MathInfra.This;
-        this.Math = MathMath.This;
         this.MathComp = new MathComp();
         this.MathComp.Init();
         return true;
@@ -14,8 +12,6 @@ class ThreadState : State
 
     public Demo Demo { get; set; }
     public DrawImage Image { get; set; }
-    protected virtual MathInfra MathInfra { get; set; }
-    protected virtual MathMath Math { get; set; }
     protected virtual MathComp MathComp { get; set; }
 
     public override bool Execute()
@@ -126,7 +122,7 @@ class ThreadState : State
     protected virtual long MathInt(long n)
     {
         MathInfra mathInfra;
-        mathInfra = this.MathInfra;
+        mathInfra = this.Demo.MathInfra;
 
         MathComp mathComp;
         mathComp = this.MathComp;
@@ -134,33 +130,5 @@ class ThreadState : State
         long a;
         a = mathInfra.Int(mathComp, n);
         return a;
-    }
-
-    public virtual ThreadState Add(String a)
-    {
-        this.Demo.Add(a);
-        return this;
-    }
-
-    public virtual ThreadState AddS(string o)
-    {
-        this.Demo.AddS(o);
-        return this;
-    }
-
-    public virtual ThreadState AddClear()
-    {
-        this.Demo.AddClear();
-        return this;
-    }
-
-    public virtual String AddResult()
-    {
-        return this.Demo.AddResult();
-    }
-
-    protected virtual String S(string o)
-    {
-        return this.Demo.S(o);
     }
 }
