@@ -9,7 +9,7 @@ class Play : MediaPlay
 
         this.MediaStorage : new Storage;
         this.MediaStorage.Init();
-        this.MediaStorage.Path : "View.Demo-0.00.00/Media.mp4";
+        this.MediaStorage.Path : "View.Demo-0.00.00.data/Demo/Media.mp4";
         this.MediaStorage.Mode : mode;
         this.MediaStorage.Open();
 
