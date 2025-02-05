@@ -19,7 +19,7 @@ class ThreadState : State
         Console console;
         console = Console.This;
         console.Out.Write(this.S("ThreadState.Execute START\n"));
-        
+
         this.Draw();
 
         Value aa;
