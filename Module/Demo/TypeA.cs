@@ -2,16 +2,16 @@ namespace Demo;
 
 class TypeA : Type
 {
-    public Demo Demo { get; set; }
-    public long TitleIndex { get; set; }
+    public virtual Demo Demo { get; set; }
+    public virtual long TitleIndex { get; set; }
 
-    public override bool Event(Button index, bool field)
+    public override bool Event(Button index, bool value)
     {
         Button a;
         a = index;
 
         bool o;
-        o = field;
+        o = value;
 
         ButtonList d;
         d = this.Demo.Frame.Type.Index;
