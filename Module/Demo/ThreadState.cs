@@ -91,7 +91,7 @@ class ThreadState : State
         rectA.Size.Het = this.MathInt(h);
 
         Text text;
-        text = this.Demo.TextInfra.TextCreateStringData(this.S("C hr"), null);
+        text = this.Demo.TextCreate(this.S("C hr"));
 
         DrawSlash slash;
         slash = new DrawSlash();
@@ -102,18 +102,18 @@ class ThreadState : State
         slash.Wed = this.MathInt(5);
         slash.Init();
 
-        DrawFace face;
-        face = new DrawFace();
-        face.Name = this.Demo.DrawInfra.Font.Name;
-        face.Size = 38;
-        face.Weight = 700;
-        face.Italic = false;
-        face.Overline = false;
-        face.Underline = false;
-        face.Strikeout = false;
-        face.Init();
+        DrawFont font;
+        font = new DrawFont();
+        font.Name = this.Demo.DrawInfra.FontAriaName;
+        font.Size = 38;
+        font.Strong = 700;
+        font.Tenden = false;
+        font.Staline = false;
+        font.Midline = false;
+        font.Endline = false;
+        font.Init();
 
-        draw.Font = face;
+        draw.Font = font;
         draw.Line = slash;
         draw.Comp = compList.DestOut;
         draw.ExecuteText(text, this.Demo.AlignList.Start, this.Demo.AlignList.Start, false, rectA);
@@ -122,7 +122,7 @@ class ThreadState : State
 
         draw.Final();
 
-        face.Final();
+        font.Final();
 
         slash.Final();
 
