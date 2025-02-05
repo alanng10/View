@@ -41,17 +41,17 @@ class ThreadState : State
         brush.Color = this.Demo.DrawInfra.ColorCreate(0xff, 0xff, 0xff, 0);
         brush.Init();
 
-        long left;
-        long up;
+        long col;
+        long row;
         long wed;
         long het;
-        left = 20;
-        up = 20;
+        col = 20;
+        row = 20;
         wed = this.Image.Size.Wed - 50;
         het = this.Image.Size.Het - 50;
 
         DrawRect rectA;
-        rectA = this.Demo.DrawInfra.RectCreate(this.MathInt(left), this.MathInt(up), this.MathInt(wed), this.MathInt(het));
+        rectA = this.Demo.DrawInfra.RectCreate(this.MathInt(col), this.MathInt(row), this.MathInt(wed), this.MathInt(het));
 
         DrawDraw draw;
         draw = new DrawDraw();
@@ -60,7 +60,7 @@ class ThreadState : State
         draw.Size.Wed = this.Image.Size.Wed;
         draw.Size.Het = this.Image.Size.Het;
         draw.SizeSet();
-        
+
         draw.Start();
         draw.Line = null;
         draw.Fill = brush;
