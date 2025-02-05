@@ -60,9 +60,9 @@ class TypeA : Type
         if (a == d.AlphaU & o)
         {
             bool bo;
-            bo = this.Demo.ViewA.Visible;
+            bo = this.Demo.ViewA.Shown;
             bo = !bo;
-            this.Demo.ViewA.Visible = bo;
+            this.Demo.ViewA.Shown = bo;
             b = true;
         }
 
