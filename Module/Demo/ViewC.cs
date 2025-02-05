@@ -61,10 +61,6 @@ class ViewC : ViewView
 
     public virtual bool Final()
     {
-        DrawSlash textPen;
-        textPen = this.TextPen;
-        DrawBrush ellipseBrush;
-        ellipseBrush = this.EllipseBrush;
         DrawBrush brush;
         brush = this.Back;
         DrawPolate polate;
@@ -74,11 +70,11 @@ class ViewC : ViewView
         DrawPolateLinear polateLinear;
         polateLinear = polate.Linear;
 
-        this.TextSlashFinal(textPen);
+        this.TextSlashFinal(this.TextPen);
 
         this.FontFinal(this.Font);
 
-        this.EllipseBrushFinal(ellipseBrush);
+        this.EllipseBrushFinal(this.EllipseBrush);
 
         brush.Final();
 
