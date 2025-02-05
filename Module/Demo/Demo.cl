@@ -158,5 +158,23 @@ class Demo : ClassBase
         childA.View : this.ViewA;
         childA.Rect.Size.Wed : 1;
         childA.Rect.Size.Het : 1;
+        var GridChild childB;
+        childB : new GridChild;
+        childB.Init();
+        childB.View : this.ViewC;
+        childB.Rect.Pos.Col : 1;
+        childB.Rect.Size.Wed : 1;
+        childB.Rect.Size.Het : 1;
+
+        grid.Pos.Col : 50;
+        grid.Pos.Row : 50;
+        grid.Size.Wed : 1500;
+        grid.Size.Het : 800;
+        grid.Row.Add(rowA);
+        grid.Col.Add(colA);
+        grid.Col.Add(colB);
+        grid.ChildList.Add(childA);
+        grid.ChildList.Add(childB);
+        return grid;
     }
 }
