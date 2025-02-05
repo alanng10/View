@@ -221,4 +221,35 @@ class Demo : ClassBase
 
         return true;
     }
+
+    maide private DrawImage PlayImageCreate()
+    {
+        var DrawImage a;
+        a : new DrawImage;
+        a.Init();
+        return a;
+    }
+
+    maide private Bool PlayImageFinal(var DrawImage a)
+    {
+        a.Final();
+        return true;
+    }
+
+    maide prusate Int MathInt(var Int n)
+    {
+        var Int a;
+        a : this.MathInfra.Int(this.MathComp, n);
+        return a;
+    }
+
+    maide prusate Int MathValue(var Int cand, var Int expo)
+    {
+        this.MathComp.Cand : cand;
+        this.MathComp.Expo : expo;
+
+        var Int a;
+        a : this.Math.Value(this.MathComp);
+        return a;
+    }
 }
