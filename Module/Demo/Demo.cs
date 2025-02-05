@@ -10,6 +10,7 @@ class Demo : ClassBase
         this.ViewInfra = ViewInfra.This;
         this.Math = MathMath.This;
         this.Console = Console.This;
+        this.CompList = DrawCompList.This;
         this.BrushKindList = DrawBrushKindList.This;
         this.SlashLineList = DrawSlashLineList.This;
         this.SlashCapeList = DrawSlashCapeList.This;
@@ -33,6 +34,7 @@ class Demo : ClassBase
     public virtual ViewInfra ViewInfra { get; set; }
     public virtual MathMath Math { get; set; }
     public virtual Console Console { get; set; }
+    public virtual DrawCompList CompList { get; set; }
     public virtual DrawBrushKindList BrushKindList { get; set; }
     public virtual DrawSlashLineList SlashLineList { get; set; }
     public virtual DrawSlashCapList SlashCapeList { get; set; }

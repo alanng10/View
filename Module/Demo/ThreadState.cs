@@ -39,9 +39,6 @@ class ThreadState : State
 
     private bool Draw()
     {
-        DrawCompList compList;
-        compList = DrawCompList.This;
-
         DrawBrush brush;
         brush = new DrawBrush();
         brush.Kind = this.Demo.BrushKindList.Color;
@@ -111,7 +108,7 @@ class ThreadState : State
 
         draw.Font = font;
         draw.Line = slash;
-        draw.Comp = compList.DestOut;
+        draw.Comp = this.Demo.CompList.DestOut;
         draw.ExecuteText(text, this.Demo.AlignList.Start, this.Demo.AlignList.Start, false, rectA);
 
         draw.End();
