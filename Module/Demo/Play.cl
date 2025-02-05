@@ -28,5 +28,31 @@ class Play : MediaPlay
         audioOut : new MediaAudioOut;
         audioOut.Init();
         audioOut.Volume : volume;
+
+        base.Init();
+        this.Source : this.MediaStorage.Stream;
+        this.SourceSet();
+        this.VideoOut : videoOut;
+        this.AudioOut : audioOut;
+        this.VideoOutSet();
+        this.AudioOutSet();
+        return true;
     }
+
+    maide prusate Bool Final()
+    {
+        base.Init();
+
+        this.AudioOut.Final();
+
+        this.VideoOut.Final();
+
+        this.MediaStorage.Close();
+
+        this.MediaStorage.Final();
+        return true;
+    }
+
+    field prusate Demo Demo { get { return data; } set { data : value; } }
+    field private Storage MediaStorage { get { return data; } set { data : value; } }
 }
