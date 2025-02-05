@@ -211,28 +211,17 @@ class Demo : ClassBase
 
     private bool ExecuteDemoThread()
     {
-        ThreadPhore phore;
-        phore = new ThreadPhore();
-        phore.InitCount = 1;
-        phore.Init();
-        phore.Open();
-
         ThreadState state;
         state = new ThreadState();
         state.Init();
         state.Demo = this;
         state.Image = this.ThreadDrawImage;
-        state.Phore = phore;
 
         ThreadThread thread;
         thread = new ThreadThread();
         thread.Init();
         thread.ExecuteState = state;
         thread.Execute();
-
-        phore.Open();
-
-        this.Console.Out.Write("Demo.ExecuteDemoThread phore Acquire Success\n");
 
         thread.Wait();
 
@@ -242,7 +231,6 @@ class Demo : ClassBase
 
         thread.Final();
 
-        phore.Final();
         return true;
     }
 

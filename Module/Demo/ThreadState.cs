@@ -14,7 +14,6 @@ class ThreadState : State
 
     public Demo Demo { get; set; }
     public DrawImage Image { get; set; }
-    public ThreadPhore Phore { get; set; }
     protected virtual MathInfra MathInfra { get; set; }
     protected virtual MathMath Math { get; set; }
     protected virtual MathComp MathComp { get; set; }
@@ -24,8 +23,6 @@ class ThreadState : State
         Console console;
         console = Console.This;
         console.Out.Write(this.S("ThreadState.Execute START\n"));
-
-        this.Phore.Close();
         
         this.Draw();
 
