@@ -163,7 +163,7 @@ class Demo : ClassBase
         GridChild childA;
         childA = new GridChild();
         childA.Init();
-        childA.View = viewA;
+        childA.View = this.ViewA;
         childA.Rect.Size.Wed = 1;
         childA.Rect.Size.Het = 1;
         GridChild childB;
