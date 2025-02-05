@@ -10,7 +10,7 @@ class VideoOut : MediaVideoOut
 
         this.Demo.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewA.Area);
 
-        this.Demo.Frame.EventDraw(this.Demo.UpdateRect);
+        this.Demo.Frame.Update(this.Demo.UpdateRect);
         return true;
     }
 }
