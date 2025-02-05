@@ -183,4 +183,17 @@ class Demo : ClassBase
         a.Back.Final();
         return true;
     }
+
+    maide private DrawImage ThreadDrawImageCreate()
+    {
+        var DrawImage a;
+        a : this.DrawInfra.ImageCreateSize(this.DrawInfra.SizeCreate(250, 200));
+        return a;
+    }
+
+    maide private Bool ThreadDrawImageFinal(var DrawImage a)
+    {
+        a.Final();
+        return true;
+    }
 }
