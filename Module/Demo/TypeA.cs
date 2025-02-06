@@ -116,10 +116,13 @@ class TypeA : Type
         long scaleFactor;
         scaleFactor = 1 << 20;
 
+        long ao;
+        ao = 0;
+
         if (a == d.AlphaC & o)
         {
             k = this.Demo.Play.AudioOut.Volume;
-            long ao;
+
             ao = this.Demo.MathValue(scaleFactor / 16, -20);
 
             k = this.Demo.Math.Add(k, ao);
@@ -130,7 +133,7 @@ class TypeA : Type
         if (a == d.AlphaV & o)
         {
             k = this.Demo.Play.AudioOut.Volume;
-            long ao;
+
             ao = this.Demo.MathValue(scaleFactor / 16, -20);
 
             k = this.Demo.Math.Sub(k, ao);
