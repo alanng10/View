@@ -31,5 +31,26 @@ class TypeA : Type
             this.Demo.ViewA.Pos.Col : k;
             b : true;
         }
+        inf (a = d.AlphaL & o)
+        {
+            k : this.Demo.ViewA.Pos.Col;
+            k : k + 10;
+            this.Demo.ViewA.Pos.Col : k;
+            b : true;
+        }
+        inf (a = d.AlphaI & o)
+        {
+            k : this.Demo.ViewA.Pos.Row;
+            k : k - 10;
+            this.Demo.ViewA.Pos.Row : k;
+            b : true;
+        }
+        inf (a = d.AlphaK & o)
+        {
+            k : this.Demo.ViewA.Pos.Row;
+            k : k + 10;
+            this.Demo.ViewA.Pos.Row : k;
+            b : true;
+        }
     }
 }
