@@ -117,9 +117,9 @@ class ViewC : ViewView
         a = new DrawSlash();
         a.Brush = ka;
         a.Line = this.Demo.SlashLineList.DashDotDot;
-        a.Size = this.MathInt(14);
         a.Cape = this.Demo.SlashCapeList.Round;
         a.Join = this.Demo.SlashJoinList.Bevel;
+        a.Size = this.MathInt(14);
         a.Init();
         return a;
     }
