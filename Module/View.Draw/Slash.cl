@@ -11,9 +11,9 @@ class Slash : Any
         this.Intern : extern.Slash_New();
         extern.Slash_BrushSet(this.Intern, this.Brush.Intern);
         extern.Slash_LineSet(this.Intern, this.Line.Intern);
-        extern.Slash_SizeSet(this.Intern, this.Size);
         extern.Slash_CapeSet(this.Intern, this.Cape.Intern);
         extern.Slash_JoinSet(this.Intern, this.Join.Intern);
+        extern.Slash_SizeSet(this.Intern, this.Size);
         extern.Slash_Init(this.Intern);
         return true;
     }
@@ -30,9 +30,9 @@ class Slash : Any
 
     field prusate Brush Brush { get { return data; } set { data : value; } }
     field prusate SlashLine Line { get { return data; } set { data : value; } }
-    field prusate Int Size { get { return data; } set { data : value; } }
     field prusate SlashCape Cape { get { return data; } set { data : value; } }
     field prusate SlashJoin Join { get { return data; } set { data : value; } }    
+    field prusate Int Size { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }    
     field pronate Int Intern { get { return data; } set { data : value; } }
 }
