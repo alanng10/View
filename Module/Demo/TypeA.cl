@@ -156,5 +156,16 @@ class TypeA : Type
 
             this.Demo.Play.Pos : kkaa;
         }
+
+        inf (a = d.AlphaN & o)
+        {
+            var String frameTitle;
+            frameTitle : this.Demo.AddClear().Add("View Demo ").Add(this.Demo.StringInt(this.TitleIndex)).AddResult();
+
+            this.Demo.Frame.Title : frameTitle;
+            this.Demo.Frame.TitleSet();
+
+            this.TitleIndex : this.TitleIndex + 1;
+        }
     }
 }
