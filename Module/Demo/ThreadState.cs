@@ -60,8 +60,9 @@ class ThreadState : State
         draw.SizeSet();
 
         draw.Start();
-        draw.Line = null;
+
         draw.Fill = brush;
+
         draw.ExecuteRect(rectA);
 
         draw.Fill = null;
