@@ -122,10 +122,9 @@ class ViewA : ViewView
 
         draw.Form = null;
         draw.FormSet();
-        
-        draw.Fill = null;
 
         draw.Line = null;
+        draw.Fill = null;
         return true;
     }
 }
