@@ -52,4 +52,13 @@ class ViewA : View
         this.Back.Final();
         return true;
     }
+
+    field prusate Demo Demo { get { return data; } set { data : value; } }
+    field prusate DrawSlash Slash { get { return data; } set { data : value; } }
+    field prusate DrawForm Form { get { return data; } set { data : value; } }
+    field prusate Int RotateValue { get { return data; } set { data : value; } }
+
+    maide precate Bool ExecuteDrawThis(var Draw draw)
+    {
+    }
 }
