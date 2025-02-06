@@ -128,5 +128,15 @@ class TypeA : Type
 
             this.Demo.Play.AudioOut.Volume : k;
         }
+
+        inf (a = d.AlpheE & o)
+        {
+            this.Demo.Play.Execute();
+        }
+
+        inf (a = d.AlpheR & o)
+        {
+            this.Demo.Play.Pause();
+        }
     }
 }
