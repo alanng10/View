@@ -67,5 +67,19 @@ class ThreadState : State
         var Int h;
         h : het;
         h : h - 40;
+
+        rectA.Size.Wed : this.MathInt(w);
+        rectA.Size.Het : this.MathInt(h);
+
+        var Text text;
+        text : this.Demo.TextCreate("C hr");
+
+        var DrawSlash slash;
+        slash : new DrawSlash;
+        slash.Brush : this.Demo.DrawInfra.BlackSlash.Brush;
+        slash.Line : this.Demo.SlashLineList.DashDotDot;
+        slash.Cape : this.Demo.SlashCapeList.Round;
+        slash.Join : this.Demo.SlashJoinList.Miter;
+        slash.Size : this.MathInt(5);
     }
 }
