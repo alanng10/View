@@ -21,9 +21,9 @@ class ViewA : ViewView
         slash = new DrawSlash();
         slash.Brush = slashBrush;
         slash.Line = this.Demo.SlashLineList.DashDotDot;
-        slash.Size = this.Demo.MathInt(11);
         slash.Cape = this.Demo.SlashCapeList.Round;
         slash.Join = this.Demo.SlashJoinList.Bevel;
+        slash.Size = this.Demo.MathInt(11);
         slash.Init();
 
         DrawForm form;
