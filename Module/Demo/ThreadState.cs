@@ -108,11 +108,11 @@ class ThreadState : State
 
         draw.End();
 
-        draw.Final();
-
         font.Final();
 
         slash.Final();
+
+        draw.Final();
 
         brush.Final();
         return true;
