@@ -27,20 +27,6 @@ class TypeA : Type
         long k;
         k = 0;
 
-        if (a == d.AlphaI & o)
-        {
-            k = this.Demo.ViewA.Pos.Row;
-            k = k - 10;
-            this.Demo.ViewA.Pos.Row = k;
-            b = true;
-        }
-        if (a == d.AlphaK & o)
-        {
-            k = this.Demo.ViewA.Pos.Row;
-            k = k + 10;
-            this.Demo.ViewA.Pos.Row = k;
-            b = true;
-        }
         if (a == d.AlphaJ & o)
         {
             k = this.Demo.ViewA.Pos.Col;
@@ -53,6 +39,20 @@ class TypeA : Type
             k = this.Demo.ViewA.Pos.Col;
             k = k + 10;
             this.Demo.ViewA.Pos.Col = k;
+            b = true;
+        }
+        if (a == d.AlphaI & o)
+        {
+            k = this.Demo.ViewA.Pos.Row;
+            k = k - 10;
+            this.Demo.ViewA.Pos.Row = k;
+            b = true;
+        }
+        if (a == d.AlphaK & o)
+        {
+            k = this.Demo.ViewA.Pos.Row;
+            k = k + 10;
+            this.Demo.ViewA.Pos.Row = k;
             b = true;
         }
 
