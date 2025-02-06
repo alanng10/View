@@ -108,9 +108,9 @@ class TypeA : Type
         if (a == d.AlphaH & o)
         {
             bool baa;
-            baa = this.Demo.Play.AudioOut.Muted;
+            baa = this.Demo.Play.AudioOut.Mute;
             baa = !baa;
-            this.Demo.Play.AudioOut.Muted = baa;
+            this.Demo.Play.AudioOut.Mute = baa;
         }
 
         long scaleFactor;
