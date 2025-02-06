@@ -37,4 +37,19 @@ class ViewA : View
         this.Form : form;
         return true;
     }
+
+    maide prusate Bool Final()
+    {
+        this.Form.Final();
+
+        var DrawBrush k;
+        k : this.Slash.Brush;
+
+        this.Slash.Final();
+
+        k.Final();
+
+        this.Back.Final();
+        return true;
+    }
 }
