@@ -85,9 +85,9 @@ class ThreadState : State
         slash = new DrawSlash();
         slash.Brush = this.Demo.DrawInfra.BlackSlash.Brush;
         slash.Line = this.Demo.SlashLineList.DashDotDot;
-        slash.Cap = this.Demo.SlashCapeList.Round;
+        slash.Cape = this.Demo.SlashCapeList.Round;
         slash.Join = this.Demo.SlashJoinList.Miter;
-        slash.Wed = this.MathInt(5);
+        slash.Size = this.MathInt(5);
         slash.Init();
 
         DrawFont font;
