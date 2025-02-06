@@ -55,8 +55,8 @@ class ViewA : ViewView
         return true;
     }
 
-    public virtual DrawSlash Slash { get; set; }
     public virtual Demo Demo { get; set; }
+    public virtual DrawSlash Slash { get; set; }
     public virtual DrawForm Form { get; set; }
     public virtual long RotateValue { get; set; }
 
