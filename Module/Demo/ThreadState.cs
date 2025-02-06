@@ -120,14 +120,8 @@ class ThreadState : State
 
     protected virtual long MathInt(long n)
     {
-        MathInfra mathInfra;
-        mathInfra = this.Demo.MathInfra;
-
-        MathComp mathComp;
-        mathComp = this.MathComp;
-
         long a;
-        a = mathInfra.Int(mathComp, n);
+        a = this.Demo.MathInfra.Int(this.MathComp, n);
         return a;
     }
 }
