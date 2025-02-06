@@ -23,10 +23,12 @@ class TypeA : Type
 
         bool b;
         b = false;
-    
+
+        long k;
+        k = 0;
+
         if (a == d.AlphaI & o)
         {
-            long k;
             k = this.Demo.ViewA.Pos.Row;
             k = k - 10;
             this.Demo.ViewA.Pos.Row = k;
@@ -34,7 +36,6 @@ class TypeA : Type
         }
         if (a == d.AlphaK & o)
         {
-            long k;
             k = this.Demo.ViewA.Pos.Row;
             k = k + 10;
             this.Demo.ViewA.Pos.Row = k;
@@ -42,7 +43,6 @@ class TypeA : Type
         }
         if (a == d.AlphaJ & o)
         {
-            long k;
             k = this.Demo.ViewA.Pos.Col;
             k = k - 10;
             this.Demo.ViewA.Pos.Col = k;
@@ -50,7 +50,6 @@ class TypeA : Type
         }
         if (a == d.AlphaL & o)
         {
-            long k;
             k = this.Demo.ViewA.Pos.Col;
             k = k + 10;
             this.Demo.ViewA.Pos.Col = k;
@@ -68,7 +67,6 @@ class TypeA : Type
 
         if (a == d.AlphaF & o)
         {
-            long k;
             k = this.Demo.ViewA.RotateValue;
             k = k + 1;
             this.Demo.ViewA.RotateValue = k;
@@ -79,7 +77,6 @@ class TypeA : Type
         ba = false;
         if (a == d.AlphaW & o)
         {
-            long k;
             k = this.Demo.ViewC.Pos.Row;
             k = k - 10;
             this.Demo.ViewC.Pos.Row = k;
@@ -87,7 +84,6 @@ class TypeA : Type
         }
         if (a == d.AlphaS & o)
         {
-            long k;
             k = this.Demo.ViewC.Pos.Row;
             k = k + 10;
             this.Demo.ViewC.Pos.Row = k;
@@ -95,7 +91,6 @@ class TypeA : Type
         }
         if (a == d.AlphaA & o)
         {
-            long k;
             k = this.Demo.ViewC.Pos.Col;
             k = k - 10;
             this.Demo.ViewC.Pos.Col = k;
@@ -105,7 +100,6 @@ class TypeA : Type
         }
         if (a == d.AlphaD & o)
         {
-            long k;
             k = this.Demo.ViewC.Pos.Col;
             k = k + 10;
             this.Demo.ViewC.Pos.Col = k;
@@ -125,7 +119,6 @@ class TypeA : Type
 
         if (a == d.AlphaC & o)
         {
-            long k;
             k = this.Demo.Play.AudioOut.Volume;
             long ao;
             ao = this.Demo.MathValue(scaleFactor / 16, -20);
@@ -137,7 +130,6 @@ class TypeA : Type
 
         if (a == d.AlphaV & o)
         {
-            long k;
             k = this.Demo.Play.AudioOut.Volume;
             long ao;
             ao = this.Demo.MathValue(scaleFactor / 16, -20);
