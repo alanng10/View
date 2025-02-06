@@ -23,4 +23,49 @@ class ThreadState : State
         this.Demo.Console.Out.Write("ThreadState.Execute END\n");
         return true;
     }
+
+    maide private Bool Draw()
+    {
+        var DrawBrush brush;
+        brush : new DrawBrush;
+        brush.Kind : this.Demo.BrushKindList.Color;
+        brush.Color : this.Demo.DrawInfra.ColorCreate(0hff, 0hff, 0hff, 0);
+        brush.Init();
+
+        var Int col;
+        var Int row;
+        var Int wed;
+        var Int het;
+        col : 20;
+        row : 20;
+        wed : this.Image.Size.Wed - 50;
+        het : this.Image.Size.Het - 50;
+
+        var DrawRect rectA;
+        rectA : this.Demo.DrawInfra.RectCreate(this.MathInt(col), this.MathInt(row), this.MathInt(wed), this.MathInt(het));
+
+        var Draw draw;
+        draw : new Draw;
+        draw.Init();
+        draw.Out : this.Image.Out;
+        draw.Size.Wed : this.Image.Size.Wed;
+        draw.Size.Het : this.Image.Size.Het;
+        draw.SizeSet();
+
+        draw.Start();
+
+        draw.Fill : brush;
+        
+        draw.ExecuteRect(rectA);
+
+        draw.Fill : null;
+
+        var Int w;
+        w : wed;
+        w : w - 40;
+
+        var Int h;
+        h : het;
+        h : h - 40;
+    }
 }
