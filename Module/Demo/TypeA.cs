@@ -76,6 +76,20 @@ class TypeA : Type
         bool ba;
         ba = false;
 
+        if (a == d.AlphaA & o)
+        {
+            k = this.Demo.ViewC.Pos.Col;
+            k = k - 10;
+            this.Demo.ViewC.Pos.Col = k;
+            ba = true;
+        }
+        if (a == d.AlphaD & o)
+        {
+            k = this.Demo.ViewC.Pos.Col;
+            k = k + 10;
+            this.Demo.ViewC.Pos.Col = k;
+            ba = true;
+        }
         if (a == d.AlphaW & o)
         {
             k = this.Demo.ViewC.Pos.Row;
@@ -88,22 +102,6 @@ class TypeA : Type
             k = this.Demo.ViewC.Pos.Row;
             k = k + 10;
             this.Demo.ViewC.Pos.Row = k;
-            ba = true;
-        }
-        if (a == d.AlphaA & o)
-        {
-            k = this.Demo.ViewC.Pos.Col;
-            k = k - 10;
-            this.Demo.ViewC.Pos.Col = k;
-
-
-            ba = true;
-        }
-        if (a == d.AlphaD & o)
-        {
-            k = this.Demo.ViewC.Pos.Col;
-            k = k + 10;
-            this.Demo.ViewC.Pos.Col = k;
             ba = true;
         }
 
