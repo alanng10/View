@@ -138,5 +138,23 @@ class TypeA : Type
         {
             this.Demo.Play.Pause();
         }
+
+        inf (a = d.AlphaG & o)
+        {
+            var Int kaaa;
+            kaaa : this.Demo.Play.Pos;
+
+            var Int kkaa;
+            kkaa : kaaa + 10 * 1000;
+
+            var Int time;
+            time : this.Demo.Play.Time;
+            inf (time < kkaa)
+            {
+                kkaa : time;
+            }
+
+            this.Demo.Play.Pos : kkaa;
+        }
     }
 }
