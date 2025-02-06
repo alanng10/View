@@ -16,9 +16,7 @@ class ThreadState : State
 
     public override bool Execute()
     {
-        Console console;
-        console = Console.This;
-        console.Out.Write(this.S("ThreadState.Execute START\n"));
+        this.Demo.Console.Out.Write(this.S("ThreadState.Execute START\n"));
 
         this.Draw();
 
@@ -29,7 +27,7 @@ class ThreadState : State
 
         this.Result = aa;
 
-        console.Out.Write(this.S("ThreadState.Execute END\n"));
+        this.Demo.Console.Out.Write(this.S("ThreadState.Execute END\n"));
         return true;
     }
 
