@@ -93,5 +93,13 @@ class TypeA : Type
             this.Demo.ViewC.Pos.Row : k;
             ba : true; 
         }
+
+        inf (a = d.AlphaH & o)
+        {
+            var Bool baa;
+            baa : this.Demo.Play.AudioOut.Mute;
+            baa : ~baa;
+            this.Demo.Play.AudioOut.Mute : baa;
+        }
     }
 }
