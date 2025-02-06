@@ -101,5 +101,32 @@ class TypeA : Type
             baa : ~baa;
             this.Demo.Play.AudioOut.Mute : baa;
         }
+
+        var Int scaleFactor;
+        scaleFactor : bit <(1, 20);
+
+        var Int ao;
+
+        inf (a = d.AlphaC & o)
+        {
+            k : this.Demo.Play.AudioOut.Volume;
+
+            ao : this.Demo.MathValue(scaleFactor / 16, 0 - 20);
+
+            k : this.Demo.Math.Add(k, ao);
+
+            this.Demo.Play.AudioOut.Volume : k;
+        }
+
+        inf (a = d.AlphaV & o)
+        {
+            k : this.Demo.Play.AudioOut.Volume;
+
+            ao : this.Demo.MathValue(scaleFactor / 16, 0 - 20);
+
+            k : this.Demo.Math.Sub(k, ao);
+
+            this.Demo.Play.AudioOut.Volume : k;
+        }
     }
 }
