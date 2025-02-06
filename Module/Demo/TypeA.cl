@@ -52,5 +52,14 @@ class TypeA : Type
             this.Demo.ViewA.Pos.Row : k;
             b : true;
         }
+
+        inf (a = d.AlphaU & o)
+        {
+            var Bool bo;
+            bo : this.Demo.ViewA.Shown;
+            bo : ~bo;
+            this.Demo.ViewA.Shown : bo;
+            b : true;
+        }
     }
 }
