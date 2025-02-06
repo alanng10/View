@@ -93,5 +93,21 @@ class ThreadState : State
         font.Midline : false;
         font.Endline : false;
         font.Init();
+
+        draw.Font : font;
+        draw.Line : slash;
+        draw.Comp : this.Demo.CompList.DestOut;
+        draw.ExecuteText(text, this.Demo.AlignList.Start, this.Demo.AlignList.Start, false, rectA);
+
+        draw.End();
+
+        font.Final();
+
+        slash.Final();
+
+        draw.Final();
+
+        brush.Final();
+        return true;
     }
 }
