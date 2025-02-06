@@ -10,8 +10,8 @@ class ThreadState : State
         return true;
     }
 
-    public Demo Demo { get; set; }
-    public DrawImage Image { get; set; }
+    public virtual Demo Demo { get; set; }
+    public virtual DrawImage Image { get; set; }
     protected virtual MathComp MathComp { get; set; }
 
     public override bool Execute()
