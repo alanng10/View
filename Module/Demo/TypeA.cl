@@ -61,5 +61,37 @@ class TypeA : Type
             this.Demo.ViewA.Shown : bo;
             b : true;
         }
+
+        var Bool ba;
+        ba : false;
+
+        inf (a = d.AlphaA & o)
+        {
+            k : this.Demo.ViewC.Pos.Col;
+            k : k - 10;
+            this.Demo.ViewC.Pos.Col : k;
+            ba : true; 
+        }
+        inf (a = d.AlphaD & o)
+        {
+            k : this.Demo.ViewC.Pos.Col;
+            k : k + 10;
+            this.Demo.ViewC.Pos.Col : k;
+            ba : true; 
+        }
+        inf (a = d.AlphaW & o)
+        {
+            k : this.Demo.ViewC.Pos.Row;
+            k : k - 10;
+            this.Demo.ViewC.Pos.Row : k;
+            ba : true; 
+        }
+        inf (a = d.AlphaS & o)
+        {
+            k : this.Demo.ViewC.Pos.Row;
+            k : k + 10;
+            this.Demo.ViewC.Pos.Row : k;
+            ba : true; 
+        }
     }
 }
