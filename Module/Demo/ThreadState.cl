@@ -81,5 +81,17 @@ class ThreadState : State
         slash.Cape : this.Demo.SlashCapeList.Round;
         slash.Join : this.Demo.SlashJoinList.Miter;
         slash.Size : this.MathInt(5);
+        slash.Init();
+
+        var DrawFont font;
+        font : new DrawFont;
+        font.Name : this.Demo.DrawInfra.FontAriaName;
+        font.Size : 38;
+        font.Strong : 700;
+        font.Tenden : false;
+        font.Staline : false;
+        font.Midline : false;
+        font.Endline : false;
+        font.Init();
     }
 }
