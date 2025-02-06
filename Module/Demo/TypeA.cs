@@ -5,15 +5,15 @@ class TypeA : Type
     public virtual Demo Demo { get; set; }
     public virtual long TitleIndex { get; set; }
 
-    public override bool Event(Button index, bool value)
+    public override bool Event(TypeIndex index, bool value)
     {
-        Button a;
+        TypeIndex a;
         a = index;
 
         bool o;
         o = value;
 
-        ButtonList d;
+        TypeIndexList d;
         d = this.Demo.Frame.Type.Index;
 
         if (a == d.AlphaB & o)
