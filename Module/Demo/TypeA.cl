@@ -167,5 +167,20 @@ class TypeA : Type
 
             this.TitleIndex : this.TitleIndex + 1;
         }
+
+        inf (b)
+        {
+            this.Demo.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewA.Area);
+
+            this.Demo.Frame.Update(this.Demo.UpdateRect);
+        }
+
+        inf (ba)
+        {
+            this.Demo.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewC.Area);
+
+            this.Demo.Frame.Update(this.Demo.UpdateRect);
+        }
+        return true;
     }
 }
