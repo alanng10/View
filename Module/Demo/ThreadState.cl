@@ -110,4 +110,11 @@ class ThreadState : State
         brush.Final();
         return true;
     }
+
+    maide precate Int MathInt(var Int n)
+    {
+        var Int a;
+        a : this.Demo.MathInfra.Int(this.MathComp, n);
+        return a;
+    }
 }
