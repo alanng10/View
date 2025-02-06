@@ -75,6 +75,7 @@ class TypeA : Type
 
         bool ba;
         ba = false;
+
         if (a == d.AlphaW & o)
         {
             k = this.Demo.ViewC.Pos.Row;
