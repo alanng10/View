@@ -195,9 +195,4 @@ class TypeA : Type
         }
         return true;
     }
-
-    protected virtual String S(string o)
-    {
-        return this.Demo.S(o);
-    }
 }
