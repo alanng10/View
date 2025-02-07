@@ -93,12 +93,6 @@ class ViewA : ViewView
         this.DrawRectB.Size.Wed = this.MathInt(this.Demo.PlayImage.Size.Wed);
         this.DrawRectB.Size.Het = this.MathInt(this.Demo.PlayImage.Size.Het);
 
-        long ooa;
-        ooa = this.MathInt(col);
-
-        long oob;
-        oob = this.MathInt(row);
-
         long oa;
         oa = this.RotateValue * 10;
         long ob;
@@ -111,7 +105,7 @@ class ViewA : ViewView
 
         this.Form.Reset();
 
-        this.Form.Pos(ooa, oob);
+        this.Form.Pos(this.MathInt(col), this.MathInt(row));
 
         this.Form.Angle(angle);
 
