@@ -84,7 +84,7 @@ class IndexList : Any
 
         this.InnSpace : this.AddSpaceIndex();
         this.InnGroupIndex : 0h01;
-        this.InnTab : this.AddInnIndex();
+        this.InnTable : this.AddInnIndex();
         this.InnGroupIndex : 0h04;
         this.InnEnter : this.AddInnIndex();
         this.InnGroupIndex : 0h20;
@@ -161,7 +161,7 @@ class IndexList : Any
     field prusate Index SignNext { get { return data; } set { data : value; } }
     field prusate Index SignOrn { get { return data; } set { data : value; } }
     field prusate Index InnSpace { get { return data; } set { data : value; } }
-    field prusate Index InnTab { get { return data; } set { data : value; } }
+    field prusate Index InnTable { get { return data; } set { data : value; } }
     field prusate Index InnEnter { get { return data; } set { data : value; } }
     field prusate Index InnShift { get { return data; } set { data : value; } }
     field prusate Int InnStart { get { return data; } set { data : value; } }
