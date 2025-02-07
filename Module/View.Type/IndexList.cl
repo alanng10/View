@@ -49,14 +49,14 @@ class IndexList : Any
         this.Digit8 : this.AddDigitIndex();
         this.Digit9 : this.AddDigitIndex();
 
-        this.SignBackTick : this.AddSignIndex("`");
+        #this.SignBackTick : this.AddSignIndex("`");
         this.SignNot : this.AddSignIndex("~");
         this.SignExclamate : this.AddSignIndex("!");
-        this.SignAte : this.AddSignIndex("@");
+        #this.SignAte : this.AddSignIndex("@");
         this.SignHash : this.AddSignIndex("#");
-        this.SignDollar : this.AddSignIndex("$");
-        this.SignPercent : this.AddSignIndex("%");
-        this.SignExpo : this.AddSignIndex("^");
+        #this.SignDollar : this.AddSignIndex("$");
+        #this.SignPercent : this.AddSignIndex("%");
+        #this.SignExpo : this.AddSignIndex("^");
         this.SignAnd : this.AddSignIndex("&");
         this.SignMul : this.AddSignIndex("*");
         this.SignSub : this.AddSignIndex("-");
@@ -71,7 +71,7 @@ class IndexList : Any
         this.SignBraceRightRite : this.AddSignIndex("]");
         this.SignExecute : this.AddSignIndex(";");
         this.SignAre : this.AddSignIndex(":");
-        this.SignTail : this.AddSignIndex("'");
+        #this.SignTail : this.AddSignIndex("'");
         this.SignQuote : this.AddSignIndex("\"");
         this.SignPause : this.AddSignIndex(",");
         this.SignLessNite : this.AddSignIndex("<");
@@ -128,14 +128,14 @@ class IndexList : Any
     field prusate Index Digit7 { get { return data; } set { data : value; } }
     field prusate Index Digit8 { get { return data; } set { data : value; } }
     field prusate Index Digit9 { get { return data; } set { data : value; } }
-    field prusate Index SignBackTick { get { return data; } set { data : value; } }
+    #field prusate Index SignBackTick { get { return data; } set { data : value; } }
     field prusate Index SignNot { get { return data; } set { data : value; } }
     field prusate Index SignExclamate { get { return data; } set { data : value; } }
-    field prusate Index SignAte { get { return data; } set { data : value; } }
+    #field prusate Index SignAte { get { return data; } set { data : value; } }
     field prusate Index SignHash { get { return data; } set { data : value; } }
-    field prusate Index SignDollar { get { return data; } set { data : value; } }
-    field prusate Index SignPercent { get { return data; } set { data : value; } }
-    field prusate Index SignExpo { get { return data; } set { data : value; } }
+    #field prusate Index SignDollar { get { return data; } set { data : value; } }
+    #field prusate Index SignPercent { get { return data; } set { data : value; } }
+    #field prusate Index SignExpo { get { return data; } set { data : value; } }
     field prusate Index SignAnd { get { return data; } set { data : value; } }
     field prusate Index SignMul { get { return data; } set { data : value; } }
     field prusate Index SignBraceRoundLite { get { return data; } set { data : value; } }
@@ -150,7 +150,7 @@ class IndexList : Any
     field prusate Index SignBraceRightRite { get { return data; } set { data : value; } }
     field prusate Index SignExecute { get { return data; } set { data : value; } }
     field prusate Index SignAre { get { return data; } set { data : value; } }
-    field prusate Index SignTail { get { return data; } set { data : value; } }
+    #field prusate Index SignTail { get { return data; } set { data : value; } }
     field prusate Index SignQuote { get { return data; } set { data : value; } }
     field prusate Index SignPause { get { return data; } set { data : value; } }
     field prusate Index SignLessNite { get { return data; } set { data : value; } }
