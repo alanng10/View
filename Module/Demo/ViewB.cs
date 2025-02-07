@@ -5,8 +5,6 @@ class ViewB : ViewView
     public override bool Init()
     {
         base.Init();
-        this.DrawComp = DrawCompList.This;
-
         long wedA;
         long hetA;
         wedA = 400;
@@ -57,13 +55,13 @@ class ViewB : ViewView
         return true;
     }
 
+    public virtual Demo Demo { get; set; }
     public virtual DrawImage DrawImage { get; set; }
     public virtual DrawRect SourceRect { get; set; }
     public virtual DrawForm Form { get; set; }
     public virtual DrawImage ThreadDrawImage { get; set; }
     public virtual DrawRect DestRectA { get; set; }
     public virtual DrawRect SourceRectA { get; set; }
-    protected virtual DrawCompList DrawComp { get; set; }
 
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
@@ -107,7 +105,7 @@ class ViewB : ViewView
         this.DestRectA.Pos.Col = this.MathInt(col);
         this.DestRectA.Pos.Row = this.MathInt(row + 150);
 
-        draw.Comp = this.DrawComp.SourceOver;
+        draw.Comp = this.Demo.CompList.SourceOver;
 
         draw.ExecuteImage(this.ThreadDrawImage, this.DestRectA, this.SourceRectA);
 
