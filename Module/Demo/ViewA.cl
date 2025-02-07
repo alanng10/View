@@ -60,5 +60,25 @@ class ViewA : View
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
+        var Int col;
+        var Int row;
+        col : this.Pos.Col;
+        row : this.Pos.Row;
+        var Int wed;
+        var Int het;
+        wed : this.Size.Wed;
+        het : this.Size.Het;
+
+        this.DrawRectA.Pos.Col : this.MathInt(col);
+        this.DrawRectA.Pos.Row : this.MathInt(row);
+        this.DrawRectA.Size.Wed : this.MathInt(wed);
+        this.DrawRectA.Size.Het : this.MathInt(het);
+
+        draw.Fill : this.Back;
+        draw.Line : this.Slash;
+
+        draw.FillPos.Col : this.MathInt(col);
+        draw.FillPos.Row : this.MathInt(row);
+        draw.FillPosSet();
     }
 }
