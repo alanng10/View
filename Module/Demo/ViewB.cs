@@ -23,7 +23,7 @@ class ViewB : ViewView
         this.Pos.Row = 40;
         this.Size.Wed = wedA;
         this.Size.Het = hetA;
-        this.DrawImage = this.ImageCreate();
+        this.DrawImage = this.DrawInfra.ImageCreateStorage(this.S("ViewDemoData/image.jpg"));
         this.SourceRect = sourceRect;
         this.DestRectA = destRectA;
         this.SourceRectA = sourceRectA;
@@ -37,21 +37,8 @@ class ViewB : ViewView
     {
         this.Form.Final();
 
-        this.ImageFinal(this.DrawImage);
+        this.DrawImage.Final();
 
-        return true;
-    }
-
-    private DrawImage ImageCreate()
-    {
-        DrawImage image;
-        image = this.DrawInfra.ImageCreateStorage(this.S("ViewDemoData/image.jpg"));
-        return image;
-    }
-
-    private bool ImageFinal(DrawImage image)
-    {
-        image.Final();
         return true;
     }
 
