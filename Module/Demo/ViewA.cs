@@ -63,12 +63,12 @@ class ViewA : ViewView
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
         long col;
-        col = this.Pos.Col;
         long row;
+        col = this.Pos.Col;
         row = this.Pos.Row;
         long wed;
-        wed = this.Size.Wed;
         long het;
+        wed = this.Size.Wed;
         het = this.Size.Het;
 
         this.DrawRectA.Pos.Col = this.MathInt(col);
