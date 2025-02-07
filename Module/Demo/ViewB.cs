@@ -11,19 +11,19 @@ class ViewB : ViewView
         hetA = 200;
 
         DrawRect sourceRect;
-        sourceRect = this.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(wedA), this.MathInt(hetA));
+        sourceRect = this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(wedA), this.MathInt(hetA));
 
         DrawRect destRectA;
-        destRectA = this.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
+        destRectA = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
 
         DrawRect sourceRectA;
-        sourceRectA = this.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
+        sourceRectA = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
 
         this.Pos.Col = 60;
         this.Pos.Row = 40;
         this.Size.Wed = wedA;
         this.Size.Het = hetA;
-        this.DrawImage = this.DrawInfra.ImageCreateStorage(this.S("ViewDemoData/image.jpg"));
+        this.DrawImage = this.Demo.DrawInfra.ImageCreateStorage(this.S("ViewDemoData/image.jpg"));
         this.SourceRect = sourceRect;
         this.DestRectA = destRectA;
         this.SourceRectA = sourceRectA;
