@@ -5,13 +5,13 @@ class ViewB : ViewView
     public override bool Init()
     {
         base.Init();
-        long wedA;
-        long hetA;
-        wedA = 400;
-        hetA = 200;
+        long wed;
+        long het;
+        wed = 400;
+        het = 200;
 
         DrawRect sourceRect;
-        sourceRect = this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(wedA), this.MathInt(hetA));
+        sourceRect = this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(wed), this.MathInt(het));
 
         DrawRect destRectA;
         destRectA = this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
@@ -21,8 +21,8 @@ class ViewB : ViewView
 
         this.Pos.Col = 60;
         this.Pos.Row = 40;
-        this.Size.Wed = wedA;
-        this.Size.Het = hetA;
+        this.Size.Wed = wed;
+        this.Size.Het = het;
         this.DrawImage = this.Demo.DrawInfra.ImageCreateStorage(this.S("ViewDemoData/image.jpg"));
         this.SourceRect = sourceRect;
         this.DestRectA = destRectA;
@@ -53,12 +53,12 @@ class ViewB : ViewView
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
         long col;
-        col = this.Pos.Col;
         long row;
+        col = this.Pos.Col;
         row = this.Pos.Row;
         long wed;
-        wed = this.Size.Wed;
         long het;
+        wed = this.Size.Wed;
         het = this.Size.Het;
 
         this.DrawRectA.Pos.Col = this.MathInt(col);
