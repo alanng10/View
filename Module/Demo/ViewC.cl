@@ -142,4 +142,10 @@ class ViewC : View
         a.Init();
         return a;
     }
+
+    maide private Bool EllipseBrushFinal(var DrawBrush a)
+    {
+        a.Final();
+        return true;
+    }
 }
