@@ -1,11 +1,8 @@
 @echo off
 
-set DotNetInfraLibFold=.\Out\net8.0\Lib
-set WorkingFold=%cd%
+set ClassFold=..\Class\Out\Class
 
-pushd Out\net8.0
-setlocal
-set "PATH=%WorkingFold%\%DotNetInfraLibFold%;%PATH%" && dotnet ViewDemo.dll
+pushd %ClassFold%
+class ViewDemo-0.00.00
 echo Status: %errorlevel%
-endlocal
 popd
