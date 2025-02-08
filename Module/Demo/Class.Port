@@ -1,0 +1,81 @@
+[Module]
+View.Draw:0.00.00
+
+[Import]
+System.Infra
+    Any Any
+    Bool Bool
+    Int Int
+    String String
+    Range Range
+    Data Data
+    State State
+    InfraInfra Infra
+System.List
+    Array Array
+    ListInfra Infra
+System.Math
+    Math Math
+    MathComp Comp
+    MathInfra Infra
+    Rand Rand
+System.Text
+    Text Text
+    TextForm Form
+    TextFormat Format
+    TextFormat FormatArg
+System.Thread
+    Thread Thread
+    ThreadThis This
+    ThreadPhore Phore
+System.Stream
+    Stream Stream
+System.Storage
+    Storage Storage
+    StorageMode Mode
+    StorageStatusList StatusList
+System.Entry
+    EntryEntry Entry
+
+[Export]
+Draw
+Pos
+Size
+Rect
+Color
+Brush
+BrushKind
+BrushKindList
+Slash
+SlashLine
+SlashLineList
+SlashCape
+SlashCapeList
+SlashJoin
+SlashJoinList
+Polate
+PolateKind
+PolateKindList
+PolateLinear
+PolateRadial
+PolateSpread
+PolateSpreadList
+PolateStop
+PolateStopPoint
+Image
+ImageFormat
+ImageFormatList
+ImageRead
+ImageWrite
+Comp
+CompList
+Form
+Font
+PointList
+Align
+AlignList
+Infra
+
+[Storage]
+
+[Entry]
