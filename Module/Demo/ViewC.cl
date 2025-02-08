@@ -132,4 +132,14 @@ class ViewC : View
         ka.Final();
         return true;
     }
+
+    maide private DrawBrush EllipseBrushCreate()
+    {
+        var DrawBrush a;
+        a : new DrawBrush;
+        a.Kind : this.Demo.BrushKindList.Color;
+        a.Color : this.Demo.DrawInfra.ColorCreate(0hff, 0, 0hff, 0hff);
+        a.Init();
+        return a;
+    }
 }
