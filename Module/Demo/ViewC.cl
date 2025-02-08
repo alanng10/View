@@ -49,5 +49,9 @@ class ViewC : View
         this.Back : brush;
         this.EllipseBrush : this.EllipseBrushCreate();
         this.EllipseRect : this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
+        this.Font : this.FontCreate();
+        this.Text : text;
+        this.TextSlash : this.TextSlashCreate();
+        return true;
     }
 }
