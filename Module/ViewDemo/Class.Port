@@ -55,14 +55,13 @@ View.Draw:0.00.00
     DrawPolateStopPoint PolateStopPoint
     DrawRect Rect
     DrawInfra Infra
-View.Frame:0.00.00
-    FrameFrame Frame
 View.Media:0.00.00
     Play Play
     MediaVideoOut VideoOut
     AudioOut AudioOut
 View.View:0.00.00
     View View
+    Frame Frame
     Grid Grid
     GridChild GridChild
     ViewCount Count
