@@ -22,7 +22,7 @@ class Play : MediaPlay
         scaleFactor : bit <(1, 20);
 
         var Int volume;
-        volume : this.MathValue(scaleFactor / 8, -20);
+        volume : this.Demo.MathValue(scaleFactor / 8, 0sn20);
 
         var MediaAudioOut audioOut;
         audioOut : new MediaAudioOut;
