@@ -62,5 +62,23 @@ class ViewC : View
         var DrawPolate polate;
         polate : brush.Polate;
         var DrawPolateStop polateStop;
+        polateStop : polate.Stop;
+        var DrawPolateLinear polateLinear;
+        polateLinear : polate.Linear;
+
+        this.TextSlashFinal(this.TextSlash);
+
+        this.FontFinal(this.Font);
+
+        this.EllipseBrushFinal(this.EllipseBrush);
+
+        brush.Final();
+
+        polate.Final();
+
+        polateStop.Final();
+
+        polateLinear.Final();
+        return true;
     }
 }
