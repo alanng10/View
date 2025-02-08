@@ -24,6 +24,7 @@ class Demo : DeA
     field prusate DrawImage PlayImage { get { return data; } set { data : value; } }
     field prusate MathInfra MathInfra { get { return data; } set { data : value; } }
     field prusate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field prusate ViewInfra ViewInfra { get { return data; } set { data : value; } }
     field prusate DrawCompList CompList { get { return data; } set { data : value; } }
     field prusate DrawBrushKindList BrushKindList { get { return data; } set { data : value; } }
     field prusate DrawSlashLineList SlashLineList { get { return data; } set { data : value; } }
