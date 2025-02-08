@@ -12,6 +12,7 @@ class Demo : DeA
         this.SlashCapeList : share DrawSlashCapeList;
         this.SlashJoinList : share DrawSlashJoinList;
         this.PolateKindList : share DrawPolateKindList;
+        this.PolateSpreadList : share DrawPolateSpreadList;
         this.AlignList : share DrawAlignList;
         return true;
     }
@@ -33,6 +34,7 @@ class Demo : DeA
     field prusate DrawSlashCapeList SlashCapeList { get { return data; } set { data : value; } }
     field prusate DrawSlashJoinList SlashJoinList { get { return data; } set { data : value; } }
     field prusate DrawPolateKindList PolateKindList { get { return data; } set { data : value; } }    
+    field prusate DrawPolateSpreadList PolateSpreadList { get { return data; } set { data : value; } }    
     field prusate DrawAlignList AlignList { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field private Stream MediaStream { get { return data; } set { data : value; } }
