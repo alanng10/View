@@ -49,6 +49,8 @@ View.Draw:0.00.00
     DrawSlashJoinList SlashJoinList
 View.Frame:0.00.00
     Frame FrameFrame
+View.Media:0.00.00
+    Play Play
 View.View:0.00.00
     View View
 
