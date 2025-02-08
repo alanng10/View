@@ -148,4 +148,13 @@ class ViewC : View
         a.Final();
         return true;
     }
+
+    field prusate Demo Demo { get { return data; } set { data : value; } }
+    field prusate DrawRect EllipseRect { get { return data; } set { data : value; } }
+    field prusate DrawBrush EllipseBrush { get { return data; } set { data : value; } }
+    field prusate DrawFont Font { get { return data; } set { data : value; } }
+    field prusate Text Text { get { return data; } set { data : value; } }
+    field prusate DrawSlash TextSlash { get { return data; } set { data : value; } }
+
+    
 }
