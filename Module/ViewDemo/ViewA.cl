@@ -18,7 +18,7 @@ class ViewA : View
         var DrawSlash slash;
         slash : new DrawSlash;
         slash.Brush : slashBrush;
-        slash.Line : this.Demo.SlashLineList.SlashDotDot;
+        slash.Line : this.Demo.SlashLineList.DashDotDot;
         slash.Cape : this.Demo.SlashCapeList.Round;
         slash.Join : this.Demo.SlashJoinList.Bevel;
         slash.Size : this.Demo.MathInt(11);
