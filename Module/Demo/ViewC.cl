@@ -96,4 +96,29 @@ class ViewC : View
         a.Init();
         return a;
     }
+
+    maide private Bool FontFinal(var DrawFont a)
+    {
+        a.Final();
+        return true;
+    }
+
+    maide private DrawSlash TextSlashCreate()
+    {
+        var DrawBrush ka;
+        ka : new DrawBrush;
+        ka.Kind : this.Demo.BrushKindList.Color;
+        ka.Color : this.Demo.DrawInfra.ColorCreate(0hff, 0, 0, 0hff);
+        ka.Init();
+
+        var DrawSlash a;
+        a : new DrawSlash;
+        a.Brush : ka;
+        a.Line : this.Demo.SlashLineList.DashDotDot;
+        a.Cape : this.Demo.SlashCapeList.Round;
+        a.Join : this.Demo.SlashJoinList.Bevel;
+        a.Size : this.MathInt(14);
+        a.Init();
+        return a;
+    }
 }
