@@ -30,4 +30,13 @@ class ViewB : View
         this.ThreadDrawImage : this.ThreadDrawImage;
         return true;
     }
+
+    maide prusate Bool Final()
+    {
+        this.Form.Final();
+
+        this.DrawImage.Final();
+
+        return true;
+    }
 }
