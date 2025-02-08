@@ -56,7 +56,7 @@ View.Draw:0.00.00
     DrawRect Rect
     DrawInfra Infra
 View.Media:0.00.00
-    Play Play
+    MediaPlay Play
     MediaVideoOut VideoOut
     AudioOut AudioOut
 View.View:0.00.00
