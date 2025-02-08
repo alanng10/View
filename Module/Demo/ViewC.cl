@@ -183,4 +183,12 @@ class ViewC : View
         draw.Font : null;
         return true;
     }
+
+    maide private Bool PolateStopSetPoint(var DrawPolateStop stop, var DrawPolateStopPoint aa, var Int index, var Int pos, var DrawColor color)
+    {
+        aa.Pos : pos;
+        aa.Color : color;
+        stop.PointSet(index, aa);
+        return true;
+    }
 }
