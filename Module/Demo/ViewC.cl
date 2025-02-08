@@ -121,4 +121,15 @@ class ViewC : View
         a.Init();
         return a;
     }
+
+    maide private Bool TextSlashFinal(var DrawSlash a)
+    {
+        var DrawBrush ka;
+        ka : a.Brush;
+
+        a.Final();
+
+        ka.Final();
+        return true;
+    }
 }
