@@ -44,6 +44,7 @@ View.Draw:0.00.00
     DrawImageRead ImageRead
     DrawImageWrite ImageWrite
     DrawColor Color
+    DrawCompList CompList
     DrawBrush Brush
     DrawBrushKindList BrushKindList
     DrawSlash Slash
