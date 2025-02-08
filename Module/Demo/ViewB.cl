@@ -86,5 +86,15 @@ class ViewB : View
 
         draw.Form : null;
         draw.FormSet();
+
+        this.DestRectA.Pos.Col : this.MathInt(col);
+        this.DestRectA.Pos.Row : this.MathInt(row + 150);
+
+        draw.Comp : this.Demo.CompList.SourceOver;
+
+        draw.ExecuteImage(this.ThreadDrawImage, this.DestRectA, this.SourceRectA);
+
+        draw.Comp : null;
+        return true;
     }
 }
