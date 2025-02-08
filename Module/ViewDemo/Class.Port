@@ -23,7 +23,7 @@ System.Text
     Text Text
     TextForm Form
     TextFormat Format
-    TextFormat FormatArg
+    TextFormatArg FormatArg
 System.Thread
     Thread Thread
     ThreadThis This
@@ -48,7 +48,7 @@ View.Draw:0.00.00
     DrawSlashCapeList SlashCapeList
     DrawSlashJoinList SlashJoinList
 View.Frame:0.00.00
-    Frame FrameFrame
+    FrameFrame Frame
 View.Media:0.00.00
     Play Play
 View.View:0.00.00
