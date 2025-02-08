@@ -81,4 +81,19 @@ class ViewC : View
         polateLinear.Final();
         return true;
     }
+
+    maide private DrawFont FontCreate()
+    {
+        var DrawFont a;
+        a : new DrawFont;
+        a.Name : this.Demo.DrawInfra.FontMonoName;
+        a.Size : 20;
+        a.Strong : 400;
+        a.Tenden : true;
+        a.Staline : true;
+        a.Midline : true;
+        a.Endline : true;
+        a.Init();
+        return a;
+    }
 }
