@@ -60,6 +60,10 @@ View.Media:0.00.00
     MediaPlay Play
     MediaVideoOut VideoOut
     AudioOut AudioOut
+View.Type:0.00.00
+    Type Type
+    TypeIndex Index
+    TypeIndexList IndexList
 View.View:0.00.00
     View View
     Frame Frame
