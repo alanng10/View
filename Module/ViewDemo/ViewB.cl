@@ -65,7 +65,7 @@ class ViewB : View
         this.DrawRectA.Size.Het : this.MathInt(het);
 
         var Int angle;
-        angle : this.MatnInt(20);
+        angle : this.MathInt(20);
 
         var Int colScale;
         colScale : this.MathValue(3, 0sn1);
