@@ -1,4 +1,4 @@
-class Demo : ClassBase
+class Demo : Any
 {
     maide prusate Bool Init()
     {

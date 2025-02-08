@@ -47,6 +47,10 @@ View.Draw:0.00.00
     DrawSlashLineList SlashLineList
     DrawSlashCapeList SlashCapeList
     DrawSlashJoinList SlashJoinList
+    DrawPolate Polate
+    DrawPolateLinear PolateLinear
+    DrawPolateStop PolateStop
+    DrawPolateStopPoint PolateStopPoint
     DrawRect Rect
 View.Frame:0.00.00
     FrameFrame Frame
