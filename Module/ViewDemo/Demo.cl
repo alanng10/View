@@ -5,11 +5,13 @@ class Demo : DeA
         base.Init();
         this.MathInfra : share MathInfra;
         this.DrawInfra : share DrawInfra;
+        this.ViewInfra : share ViewInfra;
         this.CompList : share DrawCompList;
         this.BrushKindList : share DrawBrushKindList;
         this.SlashLineList : share DrawSlashLineList;
         this.SlashCapeList : share DrawSlashCapeList;
         this.SlashJoinList : share DrawSlashJoinList;
+        this.PolateKindList : share DrawPolateKindList;
         this.AlignList : share DrawAlignList;
         return true;
     }
@@ -30,6 +32,7 @@ class Demo : DeA
     field prusate DrawSlashLineList SlashLineList { get { return data; } set { data : value; } }
     field prusate DrawSlashCapeList SlashCapeList { get { return data; } set { data : value; } }
     field prusate DrawSlashJoinList SlashJoinList { get { return data; } set { data : value; } }
+    field prusate DrawPolateKindList PolateKindList { get { return data; } set { data : value; } }    
     field prusate DrawAlignList AlignList { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field private Stream MediaStream { get { return data; } set { data : value; } }

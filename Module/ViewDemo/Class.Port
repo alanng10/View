@@ -54,6 +54,7 @@ View.Draw:0.00.00
     DrawSlashCapeList SlashCapeList
     DrawSlashJoinList SlashJoinList
     DrawPolate Polate
+    DrawPolateKindList PolateKindList
     DrawPolateLinear PolateLinear
     DrawPolateStop PolateStop
     DrawPolateStopPoint PolateStopPoint
