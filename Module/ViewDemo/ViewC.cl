@@ -30,7 +30,7 @@ class ViewC : View
         polate.Spread : this.Demo.PolateSpreadList.Pad;
         polate.Init();
 
-        var DrawBrush;
+        var DrawBrush brush;
         brush : new DrawBrush;
         brush.Kind : this.Demo.BrushKindList.Polate;
         brush.Polate : polate;
