@@ -161,6 +161,7 @@ class ViewC : ViewView
     protected override bool ExecuteDrawThis(DrawDraw draw)
     {
         base.ExecuteDrawThis(draw);
+
         this.EllipseRect.Pos.Col = this.MathInt(this.Pos.Col + 400);
         this.EllipseRect.Pos.Row = this.MathInt(this.Pos.Row + 20);
         
