@@ -41,6 +41,16 @@ View.Draw:0.00.00
     DrawImage Image
     DrawImageRead ImageRead
     DrawImageWrite ImageWrite
+    DrawBrush Brush
+    DrawBrushKindList BrushKindList
+    DrawSlash Slash
+    DrawSlashLineList SlashLineList
+    DrawSlashCapeList SlashCapeList
+    DrawSlashJoinList SlashJoinList
+View.Frame:0.00.00
+    Frame FrameFrame
+View.View:0.00.00
+    View View
 
 [Export]
 
