@@ -63,6 +63,9 @@ View.Media:0.00.00
     AudioOut AudioOut
 View.View:0.00.00
     View View
+    Grid Grid
+    GridChild GridChild
+    ViewCount Count
 
 [Export]
 
