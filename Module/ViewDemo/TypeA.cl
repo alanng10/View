@@ -12,7 +12,7 @@ class TypeA : Type
         o : value;
 
         var TypeIndexList d;
-        d : this.Demo.Frame.Type.Index;
+        d : this.Demo.Frame.Type.IndexList;
 
         inf (a = d.AlphaB & o)
         {
