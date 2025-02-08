@@ -47,4 +47,44 @@ class ViewB : View
     field prusate DrawImage ThreadDrawImage { get { return data; } set { data : value; } }
     field prusate DrawRect DestRectA { get { return data; } set { data : value; } }
     field prusate DrawRect SourceRectA { get { return data; } set { data : value; } }
+
+    maide precate Bool ExecuteDrawThis(var Draw draw)
+    {
+        var Int col;
+        var Int row;
+        col : this.Pos.Col;
+        row : this.Pos.Row;
+        var Int wed;
+        var Int het;
+        wed : this.Size.Wed;
+        het : this.Size.Het;
+
+        this.DrawRectA.Pos.Col : this.MathInt(col);
+        this.DrawRectA.Pos.Row : this.MathInt(row);
+        this.DrawRectA.Size.Wed : this.MathInt(wed);
+        this.DrawRectA.Size.Het : this.MathInt(het);
+
+        var Int angle;
+        angle : this.MatnInt(20);
+
+        var Int colScale;
+        colScale : this.MathValue(3, 0sn1);
+
+        var Int rowScale;
+        rowScale : this.MathInt(1);
+
+        this.Form.Reset();
+
+        this.Form.Angle(angle);
+
+        this.Form.Scale(colScale, rowScale);
+
+        draw.Form : this.Form;
+        draw.FormSet();
+
+        draw.ExecuteImage(this.DrawImage, this.DrawRectA, this.SourceRect);
+
+        draw.Form : null;
+        draw.FormSet();
+    }
 }
