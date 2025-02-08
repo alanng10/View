@@ -46,6 +46,7 @@ View.Draw:0.00.00
     DrawColor Color
     DrawCompList CompList
     DrawForm Form
+    DrawFont Font
     DrawBrush Brush
     DrawBrushKindList BrushKindList
     DrawSlash Slash
