@@ -39,4 +39,12 @@ class ViewB : View
 
         return true;
     }
+
+    field prusate Demo Demo { get { return data; } set { data : value; } }
+    field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
+    field prusate DrawRect SourceRect { get { return data; } set { data : value; } }
+    field prusate DrawForm Form { get { return data; } set { data : value; } }
+    field prusate DrawImage ThreadDrawImage { get { return data; } set { data : value; } }
+    field prusate DrawRect DestRectA { get { return data; } set { data : value; } }
+    field prusate DrawRect SourceRectA { get { return data; } set { data : value; } }
 }
