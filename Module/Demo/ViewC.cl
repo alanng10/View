@@ -54,4 +54,13 @@ class ViewC : View
         this.TextSlash : this.TextSlashCreate();
         return true;
     }
+
+    maide prusate Bool Final()
+    {
+        var DrawBrush brush;
+        brush : this.Back;
+        var DrawPolate polate;
+        polate : brush.Polate;
+        var DrawPolateStop polateStop;
+    }
 }
