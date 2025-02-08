@@ -62,7 +62,7 @@ View.Draw:0.00.00
 View.Media:0.00.00
     MediaPlay Play
     MediaVideoOut VideoOut
-    AudioOut AudioOut
+    MediaAudioOut AudioOut
 View.Type:0.00.00
     Type Type
     TypeIndex Index
