@@ -57,6 +57,7 @@ View.Draw:0.00.00
     DrawPolateLinear PolateLinear
     DrawPolateStop PolateStop
     DrawPolateStopPoint PolateStopPoint
+    DrawAlignList AlignList
     DrawRect Rect
     DrawInfra Infra
 View.Media:0.00.00
