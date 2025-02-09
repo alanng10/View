@@ -4,7 +4,7 @@ class VideoOut : MediaVideoOut
 
     maide precate Bool FrameEvent()
     {
-        this.Demo.Play.VideoOut.Image(this.Demo.PlayImage);
+        this.Image(this.Demo.PlayImage);
 
         this.Demo.ViewInfra.AssignDrawRectValue(this.Demo.UpdateRect, this.Demo.ViewA.Area);
 
