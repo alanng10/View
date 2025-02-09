@@ -1,5 +1,5 @@
 [Module]
-ViewDemo:0.00.00
+View.Demo:0.00.00
 
 [Import]
 System.Infra
@@ -38,7 +38,7 @@ System.Entry
     EntryEntry Entry
 SystemDemo:96207.08.47
     DeA DeA
-Draw.Draw:0.00.00
+View.Draw:0.00.00
     Draw Draw
     DrawImage Image
     DrawImageRead ImageRead
@@ -62,11 +62,11 @@ Draw.Draw:0.00.00
     DrawAlignList AlignList
     DrawRect Rect
     DrawInfra Infra
-Media.Play:0.00.00
+View.Media:0.00.00
     MediaPlay Play
     MediaVideoOut VideoOut
     MediaAudioOut AudioOut
-Type.Type:0.00.00
+View.Type:0.00.00
     Type Type
     TypeIndex Index
     TypeIndexList IndexList
@@ -76,7 +76,7 @@ View.View:0.00.00
     GridChild GridChild
     ViewCount Count
     ViewInfra Infra
-Frame.Frame:0.00.00
+View.Frame:0.00.00
     Frame Frame
 
 [Export]
