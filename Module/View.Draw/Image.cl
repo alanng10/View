@@ -36,11 +36,11 @@ class Image : Any
         extern.Image_Final(this.Intern);
         extern.Image_Delete(this.Intern);
 
-        extern.Size_Final(this.Intern);
-        extern.Size_Delete(this.Intern);
+        extern.Size_Final(this.InternSize);
+        extern.Size_Delete(this.InternSize);
 
-        extern.Data_Final(this.Intern);
-        extern.Data_Delete(this.Intern);
+        extern.Data_Final(this.InternData);
+        extern.Data_Delete(this.InternData);
         return true;
     }
 
