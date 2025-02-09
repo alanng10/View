@@ -94,6 +94,7 @@ class Demo : DeA
 
         var ViewB viewB;
         viewB : new ViewB;
+        viewB.Demo : this;
         viewB.Init();
 
         this.ViewA.Child : viewB;
