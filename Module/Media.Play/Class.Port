@@ -11,7 +11,7 @@ System.Infra
     InternInfra InternInfra
 System.Stream
     Stream Stream
-View.Draw:0.00.00
+Draw.Draw:0.00.00
     DrawImage Image
 
 [Export]
