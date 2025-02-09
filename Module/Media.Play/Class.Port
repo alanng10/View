@@ -1,5 +1,5 @@
 [Module]
-View.Media:0.00.00
+Media.Play:0.00.00
 
 [Import]
 System.Infra
