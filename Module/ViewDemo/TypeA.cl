@@ -62,6 +62,12 @@ class TypeA : Type
             b : true;
         }
 
+        inf (a = d.AlphaY & o)
+        {
+            this.Demo.ViewA.RotateValue : this.Demo.ViewA.RotateValue + 1;
+            b : true;
+        }
+
         var Bool ba;
         ba : false;
 
