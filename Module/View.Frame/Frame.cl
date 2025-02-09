@@ -230,10 +230,40 @@ class Frame : Any
 
     maide precate Bool TypeEvent(var Int index, var Bool value)
     {
+        inf (~(this.Type = null))
+        {
+            this.Type.Set(index, value);
+        }
+        return true;
     }
 
     maide precate Bool DrawEvent()
     {
+        var Draw draw;
+        draw : this.Draw;
+
+        draw.Start();
+
+        draw.Clear(this.DrawClearColor);
+
+        inf (this.ValidDrawView())
+        {
+            this.ExecuteDrawView(draw);
+        }
+
+        draw.End();
+        return true;
+    }
+
+    maide precate Bool ValidDrawView()
+    {
+        return ~(this.View = null);
+    }
+
+    maide precate Bool ExecuteDrawView(var Draw draw)
+    {
+        this.View.ExecuteDraw(draw);
+        return true;
     }
 
     maide prusate Bool Update(var DrawRect rect)
