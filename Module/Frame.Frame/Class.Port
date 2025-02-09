@@ -1,5 +1,5 @@
 [Module]
-View.Frame:0.00.00
+Frame.Frame:0.00.00
 
 [Import]
 System.Infra
