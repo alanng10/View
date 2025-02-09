@@ -21,7 +21,7 @@ class ViewB : View
         this.Pos.Row : 40;
         this.Size.Wed : wed;
         this.Size.Het : het;
-        this.DrawImage : this.Demo.DrawInfra.ImageCreateStorage("ViewDemo-0.00.00.data/Demo/image.jpg");
+        this.DrawImage : this.Demo.DrawInfra.ImageCreateStorage("View.Demo-0.00.00.data/Demo/image.jpg");
         this.SourceRect : sourceRect;
         this.DestRectA : destRectA;
         this.SourceRectA : sourceRectA;
