@@ -24,6 +24,8 @@ View.Draw:0.00.00
 View.View:0.00.00
     View View
     ViewInfra Infra
+View.Type:0.00.00
+    Type Type
 
 [Export]
 Frame

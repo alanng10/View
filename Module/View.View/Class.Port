@@ -16,8 +16,6 @@ View.Infra:0.00.00
     Field Field
     Mod Mod
     List List
-View.Type:0.00.00
-    Type Type
 View.Draw:0.00.00
     Draw Draw
     DrawImage Image
