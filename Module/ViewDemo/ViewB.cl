@@ -27,7 +27,6 @@ class ViewB : View
         this.SourceRectA : sourceRectA;
         this.Form : new DrawForm;
         this.Form.Init();
-        this.ThreadDrawImage : this.ThreadDrawImage;
         return true;
     }
 
@@ -44,7 +43,6 @@ class ViewB : View
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
     field prusate DrawRect SourceRect { get { return data; } set { data : value; } }
     field prusate DrawForm Form { get { return data; } set { data : value; } }
-    field prusate DrawImage ThreadDrawImage { get { return data; } set { data : value; } }
     field prusate DrawRect DestRectA { get { return data; } set { data : value; } }
     field prusate DrawRect SourceRectA { get { return data; } set { data : value; } }
 
@@ -92,7 +90,7 @@ class ViewB : View
 
         draw.Comp : this.Demo.CompList.SourceOver;
 
-        draw.ExecuteImage(this.ThreadDrawImage, this.DestRectA, this.SourceRectA);
+        draw.ExecuteImage(this.Demo.ThreadDrawImage, this.DestRectA, this.SourceRectA);
 
         draw.Comp : null;
         return true;
