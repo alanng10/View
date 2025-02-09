@@ -37,6 +37,7 @@ class Frame : Any
         this.InternInfra : share InternInfra;
         this.MathInfra : share MathInfra;
         this.DrawInfra : share DrawInfra;
+        this.ViewInfra : share ViewInfra;
         this.Math : share Math;
 
         this.MathComp : this.CreateMathComp();
@@ -84,12 +85,16 @@ class Frame : Any
         this.FrameDraw.Init();
         this.DrawSet(this.FrameDraw, k);
 
+        this.Draw : this.CreateDraw();
+
         this.DrawClearColor : this.CreateDrawClearColor();
         return true;
     }
 
     maide prusate Bool Final()
     {
+        this.FinalDraw(this.Draw);
+
         this.FrameDraw.Final();
         
         this.FinalDrawImage(this.DrawImage);
@@ -143,6 +148,21 @@ class Frame : Any
         return true;
     }
 
+    maide precate Draw CreateDraw()
+    {
+        var Draw a;
+        a : new Draw;
+        a.Init();
+        this.DrawSet(a, this.DrawImage.Out);
+        return a;
+    }
+
+    maide precate Bool FinalDraw(var Draw a)
+    {
+        a.Final();
+        return true;
+    }
+
     maide precate DrawColor CreateDrawClearColor()
     {
         var DrawColor a;
@@ -152,6 +172,9 @@ class Frame : Any
 
     field prusate DrawSize Size { get { return data; } set { data : value; } }
     field prusate String Title { get { return data; } set { data : value; } }
+    field prusate View View { get { return data; } set { data : value; } }
+    field prusate Type Type { get { return data; } set { data : value; } }
+    field precate Draw Draw { get { return data; } set { data : value; } }
     field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
 
     field prusate Bool Shown
@@ -181,6 +204,7 @@ class Frame : Any
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
+    field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
     field precate Math Math { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
     field private Int InternTitle { get { return data; } set { data : value; } }
