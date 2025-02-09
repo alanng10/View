@@ -1,5 +1,5 @@
 [Module]
-Frame.Frame:0.00.00
+View.Frame:0.00.00
 
 [Import]
 System.Infra
@@ -14,7 +14,7 @@ System.Math
     Math Math
     MathComp Comp
     MathInfra Infra
-Draw.Draw:0.00.00
+View.Draw:0.00.00
     Draw Draw
     DrawImage Image
     DrawColor Color
@@ -24,7 +24,7 @@ Draw.Draw:0.00.00
 View.View:0.00.00
     View View
     ViewInfra Infra
-Type.Type:0.00.00
+View.Type:0.00.00
     Type Type
 
 [Export]
