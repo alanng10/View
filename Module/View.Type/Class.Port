@@ -1,5 +1,5 @@
 [Module]
-Type.Type:0.00.00
+View.Type:0.00.00
 
 [Import]
 System.Infra
