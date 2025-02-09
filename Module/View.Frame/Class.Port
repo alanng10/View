@@ -21,6 +21,8 @@ View.Draw:0.00.00
     DrawRect Rect
     DrawSize Size
     DrawInfra Infra
+View.View:0.00.00
+    View View
 
 [Export]
 Frame
