@@ -4,6 +4,7 @@ class Infra : Any
     {
         base.Init();
         this.MathInfra : share MathInfra;
+        this.Math : share Math;
         this.StorageStatusList : share StorageStatusList;
         this.BrushInfra : share BrushInfra;
         this.BrushKindList : share BrushKindList;
@@ -48,6 +49,7 @@ class Infra : Any
     field prusate String FontAriaName { get { return data; } set { data : value; } }
     field prusate String FontMonoName { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field precate Math Math { get { return data; } set { data : value; } }
     field precate StorageStatusList StorageStatusList { get { return data; } set { data : value; } }
     field precate BrushKindList BrushKindList { get { return data; } set { data : value; } }
     field precate SlashLineList SlashLineList { get { return data; } set { data : value; } }
@@ -103,6 +105,17 @@ class Infra : Any
     maide pronate Int InternColor(var Color color)
     {
         return this.BrushInfra.InternColor(color);
+    }
+
+    maide prusate Int ColorCompRate(var MathComp mathComp, var Int value)
+    {
+        var Int k;
+        k : this.MathInfra.Int(mathComp, value);
+
+        var Int ka;
+        ka : this.MathInfra.Int(mathComp, 255);
+
+        return this.Math.Div(k, ka);
     }
 
     maide prusate Pos PosCreate(var Int col, var Int row)
