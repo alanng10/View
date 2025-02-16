@@ -118,6 +118,34 @@ class Infra : Any
         return this.Math.Div(k, ka);
     }
 
+    maide prusate Int ColorCompFromRate(var MathComp mathComp, var Int value)
+    {
+        var Int ka;
+        ka : this.MathInfra.Int(mathComp, 1);
+
+        inf (this.Math.Same(value, ka))
+        {
+            return 0hff;
+        }
+
+        var Int kb;
+        kb : this.MathInfra.Int(mathComp, 0h100);
+
+        var Int k;
+        k : this.Math.Mul(value, kb);
+
+        k : this.Math.Floor(k);
+
+        this.MathInfra.Comp(mathComp, k);
+
+        var Int ke;
+        ke : bit >(mathComp.Cand, 0 - mathComp.Expo);
+
+        var Int a;
+        a : ke;
+        return a;
+    }
+
     maide prusate Pos PosCreate(var Int col, var Int row)
     {
         var Pos a;
