@@ -146,6 +146,18 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Bool Chrome(var Chrome result, var Color color)
+    {
+        var Int r;
+        var Int g;
+        var Int b;
+        r : this.ColorCompRate(color.Red);
+        g : this.ColorCompRate(color.Green);
+        b : this.ColorCompRate(color.Blue);
+
+        return true;
+    }
+
     maide prusate Pos PosCreate(var Int col, var Int row)
     {
         var Pos a;
