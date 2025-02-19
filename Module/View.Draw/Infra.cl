@@ -123,7 +123,7 @@ class Infra : Any
         var Int ka;
         ka : this.MathInfra.Int(mathComp, 1);
 
-        inf (this.Math.Same(value, ka))
+        inf (value = ka)
         {
             return 0hff;
         }
