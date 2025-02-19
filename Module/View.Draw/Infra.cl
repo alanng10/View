@@ -155,6 +155,14 @@ class Infra : Any
         g : this.ColorCompRate(color.Green);
         b : this.ColorCompRate(color.Blue);
 
+        var Int max;
+        max : this.MaxThree(r, g, b);
+        
+        var Int min;
+        min : this.MinThree(r, g, b);
+
+        var Int chroma;
+        chroma : this.Math.Sub(max, min);
         return true;
     }
 
