@@ -178,6 +178,26 @@ class Infra : Any
         return a;
     }
 
+    maide precate Int MinThree(var Int ka, var Int kb, var Int kc)
+    {
+        var Int k;
+        k : ka;
+
+        inf (this.Math.Less(kb, k))
+        {
+            k : kb;
+        }
+
+        inf (this.Math.Less(kc, k))
+        {
+            k : kc;
+        }
+
+        var Int a;
+        a : k;
+        return a;
+    }
+
     maide prusate Pos PosCreate(var Int col, var Int row)
     {
         var Pos a;
