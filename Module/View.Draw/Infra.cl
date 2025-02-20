@@ -165,6 +165,7 @@ class Infra : Any
         chroma : this.Math.Sub(max, min);
 
         var Int kind;
+        var Int alpha;
         var Int value;
 
         var Int zero;
@@ -240,6 +241,23 @@ class Infra : Any
         }
 
         value : max;
+
+        var Bool ba;
+        ba : value = zero;
+
+        inf (ba)
+        {
+            alpha : zero;
+        }
+
+        inf (~ba)
+        {
+            alpha : this.Math.Div(chroma, value);
+        }
+
+        result.Kind : kind;
+        result.Alpha : alpha;
+        result.Value : value;
         return true;
     }
 
