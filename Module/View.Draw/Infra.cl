@@ -165,6 +165,7 @@ class Infra : Any
         chroma : this.Math.Sub(max, min);
 
         var Int kind;
+        var Int value;
 
         var Int zero;
         zero : this.MathInfra.Int(mathComp, 0);
@@ -237,6 +238,8 @@ class Infra : Any
 
             kind : ka;
         }
+
+        value : max;
         return true;
     }
 
