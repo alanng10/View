@@ -172,10 +172,24 @@ class Infra : Any
             var Bool b;
             b = false;
 
+            var Int ka;
+
             inf (~b)
             {
                 inf (max = r)
                 {
+                    ka : this.Math.Sub(g, b);
+
+                    ka : this.Math.Div(ka, chroma);
+
+                    inf (this.Math.Less(ka, zero))
+                    {
+                        var Int six;
+                        six : this.MathInfra.Int(mathComp, 6);
+
+                        ka : this.Math.Add(ka, six);
+                    }
+
                     b : true;
                 }
             }
@@ -184,6 +198,15 @@ class Infra : Any
             {
                 inf (max = g)
                 {
+                    ka : this.Math.Sub(b, r);
+
+                    ka : this.Math.Div(ka, chroma);
+
+                    var Int two;
+                    two : this.MathInfra.Int(mathComp, 2);
+
+                    ka : this.Math.Add(ka, two);
+
                     b : true;
                 }
             }
@@ -192,6 +215,15 @@ class Infra : Any
             {
                 inf (max = b)
                 {
+                    ka : this.Math.Sub(r, g);
+
+                    ka : this.Math.Div(ka, chroma);
+
+                    var Int four;
+                    four : this.MathInfra.Int(mathComp, 4);
+
+                    ka : this.Math.Add(ka, four);
+
                     b : true;
                 }
             }
