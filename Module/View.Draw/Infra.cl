@@ -107,7 +107,7 @@ class Infra : Any
         return this.BrushInfra.InternColor(color);
     }
 
-    maide prusate Int ColorCompRate(var MathComp mathComp, var Int value)
+    maide prusate Int RateColorComp(var MathComp mathComp, var Int value)
     {
         var Int k;
         k : this.MathInfra.Int(mathComp, value);
@@ -118,7 +118,7 @@ class Infra : Any
         return this.Math.Div(k, ka);
     }
 
-    maide prusate Int ColorCompFromRate(var MathComp mathComp, var Int value)
+    maide prusate Int ColorCompRate(var MathComp mathComp, var Int value)
     {
         var Int ka;
         ka : this.MathInfra.Int(mathComp, 1);
@@ -146,14 +146,14 @@ class Infra : Any
         return a;
     }
 
-    maide prusate Bool Chrome(var MathComp mathComp, var Chrome result, var Color color)
+    maide prusate Bool ChromeColor(var MathComp mathComp, var Chrome result, var Color color)
     {
         var Int r;
         var Int g;
         var Int b;
-        r : this.ColorCompRate(color.Red);
-        g : this.ColorCompRate(color.Green);
-        b : this.ColorCompRate(color.Blue);
+        r : this.RateColorComp(mathComp, color.Red);
+        g : this.RateColorComp(mathComp, color.Green);
+        b : this.RateColorComp(mathComp, color.Blue);
 
         var Int max;
         max : this.MaxThree(r, g, b);
@@ -261,7 +261,7 @@ class Infra : Any
         return true;
     }
 
-    maide prusate Bool ColorFromChrome(var MathComp mathComp, var Color result, var Chrome chrome)
+    maide prusate Bool ColorChrome(var MathComp mathComp, var Color result, var Chrome chrome)
     {
         return true;
     }
