@@ -306,6 +306,26 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Int Bound(var Int value, var Int min, var Int max)
+    {
+        var Int k;
+        k : value;
+
+        inf (this.Math.Less(k, min))
+        {
+            k : min;
+        }
+
+        inf (this.Math.Less(max, k))
+        {
+            k : max;
+        }
+
+        var Int a;
+        a : k;
+        return a;
+    }
+
     maide prusate Pos PosCreate(var Int col, var Int row)
     {
         var Pos a;
