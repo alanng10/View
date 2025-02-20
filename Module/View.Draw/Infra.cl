@@ -146,7 +146,7 @@ class Infra : Any
         return a;
     }
 
-    maide prusate Bool Chrome(var Chrome result, var Color color)
+    maide prusate Bool Chrome(var MathComp mathComp, var Chrome result, var Color color)
     {
         var Int r;
         var Int g;
@@ -163,6 +163,39 @@ class Infra : Any
 
         var Int chroma;
         chroma : this.Math.Sub(max, min);
+
+        var Int zero;
+        zero : this.MathInfra.Int(mathComp, 0);
+
+        inf (~(chroma = zero))
+        {
+            var Bool b;
+            b = false;
+
+            inf (~b)
+            {
+                inf (max = r)
+                {
+                    b : true;
+                }
+            }
+
+            inf (~b)
+            {
+                inf (max = g)
+                {
+                    b : true;
+                }
+            }
+
+            inf (~b)
+            {
+                inf (max = b)
+                {
+                    b : true;
+                }
+            }
+        }
         return true;
     }
 
