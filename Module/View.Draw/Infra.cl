@@ -115,7 +115,11 @@ class Infra : Any
         var Int ka;
         ka : this.MathInfra.Int(mathComp, 255);
 
-        return this.Math.Div(k, ka);
+        k : this.Math.Div(k, ka);
+
+        k : this.Bound(k, this.MathInfra.Int(0), this.MathInfra.Int(1));
+
+        return k;
     }
 
     maide prusate Int ColorCompRate(var MathComp mathComp, var Int value)
