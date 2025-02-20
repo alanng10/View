@@ -261,6 +261,11 @@ class Infra : Any
         return true;
     }
 
+    maide prusate Bool ColorFromChrome(var MathComp mathComp, var Color result, var Chrome chrome)
+    {
+        return true;
+    }
+
     maide precate Int MaxThree(var Int ka, var Int kb, var Int kc)
     {
         var Int k;
