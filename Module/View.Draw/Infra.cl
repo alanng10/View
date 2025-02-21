@@ -178,7 +178,7 @@ class Infra : Any
         inf (~(chroma = zero))
         {
             var Bool b;
-            b = false;
+            b : false;
 
             var Int ka;
 
@@ -190,12 +190,19 @@ class Infra : Any
 
                     ka : this.Math.Div(ka, chroma);
 
-                    inf (this.Math.Less(ka, zero))
-                    {
-                        var Int six;
-                        six : this.MathInt(mathComp, 6);
+                    var Bool ba;
+                    ba : this.Math.Less(ka, zero);
 
-                        ka : this.Math.Add(ka, six);
+                    inf (ba)
+                    {
+                        ka : this.Math.Add(ka, this.MathInt(mathComp, 6));
+
+                        ka : this.BoundValue(ka, this.MathInt(mathComp, 5), this.MathInt(mathComp, 6));
+                    }
+
+                    inf (~ba)
+                    {
+                        ka : this.BoundValue(ka, zero, this.MathInt(mathComp, 1));
                     }
 
                     b : true;
@@ -210,10 +217,7 @@ class Infra : Any
 
                     ka : this.Math.Div(ka, chroma);
 
-                    var Int two;
-                    two : this.MathInt(mathComp, 2);
-
-                    ka : this.Math.Add(ka, two);
+                    ka : this.Math.Add(ka, this.MathInt(mathComp, 2));
 
                     ka : this.BoundValue(ka, this.MathInt(mathComp, 1), this.MathInt(mathComp, 3))
 
@@ -229,10 +233,7 @@ class Infra : Any
 
                     ka : this.Math.Div(ka, chroma);
 
-                    var Int four;
-                    four : this.MathInt(mathComp, 4);
-
-                    ka : this.Math.Add(ka, four);
+                    ka : this.Math.Add(ka, this.MathInt(mathComp, 4));
 
                     ka : this.BoundValue(ka, this.MathInt(mathComp, 3), this.MathInt(mathComp, 5))
 
@@ -252,15 +253,15 @@ class Infra : Any
 
         value : max;
 
-        var Bool ba;
-        ba : value = zero;
+        var Bool bb;
+        bb : value = zero;
 
-        inf (ba)
+        inf (bb)
         {
             alpha : zero;
         }
 
-        inf (~ba)
+        inf (~bb)
         {
             alpha : this.Math.Div(chroma, value);
         }
