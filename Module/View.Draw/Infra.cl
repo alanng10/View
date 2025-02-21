@@ -215,6 +215,8 @@ class Infra : Any
 
                     ka : this.Math.Add(ka, two);
 
+                    ka : this.BoundValue(ka, this.MathInfra.Int(mathComp, 1), this.MathInfra.Int(mathComp, 3))
+
                     b : true;
                 }
             }
@@ -231,6 +233,8 @@ class Infra : Any
                     four : this.MathInfra.Int(mathComp, 4);
 
                     ka : this.Math.Add(ka, four);
+
+                    ka : this.BoundValue(ka, this.MathInfra.Int(mathComp, 3), this.MathInfra.Int(mathComp, 5))
 
                     b : true;
                 }
