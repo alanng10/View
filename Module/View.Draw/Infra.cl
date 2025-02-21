@@ -334,6 +334,11 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Int MathInt(var MathComp mathComp, var Int n)
+    {
+        return this.MathInfra.Int(mathComp, n);
+    }
+
     maide prusate Pos PosCreate(var Int col, var Int row)
     {
         var Pos a;
