@@ -117,7 +117,7 @@ class Infra : Any
 
         k : this.Math.Div(k, ka);
 
-        k : this.Bound(k, this.MathInfra.Int(0), this.MathInfra.Int(1));
+        k : this.BoundValue(k, this.MathInfra.Int(0), this.MathInfra.Int(1));
 
         return k;
     }
@@ -310,7 +310,7 @@ class Infra : Any
         return a;
     }
 
-    maide prusate Int Bound(var Int value, var Int min, var Int max)
+    maide prusate Int BoundValue(var Int value, var Int min, var Int max)
     {
         var Int k;
         k : value;
