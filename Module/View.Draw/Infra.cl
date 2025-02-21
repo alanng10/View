@@ -30,7 +30,7 @@ class Infra : Any
         ka.Init();
 
         var Int k;
-        k : this.MathInfra.Int(ka, 1);
+        k : this.MathInt(ka, 1);
 
         this.BlackSlash : this.SlashCreate(blackColor, k);
         this.WhiteSlash : this.SlashCreate(whiteColor, k);
@@ -110,14 +110,14 @@ class Infra : Any
     maide prusate Int RateColorComp(var MathComp mathComp, var Int value)
     {
         var Int k;
-        k : this.MathInfra.Int(mathComp, value);
+        k : this.MathInt(mathComp, value);
 
         var Int ka;
-        ka : this.MathInfra.Int(mathComp, 255);
+        ka : this.MathInt(mathComp, 255);
 
         k : this.Math.Div(k, ka);
 
-        k : this.BoundValue(k, this.MathInfra.Int(0), this.MathInfra.Int(1));
+        k : this.BoundValue(k, this.MathInt(0), this.MathInt(1));
 
         return k;
     }
@@ -125,7 +125,7 @@ class Infra : Any
     maide prusate Int ColorCompRate(var MathComp mathComp, var Int value)
     {
         var Int ka;
-        ka : this.MathInfra.Int(mathComp, 1);
+        ka : this.MathInt(mathComp, 1);
 
         inf (value = ka)
         {
@@ -133,7 +133,7 @@ class Infra : Any
         }
 
         var Int kb;
-        kb : this.MathInfra.Int(mathComp, 0h100);
+        kb : this.MathInt(mathComp, 0h100);
 
         var Int k;
         k : this.Math.Mul(value, kb);
@@ -173,7 +173,7 @@ class Infra : Any
         var Int value;
 
         var Int zero;
-        zero : this.MathInfra.Int(mathComp, 0);
+        zero : this.MathInt(mathComp, 0);
 
         inf (~(chroma = zero))
         {
@@ -193,7 +193,7 @@ class Infra : Any
                     inf (this.Math.Less(ka, zero))
                     {
                         var Int six;
-                        six : this.MathInfra.Int(mathComp, 6);
+                        six : this.MathInt(mathComp, 6);
 
                         ka : this.Math.Add(ka, six);
                     }
@@ -211,11 +211,11 @@ class Infra : Any
                     ka : this.Math.Div(ka, chroma);
 
                     var Int two;
-                    two : this.MathInfra.Int(mathComp, 2);
+                    two : this.MathInt(mathComp, 2);
 
                     ka : this.Math.Add(ka, two);
 
-                    ka : this.BoundValue(ka, this.MathInfra.Int(mathComp, 1), this.MathInfra.Int(mathComp, 3))
+                    ka : this.BoundValue(ka, this.MathInt(mathComp, 1), this.MathInt(mathComp, 3))
 
                     b : true;
                 }
@@ -230,18 +230,18 @@ class Infra : Any
                     ka : this.Math.Div(ka, chroma);
 
                     var Int four;
-                    four : this.MathInfra.Int(mathComp, 4);
+                    four : this.MathInt(mathComp, 4);
 
                     ka : this.Math.Add(ka, four);
 
-                    ka : this.BoundValue(ka, this.MathInfra.Int(mathComp, 3), this.MathInfra.Int(mathComp, 5))
+                    ka : this.BoundValue(ka, this.MathInt(mathComp, 3), this.MathInt(mathComp, 5))
 
                     b : true;
                 }
             }
 
             var Int sixty;
-            sixty : this.MathInfra.Int(mathComp, 60);
+            sixty : this.MathInt(mathComp, 60);
 
             ka : this.Math.Mul(ka, sixty);
 
