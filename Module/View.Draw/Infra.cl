@@ -268,7 +268,12 @@ class Infra : Any
 
         inf (~bb)
         {
-            alpha : this.Math.Div(chroma, value);
+            var Int kb;
+            kb : this.Math.Div(chroma, value);
+
+            kb : this.BoundValue(kb, zero, this.MathInt(mathComp, 1));
+
+            alpha : kb;
         }
 
         result.Kind : kind;
