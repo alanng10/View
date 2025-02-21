@@ -245,6 +245,8 @@ class Infra : Any
 
             ka : this.Math.Mul(ka, sixty);
 
+            ka : this.BoundValue(zero, this.MathInt(mathComp, 360))
+
             kind : ka;
         }
 
