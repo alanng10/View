@@ -331,6 +331,22 @@ class Infra : Any
         {
         }
 
+        inf (ka = v2 | (this.Math.Less(v2, ka) & this.Math.Less(ka, v3)))
+        {
+        }
+
+        inf (ka = v3 | (this.Math.Less(v3, ka) & this.Math.Less(ka, v4)))
+        {
+        }
+
+        inf (ka = v4 | (this.Math.Less(v4, ka) & this.Math.Less(ka, v5)))
+        {
+        }
+
+        inf (ka = v5 | (this.Math.Less(v5, ka) & this.Math.Less(ka, v6)))
+        {
+        }
+
         return true;
     }
 
