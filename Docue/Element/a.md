@@ -13,3 +13,4 @@ View element view list includes:
 - Tool
 - Status
 - Grid
+- View
