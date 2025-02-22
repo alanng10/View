@@ -17,5 +17,11 @@ class FontStore : Any
 
     maide prusate Bool Rem(var Int ident)
     {
+        var Int k;
+        k : extern.FontStore_Rem(0, ident);
+
+        var Bool a;
+        a : ~(k = 0);
+        return a;
     }
 }
