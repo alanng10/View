@@ -3,9 +3,9 @@
 View element view list includes:
 
 - Button
-- Select
 - Choose
 - Mark
+- Select
 - Scroll
 - Table
 - Menu
