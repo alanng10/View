@@ -10,4 +10,12 @@ class FontStore : Any
 
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
+
+    maide prusate Int Add(var Stream stream)
+    {
+    }
+
+    maide prusate Bool Rem(var Int ident)
+    {
+    }
 }
