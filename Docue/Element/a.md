@@ -6,6 +6,7 @@ View element view list includes:
 - Choose
 - Mark
 - Select
+- Edit
 - Scroll
 - Table
 - Menu
