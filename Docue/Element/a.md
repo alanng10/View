@@ -11,5 +11,6 @@ View element view list includes:
 - Menu
 - Tool
 - Status
+- Tree
 - Grid
 - View
