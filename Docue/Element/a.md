@@ -2,6 +2,8 @@
 
 View element view list includes:
 - Button
+- Text
+- Image
 - Choose
 - Mark
 - Select
