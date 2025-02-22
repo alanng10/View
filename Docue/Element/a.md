@@ -16,3 +16,5 @@ View element view list includes:
 - Tree
 - Grid
 - View
+
+Element Grid and View has no style.
