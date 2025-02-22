@@ -298,6 +298,8 @@ class Infra : Any
 
         var Int chroma;
         chroma : ka;
+
+        ka : this.Math.Div(kind, this.MathInt(mathComp, 60));
         return true;
     }
 
