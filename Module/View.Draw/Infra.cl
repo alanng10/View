@@ -161,7 +161,7 @@ class Infra : Any
 
         var Int max;
         max : this.MaxThree(r, g, b);
-        
+
         var Int min;
         min : this.MinThree(r, g, b);
 
