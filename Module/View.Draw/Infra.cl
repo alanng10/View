@@ -291,29 +291,44 @@ class Infra : Any
         alpha : chrome.Alpha;
         value : chrome.Value;
 
-        var Int zero;
-        zero : this.MathInt(mathComp, 0);
+        var Int v0;
+        var Int v1;
+        var Int v2;
+        var Int v3;
+        var Int v4;
+        var Int v5;
+        var Int v6;
+        v0 : this.MathInt(mathComp, 0);
+        v1 : this.MathInt(mathComp, 1);
+        v2 : this.MathInt(mathComp, 2);
+        v3 : this.MathInt(mathComp, 3);
+        v4 : this.MathInt(mathComp, 4);
+        v5 : this.MathInt(mathComp, 5);
+        v6 : this.MathInt(mathComp, 6);
 
         var Int ka;
         ka : this.Math.Mul(value, alpha);
 
-        ka : this.BoundValue(ka, zero, this.MathInt(mathComp, 1));
+        ka : this.BoundValue(ka, v0, v1);
 
         var Int chroma;
         chroma : ka;
 
         ka : this.Math.Div(kind, this.MathInt(mathComp, 60));
 
-        ka : this.BoundValue(ka, zero, this.MathInt(mathComp, 6));
+        ka : this.BoundValue(ka, v0, v6);
 
-        inf (ka = this.MathInt(mathComp, 6))
+        inf (ka = v6)
         {
-            ka : zero;
+            ka : v0;
         }
 
-        inf (ka = zero | (this.Math.Less(zero, ka) & this.Math.Less(ka, this.MathInt(mathComp, 1))))
+        inf (ka = v0 | (this.Math.Less(v0, ka) & this.Math.Less(ka, v1)))
         {
+        }
 
+        inf (ka = v1 | (this.Math.Less(v1, ka) & this.Math.Less(ka, v2)))
+        {
         }
 
         return true;
