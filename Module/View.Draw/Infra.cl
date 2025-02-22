@@ -284,6 +284,20 @@ class Infra : Any
 
     maide prusate Bool ColorChrome(var MathComp mathComp, var Color result, var Chrome chrome)
     {
+        var Int kind;
+        var Int alpha;
+        var Int value;
+        kind : chrome.Kind;
+        alpha : chrome.Alpha;
+        value : chrome.Value;
+
+        var Int ka;
+        ka : this.Math.Mul(value, alpha);
+
+        ka : this.BoundValue(ka, this.MathInt(mathComp, 0), this.MathInt(mathComp, 1));
+
+        var Int chroma;
+        chroma : ka;
         return true;
     }
 
