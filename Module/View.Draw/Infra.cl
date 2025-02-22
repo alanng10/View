@@ -311,6 +311,11 @@ class Infra : Any
             ka : zero;
         }
 
+        inf (ka = zero | (this.Math.Less(zero, ka) & this.Math.Less(ka, this.MathInt(mathComp, 1))))
+        {
+
+        }
+
         return true;
     }
 
