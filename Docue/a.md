@@ -10,4 +10,4 @@ View has park element.
 
 View has park element view list.
 
-View uses Qt Fusion style in element view list.
+View uses Fusion style in element view list.
