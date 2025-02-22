@@ -113,7 +113,7 @@ class Infra : Any
         k : this.MathInt(mathComp, value);
 
         var Int ka;
-        ka : this.MathInt(mathComp, 255);
+        ka : this.MathInt(mathComp, 0hff);
 
         k : this.Math.Div(k, ka);
 
