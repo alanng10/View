@@ -5,13 +5,11 @@ class FontStore : Any
         base.Init();
         this.InternIntern : share Intern;
         this.Extern : share Extern;
-        this.InternInfra : share InternInfra;
         return true;
     }
 
     field private Intern InternIntern { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
-    field private InternInfra InternInfra { get { return data; } set { data : value; } }
 
     maide prusate Int Add(var Data data, var Range range)
     {
