@@ -8,7 +8,7 @@ View element view list includes:
 - Mark
 - Select
 - Edit
-- Number
+- Intdit
 - Slide
 - Progre
 - Media
