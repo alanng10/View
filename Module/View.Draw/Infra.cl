@@ -291,15 +291,26 @@ class Infra : Any
         alpha : chrome.Alpha;
         value : chrome.Value;
 
+        var Int zero;
+        zero : this.MathInt(mathComp, 0);
+
         var Int ka;
         ka : this.Math.Mul(value, alpha);
 
-        ka : this.BoundValue(ka, this.MathInt(mathComp, 0), this.MathInt(mathComp, 1));
+        ka : this.BoundValue(ka, zero, this.MathInt(mathComp, 1));
 
         var Int chroma;
         chroma : ka;
 
         ka : this.Math.Div(kind, this.MathInt(mathComp, 60));
+
+        ka : this.BoundValue(ka, zero, this.MathInt(mathComp, 6));
+
+        inf (ka = this.MathInt(mathComp, 6))
+        {
+            ka : zero;
+        }
+
         return true;
     }
 
