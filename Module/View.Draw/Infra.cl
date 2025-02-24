@@ -418,6 +418,26 @@ class Infra : Any
         return true;
     }
 
+    maide prusate Int ColorValuePercent(var Int mathComp, var Int value, var Int percent)
+    {
+        var Int ka;
+        ka : this.MathInt(mathComp, percent);
+
+        var Int v100;
+        v100 : this.MathInt(mathComp, 100);
+
+        ka : this.Math.Div(ka, v100);
+
+        var Int k;
+        k : this.Math.Mul(value, ka);
+
+        k : this.BoundValue(k, this.MathInt(mathComp, 0), this.MathInt(mathComp, 1));
+
+        var Int a;
+        a : k;
+        return a;
+    }
+
     maide prusate Int MaxThree(var Int ka, var Int kb, var Int kc)
     {
         var Int k;
