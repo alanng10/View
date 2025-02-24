@@ -9,7 +9,7 @@ class Palete : Any
 
         this.MathComp : this.CreateMathComp();
 
-        this.Chrome : this.CreateDrawChrome();
+        this.DrawChrome : this.CreateDrawChrome();
 
         this.InitColor();
         return true;
@@ -39,11 +39,11 @@ class Palete : Any
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate Math Math { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
-    field precate DrawChrome Chrome { get { return data; } set { data : value; } }
+    field precate DrawChrome DrawChrome { get { return data; } set { data : value; } }
 
     maide precate Bool InitColor()
     {
-        this.DrawInfra.ChromeColor(this.MathComp, this.Chrome, this.Color);
+        this.DrawInfra.ChromeColor(this.MathComp, this.DrawChrome, this.Color);
 
         var DrawColor whiteColor;
         var DrawColor blackColor;
@@ -61,7 +61,7 @@ class Palete : Any
         ka : this.MathInfra.Value(this.MathComp, 1, 0sn1);
 
         var Bool ba;
-        ba : this.Math.Less(ka, this.Chrome.Value);
+        ba : this.Math.Less(ka, this.DrawChrome.Value);
 
         inf (ba)
         {
@@ -79,15 +79,15 @@ class Palete : Any
 
         ka : this.DrawInfra.ChromeValueDarkPercent(200);
         
-        buttonColorDark : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
+        buttonColorDark : this.ColorCreateValue(this.MathComp, this.DrawChrome, ka);
 
         ka : this.DrawInfra.ChromeValueDarkPercent(150);
 
-        buttonColorDark150 : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
+        buttonColorDark150 : this.ColorCreateValue(this.MathComp, this.DrawChrome, ka);
 
         ka : 150;
 
-        buttonColorLite150 : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
+        buttonColorLite150 : this.ColorCreateValue(this.MathComp, this.DrawChrome, ka);
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
@@ -101,8 +101,7 @@ class Palete : Any
         chrome.Value : ka;
 
         var DrawColor ke;
-        ke : new DrawColor;
-        ke.Init();
+        ke : this.DrawInfra.ColorCreate(0, 0, 0, 0);
 
         this.DrawInfra.ColorChrome(this.MathComp, ke, chrome);
 
