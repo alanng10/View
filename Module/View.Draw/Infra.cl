@@ -418,7 +418,7 @@ class Infra : Any
         return true;
     }
 
-    maide precate Int MaxThree(var Int ka, var Int kb, var Int kc)
+    maide prusate Int MaxThree(var Int ka, var Int kb, var Int kc)
     {
         var Int k;
         k : ka;
@@ -438,7 +438,7 @@ class Infra : Any
         return a;
     }
 
-    maide precate Int MinThree(var Int ka, var Int kb, var Int kc)
+    maide prusate Int MinThree(var Int ka, var Int kb, var Int kc)
     {
         var Int k;
         k : ka;
