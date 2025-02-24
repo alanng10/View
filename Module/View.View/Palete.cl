@@ -60,10 +60,13 @@ class Palete : Any
 
         buttonColor : this.Color;
 
-        kk : this.Chrome.Value;
-
         ka : 100 * 100 / 200;
-        ka : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
+        
+        buttonColorDark : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
+
+        ka : 100 * 100 / 150;
+
+        buttonColorDark150 : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
 
     }
 
@@ -72,7 +75,8 @@ class Palete : Any
         var Int kf;
         kf : chrome.Value;
 
-        ka : this.DrawInfra.ChromeValuePercent(this.MathComp, kf, ka);
+        var Int ka;
+        ka : this.DrawInfra.ChromeValuePercent(this.MathComp, kf, valuePercent);
 
         chrome.Value : ka;
 
