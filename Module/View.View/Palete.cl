@@ -104,7 +104,7 @@ class Palete : Any
 
     }
 
-    maide precate Bool GroupSet(
+    maide precate Bool GroupColorSet(
         var PaleteGroup group, var DrawColor frameText, var DrawColor button,
         var DrawColor lite, var DrawColor dark, var DrawColor mid,
         var DrawColor text, var DrawColor liteText, var DrawColor varBase, 
@@ -124,6 +124,20 @@ class Palete : Any
 
         tipBase : this.DrawInfra.ColorCreate(0hff, 255, 255, 220);
         tipText : this.DrawInfra.BlackSlash.Brush.Color;
+    }
+
+    maide precate Bool GroupSet(
+        var PaleteGroup group, var DrawColor fore, var DrawColor button, 
+        var DrawColor lite, var DrawColor dark, var DrawColor mid, 
+        var DrawColor text, var DrawColor liteText, 
+        var DrawColor varBase, var DrawColor alterBase, 
+        var DrawColor back, var DrawColor midLite, 
+        var DrawColor buttonText, var DrawColor shade, 
+        var DrawColor highLite, var DrawColor highLiteText, 
+        var DrawColor link, var DrawColor linkVisit, 
+        var DrawColor tipBase, var DrawColor tipText 
+    )
+    {
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
