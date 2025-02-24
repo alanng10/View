@@ -20,6 +20,7 @@ View.Draw:0.00.00
     Draw Draw
     DrawImage Image
     DrawColor Color
+    DrawChrome Chrome
     DrawBrush Brush
     DrawRect Rect
     DrawPos Pos
