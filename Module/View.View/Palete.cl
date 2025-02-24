@@ -18,6 +18,9 @@ class Palete : Any
     }
 
     field prusate DrawColor Color { get { return data; } set { data : value; } }
+    field prusate PaleteGroup Active { get { return data; } set { data : value; } }
+    field prusate PaleteGroup Untive { get { return data; } set { data : value; } }
+    field prusate PaleteGroup Unable { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate Math Math { get { return data; } set { data : value; } }
