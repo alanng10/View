@@ -79,15 +79,15 @@ class Palete : Any
 
         ka : this.DrawInfra.ChromeValueDarkPercent(200);
         
-        buttonColorDark : this.ColorCreateValue(this.MathComp, this.DrawChrome, ka);
+        buttonColorDark : this.ColorCreateValue(this.Color.Alpha, this.DrawChrome, ka);
 
         ka : this.DrawInfra.ChromeValueDarkPercent(150);
 
-        buttonColorDark150 : this.ColorCreateValue(this.MathComp, this.DrawChrome, ka);
+        buttonColorDark150 : this.ColorCreateValue(this.Color.Alpha, this.DrawChrome, ka);
 
         ka : 150;
 
-        buttonColorLite150 : this.ColorCreateValue(this.MathComp, this.DrawChrome, ka);
+        buttonColorLite150 : this.ColorCreateValue(this.Color.Alpha, this.DrawChrome, ka);
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
