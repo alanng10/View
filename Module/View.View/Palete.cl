@@ -100,6 +100,27 @@ class Palete : Any
         ka : 150;
 
         buttonColorLite150 : this.ColorCreateValue(this.Color.Alpha, this.DrawChrome, ka);
+
+
+    }
+
+    maide precate Bool GroupSet(
+        var PaleteGroup group, var DrawColor frameText, var DrawColor button,
+        var DrawColor lite, var DrawColor dark, var DrawColor mid,
+        var DrawColor text, var DrawColor liteText, var DrawColor varBase, 
+        var DrawColor frame
+    )
+    {
+        var DrawColor alterBase;
+        var DrawColor midLite;
+        var DrawColor tipBase;
+        var DrawColor tipText;
+
+        alterBase : this.DrawInfra.ColorCreate(0, 0, 0, 0);
+        this.DrawInfra.ColorMix(alterBase, varBase, button);
+
+        midLite : this.DrawInfra.ColorCreate(0, 0, 0, 0);
+        this.DrawInfra.ColorMix(midLite, button, lite);
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
