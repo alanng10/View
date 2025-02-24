@@ -12,7 +12,7 @@ class PaleteGroup : Any
     field prusate DrawColor Frame { get { return data; } set { data : value; } }
     field prusate DrawColor MidLite { get { return data; } set { data : value; } }
     field prusate DrawColor ButtonText { get { return data; } set { data : value; } }
-    field prusate DrawColor Shadow { get { return data; } set { data : value; } }
+    field prusate DrawColor Shade { get { return data; } set { data : value; } }
     field prusate DrawColor HighLite { get { return data; } set { data : value; } }
     field prusate DrawColor HighLiteText { get { return data; } set { data : value; } }
     field prusate DrawColor Link { get { return data; } set { data : value; } }
