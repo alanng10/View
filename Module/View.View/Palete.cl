@@ -57,5 +57,9 @@ class Palete : Any
             baseColor : blackColor;
             foreColor : whiteColor;
         }
+
+        buttonColor : this.Color;
+
+        
     }
 }
