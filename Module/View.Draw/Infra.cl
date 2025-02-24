@@ -323,6 +323,13 @@ class Infra : Any
             ka : v0;
         }
 
+        var Int kb;
+        kb : this.Math.Div(ka, v2);
+
+        kb : this.Math.Floor(kb);
+
+        kb : this.Math.Mul(kb, v2);
+
         inf (ka = v0 | (this.Math.Less(v0, ka) & this.Math.Less(ka, v1)))
         {
         }
