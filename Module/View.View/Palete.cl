@@ -144,19 +144,21 @@ class Palete : Any
         group.Dark : dark;
         group.Mid : mid;
         group.Text : text;
-        group.BrightText : bright_text;
-        group.Base : base;
-        group.AlternateBase : alternate_base;
-        group.Window : background;
-        group.Midlight : midlight;
-        group.ButtonText : button_text;
-        group.Shadow : shadow;
-        group.Highlight : highlight;
-        group.HighlightedText : highlighted_text;
+        group.LiteText : liteText;
+        group.Base : varBase;
+        group.AlterBase : alterBase;
+        group.Frame : back;
+        group.MidLite : midLite;
+        group.ButtonText : buttonText;
+        group.Shade : shade;
+        group.HighLite : highLite;
+        group.HighLiteText : highLiteText;
         group.Link : link;
-        group.LinkVisited : link_visited;
-        group.ToolTipBase : toolTipBase;
-        group.ToolTipText : toolTipText;
+        group.LinkVisit : linkVisit;
+        group.TipBase : tipBase;
+        group.TipText : tipText;
+
+        return true;
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
