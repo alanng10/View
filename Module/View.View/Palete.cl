@@ -138,6 +138,25 @@ class Palete : Any
         var DrawColor tipBase, var DrawColor tipText 
     )
     {
+        group.FrameText : fore;
+        group.Button : button;
+        group.Lite : lite;
+        group.Dark : dark;
+        group.Mid : mid;
+        group.Text : text;
+        group.BrightText : bright_text;
+        group.Base : base;
+        group.AlternateBase : alternate_base;
+        group.Window : background;
+        group.Midlight : midlight;
+        group.ButtonText : button_text;
+        group.Shadow : shadow;
+        group.Highlight : highlight;
+        group.HighlightedText : highlighted_text;
+        group.Link : link;
+        group.LinkVisited : link_visited;
+        group.ToolTipBase : toolTipBase;
+        group.ToolTipText : toolTipText;
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
