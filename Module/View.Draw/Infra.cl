@@ -346,28 +346,53 @@ class Infra : Any
 
         kb : this.BoundValue(kb, v0, chroma);
 
+        var Int x;
+        x : kb;
+
+        var Int red;
+        var Int green;
+        var Int blue;
+
         inf (ka = v0 | (this.Math.Less(v0, ka) & this.Math.Less(ka, v1)))
         {
+            red : chroma;
+            green : x;
+            blue : 0;
         }
 
         inf (ka = v1 | (this.Math.Less(v1, ka) & this.Math.Less(ka, v2)))
         {
+            red : x;
+            green : chroma;
+            blue : 0;
         }
 
         inf (ka = v2 | (this.Math.Less(v2, ka) & this.Math.Less(ka, v3)))
         {
+            red : 0;
+            green : chroma;
+            blue : x;
         }
 
         inf (ka = v3 | (this.Math.Less(v3, ka) & this.Math.Less(ka, v4)))
         {
+            red : 0;
+            green : x;
+            blue : chroma;
         }
 
         inf (ka = v4 | (this.Math.Less(v4, ka) & this.Math.Less(ka, v5)))
         {
+            red : x;
+            green : 0;
+            blue : chroma;
         }
 
         inf (ka = v5 | (this.Math.Less(v5, ka) & this.Math.Less(ka, v6)))
         {
+            red : chroma;
+            green : 0;
+            blue : x;
         }
 
         return true;
