@@ -11,6 +11,10 @@ class Palete : Any
 
         this.DrawChrome : this.CreateDrawChrome();
 
+        this.Active : this.CreatePaleteGroup();
+        this.Untive : this.CreatePaleteGroup();
+        this.Unable : this.CreatePaleteGroup();
+
         this.InitColor();
         return true;
     }
@@ -27,6 +31,14 @@ class Palete : Any
     {
         var DrawChrome a;
         a : new DrawChrome;
+        a.Init();
+        return a;
+    }
+
+    maide precate PaleteGroup CreatePaleteGroup()
+    {
+        var PaleteGroup a;
+        a : new PaleteGroup;
         a.Init();
         return a;
     }
