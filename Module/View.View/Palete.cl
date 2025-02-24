@@ -60,6 +60,34 @@ class Palete : Any
 
         buttonColor : this.Color;
 
-        
+        kk : this.Chrome.Value;
+
+        ka : 100 * 100 / 200;
+        ka : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
+
+    }
+
+    maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
+    {
+        var Int kf;
+        kf : chrome.Value;
+
+        ka : this.DrawInfra.ChromeValuePercent(this.MathComp, kf, ka);
+
+        chrome.Value : ka;
+
+        var DrawColor ke;
+        ke : new DrawColor;
+        ke.Init();
+
+        this.DrawInfra.ColorChrome(this.MathComp, ke, chrome);
+
+        chrome.Value : kf;
+
+        ke.Alpha : alpha;
+
+        var DrawColor a;
+        a : ke;
+        return a;
     }
 }
