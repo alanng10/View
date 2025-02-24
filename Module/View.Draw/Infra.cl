@@ -418,7 +418,7 @@ class Infra : Any
         return true;
     }
 
-    maide prusate Int ColorValuePercent(var Int mathComp, var Int value, var Int percent)
+    maide prusate Int ChromeValuePercent(var Int mathComp, var Int value, var Int percent)
     {
         var Int ka;
         ka : this.MathInt(mathComp, percent);
