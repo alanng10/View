@@ -338,6 +338,14 @@ class Infra : Any
 
         kb : this.BoundValue(kb, v0, v1);
 
+        kb : this.Math.Sub(v1, kb);
+
+        kb : this.BoundValue(kb, v0, v1);
+
+        kb : this.Math.Mul(kb, chroma);
+
+        kb : this.BoundValue(kb, v0, chroma);
+
         inf (ka = v0 | (this.Math.Less(v0, ka) & this.Math.Less(ka, v1)))
         {
         }
