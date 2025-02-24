@@ -12,12 +12,6 @@ class Comp : Any
         return true;
     }
 
-    field prusate Event ModEvent { get { return data; } set { data : value; } }
-    field prusate Mod ModArg { get { return data; } set { data : value; } }
-    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
-    field precate Math Math { get { return data; } set { data : value; } }
-    field precate MathComp MathComp { get { return data; } set { data : value; } }
-
     maide precate MathComp CreateMathComp()
     {
         var MathComp a;
@@ -41,6 +35,12 @@ class Comp : Any
         a.Init();
         return a;
     }
+
+    field prusate Event ModEvent { get { return data; } set { data : value; } }
+    field prusate Mod ModArg { get { return data; } set { data : value; } }
+    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
+    field precate Math Math { get { return data; } set { data : value; } }
+    field precate MathComp MathComp { get { return data; } set { data : value; } }
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
     {
