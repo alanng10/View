@@ -126,7 +126,7 @@ class Palete : Any
         tipText : this.DrawInfra.BlackSlash.Brush.Color;
 
         this.GroupSet(group, frameText, button, lite, dark, mid, text, liteText, varBase,
-                  alterBase, frame, midLight, text,
+                  alterBase, frame, midLite, text,
                   QBrush(Qt::black), QBrush(Qt::darkBlue), QBrush(Qt::white),
                   QBrush(Qt::blue), QBrush(Qt::magenta), tipBase,
                   tipText);
