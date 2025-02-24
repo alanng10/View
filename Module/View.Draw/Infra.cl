@@ -448,6 +448,20 @@ class Infra : Any
         return 100 * 100 / percent;
     }
 
+    maide prusate Bool ColorMix(var Color result, var Color lite, var Color rite)
+    {
+        result.Alpha : this.Mean(lite.Alpha, rite.Alpha);
+        result.Red : this.Mean(lite.Red, rite.Red);
+        result.Green : this.Mean(lite.Green, rite.Green);
+        result.Blue : this.Mean(lite.Blue, rite.Blue);
+        return true;
+    }
+
+    maide prusate Int Mean(var Int ka, var Int kb)
+    {
+        return (ka + kb) / 2;
+    }
+
     maide prusate Int MaxThree(var Int ka, var Int kb, var Int kc)
     {
         var Int k;
