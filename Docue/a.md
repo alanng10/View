@@ -10,7 +10,7 @@ View has park element.
 
 View has park element view list.
 
-View uses Fusion style in element view list.
+View uses Fuse style in element view list.
 
-View Fusion style has palete from one color.
+View Fuse style has palete from one color.
 Palete has color list.
