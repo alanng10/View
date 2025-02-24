@@ -357,26 +357,26 @@ class Infra : Any
         {
             red : chroma;
             green : x;
-            blue : 0;
+            blue : v0;
         }
 
         inf (ka = v1 | (this.Math.Less(v1, ka) & this.Math.Less(ka, v2)))
         {
             red : x;
             green : chroma;
-            blue : 0;
+            blue : v0;
         }
 
         inf (ka = v2 | (this.Math.Less(v2, ka) & this.Math.Less(ka, v3)))
         {
-            red : 0;
+            red : v0;
             green : chroma;
             blue : x;
         }
 
         inf (ka = v3 | (this.Math.Less(v3, ka) & this.Math.Less(ka, v4)))
         {
-            red : 0;
+            red : v0;
             green : x;
             blue : chroma;
         }
@@ -384,16 +384,21 @@ class Infra : Any
         inf (ka = v4 | (this.Math.Less(v4, ka) & this.Math.Less(ka, v5)))
         {
             red : x;
-            green : 0;
+            green : v0;
             blue : chroma;
         }
 
         inf (ka = v5 | (this.Math.Less(v5, ka) & this.Math.Less(ka, v6)))
         {
             red : chroma;
-            green : 0;
+            green : v0;
             blue : x;
         }
+
+        var Int min;
+        min : this.Math.Sub(value, chroma);
+
+        min : this.BoundValue(min, v0, v1);
 
         return true;
     }
