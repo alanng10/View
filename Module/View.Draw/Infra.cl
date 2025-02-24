@@ -330,6 +330,14 @@ class Infra : Any
 
         kb : this.Math.Mul(kb, v2);
 
+        kb : this.Math.Sub(ka, kb);
+
+        kb : this.Math.Sub(kb, v1);
+
+        kb : this.Math.Abs(kb);
+
+        kb : this.BoundValue(kb, v0, v1);
+
         inf (ka = v0 | (this.Math.Less(v0, ka) & this.Math.Less(ka, v1)))
         {
         }
