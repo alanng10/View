@@ -121,6 +121,9 @@ class Palete : Any
 
         midLite : this.DrawInfra.ColorCreate(0, 0, 0, 0);
         this.DrawInfra.ColorMix(midLite, button, lite);
+
+        tipBase : this.DrawInfra.ColorCreate(0hff, 255, 255, 220);
+        tipText : this.DrawInfra.BlackSlash.Brush.Color;
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
