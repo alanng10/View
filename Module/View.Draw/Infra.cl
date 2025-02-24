@@ -438,6 +438,16 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Int ChromeValueDarkPercent(var Int percent)
+    {
+        inf (percent = 0)
+        {
+            return 0;
+        }
+
+        return 100 * 100 / percent;
+    }
+
     maide prusate Int MaxThree(var Int ka, var Int kb, var Int kc)
     {
         var Int k;
