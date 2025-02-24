@@ -7,14 +7,28 @@ class Palete : Any
         this.DrawInfra : share DrawInfra;
         this.Math : share Math;
 
-        this.MathComp : new MathComp;
-        this.MathComp.Init();
+        this.MathComp : this.CreateMathComp();
 
-        this.Chrome : new DrawChrome;
-        this.Chrome.Init();
+        this.Chrome : this.CreateDrawChrome();
 
         this.InitColor();
         return true;
+    }
+
+    maide precate MathComp CreateMathComp()
+    {
+        var MathComp a;
+        a : new MathComp;
+        a.Init();
+        return a;
+    }
+
+    maide precate DrawChrome CreateDrawChrome()
+    {
+        var DrawChrome a;
+        a : new DrawChrome;
+        a.Init();
+        return a;
     }
 
     field prusate DrawColor Color { get { return data; } set { data : value; } }
