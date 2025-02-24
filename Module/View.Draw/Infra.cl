@@ -400,6 +400,21 @@ class Infra : Any
 
         min : this.BoundValue(min, v0, v1);
 
+        red : this.Math.Add(red, min);
+
+        green : this.Math.Add(green, min);
+
+        blue : this.Math.Add(blue, min);
+
+        red : this.BoundValue(red, v0, v1);
+
+        green : this.BoundValue(green, v0, v1);
+
+        blue : this.BoundValue(blue, v0, v1);
+
+        result.Red : red;
+        result.Green : green;
+        result.Blue : blue;
         return true;
     }
 
