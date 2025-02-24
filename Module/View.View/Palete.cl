@@ -68,6 +68,9 @@ class Palete : Any
 
         buttonColorDark150 : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
 
+        ka : 150;
+
+        buttonColorLite150 : this.ColorCreateValue(this.MathComp, this.Chrome, ka);
     }
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
