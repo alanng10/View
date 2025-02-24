@@ -124,6 +124,13 @@ class Palete : Any
 
         tipBase : this.DrawInfra.ColorCreate(0hff, 255, 255, 220);
         tipText : this.DrawInfra.BlackSlash.Brush.Color;
+
+        this.GroupSet(group, frameText, button, lite, dark, mid, text, liteText, varBase,
+                  alterBase, frame, midLight, text,
+                  QBrush(Qt::black), QBrush(Qt::darkBlue), QBrush(Qt::white),
+                  QBrush(Qt::blue), QBrush(Qt::magenta), tipBase,
+                  tipText);
+        return true;
     }
 
     maide precate Bool GroupSet(
