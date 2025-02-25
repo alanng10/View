@@ -36,6 +36,13 @@ class Infra : Any
         this.WhiteSlash : this.SlashCreate(whiteColor, k);
         this.ZeroSlash : this.SlashCreate(zeroColor, k);
 
+        this.DarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
+        this.Gray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
+        this.LiteGray : this.ColorCreate(0hff, 0hc0, 0hc0, 0hc0);
+        this.Red : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
+        this.Green : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
+        this.Blue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
+
         this.FontAriaName : "Inter";
         this.FontMonoName : "Cascadia Mono";
         return true;
