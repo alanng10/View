@@ -43,7 +43,7 @@ class Infra : Any
         this.Green : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
         this.Blue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
 
-        this.FontAriaName : "Inter";
+        this.FontAriaName : "Noto Sans";
         this.FontMonoName : "Cascadia Mono";
         return true;
     }
