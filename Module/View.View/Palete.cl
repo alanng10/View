@@ -170,20 +170,20 @@ class Palete : Any
 
     maide precate DrawColor ColorCreateValue(var Int alpha, var DrawChrome chrome, var Int valuePercent)
     {
-        var Int kf;
-        kf : chrome.Value;
+        var Int kc
+        var Int kd;
+        kc : chrome.Alpha;
+        kd : chrome.Value;
 
-        var Int ka;
-        ka : this.DrawInfra.ChromeValuePercent(this.MathComp, kf, valuePercent);
-
-        chrome.Value : ka;
+        this.DrawInfra.ChromeValueLite(this.MathComp, chrome, valuePercent);
 
         var DrawColor ke;
         ke : this.DrawInfra.ColorCreate(0, 0, 0, 0);
 
         this.DrawInfra.ColorChrome(this.MathComp, ke, chrome);
 
-        chrome.Value : kf;
+        chrome.Alpha : kc;
+        chrome.Value : kd;
 
         ke.Alpha : alpha;
 
