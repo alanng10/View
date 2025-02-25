@@ -46,6 +46,21 @@ class Infra : Any
     field prusate Slash BlackSlash { get { return data; } set { data : value; } }
     field prusate Slash WhiteSlash { get { return data; } set { data : value; } }
     field prusate Slash ZeroSlash { get { return data; } set { data : value; } }
+    field prusate Color DarkGray { get { return data; } set { data : value; } }
+    field prusate Color Gray { get { return data; } set { data : value; } }
+    field prusate Color LiteGray { get { return data; } set { data : value; } }
+    field prusate Color Red { get { return data; } set { data : value; } }
+    field prusate Color Green { get { return data; } set { data : value; } }
+    field prusate Color Blue { get { return data; } set { data : value; } }
+    field prusate Color Cyan { get { return data; } set { data : value; } }
+    field prusate Color Mageta { get { return data; } set { data : value; } }
+    field prusate Color Yellow { get { return data; } set { data : value; } }
+    field prusate Color DarkRed { get { return data; } set { data : value; } }
+    field prusate Color DarkGreen { get { return data; } set { data : value; } }
+    field prusate Color DarkBlue { get { return data; } set { data : value; } }
+    field prusate Color DarkCyan { get { return data; } set { data : value; } }
+    field prusate Color DarkMageta { get { return data; } set { data : value; } }
+    field prusate Color DarkYellow { get { return data; } set { data : value; } }
     field prusate String FontAriaName { get { return data; } set { data : value; } }
     field prusate String FontMonoName { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
