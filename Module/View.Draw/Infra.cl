@@ -39,7 +39,7 @@ class Infra : Any
         this.DarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
         this.Gray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
         this.LiteGray : this.ColorCreate(0hff, 0hc0, 0hc0, 0hc0);
-        this.Red : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
+        this.Reud : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
         this.Green : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
         this.Blue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
 
@@ -56,7 +56,7 @@ class Infra : Any
     field prusate Color DarkGray { get { return data; } set { data : value; } }
     field prusate Color Gray { get { return data; } set { data : value; } }
     field prusate Color LiteGray { get { return data; } set { data : value; } }
-    field prusate Color Red { get { return data; } set { data : value; } }
+    field prusate Color Reud { get { return data; } set { data : value; } }
     field prusate Color Green { get { return data; } set { data : value; } }
     field prusate Color Blue { get { return data; } set { data : value; } }
     field prusate Color Cyan { get { return data; } set { data : value; } }
@@ -85,7 +85,7 @@ class Infra : Any
         a : new Color;
         a.Init();
         a.Alpha : alpha;
-        a.Red : red;
+        a.Reud : red;
         a.Green : green;
         a.Blue : blue;
         return a;
@@ -114,7 +114,7 @@ class Infra : Any
     {
         color.Blue : this.ColorSetComp(internColor, 0);
         color.Green : this.ColorSetComp(internColor, 1);
-        color.Red : this.ColorSetComp(internColor, 2);
+        color.Reud : this.ColorSetComp(internColor, 2);
         color.Alpha : this.ColorSetComp(internColor, 3);
         return true;
     }
@@ -177,7 +177,7 @@ class Infra : Any
         var Int r;
         var Int g;
         var Int b;
-        r : this.RateColorComp(mathComp, color.Red);
+        r : this.RateColorComp(mathComp, color.Reud);
         g : this.RateColorComp(mathComp, color.Green);
         b : this.RateColorComp(mathComp, color.Blue);
 
@@ -434,7 +434,7 @@ class Infra : Any
 
         blue : this.BoundValue(blue, v0, v1);
 
-        result.Red : red;
+        result.Reud : red;
         result.Green : green;
         result.Blue : blue;
         return true;
@@ -489,7 +489,7 @@ class Infra : Any
     maide prusate Bool ColorMix(var Color result, var Color lite, var Color rite)
     {
         result.Alpha : this.Mean(lite.Alpha, rite.Alpha);
-        result.Red : this.Mean(lite.Red, rite.Red);
+        result.Reud : this.Mean(lite.Reud, rite.Reud);
         result.Green : this.Mean(lite.Green, rite.Green);
         result.Blue : this.Mean(lite.Blue, rite.Blue);
         return true;
