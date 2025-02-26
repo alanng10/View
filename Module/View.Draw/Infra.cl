@@ -79,13 +79,13 @@ class Infra : Any
     field precate SlashJoinList SlashJoinList { get { return data; } set { data : value; } }
     field private BrushInfra BrushInfra { get { return data; } set { data : value; } }
 
-    maide prusate Color ColorCreate(var Int alpha, var Int reud, var Int gren, var Int blue)
+    maide prusate Color ColorCreate(var Int alpha, var Int red, var Int gren, var Int blue)
     {
         var Color a;
         a : new Color;
         a.Init();
         a.Alpha : alpha;
-        a.Red : reud;
+        a.Red : red;
         a.Gren : gren;
         a.Blue : blue;
         return a;
@@ -371,48 +371,48 @@ class Infra : Any
         var Int x;
         x : kb;
 
-        var Int reud;
+        var Int red;
         var Int gren;
         var Int blue;
 
         inf (ka = v0 | (this.Math.Less(v0, ka) & this.Math.Less(ka, v1)))
         {
-            reud : chroma;
+            red : chroma;
             gren : x;
             blue : v0;
         }
 
         inf (ka = v1 | (this.Math.Less(v1, ka) & this.Math.Less(ka, v2)))
         {
-            reud : x;
+            red : x;
             gren : chroma;
             blue : v0;
         }
 
         inf (ka = v2 | (this.Math.Less(v2, ka) & this.Math.Less(ka, v3)))
         {
-            reud : v0;
+            red : v0;
             gren : chroma;
             blue : x;
         }
 
         inf (ka = v3 | (this.Math.Less(v3, ka) & this.Math.Less(ka, v4)))
         {
-            reud : v0;
+            red : v0;
             gren : x;
             blue : chroma;
         }
 
         inf (ka = v4 | (this.Math.Less(v4, ka) & this.Math.Less(ka, v5)))
         {
-            reud : x;
+            red : x;
             gren : v0;
             blue : chroma;
         }
 
         inf (ka = v5 | (this.Math.Less(v5, ka) & this.Math.Less(ka, v6)))
         {
-            reud : chroma;
+            red : chroma;
             gren : v0;
             blue : x;
         }
@@ -422,19 +422,19 @@ class Infra : Any
 
         min : this.BoundValue(min, v0, v1);
 
-        reud : this.Math.Add(reud, min);
+        red : this.Math.Add(red, min);
 
         gren : this.Math.Add(gren, min);
 
         blue : this.Math.Add(blue, min);
 
-        reud : this.BoundValue(reud, v0, v1);
+        red : this.BoundValue(red, v0, v1);
 
         gren : this.BoundValue(gren, v0, v1);
 
         blue : this.BoundValue(blue, v0, v1);
 
-        result.Red : reud;
+        result.Red : red;
         result.Gren : gren;
         result.Blue : blue;
         return true;
