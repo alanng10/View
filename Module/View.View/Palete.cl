@@ -66,8 +66,8 @@ class Palete : Any
         var DrawColor buttonColorDark150;
         var DrawColor buttonColorLite150;
 
-        whiteColor : this.DrawInfra.WhiteSlash.Brush.Color;
-        blackColor : this.DrawInfra.BlackSlash.Brush.Color;
+        whiteColor : this.DrawInfra.SlashWhite.Brush.Color;
+        blackColor : this.DrawInfra.SlashBlack.Brush.Color;
 
         var Int ka;
         ka : this.MathInfra.Value(this.MathComp, 1, 0sn1);
@@ -123,7 +123,7 @@ class Palete : Any
         this.DrawInfra.ColorMix(midLite, button, lite);
 
         tipBase : this.DrawInfra.ColorCreate(0hff, 255, 255, 220);
-        tipText : this.DrawInfra.BlackSlash.Brush.Color;
+        tipText : this.DrawInfra.SlashBlack.Brush.Color;
 
         this.GroupSet(group, frameText, button, lite, dark, mid, text, liteText, varBase,
                   alterBase, frame, midLite, text,
