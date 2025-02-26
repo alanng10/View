@@ -32,25 +32,25 @@ class Infra : Any
         var Int k;
         k : this.MathInt(ka, 1);
 
-        this.BlackSlash : this.SlashCreate(blackColor, k);
-        this.WhiteSlash : this.SlashCreate(whiteColor, k);
-        this.ZeroSlash : this.SlashCreate(zeroColor, k);
+        this.SlashBlack : this.SlashCreate(blackColor, k);
+        this.SlashWhite : this.SlashCreate(whiteColor, k);
+        this.SlashZero : this.SlashCreate(zeroColor, k);
 
-        this.DarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
-        this.Gray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
-        this.LiteGray : this.ColorCreate(0hff, 0hc0, 0hc0, 0hc0);
-        this.Red : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
-        this.Green : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
-        this.Blue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
-        this.Cyan : this.ColorCreate(0hff, 0h00, 0hff, 0hff);
-        this.Magenta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
-        this.Yellow : this.ColorCreate(0hff, 0hff, 0hff, 0h00);
-        this.DarkRed : this.ColorCreate(0hff, 0h80, 0h00, 0h00);
-        this.DarkGreen : this.ColorCreate(0hff, 0h00, 0h80, 0h00);
-        this.DarkBlue : this.ColorCreate(0hff, 0h00, 0h00, 0h80);
-        this.DarkCyan : this.ColorCreate(0hff, 0h00, 0h80, 0h80);
-        this.DarkMagenta : this.ColorCreate(0hff, 0h80, 0h00, 0h80);
-        this.DarkYellow : this.ColorCreate(0hff, 0h80, 0h80, 0h00);
+        this.ColorDarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
+        this.ColorGray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
+        this.ColorLiteGray : this.ColorCreate(0hff, 0hc0, 0hc0, 0hc0);
+        this.ColorRed : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
+        this.ColorGreen : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
+        this.ColorBlue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
+        this.ColorCyan : this.ColorCreate(0hff, 0h00, 0hff, 0hff);
+        this.ColorMagenta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
+        this.ColorYellow : this.ColorCreate(0hff, 0hff, 0hff, 0h00);
+        this.ColorDarkRed : this.ColorCreate(0hff, 0h80, 0h00, 0h00);
+        this.ColorDarkGreen : this.ColorCreate(0hff, 0h00, 0h80, 0h00);
+        this.ColorDarkBlue : this.ColorCreate(0hff, 0h00, 0h00, 0h80);
+        this.ColorDarkCyan : this.ColorCreate(0hff, 0h00, 0h80, 0h80);
+        this.ColorDarkMagenta : this.ColorCreate(0hff, 0h80, 0h00, 0h80);
+        this.ColorDarkYellow : this.ColorCreate(0hff, 0h80, 0h80, 0h00);
 
         this.FontAriaName : "Noto Sans";
         this.FontMonoName : "Cascadia Mono";
