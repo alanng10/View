@@ -42,6 +42,9 @@ class Infra : Any
         this.Red : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
         this.Green : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
         this.Blue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
+        this.Cyan : this.ColorCreate(0hff, 0h00, 0hff, 0hff);
+        this.Magenta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
+        this.Yellow : this.ColorCreate(0hff, 0hff, 0hff, 0h00);
 
         this.FontAriaName : "Noto Sans";
         this.FontMonoName : "Cascadia Mono";
