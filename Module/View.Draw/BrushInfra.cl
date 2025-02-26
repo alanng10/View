@@ -6,7 +6,7 @@ class BrushInfra : Any
         k : 0;
         k : bit |(k, this.InternColorComp(color.Blue, 0));
         k : bit |(k, this.InternColorComp(color.Gren, 1));
-        k : bit |(k, this.InternColorComp(color.Reud, 2));
+        k : bit |(k, this.InternColorComp(color.Red, 2));
         k : bit |(k, this.InternColorComp(color.Alpha, 3));
         return k;
     }
