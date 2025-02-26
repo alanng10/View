@@ -127,8 +127,8 @@ class Palete : Any
 
         this.GroupSet(group, frameText, button, lite, dark, mid, text, liteText, varBase,
                   alterBase, frame, midLite, text,
-                  QBrush(Qt::black), QBrush(Qt::darkBlue), QBrush(Qt::white),
-                  QBrush(Qt::blue), QBrush(Qt::magenta), tipBase,
+                  this.DrawInfra.SlashBlack.Brush.Color, this.DrawInfra.ColorDarkBlue, this.DrawInfra.SlashWhite.Brush.Color,
+                  this.DrawInfra.ColorBlue, this.DrawInfra.ColorMagenta, tipBase,
                   tipText);
         return true;
     }
