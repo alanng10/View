@@ -59,24 +59,24 @@ class Infra : Any
 
     field prusate Int PixelByteCount { get { return data; } set { data : value; } }
     field prusate Int ColorCompMax { get { return data; } set { data : value; } }
-    field prusate Slash BlackSlash { get { return data; } set { data : value; } }
-    field prusate Slash WhiteSlash { get { return data; } set { data : value; } }
-    field prusate Slash ZeroSlash { get { return data; } set { data : value; } }
-    field prusate Color DarkGray { get { return data; } set { data : value; } }
-    field prusate Color Gray { get { return data; } set { data : value; } }
-    field prusate Color LiteGray { get { return data; } set { data : value; } }
-    field prusate Color Red { get { return data; } set { data : value; } }
-    field prusate Color Green { get { return data; } set { data : value; } }
-    field prusate Color Blue { get { return data; } set { data : value; } }
-    field prusate Color Cyan { get { return data; } set { data : value; } }
-    field prusate Color Mageta { get { return data; } set { data : value; } }
-    field prusate Color Yellow { get { return data; } set { data : value; } }
-    field prusate Color DarkRed { get { return data; } set { data : value; } }
-    field prusate Color DarkGreen { get { return data; } set { data : value; } }
-    field prusate Color DarkBlue { get { return data; } set { data : value; } }
-    field prusate Color DarkCyan { get { return data; } set { data : value; } }
-    field prusate Color DarkMageta { get { return data; } set { data : value; } }
-    field prusate Color DarkYellow { get { return data; } set { data : value; } }
+    field prusate Slash SlashBlack { get { return data; } set { data : value; } }
+    field prusate Slash SlashWhite { get { return data; } set { data : value; } }
+    field prusate Slash SlashZero { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkGray { get { return data; } set { data : value; } }
+    field prusate Color ColorGray { get { return data; } set { data : value; } }
+    field prusate Color ColorLiteGray { get { return data; } set { data : value; } }
+    field prusate Color ColorRed { get { return data; } set { data : value; } }
+    field prusate Color ColorGreen { get { return data; } set { data : value; } }
+    field prusate Color ColorBlue { get { return data; } set { data : value; } }
+    field prusate Color ColorCyan { get { return data; } set { data : value; } }
+    field prusate Color ColorMageta { get { return data; } set { data : value; } }
+    field prusate Color ColorYellow { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkRed { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkGreen { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkBlue { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkCyan { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkMageta { get { return data; } set { data : value; } }
+    field prusate Color ColorDarkYellow { get { return data; } set { data : value; } }
     field prusate String FontAriaName { get { return data; } set { data : value; } }
     field prusate String FontMonoName { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
