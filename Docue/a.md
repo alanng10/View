@@ -10,6 +10,6 @@ View has park marry.
 
 View has park land.
 
-Tool has park arch.
+View has park arch.
 
-Tool has park arch worth.
+View has park arch worth.
