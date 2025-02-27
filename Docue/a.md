@@ -14,3 +14,7 @@ View uses Fuse style in element view list.
 
 View Fuse style has palete from one color.
 Palete has color list.
+
+View has park marry.
+
+View has park land.
