@@ -1,11 +1,11 @@
 # View
 
-View is view module list written in Class Lang. 
+View is view module list written in Class Lang.
 
-View is park view. 
+View is park view.
 
-View has park style. 
+View has park style.
 
-View has park marry. 
+View has park marry.
 
-View has park land. 
+View has park land.
