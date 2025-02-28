@@ -1,15 +1,21 @@
-# View
+# View 
 
-View is view module list written in Class Lang.
+View is view module list written in Class Lang. 
 
-View is park view.
+View is park view. 
 
-View has park marry.
+View has park worth. 
 
-View has park land.
+View has park value. 
 
-View has park arch.
+View has park benefit. 
 
-View has park arch worth.
+View has park marry. 
 
-View has park style.
+View has park land. 
+
+View has park arch. 
+
+View has park arch worth. 
+
+View has park style. 
