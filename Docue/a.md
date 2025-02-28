@@ -18,4 +18,20 @@ View has park arch.
 
 View has park arch worth.
 
+View has park kind.
+
+View has park kind worth.
+
+View has park kind value.
+
+View has park kind benefit.
+
+View has park kind marry.
+
+View has park kind land.
+
+View has park kind arch.
+
+View has park kind arch worth.
+
 View has park style.
