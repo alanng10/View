@@ -23,7 +23,6 @@ class ImageWrite : Any
         return true;
     }
 
-
     field prusate Stream Stream { get { return data; } set { data : value; } }
     field prusate Image Image { get { return data; } set { data : value; } }
     field prusate ImageFormat Format { get { return data; } set { data : value; } }
