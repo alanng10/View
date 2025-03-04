@@ -18,6 +18,14 @@ View has park arch.
 
 View has park arch worth.
 
+View has park arch value.
+
+View has park arch benefit.
+
+View has park arch marry.
+
+View has park arch land.
+
 View has park kind.
 
 View has park kind worth.
@@ -33,5 +41,13 @@ View has park kind land.
 View has park kind arch.
 
 View has park kind arch worth.
+
+View has park kind arch value.
+
+View has park kind arch benefit.
+
+View has park kind arch marry.
+
+View has park kind arch land.
 
 View has park style.
