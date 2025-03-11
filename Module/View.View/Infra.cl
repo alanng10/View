@@ -5,12 +5,24 @@ class Infra : Any
         base.Init();
         this.DrawInfra : share DrawInfra;
 
-        this.PaleteBack : this.DrawInfra.ColorCreate(0hff, 210, 210, 210);
+        this.PaleteDefault : this.CreatePaleteDefault();
         return true;
     }
 
+    maide precate Palete CreatePaleteDefault()
+    {
+        var Palete a;
+        a : new Palete;
+        a.Init();
+        a.Base : this.DrawInfra.SlashWhite.Brush.Color;
+        a.Back : this.DrawInfra.ColorCreate(0hff, 210, 210, 210);
+        a.Fore : this.DrawInfra.SlashBlack.Brush.Color;
+        a.Lite : this.DrawInfra.ColorCreate(0hff, 0, 200, 200);
+        return a;
+    }
+
+    field prusate Palete PaleteDefault { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
-    field precate DrawColor PaleteBack { get { return data; } set { data : value; } }
 
     maide prusate Field FieldCreate(var Comp comp)
     {
@@ -85,10 +97,10 @@ class Infra : Any
 
     maide prusate Bool PaleteSet(var Palete palete, var DrawColor liteColor)
     {
-        this.Group.Base : this.DrawInfra.SlashWhite.Brush.Color;
-        this.Group.Back : this.PaleteBack;
-        this.Group.Fore : this.DrawInfra.SlashBlack.Brush.Color;
-        this.Group.Lite : liteColor;
+        palete.Base : this.PaleteDefault.Base;
+        palete.Back : this.PaleteDefault.Back;
+        palete.Fore : this.PaleteDefault.Fore;
+        palete.Lite : liteColor;
         return true;
     }
 }
