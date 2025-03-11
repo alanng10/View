@@ -7,6 +7,7 @@ class PaleteGroup : Any
     field prusate DrawColor Mid { get { return data; } set { data : value; } }
     field prusate DrawColor Text { get { return data; } set { data : value; } }
     field prusate DrawColor LiteText { get { return data; } set { data : value; } }
+    field prusate DrawColor PlaceText { get { return data; } set { data : value; } }
     field prusate DrawColor Base { get { return data; } set { data : value; } }
     field prusate DrawColor AlterBase { get { return data; } set { data : value; } }
     field prusate DrawColor Frame { get { return data; } set { data : value; } }
