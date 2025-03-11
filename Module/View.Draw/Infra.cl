@@ -25,12 +25,14 @@ class Infra : Any
         var Color zeroColor;
         zeroColor : this.ColorCreate(0, 0, 0, 0);
 
+        this.SlashSize : 1;
+
         var MathComp ka;
         ka : new MathComp;
         ka.Init();
 
         var Int k;
-        k : this.MathInt(ka, 1);
+        k : this.MathInt(ka, this.SlashSize);
 
         this.SlashBlack : this.SlashCreate(this.BrushCreate(blackColor), k);
         this.SlashWhite : this.SlashCreate(this.BrushCreate(whiteColor), k);
@@ -59,6 +61,7 @@ class Infra : Any
 
     field prusate Int PixelByteCount { get { return data; } set { data : value; } }
     field prusate Int ColorCompMax { get { return data; } set { data : value; } }
+    field prusate Int SlashSize { get { return data; } set { data : value; } }    
     field prusate Slash SlashBlack { get { return data; } set { data : value; } }
     field prusate Slash SlashWhite { get { return data; } set { data : value; } }
     field prusate Slash SlashZero { get { return data; } set { data : value; } }
