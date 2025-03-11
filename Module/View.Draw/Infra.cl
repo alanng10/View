@@ -43,13 +43,13 @@ class Infra : Any
         this.ColorGreen : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
         this.ColorBlue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
         this.ColorCyan : this.ColorCreate(0hff, 0h00, 0hff, 0hff);
-        this.ColorMagenta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
+        this.ColorMageta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
         this.ColorYellow : this.ColorCreate(0hff, 0hff, 0hff, 0h00);
         this.ColorDarkRed : this.ColorCreate(0hff, 0h80, 0h00, 0h00);
         this.ColorDarkGreen : this.ColorCreate(0hff, 0h00, 0h80, 0h00);
         this.ColorDarkBlue : this.ColorCreate(0hff, 0h00, 0h00, 0h80);
         this.ColorDarkCyan : this.ColorCreate(0hff, 0h00, 0h80, 0h80);
-        this.ColorDarkMagenta : this.ColorCreate(0hff, 0h80, 0h00, 0h80);
+        this.ColorDarkMageta : this.ColorCreate(0hff, 0h80, 0h00, 0h80);
         this.ColorDarkYellow : this.ColorCreate(0hff, 0h80, 0h80, 0h00);
 
         this.FontAriaName : "Noto Sans";
