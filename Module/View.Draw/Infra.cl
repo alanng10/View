@@ -177,12 +177,12 @@ class Infra : Any
 
         inf (~(chroma = zero))
         {
-            var Bool b;
-            b : false;
+            var Bool ba;
+            ba : false;
 
             var Int ka;
 
-            inf (~b)
+            inf (~ba)
             {
                 inf (max = r)
                 {
@@ -190,26 +190,26 @@ class Infra : Any
 
                     ka : this.Math.Div(ka, chroma);
 
-                    var Bool ba;
-                    ba : this.Math.Less(ka, zero);
+                    var Bool baa;
+                    baa : this.Math.Less(ka, zero);
 
-                    inf (ba)
+                    inf (baa)
                     {
                         ka : this.Math.Add(ka, this.MathInt(mathComp, 6));
 
                         ka : this.BoundValue(ka, this.MathInt(mathComp, 5), this.MathInt(mathComp, 6));
                     }
 
-                    inf (~ba)
+                    inf (~baa)
                     {
                         ka : this.BoundValue(ka, zero, this.MathInt(mathComp, 1));
                     }
 
-                    b : true;
+                    ba : true;
                 }
             }
 
-            inf (~b)
+            inf (~ba)
             {
                 inf (max = g)
                 {
@@ -221,11 +221,11 @@ class Infra : Any
 
                     ka : this.BoundValue(ka, this.MathInt(mathComp, 1), this.MathInt(mathComp, 3));
 
-                    b : true;
+                    ba : true;
                 }
             }
 
-            inf (~b)
+            inf (~ba)
             {
                 inf (max = b)
                 {
@@ -237,7 +237,7 @@ class Infra : Any
 
                     ka : this.BoundValue(ka, this.MathInt(mathComp, 3), this.MathInt(mathComp, 5));
 
-                    b : true;
+                    ba : true;
                 }
             }
 
