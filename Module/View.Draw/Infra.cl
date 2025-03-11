@@ -117,7 +117,7 @@ class Infra : Any
 
         k : this.Math.Div(k, ka);
 
-        k : this.BoundValue(k, this.MathInt(0), this.MathInt(1));
+        k : this.BoundValue(k, this.MathInt(mathComp, 0), this.MathInt(mathComp, 1));
 
         return k;
     }
