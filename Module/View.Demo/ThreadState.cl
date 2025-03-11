@@ -76,7 +76,7 @@ class ThreadState : State
 
         var DrawSlash slash;
         slash : new DrawSlash;
-        slash.Brush : this.Demo.DrawInfra.BlackSlash.Brush;
+        slash.Brush : this.Demo.DrawInfra.SlashBlack.Brush;
         slash.Line : this.Demo.SlashLineList.DashDotDot;
         slash.Cape : this.Demo.SlashCapeList.Round;
         slash.Join : this.Demo.SlashJoinList.Miter;
