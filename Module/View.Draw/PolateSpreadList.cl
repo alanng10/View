@@ -15,15 +15,15 @@ class PolateSpreadList : Any
         var Int stat;
         stat : extern.Share_Stat(varShare);
 
-        this.Pad : this.AddItem(extern.Stat_PolateSpreadPad(stat));
-        this.Reflect : this.AddItem(extern.Stat_PolateSpreadReflect(stat));
-        this.Repeat : this.AddItem(extern.Stat_PolateSpreadRepeat(stat));
+        this.Close : this.AddItem(extern.Stat_PolateSpreadClose(stat));
+        this.Flect : this.AddItem(extern.Stat_PolateSpreadFlect(stat));
+        this.Peatt : this.AddItem(extern.Stat_PolateSpreadPeatt(stat));
         return true;
     }
 
-    field prusate PolateSpread Pad { get { return data; } set { data : value; } }
-    field prusate PolateSpread Reflect { get { return data; } set { data : value; } }
-    field prusate PolateSpread Repeat { get { return data; } set { data : value; } }
+    field prusate PolateSpread Close { get { return data; } set { data : value; } }
+    field prusate PolateSpread Flect { get { return data; } set { data : value; } }
+    field prusate PolateSpread Peatt { get { return data; } set { data : value; } }
 
     maide precate PolateSpread AddItem(var Int o)
     {
