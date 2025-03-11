@@ -36,6 +36,22 @@ class Infra : Any
         this.SlashWhite : this.SlashCreate(whiteColor, k);
         this.SlashZero : this.SlashCreate(zeroColor, k);
 
+        this.ColorDarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
+        this.ColorGray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
+        this.ColorLiteGray : this.ColorCreate(0hff, 0hc0, 0hc0, 0hc0);
+        this.ColorRed : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
+        this.ColorGreen : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
+        this.ColorBlue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
+        this.ColorCyan : this.ColorCreate(0hff, 0h00, 0hff, 0hff);
+        this.ColorMagenta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
+        this.ColorYellow : this.ColorCreate(0hff, 0hff, 0hff, 0h00);
+        this.ColorDarkRed : this.ColorCreate(0hff, 0h80, 0h00, 0h00);
+        this.ColorDarkGreen : this.ColorCreate(0hff, 0h00, 0h80, 0h00);
+        this.ColorDarkBlue : this.ColorCreate(0hff, 0h00, 0h00, 0h80);
+        this.ColorDarkCyan : this.ColorCreate(0hff, 0h00, 0h80, 0h80);
+        this.ColorDarkMagenta : this.ColorCreate(0hff, 0h80, 0h00, 0h80);
+        this.ColorDarkYellow : this.ColorCreate(0hff, 0h80, 0h80, 0h00);
+
         this.FontAriaName : "Noto Sans";
         this.FontMonoName : "Cascadia Mono";
         return true;
