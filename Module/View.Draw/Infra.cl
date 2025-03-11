@@ -140,7 +140,7 @@ class Infra : Any
 
         k : this.Math.Floor(k);
 
-        this.MathInfra.Comp(mathComp, k);
+        this.Math.Comp(mathComp, k);
 
         var Int ke;
         ke : bit >(mathComp.Cand, 0 - mathComp.Expo);
