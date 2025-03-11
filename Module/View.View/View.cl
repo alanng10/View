@@ -75,7 +75,7 @@ class View : Comp
     maide precate DrawBrush CreateBack()
     {
         var DrawBrush a;
-        a : this.DrawInfra.WhiteSlash.Brush;
+        a : this.DrawInfra.SlashWhite.Brush;
         return a;
     }
 
