@@ -108,8 +108,8 @@ class Palete : Any
                       buttonColorDark, buttonColorDark150, foreColor, whiteColor,
                       baseColor, buttonColor);
         this.GroupColorSet(this.Unable, buttonColorDark, buttonColor, buttonColorLite150,
-                      buttonColorDark, buttonColorDark150, buttonColorDark,
-                      whiteColor, buttonColor, buttonColor);
+                      buttonColorDark, buttonColorDark150, buttonColorDark, whiteColor, 
+                      buttonColor, buttonColor);
         return true;
     }
 
