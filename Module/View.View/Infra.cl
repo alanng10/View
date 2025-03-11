@@ -14,10 +14,10 @@ class Infra : Any
         var Palete a;
         a : new Palete;
         a.Init();
-        a.Base : this.DrawInfra.SlashWhite.Brush.Color;
-        a.Back : this.DrawInfra.ColorCreate(0hff, 210, 210, 210);
-        a.Fore : this.DrawInfra.SlashBlack.Brush.Color;
-        a.Lite : this.DrawInfra.ColorCreate(0hff, 0, 200, 200);
+        a.Base : this.DrawInfra.SlashWhite.Brush;
+        a.Back : this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 210, 210, 210));
+        a.Fore : this.DrawInfra.SlashBlack.Brush;
+        a.Lite : this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 0, 200, 200));
         return a;
     }
 
@@ -95,12 +95,12 @@ class Infra : Any
         return true;
     }
 
-    maide prusate Bool PaleteSet(var Palete palete, var DrawColor liteColor)
+    maide prusate Bool PaleteSet(var Palete palete, var DrawBrush lite)
     {
         palete.Base : this.PaleteDefault.Base;
         palete.Back : this.PaleteDefault.Back;
         palete.Fore : this.PaleteDefault.Fore;
-        palete.Lite : liteColor;
+        palete.Lite : lite;
         return true;
     }
 }
