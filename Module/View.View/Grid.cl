@@ -14,7 +14,7 @@ class Grid : View
         this.Row : this.CreateRow();
         this.ChildList : this.CreateChildList();
 
-        this.Back : this.DrawInfra.ZeroSlash.Brush;
+        this.Back : this.DrawInfra.SlashZero.Brush;
 
         this.ChildPosList : this.CreateChildPosList();
         this.ColIter : this.Col.IterCreate();
