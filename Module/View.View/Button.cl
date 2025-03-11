@@ -9,7 +9,7 @@ class Button : View
 
     maide precate DrawBrush CreateBack()
     {
-        return this.Palete.Back;
+        return this.Palete.Back.Brush;
     }
 
     field prusate Field FocusField { get { return data; } set { data : value; } }
