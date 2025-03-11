@@ -10,6 +10,7 @@ System.Infra
     Range Range
     Data Data
     InfraInfra Infra
+    Intern Intern
     Extern Extern
     InternInfra InternInfra
 System.List
