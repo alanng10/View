@@ -105,6 +105,7 @@ class View : Comp
     }
 
     field prusate DrawRect Area { get { return data; } set { data : value; } }
+    field prusate Palete Palete { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate Infra ViewInfra { get { return data; } set { data : value; } }
     field precate DrawRect DrawRectA { get { return data; } set { data : value; } }
