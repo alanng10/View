@@ -166,7 +166,7 @@ class Frame : Any
     maide precate DrawColor CreateDrawClearColor()
     {
         var DrawColor a;
-        a : this.DrawInfra.WhiteSlash.Brush.Color;
+        a : this.DrawInfra.SlashWhite.Brush.Color;
         return a;
     }
 
