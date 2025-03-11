@@ -59,8 +59,8 @@ class Button : View
         {
             this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
             this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
-            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 1));
-            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1));
+            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, this.DrawInfra.SlashSize));
+            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, this.DrawInfra.SlashSize));
 
             draw.Line : this.Palete.Lite;
 
