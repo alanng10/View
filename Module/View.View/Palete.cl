@@ -69,8 +69,11 @@ class Palete : Any
         whiteColor : this.DrawInfra.SlashWhite.Brush.Color;
         blackColor : this.DrawInfra.SlashBlack.Brush.Color;
 
+        this.MathComp.Cand : 1;
+        this.MathComp.Expo : 0sn1;
+
         var Int ka;
-        ka : this.Math.Value(this.MathComp, 1, 0sn1);
+        ka : this.Math.Value(this.MathComp);
 
         var Bool ba;
         ba : this.Math.Less(ka, this.DrawChrome.Value);
