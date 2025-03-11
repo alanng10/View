@@ -140,7 +140,7 @@ class Palete : Any
         this.GroupSet(group, frameText, button, lite, dark, mid, text, liteText, varBase,
                   alterBase, frame, midLite, text,
                   this.DrawInfra.SlashBlack.Brush.Color, this.DrawInfra.ColorDarkBlue, this.DrawInfra.SlashWhite.Brush.Color,
-                  this.DrawInfra.ColorBlue, this.DrawInfra.ColorMagenta, tipBase,
+                  this.DrawInfra.ColorBlue, this.DrawInfra.ColorMageta, tipBase,
                   tipText);
         return true;
     }
