@@ -449,6 +449,52 @@ class Infra : Any
         return true;
     }
 
+    maide prusate Bool ChromeValueLite(var Int mathComp, var Chrome chrome, var Int percent)
+    {
+        var Int ka;
+        ka : this.MathInt(mathComp, percent);
+
+        var Int v0;
+        var Int v1;
+        var Int v100;
+        v0 : this.MathInt(mathComp, 0);
+        v1 : this.MathInt(mathComp, 1);
+        v100 : this.MathInt(mathComp, 100);
+
+        ka : this.Math.Div(ka, v100);
+
+        var Int k;
+        k : this.Math.Mul(chrome.Value, ka);
+
+        ka : chrome.Alpha;
+
+        inf (this.Math.Less(v1, k))
+        {
+            var Int kb;
+            kb : this.Math.Sub(k, v1);
+
+            ka : this.Math.Sub(ka, kb);
+        }
+
+        ka : this.BoundValue(ka, v0, v1);
+
+        k : this.BoundValue(k, v0, v1);
+
+        chrome.Alpha : ka;
+        chrome.Value : k;
+        return true;
+    }
+
+    maide prusate Int ChromeValueDarkPercent(var Int percent)
+    {
+        inf (percent = 0)
+        {
+            return 0;
+        }
+
+        return 100 * 100 / percent;
+    }
+
     maide prusate Bool ColorMix(var Color result, var Color lite, var Color rite)
     {
         result.Alpha : this.Mean(lite.Alpha, rite.Alpha);
