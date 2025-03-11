@@ -101,7 +101,16 @@ class Palete : Any
 
         buttonColorLite150 : this.ColorCreateValue(this.Color.Alpha, this.DrawChrome, ka);
 
-
+        this.GroupColorSet(this.Active, foreColor, buttonColor, buttonColorLite150,
+                      buttonColorDark, buttonColorDark150, foreColor, whiteColor,
+                      baseColor, buttonColor);
+        this.GroupColorSet(this.Untive, foreColor, buttonColor, buttonColorLite150,
+                      buttonColorDark, buttonColorDark150, foreColor, whiteColor,
+                      baseColor, buttonColor);
+        this.GroupColorSet(this.Unable, buttonColorDark, buttonColor, buttonColorLite150,
+                      buttonColorDark, buttonColorDark150, buttonColorDark,
+                      whiteColor, buttonColor, buttonColor);
+        return true;
     }
 
     maide precate Bool GroupColorSet(
