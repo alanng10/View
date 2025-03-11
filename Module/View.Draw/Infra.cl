@@ -449,7 +449,7 @@ class Infra : Any
         return true;
     }
 
-    maide prusate Bool ChromeValueLite(var Int mathComp, var Chrome chrome, var Int percent)
+    maide prusate Bool ChromeValueLite(var MathComp mathComp, var Chrome chrome, var Int percent)
     {
         var Int ka;
         ka : this.MathInt(mathComp, percent);
