@@ -27,7 +27,7 @@ class ViewC : View
         polate.Kind : this.Demo.PolateKindList.Linear;
         polate.Linear : polateLinear;
         polate.Stop : polateStop;
-        polate.Spread : this.Demo.PolateSpreadList.Pad;
+        polate.Spread : this.Demo.PolateSpreadList.Close;
         polate.Init();
 
         var DrawBrush brush;
