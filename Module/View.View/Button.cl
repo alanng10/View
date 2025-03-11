@@ -70,4 +70,15 @@ class Button : View
         }
         return true;
     }
+
+    maide precate Bool SetChildArea(var DrawRect dest, var Draw draw)
+    {
+        base.SetChildArea(dest, draw);
+
+        dest.Pos.Col : dest.Pos.Col + 6;
+        dest.Pos.Row : dest.Pos.Row + 6;
+        dest.Size.Wed : this.DrawInfra.BoundSub(dest.Size.Wed, 6 * 2);
+        dest.Size.Het : this.DrawInfra.BoundSub(dest.Size.Het, 6 * 2);
+        return true;
+    }
 }
