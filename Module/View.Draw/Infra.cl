@@ -219,7 +219,7 @@ class Infra : Any
 
                     ka : this.Math.Add(ka, this.MathInt(mathComp, 2));
 
-                    ka : this.BoundValue(ka, this.MathInt(mathComp, 1), this.MathInt(mathComp, 3))
+                    ka : this.BoundValue(ka, this.MathInt(mathComp, 1), this.MathInt(mathComp, 3));
 
                     b : true;
                 }
@@ -235,7 +235,7 @@ class Infra : Any
 
                     ka : this.Math.Add(ka, this.MathInt(mathComp, 4));
 
-                    ka : this.BoundValue(ka, this.MathInt(mathComp, 3), this.MathInt(mathComp, 5))
+                    ka : this.BoundValue(ka, this.MathInt(mathComp, 3), this.MathInt(mathComp, 5));
 
                     b : true;
                 }
