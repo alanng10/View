@@ -32,9 +32,9 @@ class Infra : Any
         var Int k;
         k : this.MathInt(ka, 1);
 
-        this.SlashBlack : this.SlashCreate(blackColor, k);
-        this.SlashWhite : this.SlashCreate(whiteColor, k);
-        this.SlashZero : this.SlashCreate(zeroColor, k);
+        this.SlashBlack : this.SlashCreate(this.BrushCreate(blackColor), k);
+        this.SlashWhite : this.SlashCreate(this.BrushCreate(whiteColor), k);
+        this.SlashZero : this.SlashCreate(this.BrushCreate(zeroColor), k);
 
         this.ColorDarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
         this.ColorGray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
@@ -100,17 +100,21 @@ class Infra : Any
         return a;
     }
 
-    maide private Slash SlashCreate(var Color color, var Int size)
+    maide prusate Brush BrushCreate(var Color color)
     {
-        var Brush ka;
-        ka : new Brush;
-        ka.Kind : this.BrushKindList.Color;
-        ka.Color : color;
-        ka.Init();
+        var Brush a;
+        a : new Brush;
+        a.Kind : this.BrushKindList.Color;
+        a.Color : color;
+        a.Init();
+        return a;
+    }
 
+    maide prusate Slash SlashCreate(var Brush brush, var Int size)
+    {
         var Slash a;
         a : new Slash;
-        a.Brush : ka;
+        a.Brush : brush;
         a.Line : this.SlashLineList.Solid;
         a.Size : size;
         a.Cape : this.SlashCapeList.Plane;
