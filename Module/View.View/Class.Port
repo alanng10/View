@@ -11,6 +11,10 @@ System.List
     Array Array
     Iter Iter
     ListInfra Infra
+System.Math
+    Math Math
+    MathComp Comp
+    MathInfra Infra
 View.Infra:0.00.00
     Comp Comp
     Field Field
