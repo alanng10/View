@@ -112,4 +112,11 @@ class Infra : Any
         area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, 6 * 2);
         return true;
     }
+
+    maide prusate Bool ButtonChildParentSize(var DrawSize size)
+    {
+        size.Wed : size.Wed + 6 * 2;
+        size.Het : size.Het + 6 * 2;
+        return true;
+    }
 }
