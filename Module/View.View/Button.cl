@@ -73,7 +73,7 @@ class Button : View
     {
         base.SetChildArea(dest, draw);
 
-        this.DrawInfra.ButtonChildArea(dest);
+        this.ViewInfra.ButtonChildArea(dest);
         return true;
     }
 }
