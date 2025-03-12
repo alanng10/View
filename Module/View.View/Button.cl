@@ -34,8 +34,6 @@ class Button : View
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
-        base.ExecuteDrawThis(draw);
-
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
         this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
