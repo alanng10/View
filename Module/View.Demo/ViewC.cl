@@ -53,17 +53,16 @@ class ViewC : View
         this.Text : text;
         this.TextSlash : this.TextSlashCreate();
 
-        var Button button;
-        button : new Button;
-        button.Palete : this.ViewInfra.PaleteDefault;
-        button.Init();
+        this.Button : new Button;
+        this.Button.Palete : this.ViewInfra.PaleteDefault;
+        this.Button.Init();
 
-        button.Pos.Col : 70;
-        button.Pos.Row : 60;
-        button.Size.Wed : 100;
-        button.Size.Het : 60;
+        this.Button.Pos.Col : 70;
+        this.Button.Pos.Row : 60;
+        this.Button.Size.Wed : 100;
+        this.Button.Size.Het : 60;
 
-        this.Child : button;
+        this.Child : this.Button;
         return true;
     }
 
@@ -162,6 +161,7 @@ class ViewC : View
     }
 
     field prusate Demo Demo { get { return data; } set { data : value; } }
+    field prusate Button Button { get { return data; } set { data : value; } }
     field prusate DrawRect EllipseRect { get { return data; } set { data : value; } }
     field prusate DrawBrush EllipseBrush { get { return data; } set { data : value; } }
     field prusate DrawFont Font { get { return data; } set { data : value; } }

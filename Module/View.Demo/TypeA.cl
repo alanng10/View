@@ -100,6 +100,12 @@ class TypeA : Type
             ba : true; 
         }
 
+        inf (a = d.AlphaM)
+        {
+            this.Demo.ViewC.Button.Focus : o;
+            ba : true;
+        }
+
         inf (a = d.AlphaH & o)
         {
             var Bool baa;
