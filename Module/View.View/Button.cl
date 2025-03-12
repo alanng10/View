@@ -75,10 +75,7 @@ class Button : View
     {
         base.SetChildArea(dest, draw);
 
-        dest.Pos.Col : dest.Pos.Col + 6;
-        dest.Pos.Row : dest.Pos.Row + 6;
-        dest.Size.Wed : this.DrawInfra.BoundSub(dest.Size.Wed, 6 * 2);
-        dest.Size.Het : this.DrawInfra.BoundSub(dest.Size.Het, 6 * 2);
+        this.DrawInfra.ButtonChildArea(dest);
         return true;
     }
 }
