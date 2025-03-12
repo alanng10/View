@@ -3,6 +3,8 @@ class Button : View
     maide prusate Bool Init()
     {
         base.Init();
+
+        this.FocusField : this.CreateFocusField();
         this.Focus : false;
         return true;
     }
@@ -10,6 +12,11 @@ class Button : View
     maide precate DrawBrush CreateBack()
     {
         return this.Palete.Back.Brush;
+    }
+
+    maide precate Field CreateFocusField()
+    {
+        return this.ViewInfra.FieldCreate(this);
     }
 
     field prusate Field FocusField { get { return data; } set { data : value; } }
