@@ -103,4 +103,13 @@ class Infra : Any
         palete.Lite : lite;
         return true;
     }
+
+    maide prusate Bool ButtonChildArea(var DrawRect area)
+    {
+        area.Pos.Col : area.Pos.Col + 6;
+        area.Pos.Row : area.Pos.Row + 6;
+        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, 6 * 2);
+        area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, 6 * 2);
+        return true;
+    }
 }
