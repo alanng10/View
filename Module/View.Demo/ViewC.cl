@@ -57,7 +57,7 @@ class ViewC : View
         this.Button.Palete : this.ViewInfra.PaleteDefault;
         this.Button.Init();
 
-        this.Button.Pos.Col : 70;
+        this.Button.Pos.Col : 200;
         this.Button.Pos.Row : 60;
         this.Button.Size.Wed : 100;
         this.Button.Size.Het : 60;
