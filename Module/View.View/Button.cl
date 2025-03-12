@@ -66,10 +66,12 @@ class Button : View
 
             this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
             this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
-            this.DrawRectA.Size.Wed : this.MathInt(this.BoundSub(this.Size.Wed, this.DrawInfra.SlashSize));
-            this.DrawRectA.Size.Het : this.MathInt(this.BoundSub(this.Size.Het, this.DrawInfra.SlashSize));
+            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, this.DrawInfra.SlashSize));
+            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, this.DrawInfra.SlashSize));
 
-            draw.ExecuteRectRound(this.DrawRectA, this.MathInt(this.BoundSub(6, this.DrawInfra.SlashSize)), this.MathInt(this.BoundSub(6, this.DrawInfra.SlashSize)));
+            draw.ExecuteRectRound(this.DrawRectA, 
+                this.MathInt(this.DrawInfra.BoundSub(6, this.DrawInfra.SlashSize)), 
+                this.MathInt(this.DrawInfra.BoundSub(6, this.DrawInfra.SlashSize)));
 
             draw.Line : null;
         }
