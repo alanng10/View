@@ -757,7 +757,7 @@ class Infra : Any
         return true;
     }
 
-    maide precate Int BoundSub(var Int lite, var Int rite)
+    maide prusate Int BoundSub(var Int lite, var Int rite)
     {
         var Int k;
         k : 0;
