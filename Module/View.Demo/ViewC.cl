@@ -52,6 +52,18 @@ class ViewC : View
         this.Font : this.FontCreate();
         this.Text : text;
         this.TextSlash : this.TextSlashCreate();
+
+        var Button button;
+        button : new Button;
+        button.Palete : this.ViewInfra.PaleteDefault;
+        button.Init();
+
+        button.Pos.Col : 70;
+        button.Pos.Row : 60;
+        button.Size.Wed : 100;
+        button.Size.Het : 60;
+
+        this.Child : button;
         return true;
     }
 

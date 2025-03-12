@@ -72,6 +72,7 @@ View.Type:0.00.00
     TypeIndexList IndexList
 View.View:0.00.00
     View View
+    Button Button
     Grid Grid
     GridChild GridChild
     ViewCount Count
