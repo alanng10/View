@@ -1,5 +1,7 @@
 # Style
 
+View has park style arch.
+
 View element view has style.
 
 Element view use slash, brush and color in palete.
