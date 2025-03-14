@@ -48,11 +48,11 @@ class Button : View
 
         inf (this.Focus)
         {
-            draw.Fill : this.Palete.Lite;
+            draw.Fill : this.Palete.Lite.Brush;
         }
         inf (~this.Focus)
         {
-            draw.Fill : this.Palete.Bord;
+            draw.Fill : this.Palete.Bord.Brush;
         }
 
         draw.FillPos.Col : this.MathInt(this.Pos.Col);
