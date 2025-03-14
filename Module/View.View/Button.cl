@@ -46,7 +46,14 @@ class Button : View
         this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
         this.DrawRectA.Size.Het : this.MathInt(this.Size.Het);
 
-        draw.Fill : this.Back;
+        inf (this.Focus)
+        {
+            draw.Fill : this.Lite;
+        }
+        inf (~this.Focus)
+        {
+            draw.Fill : this.Bord;
+        }
 
         draw.FillPos.Col : this.MathInt(this.Pos.Col);
         draw.FillPos.Row : this.MathInt(this.Pos.Row);
@@ -54,27 +61,22 @@ class Button : View
 
         draw.ExecuteRectRound(this.DrawRectA, this.MathInt(14), this.MathInt(14));
 
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col, 2));
+        this.DrawRectA.Pos.Row : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Row, 2));
+        this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 2 * 2));
+        this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 2 * 2));
+
+        draw.Fill : this.Back;
+
+        draw.ExecuteRectRound(this.DrawRectA, 
+            this.MathInt(this.DrawInfra.BoundSub(14, 2)), 
+            this.MathInt(this.DrawInfra.BoundSub(14, 2)));
+
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;
         draw.FillPosSet();
 
         draw.Fill : null;
-
-        inf (this.Focus)
-        {
-            draw.Line : this.Palete.Lite;
-
-            this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
-            this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
-            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, this.DrawInfra.SlashSize));
-            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, this.DrawInfra.SlashSize));
-
-            draw.ExecuteRectRound(this.DrawRectA, 
-                this.MathInt(this.DrawInfra.BoundSub(14, this.DrawInfra.SlashSize)), 
-                this.MathInt(this.DrawInfra.BoundSub(14, this.DrawInfra.SlashSize)));
-
-            draw.Line : null;
-        }
         return true;
     }
 
