@@ -106,17 +106,17 @@ class Infra : Any
 
     maide prusate Bool ButtonChildArea(var DrawRect area)
     {
-        area.Pos.Col : area.Pos.Col + 6;
-        area.Pos.Row : area.Pos.Row + 6;
-        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, 6 * 2);
-        area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, 6 * 2);
+        area.Pos.Col : area.Pos.Col + 14;
+        area.Pos.Row : area.Pos.Row + 14;
+        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, 14 * 2);
+        area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, 14 * 2);
         return true;
     }
 
     maide prusate Bool ButtonChildParentSize(var DrawSize size)
     {
-        size.Wed : size.Wed + 6 * 2;
-        size.Het : size.Het + 6 * 2;
+        size.Wed : size.Wed + 14 * 2;
+        size.Het : size.Het + 14 * 2;
         return true;
     }
 }

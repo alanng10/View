@@ -52,7 +52,7 @@ class Button : View
         draw.FillPos.Row : this.MathInt(this.Pos.Row);
         draw.FillPosSet();
 
-        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(6), this.MathInt(6));
+        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(14), this.MathInt(14));
 
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;
@@ -70,8 +70,8 @@ class Button : View
             this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, this.DrawInfra.SlashSize));
 
             draw.ExecuteRectRound(this.DrawRectA, 
-                this.MathInt(this.DrawInfra.BoundSub(6, this.DrawInfra.SlashSize)), 
-                this.MathInt(this.DrawInfra.BoundSub(6, this.DrawInfra.SlashSize)));
+                this.MathInt(this.DrawInfra.BoundSub(14, this.DrawInfra.SlashSize)), 
+                this.MathInt(this.DrawInfra.BoundSub(14, this.DrawInfra.SlashSize)));
 
             draw.Line : null;
         }
