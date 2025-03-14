@@ -16,7 +16,7 @@ class Infra : Any
         a.Init();
         a.Base : this.DrawInfra.SlashWhite;
         a.Back : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 231, 231, 231)), this.DrawInfra.SlashZero.Size);
-        a.Back : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 222, 222, 222)), this.DrawInfra.SlashZero.Size);        
+        a.Bord : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 222, 222, 222)), this.DrawInfra.SlashZero.Size);        
         a.Fore : this.DrawInfra.SlashBlack;
         a.Lite : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 0, 200, 200)), this.DrawInfra.SlashZero.Size);
         return a;
