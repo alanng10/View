@@ -61,8 +61,8 @@ class Button : View
 
         draw.ExecuteRectRound(this.DrawRectA, this.MathInt(14), this.MathInt(14));
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col, 2));
-        this.DrawRectA.Pos.Row : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Row, 2));
+        this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 2);
+        this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 2);
         this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 2 * 2));
         this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 2 * 2));
 
