@@ -57,12 +57,22 @@ class ViewC : View
         this.Button.Palete : this.ViewInfra.PaleteDefault;
         this.Button.Init();
 
-        this.Button.Pos.Col : 200;
-        this.Button.Pos.Row : 60;
+        this.Button.Pos.Col : 20;
+        this.Button.Pos.Row : 20;
         this.Button.Size.Wed : 100;
         this.Button.Size.Het : 60;
 
-        this.Child : this.Button;
+        var View view;
+        view : new View;
+        view.Init();
+        view.Pos.Col : 200;
+        view.Pos.Row : 60;
+        view.Size.Wed : 150;
+        view.Size.Het : 100;
+        view.Back : this.ViewInfra.PaleteDefault.Base.Brush;
+        view.Child : this.Button;
+
+        this.Child : view;
         return true;
     }
 
