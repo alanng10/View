@@ -14,7 +14,7 @@ class Infra : Any
         var Palete a;
         a : new Palete;
         a.Init();
-        a.Base : this.DrawInfra.SlashWhite;
+        a.Base : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 240, 240, 240)), this.DrawInfra.SlashZero.Size);
         a.Back : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 231, 231, 231)), this.DrawInfra.SlashZero.Size);
         a.Bord : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 222, 222, 222)), this.DrawInfra.SlashZero.Size);        
         a.Fore : this.DrawInfra.SlashBlack;
