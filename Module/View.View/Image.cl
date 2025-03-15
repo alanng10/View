@@ -45,6 +45,10 @@ class Image : View
     {
         base.Mod(varField, mod);
 
+        inf (this.ValueField = varField)
+        {
+            this.ModValue(mod);
+        }
         inf (this.DestField = varField)
         {
             this.ModDest(mod);
