@@ -3,6 +3,22 @@ class Image : View
     maide prusate Bool Init()
     {
         base.Init();
+        this.DestRectField : this.CreateDestRectField();
+        this.SourceRectField : this.CreateSourceRectField();
+
+        this.DestRect : this.CreateDestRect();
+        this.SourceRect : this.CreateSourceRect();
+        return true;
+    }
+
+    maide precate Field CreateDestRectField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateSourceRectField()
+    {
+        return this.ViewInfra.FieldCreate(this);
     }
 
     maide precate Rect CreateDestRect()
