@@ -66,7 +66,7 @@ class ViewC : View
         view : new View;
         view.Init();
         view.Pos.Col : 200;
-        view.Pos.Row : 60;
+        view.Pos.Row : 200;
         view.Size.Wed : 150;
         view.Size.Het : 100;
         view.Back : this.ViewInfra.PaleteDefault.Base.Brush;
