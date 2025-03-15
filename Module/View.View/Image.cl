@@ -22,4 +22,35 @@ class Image : View
         a.Init();
         return a;
     }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        base.Mod(varField, mod);
+
+        inf (this.DestRectField = varField)
+        {
+            this.ModDestRect(mod);
+        }
+        return true;
+    }
+
+    field prusate Field DestRectField { get { return data; } set { data : value; } }
+
+    field prusate Rect DestRect
+    {
+        get
+        {
+            return cast Rect(this.DestRectField.Get());
+        }
+        set
+        {
+            this.DestRectField.Set(value);
+        }
+    }
+
+    maide precate Bool ModDestRect(var Mod mod)
+    {
+        this.Event(this.DestRectField);
+        return true;
+    }
 }
