@@ -95,6 +95,20 @@ class Button : View
             draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
 
             this.DrawPosA.Col = this.MathInt(firstCol);
+            this.DrawPosA.Row = this.MathInt(firstRow);
+            this.DrawPosB.Col = this.MathInt(firstCol);
+            this.DrawPosB.Row = this.MathInt(lastRow);
+
+            draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
+
+            this.DrawPosA.Col = this.MathInt(lastCol);
+            this.DrawPosA.Row = this.MathInt(firstRow);
+            this.DrawPosB.Col = this.MathInt(lastCol);
+            this.DrawPosB.Row = this.MathInt(lastRow);
+
+            draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
+
+            this.DrawPosA.Col = this.MathInt(firstCol);
             this.DrawPosA.Row = this.MathInt(lastRow);
             this.DrawPosB.Col = this.MathInt(lastCol);
             this.DrawPosB.Row = this.MathInt(lastRow);
