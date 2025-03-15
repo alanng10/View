@@ -56,6 +56,26 @@ class Image : View
         return true;
     }
 
+    field prusate Field ValueField { get { return data; } set { data : value; } }
+
+    field prusate DrawImage Value
+    {
+        get
+        {
+            return cast DrawImage(this.ValueField.GetAny());
+        }
+        set
+        {
+            this.ValueField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModValue(var Mod mod)
+    {
+        this.Event(this.ValueField);
+        return true;
+    }
+
     field prusate Field DestField { get { return data; } set { data : value; } }
 
     field prusate Rect Dest
@@ -93,26 +113,6 @@ class Image : View
     maide precate Bool ModSource(var Mod mod)
     {
         this.Event(this.SourceField);
-        return true;
-    }
-
-    field prusate Field ValueField { get { return data; } set { data : value; } }
-
-    field prusate DrawImage Value
-    {
-        get
-        {
-            return cast DrawImage(this.ValueField.GetAny());
-        }
-        set
-        {
-            this.ValueField.SetAny(value);
-        }
-    }
-
-    maide precate Bool ModValue(var Mod mod)
-    {
-        this.Event(this.ValueField);
         return true;
     }
 
