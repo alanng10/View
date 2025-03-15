@@ -3,30 +3,32 @@ class Image : View
     maide prusate Bool Init()
     {
         base.Init();
-        this.DestRectField : this.CreateDestRectField();
-        this.SourceRectField : this.CreateSourceRectField();
+        this.DestField : this.CreateDestField();
+        this.SourceField : this.CreateSourceField();
 
-        this.DestRect : this.CreateDestRect();
-        this.SourceRect : this.CreateSourceRect();
+        this.Back : this.DrawInfra.SlashZero.Brush;
+
+        this.Dest : this.CreateDest();
+        this.Source : this.CreateSource();
         return true;
     }
 
-    maide precate Field CreateDestRectField()
+    maide precate Field CreateDestField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
 
-    maide precate Field CreateSourceRectField()
+    maide precate Field CreateSourceField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
 
-    maide precate Rect CreateDestRect()
+    maide precate Rect CreateDest()
     {
         return this.CreateRect();
     }
 
-    maide precate Rect CreateSourceRect()
+    maide precate Rect CreateSource()
     {
         return this.CreateRect();
     }
@@ -43,54 +45,100 @@ class Image : View
     {
         base.Mod(varField, mod);
 
-        inf (this.DestRectField = varField)
+        inf (this.DestField = varField)
         {
-            this.ModDestRect(mod);
+            this.ModDest(mod);
         }
-        inf (this.SourceRectField = varField)
+        inf (this.SourceField = varField)
         {
-            this.ModSourceRect(mod);
+            this.ModSource(mod);
         }
         return true;
     }
 
-    field prusate Field DestRectField { get { return data; } set { data : value; } }
+    field prusate Field DestField { get { return data; } set { data : value; } }
 
-    field prusate Rect DestRect
+    field prusate Rect Dest
     {
         get
         {
-            return cast Rect(this.DestRectField.Get());
+            return cast Rect(this.DestField.Get());
         }
         set
         {
-            this.DestRectField.Set(value);
+            this.DestField.Set(value);
         }
     }
 
-    maide precate Bool ModDestRect(var Mod mod)
+    maide precate Bool ModDest(var Mod mod)
     {
-        this.Event(this.DestRectField);
+        this.Event(this.DestField);
         return true;
     }
 
-    field prusate Field SourceRectField { get { return data; } set { data : value; } }
+    field prusate Field SourceField { get { return data; } set { data : value; } }
 
-    field prusate Rect SourceRect
+    field prusate Rect Source
     {
         get
         {
-            return cast Rect(this.SourceRectField.Get());
+            return cast Rect(this.SourceField.Get());
         }
         set
         {
-            this.SourceRectField.Set(value);
+            this.SourceField.Set(value);
         }
     }
 
-    maide precate Bool ModSourceRect(var Mod mod)
+    maide precate Bool ModSource(var Mod mod)
     {
-        this.Event(this.SourceRectField);
+        this.Event(this.SourceField);
+        return true;
+    }
+
+    field prusate Field ValueField { get { return data; } set { data : value; } }
+
+    field prusate DrawImage Value
+    {
+        get
+        {
+            return cast DrawImage(this.ValueField.GetAny());
+        }
+        set
+        {
+            this.ValueField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModValue(var Mod mod)
+    {
+        this.Event(this.ValueField);
+        return true;
+    }
+
+    maide precate Bool ValidDrawChild()
+    {
+        return false;
+    }
+
+    maide precate Bool ExecuteDrawThis(var Draw draw)
+    {
+        base.ExecuteDrawThis(draw);
+
+        inf (this.Value = null)
+        {
+            return true;
+        }
+
+        this.DrawRectA.Pos.Col : this.MathInt(this.Dest.Pos.Col);
+        this.DrawRectA.Pos.Row : this.MathInt(this.Dest.Pos.Row);
+        this.DrawRectA.Size.Wed : this.MathInt(this.Dest.Size.Wed);
+        this.DrawRectA.Size.Het : this.MathInt(this.Dest.Size.Het);
+
+        this.DrawRectB.Pos.Col : this.MathInt(this.Source.Pos.Col);
+        this.DrawRectB.Pos.Row : this.MathInt(this.Source.Pos.Row);
+        this.DrawRectB.Size.Wed : this.MathInt(this.Source.Size.Wed);
+        this.DrawRectB.Size.Het : this.MathInt(this.Source.Size.Het);
         return true;
     }
 }
