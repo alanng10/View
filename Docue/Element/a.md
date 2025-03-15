@@ -9,8 +9,8 @@ Text
 Image
 Radio
 Mark
+Slide
 Edit
 Scroll
-Slide
 
 Element Grid and View has no style.
