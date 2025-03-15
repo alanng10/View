@@ -134,15 +134,15 @@ class Image : View
             return true;
         }
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.Dest.Pos.Col);
-        this.DrawRectA.Pos.Row : this.MathInt(this.Dest.Pos.Row);
-        this.DrawRectA.Size.Wed : this.MathInt(this.Dest.Size.Wed);
-        this.DrawRectA.Size.Het : this.MathInt(this.Dest.Size.Het);
+        this.DrawRectA.Pos.Col : this.Dest.Pos.Col;
+        this.DrawRectA.Pos.Row : this.Dest.Pos.Row;
+        this.DrawRectA.Size.Wed : this.Dest.Size.Wed;
+        this.DrawRectA.Size.Het : this.Dest.Size.Het;
 
-        this.DrawRectB.Pos.Col : this.MathInt(this.Source.Pos.Col);
-        this.DrawRectB.Pos.Row : this.MathInt(this.Source.Pos.Row);
-        this.DrawRectB.Size.Wed : this.MathInt(this.Source.Size.Wed);
-        this.DrawRectB.Size.Het : this.MathInt(this.Source.Size.Het);
+        this.DrawRectB.Pos.Col : this.Source.Pos.Col;
+        this.DrawRectB.Pos.Row : this.Source.Pos.Row;
+        this.DrawRectB.Size.Wed : this.Source.Size.Wed;
+        this.DrawRectB.Size.Het : this.Source.Size.Het;
         return true;
     }
 }
