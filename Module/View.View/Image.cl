@@ -31,6 +31,10 @@ class Image : View
         {
             this.ModDestRect(mod);
         }
+        inf (this.SourceRectField = varField)
+        {
+            this.ModSourceRect(mod);
+        }
         return true;
     }
 
@@ -51,6 +55,26 @@ class Image : View
     maide precate Bool ModDestRect(var Mod mod)
     {
         this.Event(this.DestRectField);
+        return true;
+    }
+
+    field prusate Field SourceRectField { get { return data; } set { data : value; } }
+
+    field prusate Rect SourceRect
+    {
+        get
+        {
+            return cast Rect(this.SourceRectField.Get());
+        }
+        set
+        {
+            this.SourceRectField.Set(value);
+        }
+    }
+
+    maide precate Bool ModSourceRect(var Mod mod)
+    {
+        this.Event(this.SourceRectField);
         return true;
     }
 }
