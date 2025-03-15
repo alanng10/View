@@ -21,8 +21,20 @@ class Button : View
         return this.ViewInfra.FieldCreate(this);
     }
 
-    field prusate Field FocusField { get { return data; } set { data : value; } }
     field precate DrawPos DrawPosB { get { return data; } set { data : value; } }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        base.Mod(varField, mod);
+
+        inf (this.FocusField = varField)
+        {
+            this.ModFocus(mod);
+        }
+        return true;
+    }
+
+    field prusate Field FocusField { get { return data; } set { data : value; } }
 
     field prusate Bool Focus
     {
