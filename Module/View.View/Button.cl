@@ -87,31 +87,31 @@ class Button : View
             lastCol : firstCol + this.DrawInfra.BoundSub(this.Size.Wed, 1);
             lastRow : firstRow + this.DrawInfra.BoundSub(this.Size.Het, 1);
 
-            this.DrawPosA.Col = this.MathInt(firstCol);
-            this.DrawPosA.Row = this.MathInt(firstRow);
-            this.DrawPosB.Col = this.MathInt(lastCol);
-            this.DrawPosB.Row = this.MathInt(firstRow);
+            this.DrawPosA.Col : this.MathInt(firstCol);
+            this.DrawPosA.Row : this.MathInt(firstRow);
+            this.DrawPosB.Col : this.MathInt(lastCol);
+            this.DrawPosB.Row : this.MathInt(firstRow);
 
             draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
 
-            this.DrawPosA.Col = this.MathInt(firstCol);
-            this.DrawPosA.Row = this.MathInt(firstRow);
-            this.DrawPosB.Col = this.MathInt(firstCol);
-            this.DrawPosB.Row = this.MathInt(lastRow);
+            this.DrawPosA.Col : this.MathInt(firstCol);
+            this.DrawPosA.Row : this.MathInt(firstRow);
+            this.DrawPosB.Col : this.MathInt(firstCol);
+            this.DrawPosB.Row : this.MathInt(lastRow);
 
             draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
 
-            this.DrawPosA.Col = this.MathInt(lastCol);
-            this.DrawPosA.Row = this.MathInt(firstRow);
-            this.DrawPosB.Col = this.MathInt(lastCol);
-            this.DrawPosB.Row = this.MathInt(lastRow);
+            this.DrawPosA.Col : this.MathInt(lastCol);
+            this.DrawPosA.Row : this.MathInt(firstRow);
+            this.DrawPosB.Col : this.MathInt(lastCol);
+            this.DrawPosB.Row : this.MathInt(lastRow);
 
             draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
 
-            this.DrawPosA.Col = this.MathInt(firstCol);
-            this.DrawPosA.Row = this.MathInt(lastRow);
-            this.DrawPosB.Col = this.MathInt(lastCol);
-            this.DrawPosB.Row = this.MathInt(lastRow);
+            this.DrawPosA.Col : this.MathInt(firstCol);
+            this.DrawPosA.Row : this.MathInt(lastRow);
+            this.DrawPosB.Col : this.MathInt(lastCol);
+            this.DrawPosB.Row : this.MathInt(lastRow);
 
             draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
 
