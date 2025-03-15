@@ -82,10 +82,14 @@ class Button : View
             var Int firstRow;
             var Int lastCol;
             var Int lastRow;
+            var Int endCol;
+            var Int endRow;
             firstCol : this.Pos.Col;
             firstRow : this.Pos.Row;
             lastCol : firstCol + this.DrawInfra.BoundSub(this.Size.Wed, 1);
             lastRow : firstRow + this.DrawInfra.BoundSub(this.Size.Het, 1);
+            endCol : lastCol + 1;
+            endRow : lastRow + 1; 
 
             this.DrawPosA.Col : this.MathInt(firstCol);
             this.DrawPosA.Row : this.MathInt(firstRow);
@@ -110,8 +114,8 @@ class Button : View
 
             this.DrawPosA.Col : this.MathInt(firstCol);
             this.DrawPosA.Row : this.MathInt(lastRow);
-            this.DrawPosB.Col : this.MathInt(lastCol);
-            this.DrawPosB.Row : this.MathInt(lastRow);
+            this.DrawPosB.Col : this.MathInt(endCol);
+            this.DrawPosB.Row : this.MathInt(endRow);
 
             draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
 
