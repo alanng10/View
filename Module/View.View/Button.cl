@@ -84,8 +84,8 @@ class Button : View
             var Int lastRow;
             firstCol : this.Pos.Col;
             firstRow : this.Pos.Row;
-            lastCol : firstCol + this.BoundSub(this.Size.Wed, 1);
-            lastRow : firstRow + this.BoundSub(this.Size.Het, 1);
+            lastCol : firstCol + this.DrawInfra.BoundSub(this.Size.Wed, 1);
+            lastRow : firstRow + this.DrawInfra.BoundSub(this.Size.Het, 1);
 
             this.DrawPosA.Col = this.MathInt(firstCol);
             this.DrawPosA.Row = this.MathInt(firstRow);
