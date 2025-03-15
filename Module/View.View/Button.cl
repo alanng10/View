@@ -4,6 +4,8 @@ class Button : View
     {
         base.Init();
 
+        this.DrawPosB : this.CreateDrawPos();
+
         this.FocusField : this.CreateFocusField();
         this.Focus : false;
         return true;
@@ -20,6 +22,7 @@ class Button : View
     }
 
     field prusate Field FocusField { get { return data; } set { data : value; } }
+    field precate DrawPos DrawPosB { get { return data; } set { data : value; } }
 
     field prusate Bool Focus
     {
@@ -46,14 +49,7 @@ class Button : View
         this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
         this.DrawRectA.Size.Het : this.MathInt(this.Size.Het);
 
-        inf (this.Focus)
-        {
-            draw.Fill : this.Palete.Lite.Brush;
-        }
-        inf (~this.Focus)
-        {
-            draw.Fill : this.Palete.Bord.Brush;
-        }
+        draw.Fill : this.Palete.Bord.Brush;
 
         draw.FillPos.Col : this.MathInt(this.Pos.Col);
         draw.FillPos.Row : this.MathInt(this.Pos.Row);
@@ -77,6 +73,37 @@ class Button : View
         draw.FillPosSet();
 
         draw.Fill : null;
+
+        inf (this.Focus)
+        {
+            draw.Line : this.Palete.Lite;
+
+            var Int firstCol;
+            var Int firstRow;
+            var Int lastCol;
+            var Int lastRow;
+            firstCol : this.Pos.Col;
+            firstRow : this.Pos.Row;
+            lastCol : firstCol + this.BoundSub(this.Size.Wed, 1);
+            lastRow : firstRow + this.BoundSub(this.Size.Het, 1);
+
+            this.DrawPosA.Col = this.MathInt(firstCol);
+            this.DrawPosA.Row = this.MathInt(firstRow);
+            this.DrawPosB.Col = this.MathInt(lastCol);
+            this.DrawPosB.Row = this.MathInt(firstRow);
+
+            draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
+
+            this.DrawPosA.Col = this.MathInt(firstCol);
+            this.DrawPosA.Row = this.MathInt(lastRow);
+            this.DrawPosB.Col = this.MathInt(lastCol);
+            this.DrawPosB.Row = this.MathInt(lastRow);
+
+            draw.ExecuteLine(this.DrawPosA, this.DrawPosB);
+
+            draw.Line : null;
+        }
+
         return true;
     }
 
