@@ -122,18 +122,11 @@ class Image : View
 
     maide precate Bool ValidDrawChild()
     {
-        return false;
+        return ~(this.Value = null);
     }
 
-    maide precate Bool ExecuteDrawThis(var Draw draw)
+    maide precate Bool ExecuteChildDraw(var Draw draw)
     {
-        base.ExecuteDrawThis(draw);
-
-        inf (this.Value = null)
-        {
-            return true;
-        }
-
         this.DrawRectA.Pos.Col : this.Dest.Pos.Col;
         this.DrawRectA.Pos.Row : this.Dest.Pos.Row;
         this.DrawRectA.Size.Wed : this.Dest.Size.Wed;
@@ -143,6 +136,8 @@ class Image : View
         this.DrawRectB.Pos.Row : this.Source.Pos.Row;
         this.DrawRectB.Size.Wed : this.Source.Size.Wed;
         this.DrawRectB.Size.Het : this.Source.Size.Het;
+
+        draw.ExecuteImage(this.Value, this.DrawRectA, this.DrawRectB);
         return true;
     }
 }
