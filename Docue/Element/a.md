@@ -12,5 +12,7 @@ Mark
 Slide
 Edit
 Scroll
+Menu
+Tool
 
 Element Grid and View has no style.
