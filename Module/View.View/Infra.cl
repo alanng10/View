@@ -6,6 +6,7 @@ class Infra : Any
         this.DrawInfra : share DrawInfra;
 
         this.PaleteDefault : this.CreatePaleteDefault();
+        this.DrawForm : this.CreateDrawForm();
         return true;
     }
 
@@ -24,7 +25,13 @@ class Infra : Any
         return a;
     }
 
+    maide precate DrawForm CreateDrawForm()
+    {
+        return this.DrawInfra.FormCreate();
+    }
+
     field prusate Palete PaleteDefault { get { return data; } set { data : value; } }
+    field prusate DrawForm DrawForm { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
 
     maide prusate Field FieldCreate(var Comp comp)
