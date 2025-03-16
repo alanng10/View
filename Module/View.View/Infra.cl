@@ -31,7 +31,6 @@ class Infra : Any
     }
 
     field prusate Palete PaleteDefault { get { return data; } set { data : value; } }
-    field prusate DrawForm DrawForm { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
 
     maide prusate Field FieldCreate(var Comp comp)
