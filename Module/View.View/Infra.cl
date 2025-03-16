@@ -19,6 +19,8 @@ class Infra : Any
         a.Bord : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 222, 222, 222)), this.DrawInfra.SlashZero.Size);        
         a.Fore : this.DrawInfra.SlashBlack;
         a.Lite : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 0, 200, 200)), this.DrawInfra.SlashZero.Size);
+        a.FontAria : this.DrawInfra.FontCreate(this.DrawInfra.FontAriaName, 13, 400, false, false, false, false);
+        a.FontMono : this.DrawInfra.FontCreate(this.DrawInfra.FontMonoName, 13, 400, false, false, false, false);
         return a;
     }
 
