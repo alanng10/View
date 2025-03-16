@@ -6,7 +6,6 @@ class Infra : Any
         this.DrawInfra : share DrawInfra;
 
         this.PaleteDefault : this.CreatePaleteDefault();
-        this.DrawForm : this.CreateDrawForm();
         return true;
     }
 
@@ -22,12 +21,8 @@ class Infra : Any
         a.Lite : this.DrawInfra.SlashCreate(this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0hff, 0, 200, 200)), this.DrawInfra.SlashZero.Size);
         a.FontAria : this.DrawInfra.FontCreate(this.DrawInfra.FontAriaName, 13, 400, false, false, false, false);
         a.FontMono : this.DrawInfra.FontCreate(this.DrawInfra.FontMonoName, 13, 400, false, false, false, false);
+        a.Form : this.DrawInfra.FormCreate();
         return a;
-    }
-
-    maide precate DrawForm CreateDrawForm()
-    {
-        return this.DrawInfra.FormCreate();
     }
 
     field prusate Palete PaleteDefault { get { return data; } set { data : value; } }
