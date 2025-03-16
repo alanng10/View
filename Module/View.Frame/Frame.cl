@@ -96,7 +96,7 @@ class Frame : Any
         this.FinalDraw(this.Draw);
 
         this.FrameDraw.Final();
-        
+
         this.FinalDrawImage(this.DrawImage);
 
         var Extern extern;
