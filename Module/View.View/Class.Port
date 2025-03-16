@@ -27,6 +27,7 @@ View.Draw:0.00.00
     DrawChrome Chrome
     DrawBrush Brush
     DrawSlash Slash
+    DrawFont Font
     DrawRect Rect
     DrawPos Pos
     DrawSize Size
