@@ -7,7 +7,7 @@ View element view has style.
 Element view use slash, brush, color and font in palete.
 Element view does not use any other slash, brush, color and font.
 Element view slash, brush, color, and font are init and final from palete.
-Element view form is init and final from view infra. 
+Element view form is init and final from view infra.
 
 Element view does not need final.
 
