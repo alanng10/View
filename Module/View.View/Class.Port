@@ -28,6 +28,7 @@ View.Draw:0.00.00
     DrawBrush Brush
     DrawSlash Slash
     DrawFont Font
+    DrawForm Form
     DrawRect Rect
     DrawPos Pos
     DrawSize Size
