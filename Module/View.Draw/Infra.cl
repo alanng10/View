@@ -126,6 +126,21 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Font FontCreate(var String name, var Int size, var Int strong, var Bool tenden, var Bool staline, var Bool midline, var Bool endline)
+    {
+        var Font a;
+        a : new Font;
+        a.Name : name;
+        a.Size : size;
+        a.Strong : strong;
+        a.Tenden : tenden;
+        a.Staline : staline;
+        a.Midline : midline;
+        a.Endline : endline;
+        a.Init();
+        return a;
+    }
+
     maide pronate Bool ColorSet(var Color color, var Int internColor)
     {
         color.Blue : this.ColorSetComp(internColor, 0);
