@@ -7,13 +7,10 @@ class Button : View
         this.DrawPosB : this.CreateDrawPos();
 
         this.FocusField : this.CreateFocusField();
+
+        this.Back : this.Palete.Back.Brush;
         this.Focus : false;
         return true;
-    }
-
-    maide precate DrawBrush CreateBack()
-    {
-        return this.Palete.Back.Brush;
     }
 
     maide precate Field CreateFocusField()
