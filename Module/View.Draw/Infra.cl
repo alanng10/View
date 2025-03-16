@@ -141,6 +141,14 @@ class Infra : Any
         return a;
     }
 
+    maide prusate Form FormCreate()
+    {
+        var Form a;
+        a : new Form;
+        a.Init();
+        return a;
+    }
+
     maide pronate Bool ColorSet(var Color color, var Int internColor)
     {
         color.Blue : this.ColorSetComp(internColor, 0);
