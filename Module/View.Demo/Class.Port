@@ -38,6 +38,10 @@ System.Entry
     EntryEntry Entry
 SystemDemo:96207.08.47
     DeA DeA
+Type.Type:0.00.00
+    Type Type
+    TypeIndex Index
+    TypeIndexList IndexList
 View.Draw:0.00.00
     Draw Draw
     DrawImage Image
@@ -66,10 +70,6 @@ View.Media:0.00.00
     MediaPlay Play
     MediaVideoOut VideoOut
     MediaAudioOut AudioOut
-View.Type:0.00.00
-    Type Type
-    TypeIndex Index
-    TypeIndexList IndexList
 View.View:0.00.00
     View View
     Button Button
