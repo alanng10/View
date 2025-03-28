@@ -14,6 +14,8 @@ System.Math
     Math Math
     MathComp Comp
     MathInfra Infra
+Type.Type:0.00.00
+    Type Type
 View.Draw:0.00.00
     Draw Draw
     DrawImage Image
@@ -24,8 +26,6 @@ View.Draw:0.00.00
 View.View:0.00.00
     View View
     ViewInfra Infra
-View.Type:0.00.00
-    Type Type
 
 [Export]
 Frame
