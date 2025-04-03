@@ -51,3 +51,7 @@ View has park kind arch marry.
 View has park kind arch land.
 
 View has park style.
+
+View is did.
+
+View style is did.
