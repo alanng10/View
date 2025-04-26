@@ -55,3 +55,5 @@ View has park style.
 View is did.
 
 View style is did.
+
+View has major.
