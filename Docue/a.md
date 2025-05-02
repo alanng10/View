@@ -54,7 +54,11 @@ View has park style.
 
 View has park mark.
 
+View has park cross.
+
 View frame has park mark.
+
+View frame has park cross.
 
 View is did.
 
