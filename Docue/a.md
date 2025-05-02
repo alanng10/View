@@ -52,6 +52,8 @@ View has park kind arch land.
 
 View has park style.
 
+View has park mark.
+
 View is did.
 
 View style is did.
