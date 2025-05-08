@@ -27,7 +27,7 @@ class Draw : Any
         var Int ka;
         ka : this.TextCount;
         ka : ka * 4;
-        this.InternTextData : extern.New(ka);
+        this.InternTextData : extern.Environ_New(ka);
 
         this.InternText : extern.String_New();
         extern.String_Init(this.InternText);
@@ -77,7 +77,7 @@ class Draw : Any
         extern.String_Final(this.InternText);
         extern.String_Delete(this.InternText);
 
-        extern.Delete(this.InternTextData);
+        extern.Environ_Delete(this.InternTextData);
 
         this.FinalWorldForm(this.WorldForm);
         return true;

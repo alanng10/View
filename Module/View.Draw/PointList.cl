@@ -25,7 +25,7 @@ class PointList : Any
         dataCount : this.Count * ka;
 
         var Int dataValue;
-        dataValue : extern.New(dataCount);
+        dataValue : extern.Environ_New(dataCount);
 
         this.InternDataValue : dataValue;
 
@@ -44,7 +44,7 @@ class PointList : Any
         extern.Data_Final(this.Intern);
         extern.Data_Delete(this.Intern);
 
-        extern.Delete(this.InternDataValue);
+        extern.Environ_Delete(this.InternDataValue);
 
         this.InternInfra.PosDelete(this.InternPos);
         return true;
