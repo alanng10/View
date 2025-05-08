@@ -361,12 +361,9 @@ class Draw : Any
         return true;
     }
 
-    maide prusate Bool Clear(var Color color)
+    maide prusate Bool Clear()
     {
-        var Int k;
-        k : this.DrawInfra.InternColor(color);
-
-        this.Extern.Draw_Clear(this.Intern, k);
+        this.Extern.Draw_Clear(this.Intern);
         return true;
     }
 
