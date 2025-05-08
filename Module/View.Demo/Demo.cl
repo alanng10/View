@@ -50,7 +50,7 @@ class Demo : TextAdd
 
         this.ThreadDrawImage : this.ThreadDrawImageCreate();
 
-        this.ExecuteDemoThread();
+        this.ExecuteThread();
 
         this.Frame : new Frame;
         this.Frame.Init();
@@ -194,7 +194,7 @@ class Demo : TextAdd
         return true;
     }
 
-    maide private Bool ExecuteDemoThread()
+    maide private Bool ExecuteThread()
     {
         var ThreadState state;
         state : new ThreadState;
@@ -212,7 +212,7 @@ class Demo : TextAdd
 
         var Int aa;
         aa : thread.Status;
-        this.Console.Out.Write(this.AddClear().Add("Demo.ExecuteDemoThread Thread Status: 0h").Add(this.StringIntHex(aa)).AddLine().AddResult());
+        this.Console.Out.Write(this.AddClear().Add("Thread Status: 0h").Add(this.StringIntHex(aa)).AddLine().AddResult());
  
         thread.Final();
 
