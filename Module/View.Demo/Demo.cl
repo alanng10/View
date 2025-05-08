@@ -1,4 +1,4 @@
-class Demo : DeA
+class Demo : TextAdd
 {
     maide prusate Bool Init()
     {
@@ -23,8 +23,6 @@ class Demo : DeA
     field prusate ViewC ViewC { get { return data; } set { data : value; } }
     field prusate DrawRect UpdateRect { get { return data; } set { data : value; } }
     field prusate DrawImage ThreadDrawImage { get { return data; } set { data : value; } }
-    field prusate Play Play { get { return data; } set { data : value; } }
-    field prusate DrawImage PlayImage { get { return data; } set { data : value; } }
     field prusate MathInfra MathInfra { get { return data; } set { data : value; } }
     field prusate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field prusate ViewInfra ViewInfra { get { return data; } set { data : value; } }
@@ -99,12 +97,6 @@ class Demo : DeA
 
         this.ViewA.Child : viewB;
 
-        this.PlayImage : this.PlayImageCreate();
-
-        this.Play : new Play;
-        this.Play.Demo : this;
-        this.Play.Init();
-
         this.Frame.View : this.View;
         this.Frame.Shown : true;
 
@@ -112,10 +104,6 @@ class Demo : DeA
         thread : varThis.Thread;
 
         thread.ExecuteMain();
-
-        this.Play.Final();
-
-        this.PlayImageFinal(this.PlayImage);
 
         viewB.Final();
 
@@ -226,20 +214,6 @@ class Demo : DeA
  
         thread.Final();
 
-        return true;
-    }
-
-    maide private DrawImage PlayImageCreate()
-    {
-        var DrawImage a;
-        a : new DrawImage;
-        a.Init();
-        return a;
-    }
-
-    maide private Bool PlayImageFinal(var DrawImage a)
-    {
-        a.Final();
         return true;
     }
 
