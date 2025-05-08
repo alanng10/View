@@ -6,6 +6,7 @@ class Demo : TextAdd
         this.MathInfra : share MathInfra;
         this.DrawInfra : share DrawInfra;
         this.ViewInfra : share ViewInfra;
+        this.Math : share Math;
         this.Console : share Console;
         this.CompList : share DrawCompList;
         this.BrushKindList : share DrawBrushKindList;
@@ -27,6 +28,7 @@ class Demo : TextAdd
     field prusate MathInfra MathInfra { get { return data; } set { data : value; } }
     field prusate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field prusate ViewInfra ViewInfra { get { return data; } set { data : value; } }
+    field prusate Math Math { get { return data; } set { data : value; } }
     field prusate Console Console { get { return data; } set { data : value; } }
     field prusate DrawCompList CompList { get { return data; } set { data : value; } }
     field prusate DrawBrushKindList BrushKindList { get { return data; } set { data : value; } }
