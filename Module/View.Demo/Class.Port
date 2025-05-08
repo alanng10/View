@@ -34,6 +34,8 @@ System.Storage
     Storage Storage
     StorageMode Mode
     StorageStatusList StatusList
+System.Console
+    Console Console
 System.Entry
     EntryEntry Entry
 SystemDemo:96207.08.47
