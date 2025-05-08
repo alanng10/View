@@ -50,11 +50,11 @@ View has park kind arch marry.
 
 View has park kind arch land.
 
-View has park style.
-
 View has park mark.
 
 View has park cross.
+
+View has park style.
 
 View frame has park mark.
 
