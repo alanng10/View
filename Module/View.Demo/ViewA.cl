@@ -82,15 +82,7 @@ class ViewA : View
         draw.FillPosSet();
 
         draw.ExecuteRectRound(this.DrawRectA, this.MathInt(40), this.MathInt(30));
-
-        this.DrawRectA.Pos.Col : 0;
-        this.DrawRectA.Pos.Row : 0;
-
-        this.DrawRectB.Pos.Col : 0;
-        this.DrawRectB.Pos.Row : 0;
-        this.DrawRectB.Size.Wed : this.MathInt(this.Demo.PlayImage.Size.Wed);
-        this.DrawRectB.Size.Het : this.MathInt(this.Demo.PlayImage.Size.Het);
-
+    
         var Int oa;
         oa : this.RotateValue * 10;
         var Int ob;
@@ -110,7 +102,12 @@ class ViewA : View
         draw.Form : this.Form;
         draw.FormSet();
 
-        draw.ExecuteImage(this.Demo.PlayImage, this.DrawRectA, this.DrawRectB);
+        this.DrawRectA.Pos.Col : 0;
+        this.DrawRectA.Pos.Row : 0;
+        this.DrawRectA.Size.Wed : this.MathInt(300);
+        this.DrawRectA.Size.Het : this.MathInt(200);
+
+        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(40), this.MathInt(30));
 
         draw.Form : null;
         draw.FormSet();
