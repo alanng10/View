@@ -106,68 +106,8 @@ class TypeA : Type
             ba : true;
         }
 
-        inf (a = d.AlphaH & o)
-        {
-            var Bool baa;
-            baa : this.Demo.Play.AudioOut.Mute;
-            baa : ~baa;
-            this.Demo.Play.AudioOut.Mute : baa;
-        }
-
         var Int scaleFactor;
         scaleFactor : bit <(1, 20);
-
-        var Int ao;
-
-        inf (a = d.AlphaC & o)
-        {
-            k : this.Demo.Play.AudioOut.Volume;
-
-            ao : this.Demo.MathValue(scaleFactor / 16, 0 - 20);
-
-            k : this.Demo.Math.Add(k, ao);
-
-            this.Demo.Play.AudioOut.Volume : k;
-        }
-
-        inf (a = d.AlphaV & o)
-        {
-            k : this.Demo.Play.AudioOut.Volume;
-
-            ao : this.Demo.MathValue(scaleFactor / 16, 0 - 20);
-
-            k : this.Demo.Math.Sub(k, ao);
-
-            this.Demo.Play.AudioOut.Volume : k;
-        }
-
-        inf (a = d.AlphaE & o)
-        {
-            this.Demo.Play.Execute();
-        }
-
-        inf (a = d.AlphaR & o)
-        {
-            this.Demo.Play.Pause();
-        }
-
-        inf (a = d.AlphaG & o)
-        {
-            var Int kaaa;
-            kaaa : this.Demo.Play.Pos;
-
-            var Int kkaa;
-            kkaa : kaaa + 10 * 1000;
-
-            var Int time;
-            time : this.Demo.Play.Time;
-            inf (time < kkaa)
-            {
-                kkaa : time;
-            }
-
-            this.Demo.Play.Pos : kkaa;
-        }
 
         inf (a = d.AlphaN & o)
         {
