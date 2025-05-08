@@ -38,6 +38,8 @@ System.Entry
     EntryEntry Entry
 SystemDemo:96207.08.47
     DeA DeA
+Text.Text:0.00.00
+    TextAdd Add
 Type.Type:0.00.00
     Type Type
     TypeIndex Index
@@ -66,10 +68,6 @@ View.Draw:0.00.00
     DrawAlignList AlignList
     DrawRect Rect
     DrawInfra Infra
-View.Media:0.00.00
-    MediaPlay Play
-    MediaVideoOut VideoOut
-    MediaAudioOut AudioOut
 View.View:0.00.00
     View View
     Button Button
