@@ -19,7 +19,7 @@ class Frame : Any
 
         draw.Start();
 
-        draw.Clear(this.DrawClearColor);
+        draw.Clear();
 
         this.DrawEvent();
 
@@ -86,8 +86,6 @@ class Frame : Any
         this.DrawSet(this.FrameDraw, k);
 
         this.Draw : this.CreateDraw();
-
-        this.DrawClearColor : this.CreateDrawClearColor();
         return true;
     }
 
@@ -163,13 +161,6 @@ class Frame : Any
         return true;
     }
 
-    maide precate DrawColor CreateDrawClearColor()
-    {
-        var DrawColor a;
-        a : this.DrawInfra.SlashWhite.Brush.Color;
-        return a;
-    }
-
     field prusate DrawSize Size { get { return data; } set { data : value; } }
     field prusate String Title { get { return data; } set { data : value; } }
     field prusate View View { get { return data; } set { data : value; } }
@@ -198,7 +189,6 @@ class Frame : Any
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field precate DrawRect DestRect { get { return data; } set { data : value; } }
     field precate DrawRect SourceRect { get { return data; } set { data : value; } }
-    field precate DrawColor DrawClearColor { get { return data; } set { data : value; } }
     field private Intern InternIntern { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
     field private InternInfra InternInfra { get { return data; } set { data : value; } }
@@ -244,7 +234,7 @@ class Frame : Any
 
         draw.Start();
 
-        draw.Clear(this.DrawClearColor);
+        draw.Clear();
 
         inf (this.ValidDrawView())
         {
