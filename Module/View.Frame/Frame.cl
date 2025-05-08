@@ -14,18 +14,7 @@ class Frame : Any
 
     maide private Bool PrivateDrawEvent()
     {
-        var Draw draw;
-        draw : this.FrameDraw;
-
-        draw.Start();
-
-        draw.Clear();
-
         this.DrawEvent();
-
-        draw.ExecuteImage(this.DrawImage, this.DestRect, this.SourceRect);
-
-        draw.End();
         return true;
     }
 
@@ -73,17 +62,7 @@ class Frame : Any
         extern.Frame_TypeStateSet(this.Intern, this.InternTypeState);
         extern.Frame_DrawStateSet(this.Intern, this.InternDrawState);
 
-        this.DestRect : this.CreateDestRect();
-        this.SourceRect : this.CreateSourceRect();
-
-        this.DrawImage : this.CreateDrawImage();
-
-        var Int k;
-        k : extern.Frame_Out(this.Intern);
-
-        this.FrameDraw : new Draw;
-        this.FrameDraw.Init();
-        this.DrawSet(this.FrameDraw, k);
+        this.Out : extern.Frame_Out(this.Intern);
 
         this.Draw : this.CreateDraw();
         return true;
@@ -92,10 +71,6 @@ class Frame : Any
     maide prusate Bool Final()
     {
         this.FinalDraw(this.Draw);
-
-        this.FrameDraw.Final();
-
-        this.FinalDrawImage(this.DrawImage);
 
         var Extern extern;
         extern : this.Extern;
@@ -129,29 +104,12 @@ class Frame : Any
         return this.CreateFrameRect();
     }
 
-    maide precate DrawImage CreateDrawImage()
-    {
-        var DrawImage a;
-        a : new DrawImage;
-        a.Init();
-        a.Size.Wed : this.Size.Wed;
-        a.Size.Het : this.Size.Het;
-        a.DataCreate();
-        return a;
-    }
-
-    maide precate Bool FinalDrawImage(var DrawImage a)
-    {
-        a.Final();
-        return true;
-    }
-
     maide precate Draw CreateDraw()
     {
         var Draw a;
         a : new Draw;
         a.Init();
-        this.DrawSet(a, this.DrawImage.Out);
+        this.DrawSet(a, this.Out);
         return a;
     }
 
@@ -165,8 +123,8 @@ class Frame : Any
     field prusate String Title { get { return data; } set { data : value; } }
     field prusate View View { get { return data; } set { data : value; } }
     field prusate Type Type { get { return data; } set { data : value; } }
+    field prusate Any Out { get { return data; } set { data : value; } }
     field precate Draw Draw { get { return data; } set { data : value; } }
-    field prusate DrawImage DrawImage { get { return data; } set { data : value; } }
 
     field prusate Bool Shown
     {
