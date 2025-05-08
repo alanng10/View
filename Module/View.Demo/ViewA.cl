@@ -3,11 +3,17 @@ class ViewA : View
     maide prusate Bool Init()
     {
         base.Init();
+
         var DrawBrush brushA;
         brushA : new DrawBrush;
         brushA.Kind : this.Demo.BrushKindList.Color;
         brushA.Color : this.Demo.DrawInfra.ColorCreate(0hff, 0, 0, 0hff);
         brushA.Init();
+
+        this.Brush : new DrawBrush;
+        this.Brush.Kind : this.Demo.BrushKindList.Color;
+        this.Brush.Color : this.Demo.DrawInfra.ColorCreate(0hff, 0hff, 0hff, 0);
+        this.Brush.Init();
 
         var DrawBrush slashBrush;
         slashBrush : new DrawBrush;
@@ -49,12 +55,15 @@ class ViewA : View
 
         k.Final();
 
+        this.Brush.Final();
+
         this.Back.Final();
         return true;
     }
 
     field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate DrawSlash Slash { get { return data; } set { data : value; } }
+    field prusate DrawBrush Brush { get { return data; } set { data : value; } }
     field prusate DrawForm Form { get { return data; } set { data : value; } }
     field prusate Int RotateValue { get { return data; } set { data : value; } }
 
@@ -101,6 +110,8 @@ class ViewA : View
 
         draw.Form : this.Form;
         draw.FormSet();
+
+        draw.Fill : this.Brush;
 
         this.DrawRectA.Pos.Col : 0;
         this.DrawRectA.Pos.Row : 0;
