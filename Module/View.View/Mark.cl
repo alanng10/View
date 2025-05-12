@@ -45,7 +45,25 @@ class Mark : View
                 this.MathInt(this.DrawInfra.BoundSub(4, 1)));
         }
 
-        
+        var DrawForm form;
+        form : this.Palete.Form;
+
+        var Int angle;
+        angle : 315;
+
+        var Int formCol;
+        var Int formRow;
+        formCol : cubeCol + cubeSize / 2;
+        formRow : this.Pos.Row + this.Size.Het / 2;
+
+        form.Reset();
+
+        form.Pos(this.MathInt(formCol), this.MathInt(formRow));
+
+        form.Angle(this.MathInt(angle));
+
+        draw.Form : this.Form;
+        draw.FormSet();
 
 
         draw.FillPos.Col : 0;
