@@ -35,9 +35,9 @@ class Mark : View
         }
         set
         {
-            inf (this.Focus & ~value))
+            inf (this.Focus & ~value)
             {
-                this.Turn = ~this.Turn;
+                this.Turn : ~this.Turn;
             }
 
             base.Focus : value;
