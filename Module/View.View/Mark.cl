@@ -29,7 +29,7 @@ class Mark : View
         draw.FillPos.Row : this.MathInt(cubeRow);
         draw.FillPosSet();
 
-        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(14), this.MathInt(14));
+        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(4), this.MathInt(4));
 
         this.DrawRectA.Pos.Col : this.MathInt(cubeCol + 1);
         this.DrawRectA.Pos.Row : this.MathInt(cubeRow + 1);
@@ -41,8 +41,8 @@ class Mark : View
             draw.Fill : this.Back;
 
             draw.ExecuteRectRound(this.DrawRectA, 
-                this.MathInt(this.DrawInfra.BoundSub(14, 1)), 
-                this.MathInt(this.DrawInfra.BoundSub(14, 1)));
+                this.MathInt(this.DrawInfra.BoundSub(4, 1)), 
+                this.MathInt(this.DrawInfra.BoundSub(4, 1)));
         }
 
         
