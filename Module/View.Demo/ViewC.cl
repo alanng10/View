@@ -42,7 +42,7 @@ class ViewC : View
         var Text text;
         text : this.Demo.TextCreate(oa);
 
-        this.Pos.Col : 0sn300;
+        this.Pos.Col : 100;
         this.Pos.Row : 0;
         this.Size.Wed : 500;
         this.Size.Het : 400;
