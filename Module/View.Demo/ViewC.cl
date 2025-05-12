@@ -62,17 +62,45 @@ class ViewC : View
         this.Button.Size.Wed : 100;
         this.Button.Size.Het : 60;
 
-        var View view;
-        view : new View;
-        view.Init();
-        view.Pos.Col : 200;
-        view.Pos.Row : 200;
-        view.Size.Wed : 150;
-        view.Size.Het : 100;
-        view.Back : this.ViewInfra.PaleteDefault.Base.Brush;
-        view.Child : this.Button;
+        var Grid grid;
+        grid : new Grid;
+        grid.Init();
+        grid.Pos.Col : 200;
+        grid.Pos.Row : 200;
+        grid.Size.Wed : 150;
+        grid.Size.Het : 600;
+        grid.Back : this.ViewInfra.PaleteDefault.Base.Brush;
+        grid.Child : this.Button;
 
-        this.Child : view;
+        var ViewCount rowA;
+        rowA : new ViewCount;
+        rowA.Init();
+        rowA.Value : 300;
+        var ViewCount rowB;
+        rowB : new ViewCount;
+        rowB.Init();
+        rowB.Value : 300;
+        
+        var GridChild childA;
+        childA : new GridChild;
+        childA.Init();
+        childA.View : this.Button;
+        childA.Rect.Size.Wed : 1;
+        childA.Rect.Size.Het : 1;
+        var GridChild childB;
+        childB : new GridChild;
+        childB.Init();
+        childB.View : null;
+        childB.Rect.Pos.Row : 1;
+        childB.Rect.Size.Wed : 1;
+        childB.Rect.Size.Het : 1;
+
+        grid.Row.Add(rowA);
+        grid.Row.Add(rowB);
+        grid.ChildList.Add(childA);
+        grid.ChildList.Add(childB);
+
+        this.Child : grid;
         return true;
     }
 
