@@ -31,10 +31,10 @@ class Mark : View
 
         draw.ExecuteRectRound(this.DrawRectA, this.MathInt(14), this.MathInt(14));
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
-        this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
-        this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 1 * 2));
-        this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1 * 2));
+        this.DrawRectA.Pos.Col : this.MathInt(cubeCol + 1);
+        this.DrawRectA.Pos.Row : this.MathInt(cubeRow + 1);
+        this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
+        this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
 
         inf (~this.Focus)
         {
