@@ -4,14 +4,14 @@ class Mark : View
     {
         base.Init();
 
-        this.Back : this.Palete.Back.Brush;
+        this.Back : this.Palete.Base.Brush;
         return true;
     }
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var Int cubeSize;
-        cubeSize : 14;
+        cubeSize : 16;
 
         var Int cubeCol;
         var Int cubeRow;
@@ -67,17 +67,17 @@ class Mark : View
 
         draw.Fill : this.Palete.Fore.Brush;
 
-        this.DrawRectA.Pos.Col : this.MathInt(0sn5);
-        this.DrawRectA.Pos.Row : this.MathInt(0sn2);
-        this.DrawRectA.Size.Wed : this.MathInt(1);
+        this.DrawRectA.Pos.Col : this.MathInt(0sn4);
+        this.DrawRectA.Pos.Row : this.MathInt(0sn3);
+        this.DrawRectA.Size.Wed : this.MathValue(3, 0sn1);
         this.DrawRectA.Size.Het : this.MathInt(4);
 
         draw.ExecuteRect(this.DrawRectA);
 
-        this.DrawRectA.Pos.Col : this.MathInt(0sn5);
-        this.DrawRectA.Pos.Row : this.MathInt(2);
+        this.DrawRectA.Pos.Col : this.MathInt(0sn4);
+        this.DrawRectA.Pos.Row : this.MathInt(1);
         this.DrawRectA.Size.Wed : this.MathInt(10);
-        this.DrawRectA.Size.Het : this.MathInt(1);
+        this.DrawRectA.Size.Het : this.MathValue(3, 0sn1);
 
         draw.ExecuteRect(this.DrawRectA);
 
