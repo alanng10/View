@@ -65,6 +65,24 @@ class Mark : View
         draw.Form : this.Form;
         draw.FormSet();
 
+        draw.Fill : this.Palete.Fore.Brush;
+
+        this.DrawRectA.Pos.Col : this.MathInt(0sn5);
+        this.DrawRectA.Pos.Row : this.MathInt(0sn2);
+        this.DrawRectA.Size.Wed : this.MathInt(1);
+        this.DrawRectA.Size.Het : this.MathInt(4);
+
+        draw.ExecuteRect(this.DrawRectA);
+
+        this.DrawRectA.Pos.Col : this.MathInt(0sn5);
+        this.DrawRectA.Pos.Row : this.MathInt(2);
+        this.DrawRectA.Size.Wed : this.MathInt(10);
+        this.DrawRectA.Size.Het : this.MathInt(1);
+
+        draw.ExecuteRect(this.DrawRectA);
+
+        draw.Form : null;
+        draw.FormSet();
 
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;
