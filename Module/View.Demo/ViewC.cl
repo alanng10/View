@@ -74,10 +74,9 @@ class ViewC : View
         grid.Init();
         grid.Pos.Col : 200;
         grid.Pos.Row : 200;
-        grid.Size.Wed : 150;
+        grid.Size.Wed : 300;
         grid.Size.Het : 600;
         grid.Back : this.ViewInfra.PaleteDefault.Base.Brush;
-        grid.Child : this.Button;
 
         var ViewCount colA;
         colA : new ViewCount;
