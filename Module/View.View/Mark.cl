@@ -4,8 +4,17 @@ class Mark : View
     {
         base.Init();
 
+        this.TurnField : this.CreateTurnField();
+
         this.Back : this.Palete.Base.Brush;
+
+        this.Turn : false;
         return true;
+    }
+
+    maide precate Field CreateTurnField()
+    {
+        return this.ViewInfra.FieldCreate(this);
     }
 
     maide prusate Bool Mod(var Field varField, var Mod mod)
