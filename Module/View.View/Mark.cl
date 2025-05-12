@@ -62,7 +62,7 @@ class Mark : View
 
         form.Angle(this.MathInt(angle));
 
-        draw.Form : this.Form;
+        draw.Form : form;
         draw.FormSet();
 
         draw.Fill : this.Palete.Fore.Brush;
