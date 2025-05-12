@@ -11,7 +11,7 @@ class Mark : View
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var Int cubeSize;
-        cubeSize : 34;
+        cubeSize : 14;
 
         var Int cubeCol;
         var Int cubeRow;
@@ -44,6 +44,9 @@ class Mark : View
                 this.MathInt(this.DrawInfra.BoundSub(14, 1)), 
                 this.MathInt(this.DrawInfra.BoundSub(14, 1)));
         }
+
+        
+
 
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;
