@@ -15,7 +15,7 @@ class Mark : View
 
         var Int cubeCol;
         var Int cubeRow;
-        cubeCol : this.Pos.Col + this.DrawInfra.BoundSub(this.Size.Wed, cubeSize) / 2;
+        cubeCol : this.Pos.Col + 12;
         cubeRow : this.Pos.Row + this.DrawInfra.BoundSub(this.Size.Het, cubeSize) / 2;
 
         this.DrawRectA.Pos.Col : this.MathInt(cubeCol);
