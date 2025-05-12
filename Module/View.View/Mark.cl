@@ -7,7 +7,6 @@ class Mark : View
         this.TurnField : this.CreateTurnField();
 
         this.Back : this.Palete.Base.Brush;
-
         this.Turn : false;
         return true;
     }
