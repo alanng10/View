@@ -106,10 +106,16 @@ class TypeA : Type
             ba : true;
         }
 
+        inf (a = d.AlphaN)
+        {
+            this.Demo.ViewC.Mark.Focus : o;
+            ba : true;
+        }
+
         var Int scaleFactor;
         scaleFactor : bit <(1, 20);
 
-        inf (a = d.AlphaN & o)
+        inf (a = d.AlphaP & o)
         {
             var String frameTitle;
             frameTitle : this.Demo.AddClear().Add("View Demo ").Add(this.Demo.StringInt(this.TitleIndex)).AddResult();
