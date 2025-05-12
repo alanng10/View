@@ -36,10 +36,11 @@ View.Draw:0.00.00
 
 [Export]
 View
-Button
-Palete
 Grid
 GridChild
+Button
+Mark
+Palete
 Rect
 Pos
 Size
