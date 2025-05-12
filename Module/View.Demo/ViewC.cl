@@ -56,11 +56,18 @@ class ViewC : View
         this.Button : new Button;
         this.Button.Palete : this.ViewInfra.PaleteDefault;
         this.Button.Init();
-
         this.Button.Pos.Col : 20;
         this.Button.Pos.Row : 20;
         this.Button.Size.Wed : 100;
         this.Button.Size.Het : 60;
+
+        this.Mark : new Mark;
+        this.Mark.Palete : this.ViewInfra.PaleteDefault;
+        this.Mark.Init();
+        this.Mark.Pos.Col : 20;
+        this.Mark.Pos.Row : 20;
+        this.Mark.Size.Wed : 100;
+        this.Mark.Size.Het : 60;
 
         var Grid grid;
         grid : new Grid;
@@ -72,6 +79,10 @@ class ViewC : View
         grid.Back : this.ViewInfra.PaleteDefault.Base.Brush;
         grid.Child : this.Button;
 
+        var ViewCount colA;
+        colA : new ViewCount;
+        colA.Init();
+        colA.Value : 300;
         var ViewCount rowA;
         rowA : new ViewCount;
         rowA.Init();
@@ -90,11 +101,12 @@ class ViewC : View
         var GridChild childB;
         childB : new GridChild;
         childB.Init();
-        childB.View : null;
+        childB.View : this.Mark;
         childB.Rect.Pos.Row : 1;
         childB.Rect.Size.Wed : 1;
         childB.Rect.Size.Het : 1;
 
+        grid.Col.Add(colA);
         grid.Row.Add(rowA);
         grid.Row.Add(rowB);
         grid.ChildList.Add(childA);
@@ -200,6 +212,7 @@ class ViewC : View
 
     field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate Button Button { get { return data; } set { data : value; } }
+    field prusate Mark Mark { get { return data; } set { data : value; } }
     field prusate DrawRect EllipseRect { get { return data; } set { data : value; } }
     field prusate DrawBrush EllipseBrush { get { return data; } set { data : value; } }
     field prusate DrawFont Font { get { return data; } set { data : value; } }
