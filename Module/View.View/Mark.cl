@@ -89,5 +89,15 @@ class Mark : View
         draw.FillPosSet();
 
         draw.Fill : null;
+
+        return true;
+    }
+
+    maide precate Bool SetChildArea(var DrawRect dest, var Draw draw)
+    {
+        base.SetChildArea(dest, draw);
+
+        this.ViewInfra.MarkChildArea(dest);
+        return true;
     }
 }
