@@ -133,4 +133,13 @@ class Infra : Any
         area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, cubeSize + 6 * 2);
         return true;
     }
+
+    maide prusate Bool MarkChildParentSize(var DrawSize size)
+    {
+        var Int cubeSize;
+        cubeSize : 16;
+
+        size.Wed : size.Wed + cubeSize + 6 * 2;
+        return true;
+    }
 }
