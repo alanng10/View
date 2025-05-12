@@ -73,7 +73,7 @@ class ViewC : View
         grid : new Grid;
         grid.Init();
         grid.Pos.Col : 200;
-        grid.Pos.Row : 200;
+        grid.Pos.Row : 100;
         grid.Size.Wed : 300;
         grid.Size.Het : 600;
         grid.Back : this.ViewInfra.PaleteDefault.Base.Brush;
@@ -85,11 +85,11 @@ class ViewC : View
         var ViewCount rowA;
         rowA : new ViewCount;
         rowA.Init();
-        rowA.Value : 300;
+        rowA.Value : 150;
         var ViewCount rowB;
         rowB : new ViewCount;
         rowB.Init();
-        rowB.Value : 300;
+        rowB.Value : 150;
         
         var GridChild childA;
         childA : new GridChild;
@@ -97,6 +97,7 @@ class ViewC : View
         childA.View : this.Button;
         childA.Rect.Size.Wed : 1;
         childA.Rect.Size.Het : 1;
+
         var GridChild childB;
         childB : new GridChild;
         childB.Init();
