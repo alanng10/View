@@ -8,6 +8,54 @@ class Mark : View
         return true;
     }
 
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        base.Mod(varField, mod);
+
+        inf (this.TurnField = varField)
+        {
+            this.ModTurn(mod);
+        }
+        return true;
+    }
+
+    field prusate Bool Focus
+    {
+        get
+        {
+            return base.Focus;
+        }
+        set
+        {
+            inf (this.Focus & ~value))
+            {
+                this.Turn = ~this.Turn;
+            }
+
+            base.Focus : value;
+        }
+    }
+
+    field prusate Field TurnField { get { return data; } set { data : value; } }
+
+    field prusate Bool Turn
+    {
+        get
+        {
+            return cast Bool(this.TurnField.GetAny());
+        }
+        set
+        {
+            this.TurnField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModTurn(var Mod mod)
+    {
+        this.Event(this.TurnField);
+        return true;
+    }
+
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var Int cubeSize;
@@ -45,44 +93,47 @@ class Mark : View
                 this.MathInt(this.DrawInfra.BoundSub(4, 1)));
         }
 
-        var DrawForm form;
-        form : this.Palete.Form;
+        inf (this.Turn)
+        {
+            var DrawForm form;
+            form : this.Palete.Form;
 
-        var Int angle;
-        angle : 315;
+            var Int angle;
+            angle : 315;
 
-        var Int formCol;
-        var Int formRow;
-        formCol : cubeCol + cubeSize / 2;
-        formRow : this.Pos.Row + this.Size.Het / 2;
+            var Int formCol;
+            var Int formRow;
+            formCol : cubeCol + cubeSize / 2;
+            formRow : this.Pos.Row + this.Size.Het / 2;
 
-        form.Reset();
+            form.Reset();
 
-        form.Pos(this.MathInt(formCol), this.MathInt(formRow));
+            form.Pos(this.MathInt(formCol), this.MathInt(formRow));
 
-        form.Angle(this.MathInt(angle));
+            form.Angle(this.MathInt(angle));
 
-        draw.Form : form;
-        draw.FormSet();
+            draw.Form : form;
+            draw.FormSet();
 
-        draw.Fill : this.Palete.Fore.Brush;
+            draw.Fill : this.Palete.Fore.Brush;
 
-        this.DrawRectA.Pos.Col : this.MathInt(0sn4);
-        this.DrawRectA.Pos.Row : this.MathInt(0sn3);
-        this.DrawRectA.Size.Wed : this.MathValue(3, 0sn1);
-        this.DrawRectA.Size.Het : this.MathInt(4);
+            this.DrawRectA.Pos.Col : this.MathInt(0sn4);
+            this.DrawRectA.Pos.Row : this.MathInt(0sn3);
+            this.DrawRectA.Size.Wed : this.MathValue(3, 0sn1);
+            this.DrawRectA.Size.Het : this.MathInt(4);
 
-        draw.ExecuteRect(this.DrawRectA);
+            draw.ExecuteRect(this.DrawRectA);
 
-        this.DrawRectA.Pos.Col : this.MathInt(0sn4);
-        this.DrawRectA.Pos.Row : this.MathInt(1);
-        this.DrawRectA.Size.Wed : this.MathInt(10);
-        this.DrawRectA.Size.Het : this.MathValue(3, 0sn1);
+            this.DrawRectA.Pos.Col : this.MathInt(0sn4);
+            this.DrawRectA.Pos.Row : this.MathInt(1);
+            this.DrawRectA.Size.Wed : this.MathInt(10);
+            this.DrawRectA.Size.Het : this.MathValue(3, 0sn1);
 
-        draw.ExecuteRect(this.DrawRectA);
+            draw.ExecuteRect(this.DrawRectA);
 
-        draw.Form : null;
-        draw.FormSet();
+            draw.Form : null;
+            draw.FormSet();
+        }
 
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;
