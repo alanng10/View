@@ -51,14 +51,6 @@ class Frame : Any
         this.Title : "Frame";
         this.TitleSet();
 
-        var Int size;
-        size : extern.Frame_SizeGet(this.Intern);
-        var Int wed;
-        var Int het;
-        wed : extern.Size_WedGet(size);
-        het : extern.Size_HetGet(size);
-        this.Size : this.DrawInfra.SizeCreate(wed, het);
-
         extern.Frame_TypeStateSet(this.Intern, this.InternTypeState);
         extern.Frame_DrawStateSet(this.Intern, this.InternDrawState);
 
@@ -106,10 +98,16 @@ class Frame : Any
 
     maide precate Draw CreateDraw()
     {
+        var Screen screen;
+        screen : share Screen;
+
         var Draw a;
         a : new Draw;
         a.Init();
-        this.DrawSet(a, this.Out);
+        a.Out : this.Out;
+        a.Size.Wed : screen.Size.Wed;
+        a.Size.Het : screen.Size.Het;
+        a.SizeSet();
         return a;
     }
 
@@ -119,7 +117,6 @@ class Frame : Any
         return true;
     }
 
-    field prusate DrawSize Size { get { return data; } set { data : value; } }
     field prusate String Title { get { return data; } set { data : value; } }
     field prusate View View { get { return data; } set { data : value; } }
     field prusate Type Type { get { return data; } set { data : value; } }
@@ -252,14 +249,5 @@ class Frame : Any
         var DrawRect a;
         a : this.DrawInfra.RectCreate(0, 0, this.MathInt(this.Size.Wed), this.MathInt(this.Size.Het));
         return a;
-    }
-
-    maide private Bool DrawSet(var Draw draw, var Any drawOut)
-    {
-        draw.Out : drawOut;
-        draw.Size.Wed : this.Size.Wed;
-        draw.Size.Het : this.Size.Het;
-        draw.SizeSet();
-        return true;
     }
 }
