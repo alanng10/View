@@ -40,6 +40,7 @@ class Demo : TextAdd
     field prusate DrawPolateSpreadList PolateSpreadList { get { return data; } set { data : value; } }    
     field prusate DrawAlignList AlignList { get { return data; } set { data : value; } }
     field prusate Screen Screen { get { return data; } set { data : value; } }
+    field prusate ThreadThis ThreadThis { get { return data; } set { data : value; } }
     field precate MathComp MathComp { get { return data; } set { data : value; } }
     field private Stream MediaStream { get { return data; } set { data : value; } }
 
@@ -48,6 +49,7 @@ class Demo : TextAdd
         var ThreadThis varThis;
         varThis : new ThreadThis;
         varThis.Init();
+        this.ThreadThis : varThis;
 
         this.MathComp : new MathComp;
         this.MathComp.Init();

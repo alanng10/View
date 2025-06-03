@@ -17,6 +17,8 @@ class TypeA : Type
         inf (a = d.AlphaB & o)
         {
             this.Demo.Frame.Close();
+
+            this.Demo.ThreadThis.Thread.Exit(0);
         }
 
         var Bool b;
