@@ -86,16 +86,6 @@ class Frame : Any
         return a;
     }
 
-    maide precate DrawRect CreateDestRect()
-    {
-        return this.CreateFrameRect();
-    }
-
-    maide precate DrawRect CreateSourceRect()
-    {
-        return this.CreateFrameRect();
-    }
-
     maide precate Draw CreateDraw()
     {
         var Screen screen;
@@ -241,13 +231,6 @@ class Frame : Any
 
         var Int a;
         a : this.Math.Value(this.MathComp);
-        return a;
-    }
-
-    maide precate DrawRect CreateFrameRect()
-    {
-        var DrawRect a;
-        a : this.DrawInfra.RectCreate(0, 0, this.MathInt(this.Size.Wed), this.MathInt(this.Size.Het));
         return a;
     }
 }
