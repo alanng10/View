@@ -4,6 +4,7 @@ class Screen : Any
     {
         base.Init();
         this.Extern : share Extern;
+        this.DrawInfra : share DrawInfra;
 
         var Extern extern;
         extern : this.Extern;
@@ -16,10 +17,7 @@ class Screen : Any
         sizeWed : extern.Size_WedGet(sizeK);
         sizeHet : extern.Size_HetGet(sizeK);
 
-        this.Size : new DrawSize;
-        this.Size.Init();
-        this.Size.Wed : sizeWed;
-        this.Size.Het : sizeHet;
+        this.Size : this.DrawInfra.SizeCreate(sizeWed, sizeHet);
 
         var Int dimendK;
         dimendK : extern.Screen_DimendGet(0);
@@ -29,10 +27,7 @@ class Screen : Any
         dimendWed : extern.Size_WedGet(dimendK);
         dimendHet : extern.Size_HetGet(dimendK);
 
-        this.Dimend : new DrawSize;
-        this.Dimend.Init();
-        this.Dimend.Wed : dimendWed;
-        this.Dimend.Het : dimendHet;
+        this.Dimend : this.DrawInfra.SizeCreate(dimendWed, dimendHet);
 
         return true;
     }
@@ -40,4 +35,5 @@ class Screen : Any
     field prusate DrawSize Size { get { return data; } set { data : value; } }
     field prusate DrawSize Dimend { get { return data; } set { data : value; } }
     field private Extern Extern { get { return data; } set { data : value; } }
+    field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
 }
