@@ -114,6 +114,12 @@ class TypeA : Type
             ba : true;
         }
 
+        inf (a = d.AlphaJ)
+        {
+            this.Demo.ViewC.Radio.Focus : o;
+            ba : true;
+        }
+
         var Int scaleFactor;
         scaleFactor : bit <(1, 20);
 
