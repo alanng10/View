@@ -3,6 +3,7 @@ class Image : View
     maide prusate Bool Init()
     {
         base.Init();
+        this.ValueField : this.CreateValueField();
         this.DestField : this.CreateDestField();
         this.SourceField : this.CreateSourceField();
 
@@ -11,6 +12,11 @@ class Image : View
         this.Dest : this.CreateDest();
         this.Source : this.CreateSource();
         return true;
+    }
+
+    maide precate Field CreateValueField()
+    {
+        return this.ViewInfra.FieldCreate(this);
     }
 
     maide precate Field CreateDestField()
