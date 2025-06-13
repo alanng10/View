@@ -129,7 +129,7 @@ class Infra : Any
         var Int cubeSize;
         cubeSize : 16;
         
-        area.Pos.Col : area.Pos.Col + 6 + cubeSize + 6;
+        area.Pos.Col : area.Pos.Col + cubeSize + 6 * 2;
         area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, cubeSize + 6 * 2);
         return true;
     }
@@ -140,6 +140,25 @@ class Infra : Any
         cubeSize : 16;
 
         size.Wed : size.Wed + cubeSize + 6 * 2;
+        return true;
+    }
+
+    maide prusate Bool RadioChildArea(var DrawRect area)
+    {
+        var Int roundSize;
+        roundSize : 18;
+        
+        area.Pos.Col : area.Pos.Col + roundSize + 6 * 2;
+        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, roundSize + 6 * 2);
+        return true;
+    }
+
+    maide prusate Bool RadioChildParentSize(var DrawSize size)
+    {
+        var Int roundSize;
+        roundSize : 18;
+
+        size.Wed : size.Wed + roundSize + 6 * 2;
         return true;
     }
 }
