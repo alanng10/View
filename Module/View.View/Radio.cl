@@ -69,8 +69,8 @@ class Radio : View
         var Int roundSize;
         roundSize : 18;
 
-        var Int foreRoundSize;
-        foreRoundSize : 10;
+        var Int foreRectSize;
+        foreRectSize : 8;
 
         var Int roundCol;
         var Int roundRow;
@@ -106,12 +106,12 @@ class Radio : View
         {
             draw.Fill : this.Palete.Fore.Brush;
 
-            this.DrawRectA.Pos.Col : this.MathInt(roundCol + (roundSize - foreRoundSize) / 2);
-            this.DrawRectA.Pos.Row : this.MathInt(roundRow + (roundSize - foreRoundSize) / 2);
-            this.DrawRectA.Size.Wed : this.MathInt(foreRoundSize);
-            this.DrawRectA.Size.Het : this.MathInt(foreRoundSize);
+            this.DrawRectA.Pos.Col : this.MathInt(roundCol + (roundSize - foreRectSize) / 2);
+            this.DrawRectA.Pos.Row : this.MathInt(roundRow + (roundSize - foreRectSize) / 2);
+            this.DrawRectA.Size.Wed : this.MathInt(foreRectSize);
+            this.DrawRectA.Size.Het : this.MathInt(foreRectSize);
 
-            draw.ExecuteRound(this.DrawRectA);
+            draw.ExecuteRect(this.DrawRectA);
         }
 
         draw.FillPos.Col : 0;
