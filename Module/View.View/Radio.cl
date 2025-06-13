@@ -69,6 +69,9 @@ class Radio : View
         var Int roundSize;
         roundSize : 18;
 
+        var Int foreRoundSize;
+        foreRoundSize : 10;
+
         var Int roundCol;
         var Int roundRow;
         roundCol : this.Pos.Col + 6;
@@ -101,44 +104,14 @@ class Radio : View
 
         inf (this.Turn)
         {
-            var DrawForm form;
-            form : this.Palete.Form;
-
-            var Int angle;
-            angle : 315;
-
-            var Int formCol;
-            var Int formRow;
-            formCol : cubeCol + cubeSize / 2;
-            formRow : this.Pos.Row + this.Size.Het / 2;
-
-            form.Reset();
-
-            form.Pos(this.MathInt(formCol), this.MathInt(formRow));
-
-            form.Angle(this.MathInt(angle));
-
-            draw.Form : form;
-            draw.FormSet();
-
             draw.Fill : this.Palete.Fore.Brush;
 
-            this.DrawRectA.Pos.Col : this.MathInt(0sn4);
-            this.DrawRectA.Pos.Row : this.MathInt(0sn3);
-            this.DrawRectA.Size.Wed : this.MathValue(3, 0sn1);
-            this.DrawRectA.Size.Het : this.MathInt(4);
+            this.DrawRectA.Pos.Col : this.MathInt(roundCol + (roundSize - foreRoundSize) / 2);
+            this.DrawRectA.Pos.Row : this.MathInt(roundRow + (roundSize - foreRoundSize) / 2);
+            this.DrawRectA.Size.Wed : this.MathInt(foreRoundSize);
+            this.DrawRectA.Size.Het : this.MathInt(foreRoundSize);
 
-            draw.ExecuteRect(this.DrawRectA);
-
-            this.DrawRectA.Pos.Col : this.MathInt(0sn4);
-            this.DrawRectA.Pos.Row : this.MathInt(1);
-            this.DrawRectA.Size.Wed : this.MathInt(10);
-            this.DrawRectA.Size.Het : this.MathValue(3, 0sn1);
-
-            draw.ExecuteRect(this.DrawRectA);
-
-            draw.Form : null;
-            draw.FormSet();
+            draw.ExecuteRound(this.DrawRectA);
         }
 
         draw.FillPos.Col : 0;
