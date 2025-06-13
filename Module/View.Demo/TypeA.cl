@@ -102,19 +102,19 @@ class TypeA : Type
             ba : true; 
         }
 
-        inf (a = d.AlphaM)
+        inf (a = d.Digit1)
         {
             this.Demo.ViewC.Button.Focus : o;
             ba : true;
         }
 
-        inf (a = d.AlphaN)
+        inf (a = d.Digit2)
         {
             this.Demo.ViewC.Mark.Focus : o;
             ba : true;
         }
 
-        inf (a = d.AlphaJ)
+        inf (a = d.Digit3)
         {
             this.Demo.ViewC.Radio.Focus : o;
             ba : true;
