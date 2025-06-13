@@ -19,4 +19,5 @@ Element has:
 - Select
 - Image
 - Text
+- Edit
 - Table
