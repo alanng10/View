@@ -128,7 +128,7 @@ class Radio : View
             this.DrawRectA.Size.Wed : this.MathInt(40);
             this.DrawRectA.Size.Het : this.MathInt(40);
 
-            draw.ExecuteRectRound(this.DrawRectA);
+            draw.ExecuteRound(this.DrawRectA);
 
             draw.Form : null;
             draw.FormSet();
