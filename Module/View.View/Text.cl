@@ -6,6 +6,9 @@ class Text : View
         this.ValueField : this.CreateValueField();
         this.DestField : this.CreateDestField();
         this.FontField : this.CreateFontField();
+        this.ColAlignField : this.CreateColAlignField();
+        this.RowAlignField : this.CreateRowAlignField();
+        this.WordWrapField : this.CreateWordWrapField();
         return true;
     }
 
@@ -20,6 +23,21 @@ class Text : View
     }
 
     maide precate Field CreateFontField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateColAlignField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateRowAlignField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateWordWrapField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
