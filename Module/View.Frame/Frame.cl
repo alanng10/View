@@ -36,7 +36,7 @@ class Frame : Any
         ka : this.InternIntern.StateFrameTypeEvent();
         kb : this.InternIntern.StateFrameDrawEvent();
         var Int arg;
-        arg : this.InternIntern.Memory(this);
+        arg : this.InternIntern.StateArgMemory(this);
         this.InternTypeState : this.InternInfra.StateCreate(ka, arg);
         this.InternDrawState : this.InternInfra.StateCreate(kb, arg);
 
