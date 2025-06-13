@@ -6,4 +6,9 @@ class Text : View
         this.ValueField : this.CreateValueField();
         return true;
     }
+
+    maide precate Field CreateValueField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
 }
