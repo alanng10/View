@@ -53,6 +53,23 @@ class ViewC : View
         this.Text : text;
         this.TextSlash : this.TextSlashCreate();
 
+        var Image image;
+        image : new Image;
+        image.Init();
+        image.Pos.Col : 0;
+        image.Pos.Row : 0;
+        image.Size.Wed : 16;
+        image.Size.Het : 16;
+        image.Dest.Pos.Col : 0;
+        image.Dest.Pos.Row : 0;
+        image.Dest.Size.Wed : 16;
+        image.Dest.Size.Het : 16;
+        image.Source.Pos.Col : 0;
+        image.Source.Pos.Row : 0;
+        image.Source.Size.Wed : 16;
+        image.Source.Size.Het : 16;
+        image.Value : this.ButtonImage;
+
         this.Button : new Button;
         this.Button.Palete : this.ViewInfra.PaleteDefault;
         this.Button.Init();
@@ -60,6 +77,7 @@ class ViewC : View
         this.Button.Pos.Row : 20;
         this.Button.Size.Wed : 100;
         this.Button.Size.Het : 60;
+        this.Button.Child : image;
 
         this.Mark : new Mark;
         this.Mark.Palete : this.ViewInfra.PaleteDefault;
@@ -231,6 +249,7 @@ class ViewC : View
     field prusate Button Button { get { return data; } set { data : value; } }
     field prusate Mark Mark { get { return data; } set { data : value; } }
     field prusate Radio Radio { get { return data; } set { data : value; } }
+    field prusate DrawImage ButtonImage { get { return data; } set { data : value; } }
     field prusate DrawRect EllipseRect { get { return data; } set { data : value; } }
     field prusate DrawBrush EllipseBrush { get { return data; } set { data : value; } }
     field prusate DrawFont Font { get { return data; } set { data : value; } }
