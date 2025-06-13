@@ -9,3 +9,14 @@ Element view has park element.
 Element view has park land.
 
 Element view is did.
+
+Element has:
+- View
+- Grid
+- Button
+- Mark
+- Radio
+- Select
+- Image
+- Text
+- Table
