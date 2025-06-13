@@ -72,6 +72,7 @@ View.View:0.00.00
     View View
     Button Button
     Mark Mark
+    Radio Radio
     Grid Grid
     GridChild GridChild
     ViewCount Count
