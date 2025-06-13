@@ -77,6 +77,9 @@ class Demo : TextAdd
         brush.Color : this.DrawInfra.ColorCreate(0hff, 0, 0hff, 0);
         brush.Init();
 
+        var DrawImage buttonImage;
+        buttonImage : this.DrawInfra.ImageCreateStorage("View.Demo-0.00.00.data/Demo/Icon.png");
+
         this.View : new View;
         this.View.Init();
         this.View.Pos.Col : 100;
@@ -87,6 +90,7 @@ class Demo : TextAdd
 
         this.ViewC : new ViewC;
         this.ViewC.Demo : this;
+        this.ViewC.ButtonImage : buttonImage;
         this.ViewC.Init();
 
         this.ViewA : new ViewA;
@@ -120,6 +124,8 @@ class Demo : TextAdd
         this.ViewA.Final();
 
         this.ViewC.Final();
+
+        buttonImage.Final();
 
         brush.Final();
 
