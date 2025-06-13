@@ -104,34 +104,14 @@ class Radio : View
 
         inf (this.Turn)
         {
-            var DrawForm form;
-            form : this.Palete.Form;
-
-            var Int formCol;
-            var Int formRow;
-            formCol : roundCol + roundSize / 2;
-            formRow : this.Pos.Row + this.Size.Het / 2;
-
-            form.Reset();
-
-            form.Pos(this.MathInt(formCol), this.MathInt(formRow));
-
-            form.Scale(this.MathValue(1, 0sn3), this.MathValue(1, 0sn3));
-
-            draw.Form : form;
-            draw.FormSet();
-
             draw.Fill : this.Palete.Fore.Brush;
 
-            this.DrawRectA.Pos.Col : this.MathInt(0sn20);
-            this.DrawRectA.Pos.Row : this.MathInt(0sn20);
-            this.DrawRectA.Size.Wed : this.MathInt(40);
-            this.DrawRectA.Size.Het : this.MathInt(40);
+            this.DrawRectA.Pos.Col : this.MathInt(roundCol + (roundSize - foreRoundSize) / 2);
+            this.DrawRectA.Pos.Row : this.MathInt(roundRow + (roundSize - foreRoundSize) / 2);
+            this.DrawRectA.Size.Wed : this.MathInt(foreRoundSize);
+            this.DrawRectA.Size.Het : this.MathInt(foreRoundSize);
 
             draw.ExecuteRound(this.DrawRectA);
-
-            draw.Form : null;
-            draw.FormSet();
         }
 
         draw.FillPos.Col : 0;
