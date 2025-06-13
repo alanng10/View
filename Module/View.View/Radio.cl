@@ -106,8 +106,8 @@ class Radio : View
         {
             draw.Fill : this.Palete.Fore.Brush;
 
-            this.DrawRectA.Pos.Col : this.MathInt(roundCol + (roundSize - foreRectSize) / 2);
-            this.DrawRectA.Pos.Row : this.MathInt(roundRow + (roundSize - foreRectSize) / 2);
+            this.DrawRectA.Pos.Col : this.MathValue((roundCol + (roundSize - foreRectSize) / 2) * 64 + 31, 0sn6);
+            this.DrawRectA.Pos.Row : this.MathValue((roundRow + (roundSize - foreRectSize) / 2) * 64 + 31, 0sn6);
             this.DrawRectA.Size.Wed : this.MathInt(foreRectSize);
             this.DrawRectA.Size.Het : this.MathInt(foreRectSize);
 
