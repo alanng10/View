@@ -69,6 +69,14 @@ class ViewC : View
         this.Mark.Size.Wed : 100;
         this.Mark.Size.Het : 60;
 
+        this.Radio : new Radio;
+        this.Radio.Palete : this.ViewInfra.PaleteDefault;
+        this.Radio.Init();
+        this.Radio.Pos.Col : 120;
+        this.Radio.Pos.Row : 20;
+        this.Radio.Size.Wed : 100;
+        this.Radio.Size.Het : 60;
+
         var Grid grid;
         grid : new Grid;
         grid.Init();
@@ -106,11 +114,20 @@ class ViewC : View
         childB.Rect.Size.Wed : 1;
         childB.Rect.Size.Het : 1;
 
+        var GridChild childC;
+        childC : new GridChild;
+        childC.Init();
+        childC.View : this.Radio;
+        childC.Rect.Pos.Row : 1;
+        childC.Rect.Size.Wed : 1;
+        childC.Rect.Size.Het : 1;
+
         grid.Col.Add(colA);
         grid.Row.Add(rowA);
         grid.Row.Add(rowB);
         grid.ChildList.Add(childA);
         grid.ChildList.Add(childB);
+        grid.ChildList.Add(childC);
 
         this.Child : grid;
         return true;
@@ -213,6 +230,7 @@ class ViewC : View
     field prusate Demo Demo { get { return data; } set { data : value; } }
     field prusate Button Button { get { return data; } set { data : value; } }
     field prusate Mark Mark { get { return data; } set { data : value; } }
+    field prusate Radio Radio { get { return data; } set { data : value; } }
     field prusate DrawRect EllipseRect { get { return data; } set { data : value; } }
     field prusate DrawBrush EllipseBrush { get { return data; } set { data : value; } }
     field prusate DrawFont Font { get { return data; } set { data : value; } }
