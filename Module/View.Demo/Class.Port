@@ -75,6 +75,7 @@ View.View:0.00.00
     Radio Radio
     Image Image
     Text Text
+    Select Select
     Grid Grid
     GridChild GridChild
     ViewCount Count
