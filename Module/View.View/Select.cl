@@ -72,14 +72,14 @@ class Select : View
 
         draw.Fill : this.Palete.Fore.Brush;
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 8));
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 10));
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius);
-        this.DrawRectA.Size.Wed : this.MathInt(8);
+        this.DrawRectA.Size.Wed : this.MathInt(10);
         this.DrawRectA.Size.Het : this.MathInt(4);
 
         draw.ExecuteRect(this.DrawRectA);
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 6));
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 7));
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius + 4);
         this.DrawRectA.Size.Wed : this.MathInt(4);
         this.DrawRectA.Size.Het : this.MathInt(4);
