@@ -110,6 +110,14 @@ class ViewC : View
         this.Radio.Size.Wed : 100;
         this.Radio.Size.Het : 60;
 
+        this.Select : new Select;
+        this.Select.Palete : this.ViewInfra.PaleteDefault;
+        this.Select.Init();
+        this.Select.Pos.Col : 20;
+        this.Select.Pos.Row : 80;
+        this.Select.Size.Wed : 100;
+        this.Select.Size.Het : 60;
+
         var Grid grid;
         grid : new Grid;
         grid.Init();
@@ -155,12 +163,21 @@ class ViewC : View
         childC.Rect.Size.Wed : 1;
         childC.Rect.Size.Het : 1;
 
+        var GridChild childD;
+        childD : new GridChild;
+        childD.Init();
+        childD.View : this.Radio;
+        childD.Rect.Pos.Row : 1;
+        childD.Rect.Size.Wed : 1;
+        childD.Rect.Size.Het : 1;
+
         grid.Col.Add(colA);
         grid.Row.Add(rowA);
         grid.Row.Add(rowB);
         grid.ChildList.Add(childA);
         grid.ChildList.Add(childB);
         grid.ChildList.Add(childC);
+        grid.ChildList.Add(childD);
 
         this.Child : grid;
         return true;
