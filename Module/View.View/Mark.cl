@@ -3,7 +3,6 @@ class Mark : View
     maide prusate Bool Init()
     {
         base.Init();
-
         this.TurnField : this.CreateTurnField();
 
         this.Back : this.Palete.Base.Brush;
