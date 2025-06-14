@@ -12,6 +12,7 @@ class Text : View
         this.WordWrapField : this.CreateWordWrapField();
 
         this.Dest : this.CreateDest();
+        this.Back : this.DrawInfra.SlashZero.Brush;
         this.Font : this.Palete.FontAria;
         this.ColAlign : this.DrawAlignList.Start;
         this.RowAlign : this.DrawAlignList.Start;
