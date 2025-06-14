@@ -109,11 +109,11 @@ class Text : View
 
     field prusate Field ValueField { get { return data; } set { data : value; } }
 
-    field prusate Text Value
+    field prusate TextText Value
     {
         get
         {
-            return cast Text(this.ValueField.GetAny());
+            return cast TextText(this.ValueField.GetAny());
         }
         set
         {
