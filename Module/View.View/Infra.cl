@@ -3,6 +3,7 @@ class Infra : Any
     maide prusate Bool Init()
     {
         base.Init();
+        this.MathInfra : share MathInfra;
         this.DrawInfra : share DrawInfra;
 
         this.PaleteDefault : this.CreatePaleteDefault();
@@ -22,10 +23,29 @@ class Infra : Any
         a.FontAria : this.DrawInfra.FontCreate(this.DrawInfra.FontAriaName, 10, 400, false, false, false, false);
         a.FontMono : this.DrawInfra.FontCreate(this.DrawInfra.FontMonoName, 11, 400, false, false, false, false);
         a.Form : this.DrawInfra.FormCreate();
+
+        var MathComp kaa;
+        kaa : new MathComp;
+        kaa.Init();
+
+        var DrawPos ka;
+        ka : new DrawPos;
+        ka.Init();
+
+        var DrawPointList kd;
+        kd : new DrawPointList;
+        kd.Count : 3;
+        kd.Init();
+        kd.Set(0, this.PosSet(ka, this.MathInfra.Int(kaa, 0sn5), this.MathInfra.Int(kaa, 0sn5)));
+        kd.Set(1, this.PosSet(ka, this.MathInfra.Int(kaa, 5), this.MathInfra.Int(kaa, 0sn5)));
+        kd.Set(2, this.PosSet(ka, this.MathInfra.Int(kaa, 0), this.MathInfra.Int(kaa, 5)));
+
+        a.SelectTria : kd;
         return a;
     }
 
     field prusate Palete PaleteDefault { get { return data; } set { data : value; } }
+    field precate MathInfra MathInfra { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
 
     maide prusate Field FieldCreate(var Comp comp)
@@ -106,6 +126,13 @@ class Infra : Any
         palete.Fore : this.PaleteDefault.Fore;
         palete.Lite : lite;
         return true;
+    }
+
+    maide private DrawPos PosSet(var DrawPos result, var Int col, var Int row)
+    {
+        result.Col : col;
+        result.Row : row;
+        return result;
     }
 
     maide prusate Bool ButtonChildArea(var DrawRect area)
