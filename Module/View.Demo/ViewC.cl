@@ -166,7 +166,7 @@ class ViewC : View
         var GridChild childD;
         childD : new GridChild;
         childD.Init();
-        childD.View : this.Radio;
+        childD.View : this.Select;
         childD.Rect.Pos.Row : 1;
         childD.Rect.Size.Wed : 1;
         childD.Rect.Size.Het : 1;
