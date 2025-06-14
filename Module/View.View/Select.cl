@@ -33,6 +33,8 @@ class Select : View
     maide precate Bool ModIndex(var Mod mod)
     {
         this.Event(this.IndexField);
+
+        this.Child : cast View(this.List.Get(index));
         return true;
     }
 
