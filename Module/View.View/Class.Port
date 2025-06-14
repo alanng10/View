@@ -32,6 +32,8 @@ View.Draw:0.00.00
     DrawRect Rect
     DrawPos Pos
     DrawSize Size
+    DrawAlign Align
+    DrawAlignList AlignList
     DrawInfra Infra
 
 [Export]
