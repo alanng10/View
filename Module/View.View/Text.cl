@@ -146,4 +146,24 @@ class Text : View
         this.Event(this.DestField);
         return true;
     }
+
+    field prusate Field ForeField { get { return data; } set { data : value; } }
+
+    field prusate DrawSlash Fore
+    {
+        get
+        {
+            return cast DrawSlash(this.ForeField.GetAny());
+        }
+        set
+        {
+            this.ForeField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModFore(var Mod mod)
+    {
+        this.Event(this.ForeField);
+        return true;
+    }
 }
