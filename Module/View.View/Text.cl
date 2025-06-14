@@ -3,12 +3,19 @@ class Text : View
     maide prusate Bool Init()
     {
         base.Init();
+        this.DrawAlignList : share DrawAlignList;
         this.ValueField : this.CreateValueField();
         this.DestField : this.CreateDestField();
         this.FontField : this.CreateFontField();
         this.ColAlignField : this.CreateColAlignField();
         this.RowAlignField : this.CreateRowAlignField();
         this.WordWrapField : this.CreateWordWrapField();
+
+        this.Dest : this.CreateDest();
+        this.Font : this.Palete.FontAria;
+        this.ColAlign : this.DrawAlignList.Start;
+        this.RowAlign : this.DrawAlignList.Start;
+        this.WordWrap : true;
         return true;
     }
 
@@ -41,4 +48,19 @@ class Text : View
     {
         return this.ViewInfra.FieldCreate(this);
     }
+
+    maide precate Rect CreateDest()
+    {
+        return this.CreateRect();
+    }
+
+    maide precate Rect CreateRect()
+    {
+        var Rect a;
+        a : new Rect;
+        a.Init();
+        return a;
+    }
+
+    field precate DrawAlignList DrawAlignList { get { return data; } set { data : value; } }
 }
