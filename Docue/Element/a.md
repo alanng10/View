@@ -20,4 +20,5 @@ Element has:
 - Image
 - Text
 - Edit
+- Scroll
 - Table
