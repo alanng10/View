@@ -226,4 +226,24 @@ class Text : View
         this.Event(this.RowAlignField);
         return true;
     }
+
+    field prusate Field WordWrapField { get { return data; } set { data : value; } }
+
+    field prusate Bool WordWrap
+    {
+        get
+        {
+            return cast Bool(this.WordWrapField.GetAny());
+        }
+        set
+        {
+            this.WordWrapField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModWordWrap(var Mod mod)
+    {
+        this.Event(this.WordWrapField);
+        return true;
+    }
 }
