@@ -206,4 +206,24 @@ class Text : View
         this.Event(this.ColAlignField);
         return true;
     }
+
+    field prusate Field RowAlignField { get { return data; } set { data : value; } }
+
+    field prusate DrawAlign RowAlign
+    {
+        get
+        {
+            return cast DrawAlign(this.RowAlignField.GetAny());
+        }
+        set
+        {
+            this.RowAlignField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModRowAlign(var Mod mod)
+    {
+        this.Event(this.RowAlignField);
+        return true;
+    }
 }
