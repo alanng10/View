@@ -6,6 +6,7 @@ class Text : View
         this.DrawAlignList : share DrawAlignList;
         this.ValueField : this.CreateValueField();
         this.DestField : this.CreateDestField();
+        this.ForeField : this.CreateForeField();
         this.FontField : this.CreateFontField();
         this.ColAlignField : this.CreateColAlignField();
         this.RowAlignField : this.CreateRowAlignField();
@@ -13,6 +14,8 @@ class Text : View
 
         this.Dest : this.CreateDest();
         this.Back : this.DrawInfra.SlashZero.Brush;
+        this.Fore : this.DrawInfra.SlashBlack;
+
         this.Font : this.Palete.FontAria;
         this.ColAlign : this.DrawAlignList.Start;
         this.RowAlign : this.DrawAlignList.Start;
@@ -26,6 +29,11 @@ class Text : View
     }
 
     maide precate Field CreateDestField()
+    {
+        return this.ViewInfra.FieldCreate(this);
+    }
+
+    maide precate Field CreateForeField()
     {
         return this.ViewInfra.FieldCreate(this);
     }
