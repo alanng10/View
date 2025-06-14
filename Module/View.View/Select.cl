@@ -47,4 +47,12 @@ class Select : View
 
         return true;
     }
+
+    maide precate Bool SetChildArea(var DrawRect dest, var Draw draw)
+    {
+        base.SetChildArea(dest, draw);
+
+        this.ViewInfra.SelectChildArea(dest);
+        return true;
+    }
 }
