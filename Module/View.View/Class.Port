@@ -34,6 +34,7 @@ View.Draw:0.00.00
     DrawRect Rect
     DrawPos Pos
     DrawSize Size
+    DrawPointList PointList
     DrawAlign Align
     DrawAlignList AlignList
     DrawInfra Infra
