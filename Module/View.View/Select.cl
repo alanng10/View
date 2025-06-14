@@ -3,8 +3,15 @@ class Select : View
     maide prusate Bool Init()
     {
         base.Init();
+        this.IndexField : this.CreateIndexField();
+
         this.Back : this.Palete.Back.Brush;
         return true;
+    }
+
+    maide precate Field CreateIndexField()
+    {
+        return this.ViewInfra.FieldCreate(this);
     }
 
     field prusate Array List { get { return data; } set { data : value; } }
