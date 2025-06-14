@@ -25,13 +25,13 @@ class Select : View
 
         draw.ExecuteRectRound(this.DrawRectA, this.MathInt(radius), this.MathInt(radius));
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
-        this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
-        this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 1 * 2));
-        this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1 * 2));
-
         inf (~this.Focus)
         {
+            this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
+            this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
+            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 1 * 2));
+            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1 * 2));
+
             draw.Fill : this.Back;
 
             draw.ExecuteRectRound(this.DrawRectA, 
