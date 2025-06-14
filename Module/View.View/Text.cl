@@ -166,4 +166,24 @@ class Text : View
         this.Event(this.ForeField);
         return true;
     }
+
+    field prusate Field FontField { get { return data; } set { data : value; } }
+
+    field prusate DrawFont Font
+    {
+        get
+        {
+            return cast DrawFont(this.FontField.GetAny());
+        }
+        set
+        {
+            this.FontField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModFont(var Mod mod)
+    {
+        this.Event(this.FontField);
+        return true;
+    }
 }
