@@ -196,7 +196,7 @@ class Infra : Any
 
         area.Pos.Col : area.Pos.Col + radius;
         area.Pos.Row : area.Pos.Row + radius;
-        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, radius * 2);
+        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, radius * 2 + 10 + 4 * 2);
         area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, radius * 2);
         return true;
     }
@@ -206,7 +206,7 @@ class Infra : Any
         var Int radius;
         radius : 6;
 
-        size.Wed : size.Wed + radius * 2;
+        size.Wed : size.Wed + radius * 2 + 10 + 4 * 2;
         size.Het : size.Het + radius * 2;
         return true;
     }
