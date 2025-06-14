@@ -34,7 +34,7 @@ class Select : View
     {
         this.Event(this.IndexField);
 
-        this.Child : cast View(this.List.Get(index));
+        this.Child : cast View(this.List.Get(this.Index));
         return true;
     }
 
