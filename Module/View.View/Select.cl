@@ -7,6 +7,28 @@ class Select : View
         return true;
     }
 
+    field prusate Array List { get { return data; } set { data : value; } }
+
+    field prusate Field IndexField { get { return data; } set { data : value; } }
+
+    field prusate Int Index
+    {
+        get
+        {
+            return cast Int(this.IndexField.GetAny());
+        }
+        set
+        {
+            this.IndexField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModIndex(var Mod mod)
+    {
+        this.Event(this.IndexField);
+        return true;
+    }
+
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
         var Int radius;
