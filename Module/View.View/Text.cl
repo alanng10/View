@@ -126,4 +126,24 @@ class Text : View
         this.Event(this.ValueField);
         return true;
     }
+
+    field prusate Field DestField { get { return data; } set { data : value; } }
+
+    field prusate Rect Dest
+    {
+        get
+        {
+            return cast Rect(this.DestField.Get());
+        }
+        set
+        {
+            this.DestField.Set(value);
+        }
+    }
+
+    maide precate Bool ModDest(var Mod mod)
+    {
+        this.Event(this.DestField);
+        return true;
+    }
 }
