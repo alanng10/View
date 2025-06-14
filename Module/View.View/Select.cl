@@ -75,8 +75,8 @@ class Select : View
 
         var Int formCol;
         var Int formRow;
-        formCol : this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, 5 + 4);
-        formRow : this.Pos.Row + 5 + 4;
+        formCol : this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, 5 + radius);
+        formRow : this.Pos.Row + 5 + radius;
 
         form.Reset();
 
