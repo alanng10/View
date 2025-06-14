@@ -39,6 +39,28 @@ class Select : View
                 this.MathInt(this.DrawInfra.BoundSub(radius, 1)));
         }
 
+        var DrawForm form;
+        form : this.Palete.Form;
+
+        var Int formCol;
+        var Int formRow;
+        formCol : this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, 5 + 4);
+        formRow : this.Pos.Row + 5 + 4;
+
+        form.Reset();
+
+        form.Pos(this.MathInt(formCol), this.MathInt(formRow));
+
+        draw.Form : form;
+        draw.FormSet();
+
+        draw.Fill : this.Palete.Fore.Brush;
+
+        draw.ExecuteShape(this.Palete.SelectTria);
+
+        draw.Form : null;
+        draw.FormSet();
+
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;
         draw.FillPosSet();
