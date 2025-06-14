@@ -246,4 +246,26 @@ class Text : View
         this.Event(this.WordWrapField);
         return true;
     }
+
+    maide precate Bool ValidDrawChild()
+    {
+        return ~(this.Value = null);
+    }
+
+    maide precate Bool ExecuteChildDraw(var Draw draw)
+    {
+        this.DrawRectA.Pos.Col : this.Dest.Pos.Col;
+        this.DrawRectA.Pos.Row : this.Dest.Pos.Row;
+        this.DrawRectA.Size.Wed : this.Dest.Size.Wed;
+        this.DrawRectA.Size.Het : this.Dest.Size.Het;
+
+        draw.Font : this.Font;
+        draw.Line : this.Fore;
+
+        draw.ExecuteText(this.Value, this.ColAlign, this.RowAlign, this.WordWrap, this.DrawRectA);
+
+        draw.Line : null;
+        draw.Font : null;
+        return true;
+    }
 }
