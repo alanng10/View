@@ -14,6 +14,9 @@ class Button : View
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
     {
+        var Int radius;
+        radius : 14;
+
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
         this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
@@ -25,7 +28,7 @@ class Button : View
         draw.FillPos.Row : this.MathInt(this.Pos.Row);
         draw.FillPosSet();
 
-        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(14), this.MathInt(14));
+        draw.ExecuteRectRound(this.DrawRectA, this.MathInt(radius), this.MathInt(radius));
 
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
@@ -37,8 +40,8 @@ class Button : View
             draw.Fill : this.Back;
 
             draw.ExecuteRectRound(this.DrawRectA, 
-                this.MathInt(this.DrawInfra.BoundSub(14, 1)), 
-                this.MathInt(this.DrawInfra.BoundSub(14, 1)));
+                this.MathInt(this.DrawInfra.BoundSub(radius, 1)), 
+                this.MathInt(this.DrawInfra.BoundSub(radius, 1)));
         }
 
         draw.FillPos.Col : 0;
