@@ -106,4 +106,24 @@ class Text : View
         }
         return true;
     }
+
+    field prusate Field ValueField { get { return data; } set { data : value; } }
+
+    field prusate Text Value
+    {
+        get
+        {
+            return cast Text(this.ValueField.GetAny());
+        }
+        set
+        {
+            this.ValueField.SetAny(value);
+        }
+    }
+
+    maide precate Bool ModValue(var Mod mod)
+    {
+        this.Event(this.ValueField);
+        return true;
+    }
 }
