@@ -39,8 +39,8 @@ class ViewC : View
         var String oa;
         oa : "G L 的哈gd@行 o #";
 
-        var TextText text;
-        text : this.Demo.TextCreate(oa);
+        var TextText textA;
+        textA : this.Demo.TextCreate(oa);
 
         this.Pos.Col : 100;
         this.Pos.Row : 0;
@@ -50,7 +50,7 @@ class ViewC : View
         this.EllipseBrush : this.EllipseBrushCreate();
         this.EllipseRect : this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
         this.Font : this.FontCreate();
-        this.Text : text;
+        this.Text : textA;
         this.TextSlash : this.TextSlashCreate();
 
         var Image image;
@@ -70,6 +70,20 @@ class ViewC : View
         image.Source.Size.Het : 16;
         image.Value : this.ButtonImage;
 
+        var Text text;
+        text : new Text;
+        text.Palete : this.ViewInfra.PaleteDefault;
+        text.Init();
+        text.Pos.Col : 0;
+        text.Pos.Row : 0;
+        text.Size.Wed : 80;
+        text.Size.Het : 60;
+        text.Dest.Pos.Col : 0;
+        text.Dest.Pos.Row : 0;
+        text.Dest.Size.Wed : 80;
+        text.Dest.Size.Het : 60;
+        text.Value : this.Demo.TextCreate("H k m5 #");
+
         this.Button : new Button;
         this.Button.Palete : this.ViewInfra.PaleteDefault;
         this.Button.Init();
@@ -86,6 +100,7 @@ class ViewC : View
         this.Mark.Pos.Row : 20;
         this.Mark.Size.Wed : 100;
         this.Mark.Size.Het : 60;
+        this.Mark.Child : text;
 
         this.Radio : new Radio;
         this.Radio.Palete : this.ViewInfra.PaleteDefault;

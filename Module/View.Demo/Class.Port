@@ -74,6 +74,7 @@ View.View:0.00.00
     Mark Mark
     Radio Radio
     Image Image
+    Text Text
     Grid Grid
     GridChild GridChild
     ViewCount Count
