@@ -14,7 +14,7 @@ class Text : View
 
         this.Dest : this.CreateDest();
         this.Back : this.DrawInfra.SlashZero.Brush;
-        this.Fore : this.DrawInfra.SlashBlack;
+        this.Fore : this.Palete.Fore;
 
         this.Font : this.Palete.FontAria;
         this.ColAlign : this.DrawAlignList.Start;
