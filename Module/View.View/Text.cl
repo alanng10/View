@@ -71,4 +71,39 @@ class Text : View
     }
 
     field precate DrawAlignList DrawAlignList { get { return data; } set { data : value; } }
+
+    maide prusate Bool Mod(var Field varField, var Mod mod)
+    {
+        base.Mod(varField, mod);
+
+        inf (this.ValueField = varField)
+        {
+            this.ModValue(mod);
+        }
+        inf (this.DestField = varField)
+        {
+            this.ModDest(mod);
+        }
+        inf (this.ForeField = varField)
+        {
+            this.ModFore(mod);
+        }
+        inf (this.FontField = varField)
+        {
+            this.ModFont(mod);
+        }
+        inf (this.ColAlignField = varField)
+        {
+            this.ModColAlign(mod);
+        }
+        inf (this.RowAlignField = varField)
+        {
+            this.ModRowAlign(mod);
+        }
+        inf (this.WordWrapField = varField)
+        {
+            this.ModWordWrap(mod);
+        }
+        return true;
+    }
 }
