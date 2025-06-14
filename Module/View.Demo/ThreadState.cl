@@ -71,7 +71,7 @@ class ThreadState : State
         rectA.Size.Wed : this.MathInt(w);
         rectA.Size.Het : this.MathInt(h);
 
-        var Text text;
+        var TextText text;
         text : this.Demo.TextCreate("C hr");
 
         var DrawSlash slash;

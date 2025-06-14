@@ -20,7 +20,7 @@ System.Math
     MathInfra Infra
     Rand Rand
 System.Text
-    Text Text
+    TextText Text
     TextForm Form
     TextFormat Format
     TextFormatArg FormatArg

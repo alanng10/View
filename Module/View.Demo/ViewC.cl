@@ -39,7 +39,7 @@ class ViewC : View
         var String oa;
         oa : "G L 的哈gd@行 o #";
 
-        var Text text;
+        var TextText text;
         text : this.Demo.TextCreate(oa);
 
         this.Pos.Col : 100;
@@ -253,7 +253,7 @@ class ViewC : View
     field prusate DrawRect EllipseRect { get { return data; } set { data : value; } }
     field prusate DrawBrush EllipseBrush { get { return data; } set { data : value; } }
     field prusate DrawFont Font { get { return data; } set { data : value; } }
-    field prusate Text Text { get { return data; } set { data : value; } }
+    field prusate TextText Text { get { return data; } set { data : value; } }
     field prusate DrawSlash TextSlash { get { return data; } set { data : value; } }
 
     maide precate Bool ExecuteDrawThis(var Draw draw)
