@@ -161,4 +161,26 @@ class Infra : Any
         size.Wed : size.Wed + roundSize + 6 * 2;
         return true;
     }
+
+    maide prusate Bool SelectChildArea(var DrawRect area)
+    {
+        var Int radius;
+        radius : 6;
+
+        area.Pos.Col : area.Pos.Col + radius;
+        area.Pos.Row : area.Pos.Row + radius;
+        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, radius * 2);
+        area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, radius * 2);
+        return true;
+    }
+
+    maide prusate Bool SelectChildParentSize(var DrawSize size)
+    {
+        var Int radius;
+        radius : 6;
+
+        size.Wed : size.Wed + radius * 2;
+        size.Het : size.Het + radius * 2;
+        return true;
+    }
 }
