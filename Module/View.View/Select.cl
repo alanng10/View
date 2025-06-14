@@ -70,27 +70,21 @@ class Select : View
                 this.MathInt(this.DrawInfra.BoundSub(radius, 1)));
         }
 
-        var DrawForm form;
-        form : this.Palete.Form;
-
-        var Int formCol;
-        var Int formRow;
-        formCol : this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, 5 + radius);
-        formRow : this.Pos.Row + 5 + radius;
-
-        form.Reset();
-
-        form.Pos(this.MathInt(formCol), this.MathInt(formRow));
-
-        draw.Form : form;
-        draw.FormSet();
-
         draw.Fill : this.Palete.Fore.Brush;
 
-        draw.ExecuteShape(this.Palete.SelectTria);
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 8));
+        this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius);
+        this.DrawRectA.Size.Wed : this.MathInt(8);
+        this.DrawRectA.Size.Het : this.MathInt(4);
 
-        draw.Form : null;
-        draw.FormSet();
+        draw.ExecuteRect(this.DrawRectA);
+
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 6));
+        this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius + 4);
+        this.DrawRectA.Size.Wed : this.MathInt(4);
+        this.DrawRectA.Size.Het : this.MathInt(4);
+
+        draw.ExecuteRect(this.DrawRectA);
 
         draw.FillPos.Col : 0;
         draw.FillPos.Row : 0;

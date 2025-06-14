@@ -23,24 +23,6 @@ class Infra : Any
         a.FontAria : this.DrawInfra.FontCreate(this.DrawInfra.FontAriaName, 10, 400, false, false, false, false);
         a.FontMono : this.DrawInfra.FontCreate(this.DrawInfra.FontMonoName, 11, 400, false, false, false, false);
         a.Form : this.DrawInfra.FormCreate();
-
-        var MathComp kaa;
-        kaa : new MathComp;
-        kaa.Init();
-
-        var DrawPos ka;
-        ka : new DrawPos;
-        ka.Init();
-
-        var DrawPointList kd;
-        kd : new DrawPointList;
-        kd.Count : 3;
-        kd.Init();
-        kd.Set(0, this.PosSet(ka, this.MathInfra.Int(kaa, 0sn5), this.MathInfra.Int(kaa, 0sn5)));
-        kd.Set(1, this.PosSet(ka, this.MathInfra.Int(kaa, 5), this.MathInfra.Int(kaa, 0sn5)));
-        kd.Set(2, this.PosSet(ka, this.MathInfra.Int(kaa, 0), this.MathInfra.Int(kaa, 5)));
-
-        a.SelectTria : kd;
         return a;
     }
 
