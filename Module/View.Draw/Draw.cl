@@ -466,6 +466,11 @@ class Draw : Any
         wordWrapK = this.InternInfra.Bool(wordWrap);
 
         this.Extern.Draw_ExecuteText(this.Intern, this.InternText, colAlign.Index + 1, rowAlign.Index + 1, wordWrapK, this.InternRectA, this.InternRectB);
+
+        inf (~(boundRect = null))
+        {
+            this.RectSetFromInternRect(boundRect, this.InternRectB);
+        }
         return true;
     }
 
