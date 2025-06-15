@@ -451,7 +451,7 @@ class Draw : Any
         return true;
     }
 
-    maide prusate Bool ExecuteText(var Text text, var Align colAlign, var Align rowAlign, var Bool wordWrap, var Rect destRect)
+    maide prusate Bool ExecuteText(var Text text, var Align colAlign, var Align rowAlign, var Bool wordWrap, var Rect destRect, var Rect boundRect)
     {
         inf (this.TextCount < text.Range.Count)
         {
@@ -515,6 +515,33 @@ class Draw : Any
     maide private Bool InternRectSetFromRect(var Int internRect, var Rect rect)
     {
         this.InternInfra.RectSet(internRect, rect.Pos.Col, rect.Pos.Row, rect.Size.Wed, rect.Size.Het);
+        return true;
+    }
+
+    maide private Bool RectSetFromInternRect(var Rect rect, var Int internRect)
+    {
+        var Extern extern;
+        extern : this.Extern;
+
+        var Int pos;
+        var Int size;
+        pos : extern.Rect_PosGet(internRect);
+        size : extern.Rect_SizeGet(internRect);
+
+        var Int col;
+        var Int row;
+        col : extern.Pos_ColGet(pos);
+        row : extern.Pos_RowGet(pos);
+
+        var Int wed;
+        var Int het;
+        wed : extern.Size_WedGet(size);
+        het : extern.Size_HetGet(size);
+
+        rect.Pos.Col : col;
+        rect.Pos.Row : row;
+        rect.Size.Wed : wed;
+        rect.Size.Het : het;
         return true;
     }
 }
