@@ -262,7 +262,7 @@ class Text : View
         draw.Font : this.Font;
         draw.Line : this.Fore;
 
-        draw.ExecuteText(this.Value, this.ColAlign, this.RowAlign, this.WordWrap, this.DrawRectA);
+        draw.ExecuteText(this.Value, this.ColAlign, this.RowAlign, this.WordWrap, this.DrawRectA, null);
 
         draw.Line : null;
         draw.Font : null;
