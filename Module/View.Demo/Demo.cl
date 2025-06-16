@@ -236,7 +236,7 @@ class Demo : TextAdd
     maide private Bool ExecuteTextWed()
     {
         var DrawImage image;
-        image : this.DrawInfra.ImageCreateSize(this.DrawInfra.SizeCreate(100, 40));
+        image : this.DrawInfra.ImageCreateSize(this.DrawInfra.SizeCreate(10000, 40));
 
         var Draw draw;
         draw : new Draw;
@@ -249,7 +249,7 @@ class Demo : TextAdd
         draw.Start();
 
         var DrawRect rectA;
-        rectA : this.DrawInfra.RectCreate(this.MathInt(0), this.MathInt(0), this.MathInt(100), this.MathInt(40));
+        rectA : this.DrawInfra.RectCreate(this.MathInt(0), this.MathInt(0), this.MathInt(10000), this.MathInt(40));
 
         var DrawRect rectB;
         rectB : this.DrawInfra.RectCreate(0, 0, 0, 0);
@@ -257,13 +257,19 @@ class Demo : TextAdd
         var DrawRect rectC;
         rectC : this.DrawInfra.RectCreate(0, 0, 0, 0);
 
+        var String ka;
+        ka : "M";
+
+        var String kb;
+        kb : this.StringComp.CreateChar(this.Char("M"), 1024);
+
         draw.Font : this.ViewInfra.PaleteDefault.FontMono;
 
         draw.Line : this.DrawInfra.SlashBlack;
 
-        draw.ExecuteText(this.TA("M"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectB);
+        draw.ExecuteText(this.TA(ka), this.AlignList.Start, this.AlignList.Start, false, rectA, rectB);
 
-        draw.ExecuteText(this.TA("MMMMMMMMMMMMMMMM"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectC);
+        draw.ExecuteText(this.TA(kb), this.AlignList.Start, this.AlignList.Start, false, rectA, rectC);
 
         draw.Line : null;
 
@@ -275,8 +281,8 @@ class Demo : TextAdd
 
         image.Final();
 
-        this.ConsoleWriteMathValue("TextWed M ", rectB.Size.Wed);
-        this.ConsoleWriteMathValue("TextWed MMMMMMMMMMMMMMMM ", rectC.Size.Wed);
+        this.ConsoleWriteMathValue("TextWed M 1 ", rectB.Size.Wed);
+        this.ConsoleWriteMathValue("TextWed M 1024 ", rectC.Size.Wed);
 
         return true;
     }
