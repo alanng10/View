@@ -231,6 +231,36 @@ class Demo : TextAdd
         return true;
     }
 
+    maide private Bool ExecuteTextWed()
+    {
+        var DrawImage image;
+        image : this.DrawInfra.ImageCreateSize(this.DrawInfra.SizeCreate(100, 40));
+
+        var Draw draw;
+        draw : new Draw;
+        draw.Init();
+        draw.Out : image.Out;
+        draw.Size.Wed : image.Size.Wed;
+        draw.Size.Het : image.Size.Het;
+        draw.SizeSet();
+
+        draw.Start();
+
+        draw.Line : this.DrawInfra.SlashBlack;
+
+        var DrawRect rectA;
+        rectA : this.DrawInfra.RectCreate(this.MathInt(0), this.MathInt(0), this.MathInt(100), this.MathInt(40));
+
+        draw.Line : null;
+
+        draw.End();
+
+        draw.Final();
+
+        image.Final();
+        return true;
+    }
+
     maide prusate Int MathInt(var Int n)
     {
         var Int a;
