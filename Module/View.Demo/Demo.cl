@@ -263,7 +263,7 @@ class Demo : TextAdd
 
         draw.ExecuteText(this.TA("M"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectB);
 
-        draw.ExecuteText(this.TA("MMMM"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectC);
+        draw.ExecuteText(this.TA("MMMMMMMMMMMMMMMM"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectC);
 
         draw.Line : null;
 
@@ -276,7 +276,7 @@ class Demo : TextAdd
         image.Final();
 
         this.ConsoleWriteMathValue("TextWed M ", rectB.Size.Wed);
-        this.ConsoleWriteMathValue("TextWed MMMM ", rectC.Size.Wed);
+        this.ConsoleWriteMathValue("TextWed MMMMMMMMMMMMMMMM ", rectC.Size.Wed);
 
         return true;
     }

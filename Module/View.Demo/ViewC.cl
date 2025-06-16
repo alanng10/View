@@ -82,7 +82,7 @@ class ViewC : View
         text.Dest.Pos.Row : 0;
         text.Dest.Size.Wed : 80;
         text.Dest.Size.Het : 60;
-        text.Value : this.Demo.TextCreate("H k m5 #");
+        text.Value : this.Demo.TextCreate("MMMMH k m5 #");
         text.Font : this.ViewInfra.PaleteDefault.FontMono;
 
         this.Button : new Button;
