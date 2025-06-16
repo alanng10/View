@@ -58,6 +58,8 @@ class Demo : TextAdd
 
         this.ExecuteThread();
 
+        this.ExecuteTextWed();
+
         this.Frame : new Frame;
         this.Frame.Init();
         this.Frame.Title : "View Demo";
