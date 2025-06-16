@@ -273,10 +273,53 @@ class Demo : TextAdd
 
         image.Final();
 
-        this.Console.Out.Write(this.AddClear().Add("TextWed M: ").AddIntHex(rectB.Size.Wed).AddLine().AddResult());
-        this.Console.Out.Write(this.AddClear().Add("TextWed MMMM: ").AddIntHex(rectC.Size.Wed).AddLine().AddResult());
+        this.ConsoleWriteMathValue("TextWed M ", rectB.Size.Wed);
+        this.ConsoleWriteMathValue("TextWed MMMM ", rectC.Size.Wed);
 
         return true;
+    }
+
+    maide private Bool ConsoleWriteMathValue(var String prefix, var Int value)
+    {
+        this.Math.Comp(this.MathComp, value);
+        
+        var String ka;
+        ka : this.StringSInt(this.MathComp.Expo);
+
+        var String k;
+
+        k : this.AddClear()
+            .Add(prefix)
+            .Add("Cand: ")
+            .Add(this.StringIntFormat(this.MathComp.Cand, 16, false, 15, 15, this.Char("0")))
+            .Add(", ")
+            .Add("Expo: ")
+            .Add(ka)
+            .AddLine()
+            .AddResult()
+            ;
+
+        this.Console.Out.Write(k);
+
+        return true;
+    }
+
+    maide private String StringSInt(var Int n)
+    {
+        this.AddClear();
+
+        var Int k;
+        k : n;
+        inf (sign <(n, 0))
+        {
+            k : 0 - n;
+        
+            this.Add("-");
+        }
+
+        this.Add(this.StringInt(k));
+
+        return this.AddResult();
     }
 
     maide prusate Int MathInt(var Int n)
