@@ -246,18 +246,36 @@ class Demo : TextAdd
 
         draw.Start();
 
-        draw.Line : this.DrawInfra.SlashBlack;
-
         var DrawRect rectA;
         rectA : this.DrawInfra.RectCreate(this.MathInt(0), this.MathInt(0), this.MathInt(100), this.MathInt(40));
 
+        var DrawRect rectB;
+        rectB : this.DrawInfra.RectCreate(0, 0, 0, 0);
+
+        var DrawRect rectC;
+        rectC : this.DrawInfra.RectCreate(0, 0, 0, 0);
+
+        draw.Font : this.ViewInfra.PaleteDefault.FontMono;
+
+        draw.Line : this.DrawInfra.SlashBlack;
+
+        draw.ExecuteText(this.TA("M"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectB);
+
+        draw.ExecuteText(this.TA("MMMM"), this.AlignList.Start, this.AlignList.Start, false, rectA, rectC);
+
         draw.Line : null;
+
+        draw.Font : null;
 
         draw.End();
 
         draw.Final();
 
         image.Final();
+
+        this.Console.Out.Write(this.AddClear().Add("TextWed M: ").AddIntHex(rectB.Size.Wed).AddLine().AddResult());
+        this.Console.Out.Write(this.AddClear().Add("TextWed MMMM: ").AddIntHex(rectC.Size.Wed).AddLine().AddResult());
+
         return true;
     }
 
