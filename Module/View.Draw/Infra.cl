@@ -38,22 +38,6 @@ class Infra : Any
         this.SlashWhite : this.SlashCreate(this.BrushCreate(whiteColor), k);
         this.SlashZero : this.SlashCreate(this.BrushCreate(zeroColor), k);
 
-        this.ColorDarkGray : this.ColorCreate(0hff, 0h80, 0h80, 0h80);
-        this.ColorGray : this.ColorCreate(0hff, 0ha0, 0ha0, 0ha0);
-        this.ColorLiteGray : this.ColorCreate(0hff, 0hc0, 0hc0, 0hc0);
-        this.ColorRed : this.ColorCreate(0hff, 0hff, 0h00, 0h00);
-        this.ColorGreen : this.ColorCreate(0hff, 0h00, 0hff, 0h00);
-        this.ColorBlue : this.ColorCreate(0hff, 0h00, 0h00, 0hff);
-        this.ColorCyan : this.ColorCreate(0hff, 0h00, 0hff, 0hff);
-        this.ColorMageta : this.ColorCreate(0hff, 0hff, 0h00, 0hff);
-        this.ColorYellow : this.ColorCreate(0hff, 0hff, 0hff, 0h00);
-        this.ColorDarkRed : this.ColorCreate(0hff, 0h80, 0h00, 0h00);
-        this.ColorDarkGreen : this.ColorCreate(0hff, 0h00, 0h80, 0h00);
-        this.ColorDarkBlue : this.ColorCreate(0hff, 0h00, 0h00, 0h80);
-        this.ColorDarkCyan : this.ColorCreate(0hff, 0h00, 0h80, 0h80);
-        this.ColorDarkMageta : this.ColorCreate(0hff, 0h80, 0h00, 0h80);
-        this.ColorDarkYellow : this.ColorCreate(0hff, 0h80, 0h80, 0h00);
-
         this.FontAriaName : "Noto Sans";
         this.FontMonoName : "Cascadia Mono";
         return true;
@@ -65,21 +49,6 @@ class Infra : Any
     field prusate Slash SlashBlack { get { return data; } set { data : value; } }
     field prusate Slash SlashWhite { get { return data; } set { data : value; } }
     field prusate Slash SlashZero { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkGray { get { return data; } set { data : value; } }
-    field prusate Color ColorGray { get { return data; } set { data : value; } }
-    field prusate Color ColorLiteGray { get { return data; } set { data : value; } }
-    field prusate Color ColorRed { get { return data; } set { data : value; } }
-    field prusate Color ColorGreen { get { return data; } set { data : value; } }
-    field prusate Color ColorBlue { get { return data; } set { data : value; } }
-    field prusate Color ColorCyan { get { return data; } set { data : value; } }
-    field prusate Color ColorMageta { get { return data; } set { data : value; } }
-    field prusate Color ColorYellow { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkRed { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkGreen { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkBlue { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkCyan { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkMageta { get { return data; } set { data : value; } }
-    field prusate Color ColorDarkYellow { get { return data; } set { data : value; } }
     field prusate String FontAriaName { get { return data; } set { data : value; } }
     field prusate String FontMonoName { get { return data; } set { data : value; } }
     field precate MathInfra MathInfra { get { return data; } set { data : value; } }
