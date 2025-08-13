@@ -4,6 +4,7 @@ class IndexList : Any
     {
         base.Init();
         this.InfraInfra : share InfraInfra;
+        this.DrawInfra : share DrawInfra;
 
         this.Count : this.ListCount;
 
@@ -16,12 +17,14 @@ class IndexList : Any
 
         this.Index : new Index;
         this.Index.Init();
+        this.Index.Area : this.DrawInfra.RectCreate(0, 0, 0, 0);
         return true;
     }
 
     field prusate Int Count { get { return data; } set { data : value; } }
     field prusate Index Index { get { return data; } set { data : value; } }
     field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
+    field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate Data Data { get { return data; } set { data : value; } }
     field precate Int ListCount { get { return 1024; } set { } }
 
