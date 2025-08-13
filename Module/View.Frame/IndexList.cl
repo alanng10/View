@@ -31,14 +31,14 @@ class IndexList : Any
         this.Data.Set(ka + 2, value.IndexC.Index);
         this.Data.Set(ka + 3, value.IndexD.Index);
 
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueIndex(ka, 0), value.Area.Pos.Col);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueIndex(ka, 1), value.Area.Pos.Row);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueIndex(ka, 2), value.Area.Size.Wed);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueIndex(ka, 3), value.Area.Size.Het);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 0), value.Area.Pos.Col);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 1), value.Area.Pos.Row);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 2), value.Area.Size.Wed);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 3), value.Area.Size.Het);
         return true;
     }
 
-    maide precate Int AreaValueIndex(var Int dataIndex, var Int varField)
+    maide precate Int AreaValueDataIndex(var Int dataIndex, var Int varField)
     {
         return dataIndex + 4 + varField * 8;
     }
