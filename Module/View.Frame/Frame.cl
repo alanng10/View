@@ -6,7 +6,7 @@ class Frame : Any
         b : ~(value = 0);
 
         var Bool ba;
-        ba : index = 0h01000021;
+        ba : index = 0h01000022;
 
         inf (ba)
         {
@@ -22,7 +22,7 @@ class Frame : Any
         {
             inf (this.TypeIndexSystem)
             {
-                inf (index = 0h41)
+                inf (index = 0h01000020)
                 {
                     inf (~(this.TypeIndexSystemSpace = b))
                     {
