@@ -6,7 +6,7 @@ class Frame : Any
         b : ~(value = 0);
 
         var Bool ba;
-        ba : index = 0h20;
+        ba : index = 0h01000021;
 
         inf (ba)
         {
