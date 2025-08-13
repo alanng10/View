@@ -257,7 +257,7 @@ class Frame : Any
         var Draw draw;
         draw : this.Draw;
 
-        var Rect area;
+        var DrawRect area;
         area : draw.Area;
         area.Pos.Col : 0;
         area.Pos.Row : 0;
@@ -265,7 +265,7 @@ class Frame : Any
         area.Size.Het : draw.Size.Het;
         draw.AreaSet();
 
-        var Pos pos;
+        var DrawPos pos;
         pos : draw.Pos;
         pos.Col : 0;
         pos.Row : 0;
@@ -281,7 +281,7 @@ class Frame : Any
         draw.Form : null;
         draw.FormSet();
 
-        var Rect rectA;
+        var DrawRect rectA;
         rectA : this.IndexBackRect;
         rectA.Pos.Col : this.MathInt(area.Pos.Col);
         rectA.Pos.Row : this.MathInt(area.Pos.Row);

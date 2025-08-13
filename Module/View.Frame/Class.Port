@@ -26,6 +26,7 @@ View.Draw:0.00.00
     DrawColor Color
     DrawBrush Brush
     DrawRect Rect
+    DrawPos Pos
     DrawSize Size
     DrawInfra Infra
 View.View:0.00.00
