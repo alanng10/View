@@ -13,6 +13,8 @@ class Frame : Any
             inf (~(this.TypeIndexSystem = b))
             {
                 this.TypeIndexSystem : b;
+
+                this.Update(this.Draw.Area);
             }
         }
 
