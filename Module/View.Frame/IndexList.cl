@@ -30,6 +30,11 @@ class IndexList : Any
 
     maide prusate Bool Set(var Int index)
     {
+        inf (this.Index.IndexA = null)
+        {
+            return true;
+        }
+
         var Int ka;
         ka : this.DataIndex(index);
 
