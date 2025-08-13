@@ -35,7 +35,7 @@ class IndexInit : Any
             a.Init();
 
             a.Area : this.DrawInfra.RectCreate(0, 0, 0, 0);
-            
+
             this.List.Set(i, a);
 
             i : i + 1;
