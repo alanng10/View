@@ -29,9 +29,9 @@ class Frame : Any
                         inf (this.TypeIndexSystemSpace)
                         {
                             this.IndexEvent(this.IndexInit.List);
-
-                            this.Update(this.Draw.Area);
                         }
+
+                        this.Update(this.Draw.Area);
                     }
                 }
             }
