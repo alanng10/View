@@ -54,6 +54,11 @@ class Frame : Any
 
         this.DrawEvent();
 
+        inf (this.TypeIndexSystem & this.TypeIndexSystemSpace)
+        {
+            this.IndexDraw();
+        }
+
         draw.End();
         return true;
     }
@@ -242,6 +247,11 @@ class Frame : Any
     maide precate Bool ExecuteDrawView(var Draw draw)
     {
         this.View.ExecuteDraw(draw);
+        return true;
+    }
+
+    maide private Bool IndexDraw()
+    {
         return true;
     }
 
