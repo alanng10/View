@@ -233,7 +233,7 @@ class Frame : Any
         return true;
     }
 
-    maide precate Bool IndexEvent(var Array array)
+    maide precate Bool IndexEvent(var IndexList list)
     {
     }
 
