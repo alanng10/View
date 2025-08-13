@@ -14,7 +14,7 @@ View frame IndexEvent maide set fields in Index any list in Array any that is fr
 View frame IndexEvent is overide to set index that is present
 when Index alpha button is press.
 
-The maide is call when the button is press.
+The maide is call when the button is press. 
 
 IndexEvent index any has fields.
 1 field is IndexA of class TypeIndex.
