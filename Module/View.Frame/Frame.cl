@@ -47,7 +47,14 @@ class Frame : Any
 
     maide private Bool PrivateDrawEvent()
     {
+        var Draw draw;
+        draw : this.Draw;
+
+        draw.Start();
+
         this.DrawEvent();
+
+        draw.End();
         return true;
     }
 
@@ -218,16 +225,12 @@ class Frame : Any
         var Draw draw;
         draw : this.Draw;
 
-        draw.Start();
-
         draw.Clear();
 
         inf (this.ValidDrawView())
         {
             this.ExecuteDrawView(draw);
         }
-
-        draw.End();
         return true;
     }
 
