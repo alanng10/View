@@ -103,6 +103,8 @@ class Frame : Any
         this.Out : extern.Frame_Out(this.Intern);
 
         this.Draw : this.CreateDraw();
+
+        this.IndexBackRect : this.DrawInfra.RectCreate(0, 0, 0, 0);
         return true;
     }
 
@@ -195,6 +197,7 @@ class Frame : Any
     field private Int InternTypeState { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystem { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystemSpace { get { return data; } set { data : value; } }
+    field private DrawRect IndexBackRect { get { return data; } set { data : value; } }
 
     maide prusate Bool TitleSet()
     {
@@ -251,6 +254,43 @@ class Frame : Any
 
     maide private Bool IndexDraw()
     {
+        var Draw draw;
+        draw : this.Draw;
+
+        var Rect area;
+        area : draw.Area;
+        area.Pos.Col : 0;
+        area.Pos.Row : 0;
+        area.Size.Wed : draw.Size.Wed;
+        area.Size.Het : draw.Size.Het;
+        draw.AreaSet();
+
+        var Pos pos;
+        pos : draw.Pos;
+        pos.Col : 0;
+        pos.Row : 0;
+        draw.PosSet();
+
+        draw.Fill : this.IndexInit.BrushBack;
+        draw.Line : null;
+        draw.Comp : null;
+        draw.Font : null;
+        draw.FillPos.Col : 0;
+        draw.FillPos.Row : 0;
+        draw.FillPosSet();
+        draw.Form : null;
+        draw.FormSet();
+
+        var Rect rectA;
+        rectA : this.IndexBackRect;
+        rectA.Pos.Col : this.MathInt(area.Pos.Col);
+        rectA.Pos.Row : this.MathInt(area.Pos.Row);
+        rectA.Size.Wed : this.MathInt(area.Size.Wed);
+        rectA.Size.Het : this.MathInt(area.Size.Het);
+
+        draw.ExecuteRect(rectA);
+
+        draw.Fill : null;
         return true;
     }
 
