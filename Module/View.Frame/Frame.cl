@@ -42,6 +42,7 @@ class Frame : Any
         this.DrawInfra : share DrawInfra;
         this.ViewInfra : share ViewInfra;
         this.Math : share Math;
+        this.IndexInit : share IndexInit;
 
         this.MathComp : this.CreateMathComp();
 
