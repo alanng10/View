@@ -77,7 +77,6 @@ class Frame : Any
         this.DrawInfra : share DrawInfra;
         this.ViewInfra : share ViewInfra;
         this.Math : share Math;
-        this.IndexInit : share IndexInit;
 
         this.MathComp : this.CreateMathComp();
 
@@ -107,6 +106,9 @@ class Frame : Any
         this.Out : extern.Frame_Out(this.Intern);
 
         this.Draw : this.CreateDraw();
+
+        this.IndexList : new IndexList;
+        this.IndexList.Init();
 
         this.IndexBrushBack : this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0h80, 0, 0, 0));
         this.IndexRectBack : this.DrawInfra.RectCreate(0, 0, 0, 0);
@@ -196,12 +198,12 @@ class Frame : Any
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
     field precate Math Math { get { return data; } set { data : value; } }
-    field private IndexInit IndexInit { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
     field private Int InternTitle { get { return data; } set { data : value; } }
     field private Int InternUpdateRect { get { return data; } set { data : value; } }
     field private Int InternDrawState { get { return data; } set { data : value; } }
     field private Int InternTypeState { get { return data; } set { data : value; } }
+    field private IndexList IndexList { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystem { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystemSpace { get { return data; } set { data : value; } }
     field private DrawBrush IndexBrushBack { get { return data; } set { data : value; } }
