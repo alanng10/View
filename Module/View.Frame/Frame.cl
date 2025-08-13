@@ -196,7 +196,6 @@ class Frame : Any
     field private Draw FrameDraw { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystem { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystemSpace { get { return data; } set { data : value; } }
-    field private DrawBrush IndexDrawBack { get { return data; } set { data : value; } }
 
     maide prusate Bool TitleSet()
     {
