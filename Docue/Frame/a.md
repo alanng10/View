@@ -10,3 +10,6 @@ View frame is not partly or entirely occluded.
 
 View frame has Index event.
 View frame IndexEvent maide set values in Index any list in Array any that is from param.
+
+View frame IndexEvent is overide to set index that is present
+when Index alpha button is press.
