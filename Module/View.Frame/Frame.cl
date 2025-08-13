@@ -30,7 +30,7 @@ class Frame : Any
 
                         inf (this.TypeIndexSystemSpace)
                         {
-                            this.IndexEvent(this.IndexInit.List);
+                            this.IndexEvent(this.IndexList);
                         }
 
                         this.Update(this.Draw.Area);
