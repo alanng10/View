@@ -13,28 +13,32 @@ class IndexList : Any
         this.Data : new Data;
         this.Data.Count : count;
         this.Data.Init();
+
+        this.Index : new Index;
+        this.Index.Init();
         return true;
     }
 
     field prusate Int Count { get { return data; } set { data : value; } }
+    field prusate Index Index { get { return data; } set { data : value; } }
     field precate InfraInfra InfraInfra { get { return data; } set { data : value; } }
     field precate Data Data { get { return data; } set { data : value; } }
     field precate Int ListCount { get { return 1024; } set { } }
 
-    maide prusate Bool Set(var Int index, var Index value)
+    maide prusate Bool Set(var Int index)
     {
         var Int ka;
         ka : this.DataIndex(index);
 
-        this.Data.Set(ka + 0, value.IndexA.Index);
-        this.Data.Set(ka + 1, value.IndexB.Index);
-        this.Data.Set(ka + 2, value.IndexC.Index);
-        this.Data.Set(ka + 3, value.IndexD.Index);
+        this.Data.Set(ka + 0, this.Index.IndexA.Index);
+        this.Data.Set(ka + 1, this.Index.IndexB.Index);
+        this.Data.Set(ka + 2, this.Index.IndexC.Index);
+        this.Data.Set(ka + 3, this.Index.IndexD.Index);
 
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 0), value.Area.Pos.Col);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 1), value.Area.Pos.Row);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 2), value.Area.Size.Wed);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 3), value.Area.Size.Het);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 0), this.Index.Area.Pos.Col);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 1), this.Index.Area.Pos.Row);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 2), this.Index.Area.Size.Wed);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 3), this.Index.Area.Size.Het);
         return true;
     }
 
