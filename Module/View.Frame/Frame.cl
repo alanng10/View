@@ -201,7 +201,8 @@ class Frame : Any
     field private Int InternTypeState { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystem { get { return data; } set { data : value; } }
     field private Bool TypeIndexSystemSpace { get { return data; } set { data : value; } }
-    field private DrawRect IndexBackRect { get { return data; } set { data : value; } }
+    field private DrawBrush IndexBrushBack { get { return data; } set { data : value; } }
+    field private DrawRect IndexRectBack { get { return data; } set { data : value; } }
 
     maide prusate Bool TitleSet()
     {
@@ -275,7 +276,7 @@ class Frame : Any
         pos.Row : 0;
         draw.PosSet();
 
-        draw.Fill : this.IndexInit.BrushBack;
+        draw.Fill : this.IndexBrushBack;
         draw.Line : null;
         draw.Comp : null;
         draw.Font : null;
@@ -286,7 +287,7 @@ class Frame : Any
         draw.FormSet();
 
         var DrawRect rectA;
-        rectA : this.IndexBackRect;
+        rectA : this.IndexRectBack;
         rectA.Pos.Col : this.MathInt(area.Pos.Col);
         rectA.Pos.Row : this.MathInt(area.Pos.Row);
         rectA.Size.Wed : this.MathInt(area.Size.Wed);
