@@ -5,10 +5,24 @@ class Frame : Any
         var Bool b;
         b : ~(value = 0);
 
-        var Int indexK;
-        indexK : this.InternInfra.TypeIndexFromInternIndex(index);
+        var Bool ba;
+        ba : index = 0h01000022;
 
-        this.TypeEvent(indexK, b);
+        inf (ba)
+        {
+            this.TypeIndexIndex : b;
+        }
+
+        inf (~ba)
+        {
+            inf (~this.TypeIndexIndex)
+            {
+                var Int indexK;
+                indexK : this.InternInfra.TypeIndexFromInternIndex(index);
+
+                this.TypeEvent(indexK, b);
+            }
+        }
         return true;
     }
 
@@ -147,6 +161,7 @@ class Frame : Any
     field private Int InternDrawState { get { return data; } set { data : value; } }
     field private Int InternTypeState { get { return data; } set { data : value; } }
     field private Draw FrameDraw { get { return data; } set { data : value; } }
+    field private Bool TypeIndexIndex { get { return data; } set { data : value; } }
 
     maide prusate Bool TitleSet()
     {
