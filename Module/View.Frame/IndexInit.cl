@@ -44,8 +44,8 @@ class IndexInit : Any
     }
 
     field prusate Array List { get { return data; } set { data : value; } }
+    field prusate DrawBrush BrushBack { get { return data; } set { data : value; } }
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate Int ListCount { get { return 1024; } set { } }
-    field precate DrawBrush BrushBack { get { return data; } set { data : value; } }
 }
