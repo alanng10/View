@@ -7,6 +7,14 @@ class IndexInit : Any
         this.DrawInfra : share DrawInfra;
 
         this.InitList();
+
+        this.BrushBack : this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0h80, 0, 0, 0));
+        return true;
+    }
+
+    maide prusate Bool Final()
+    {
+        this.BrushBack.Final();
         return true;
     }
 
@@ -39,4 +47,5 @@ class IndexInit : Any
     field precate ListInfra ListInfra { get { return data; } set { data : value; } }
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate Int ListCount { get { return 1024; } set { } }
+    field precate DrawBrush BrushBack { get { return data; } set { data : value; } }
 }
