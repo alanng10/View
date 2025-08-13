@@ -10,6 +10,9 @@ System.Infra
     Intern Intern
     Extern Extern
     InternInfra InternInfra
+System.List
+    Array Array
+    ListInfra Infra
 System.Math
     Math Math
     MathComp Comp
@@ -21,6 +24,7 @@ View.Draw:0.00.00
     Draw Draw
     DrawImage Image
     DrawColor Color
+    DrawBrush Brush
     DrawRect Rect
     DrawSize Size
     DrawInfra Infra
