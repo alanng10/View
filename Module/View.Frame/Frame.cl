@@ -108,12 +108,15 @@ class Frame : Any
 
         this.Draw : this.CreateDraw();
 
-        this.IndexBackRect : this.DrawInfra.RectCreate(0, 0, 0, 0);
+        this.IndexBrushBack : this.DrawInfra.BrushCreate(this.DrawInfra.ColorCreate(0h80, 0, 0, 0));
+        this.IndexRectBack : this.DrawInfra.RectCreate(0, 0, 0, 0);
         return true;
     }
 
     maide prusate Bool Final()
     {
+        this.IndexBrushBack.Final();
+
         this.FinalDraw(this.Draw);
 
         var Extern extern;
