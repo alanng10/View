@@ -20,7 +20,7 @@ class Frame : Any
         {
             inf (this.TypeIndexSystem)
             {
-                inf (index = 0h20)
+                inf (index = 0h01000020)
                 {
                     inf (~(this.TypeIndexSystemSpace = b))
                     {
