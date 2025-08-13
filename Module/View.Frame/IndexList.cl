@@ -4,8 +4,10 @@ class IndexList : Any
     {
         base.Init();
 
+        this.Count : this.ListCount;
+
         var Int count;
-        count : this.ListCount * (4 + 4 * 8);
+        count : this.Count * (4 + 4 * 8);
 
         this.Data : new Data;
         this.Data.Count : count;
@@ -13,6 +15,7 @@ class IndexList : Any
         return true;
     }
 
+    field prusate Int Count { get { return data; } set { data : value; } }
     field precate Data Data { get { return data; } set { data : value; } }
     field precate Int ListCount { get { return 1024; } set { } }
 
