@@ -35,3 +35,5 @@ Area Col is Col field in Area of the type able.
 Area Row is Row field in Area of the type able.
 Area Wed is Wed field in Area of the type able.
 Area Het is Het field in Area of the type able.
+
+IndexA is set not null when the index any present a type able.
