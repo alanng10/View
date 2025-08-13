@@ -155,6 +155,7 @@ class Frame : Any
     field precate DrawInfra DrawInfra { get { return data; } set { data : value; } }
     field precate ViewInfra ViewInfra { get { return data; } set { data : value; } }
     field precate Math Math { get { return data; } set { data : value; } }
+    field private IndexInit IndexInit { get { return data; } set { data : value; } }
     field private Int Intern { get { return data; } set { data : value; } }
     field private Int InternTitle { get { return data; } set { data : value; } }
     field private Int InternUpdateRect { get { return data; } set { data : value; } }
