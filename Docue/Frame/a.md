@@ -37,3 +37,5 @@ Area Wed is Wed field in Area of the type able.
 Area Het is Het field in Area of the type able.
 
 IndexA is set not null when the index any present a type able.
+
+The Index any Array is passed in from Program module.
