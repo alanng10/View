@@ -10,7 +10,15 @@ class Frame : Any
 
         inf (ba)
         {
-            this.TypeIndexIndex : b;
+            inf (~(this.TypeIndexIndex = b))
+            {
+                this.TypeIndexIndex : b;
+
+                inf (this.TypeIndexIndex)
+                {
+                    this.IndexEvent(this.IndexInit.List);
+                }
+            }
         }
 
         inf (~ba)
