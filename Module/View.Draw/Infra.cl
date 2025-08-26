@@ -588,7 +588,7 @@ class Infra : Any
         var Size a;
         a : new Size;
         a.Init();
-        a.Wed : wed;
+        a.Width : wed;
         a.Het : het;
         return a;
     }
@@ -608,7 +608,7 @@ class Infra : Any
         var Image a;
         a : new Image;
         a.Init();
-        a.Size.Wed : size.Wed;
+        a.Size.Width : size.Width;
         a.Size.Het : size.Het;
         a.DataCreate();
         return a;
@@ -703,7 +703,7 @@ class Infra : Any
         var Int nite;
         nite : area.Pos.Row;
         var Int wed;
-        wed : area.Size.Wed;
+        wed : area.Size.Width;
         var Int het;
         het : area.Size.Het;
         var Int rite;
@@ -717,7 +717,7 @@ class Infra : Any
         boundNite : bound.Pos.Row;
         var Int boundRite;
         var Int boundSite;
-        boundRite : boundLite + bound.Size.Wed;
+        boundRite : boundLite + bound.Size.Width;
         boundSite : boundNite + bound.Size.Het;
 
         inf (lite < boundLite)
@@ -744,7 +744,7 @@ class Infra : Any
 
         area.Pos.Col : lite;
         area.Pos.Row : nite;
-        area.Size.Wed : w;
+        area.Size.Width : w;
         area.Size.Het : h;
         return true;
     }
