@@ -70,7 +70,7 @@ class Image : Any
     {
         var Int wed;
         var Int het;
-        wed : this.Size.Wed;
+        wed : this.Size.Width;
         het : this.Size.Het;
         
         var Extern extern;
@@ -87,7 +87,7 @@ class Image : Any
     {
         var Int w;
         var Int h;
-        w : this.Size.Wed;
+        w : this.Size.Width;
         h : this.Size.Het;
         var Int ka;
         ka : this.DrawInfra.PixelByteCount;
@@ -116,7 +116,7 @@ class Image : Any
     {
         var Int w;
         var Int h;
-        w : this.Size.Wed;
+        w : this.Size.Width;
         h : this.Size.Het;
         var Int ka;
         ka : this.DrawInfra.PixelByteCount;
