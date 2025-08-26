@@ -54,7 +54,7 @@ class ImageRead : Any
             ka : extern.Image_SizeGet(this.Image.Intern);
 
             this.Image.Size.Width : extern.Size_WedGet(ka);
-            this.Image.Size.Het : extern.Size_HetGet(ka);
+            this.Image.Size.Hegth : extern.Size_HetGet(ka);
         }
 
         var Bool a;
