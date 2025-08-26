@@ -273,7 +273,7 @@ class Draw : Any
         area.Pos.Col : 0;
         area.Pos.Row : 0;
         area.Size.Width : this.Size.Width;
-        area.Size.Het : this.Size.Het;
+        area.Size.Hegth : this.Size.Hegth;
         this.AreaSet();
 
         var Pos pos;
@@ -306,7 +306,7 @@ class Draw : Any
         extern : this.Extern;
 
         extern.Size_WedSet(this.InternSize, this.Size.Width);
-        extern.Size_WedSet(this.InternSize, this.Size.Het);
+        extern.Size_WedSet(this.InternSize, this.Size.Hegth);
         return true;
     }
 
@@ -513,7 +513,7 @@ class Draw : Any
 
     maide private Bool InternRectSetFromRect(var Int internRect, var Rect rect)
     {
-        this.InternInfra.RectSet(internRect, rect.Pos.Col, rect.Pos.Row, rect.Size.Width, rect.Size.Het);
+        this.InternInfra.RectSet(internRect, rect.Pos.Col, rect.Pos.Row, rect.Size.Width, rect.Size.Hegth);
         return true;
     }
 
@@ -540,7 +540,7 @@ class Draw : Any
         rect.Pos.Col : col;
         rect.Pos.Row : row;
         rect.Size.Width : wed;
-        rect.Size.Het : het;
+        rect.Size.Hegth : het;
         return true;
     }
 }
