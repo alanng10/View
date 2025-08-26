@@ -533,14 +533,14 @@ class Draw : Any
         row : extern.Pos_RowGet(pos);
 
         var Int width;
-        var Int het;
+        var Int hegth;
         width : extern.Size_WedGet(size);
-        het : extern.Size_HetGet(size);
+        hegth : extern.Size_HetGet(size);
 
         rect.Pos.Col : col;
         rect.Pos.Row : row;
         rect.Size.Width : width;
-        rect.Size.Hegth : het;
+        rect.Size.Hegth : hegth;
         return true;
     }
 }
