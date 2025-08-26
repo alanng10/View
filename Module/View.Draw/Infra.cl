@@ -583,23 +583,23 @@ class Infra : Any
         return a;
     }
 
-    maide prusate Size SizeCreate(var Int width, var Int het)
+    maide prusate Size SizeCreate(var Int width, var Int hegth)
     {
         var Size a;
         a : new Size;
         a.Init();
         a.Width : width;
-        a.Hegth : het;
+        a.Hegth : hegth;
         return a;
     }
 
-    maide prusate Rect RectCreate(var Int col, var Int row, var Int width, var Int het)
+    maide prusate Rect RectCreate(var Int col, var Int row, var Int width, var Int hegth)
     {
         var Rect a;
         a : new Rect;
         a.Init();
         a.Pos : this.PosCreate(col, row);
-        a.Size : this.SizeCreate(width, het);
+        a.Size : this.SizeCreate(width, hegth);
         return a;
     }
 
@@ -704,12 +704,12 @@ class Infra : Any
         nite : area.Pos.Row;
         var Int width;
         width : area.Size.Width;
-        var Int het;
-        het : area.Size.Hegth;
+        var Int hegth;
+        hegth : area.Size.Hegth;
         var Int rite;
         rite : lite + width;
         var Int site;
-        site : nite + het;
+        site : nite + hegth;
 
         var Int boundLite;
         var Int boundNite;
