@@ -271,14 +271,14 @@ class Grid : View
         rite : this.GridColPixel(endCol);
         site : this.GridRowPixel(endRow);
 
-        var Int wed;
+        var Int width;
         var Int het;
-        wed : rite - lite;
+        width : rite - lite;
         het : site - nite;
 
         dest.Pos.Col : col;
         dest.Pos.Row : row;
-        dest.Size.Wed : wed;
+        dest.Size.Wed : width;
         dest.Size.Het : het;
         return true;
     }
