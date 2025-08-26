@@ -68,15 +68,15 @@ class Image : Any
     
     maide prusate Bool DataCreate()
     {
-        var Int wed;
+        var Int width;
         var Int het;
-        wed : this.Size.Width;
+        width : this.Size.Width;
         het : this.Size.Hegth;
         
         var Extern extern;
         extern : this.Extern;
 
-        extern.Size_WedSet(this.InternSize, wed);
+        extern.Size_WedSet(this.InternSize, width);
         extern.Size_HetSet(this.InternSize, het);
         
         extern.Image_DataCreate(this.Intern);
