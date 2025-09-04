@@ -64,7 +64,7 @@ class Infra : Any
 
     maide prusate Bool AssignDrawSizeValue(var DrawSize dest, var DrawSize source)
     {
-        dest.Wed : source.Wed;
+        dest.Width : source.Width;
         dest.Het : source.Het;
         return true;
     }
@@ -121,14 +121,14 @@ class Infra : Any
     {
         area.Pos.Col : area.Pos.Col + 14;
         area.Pos.Row : area.Pos.Row + 14;
-        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, 14 * 2);
+        area.Size.Width : this.DrawInfra.BoundSub(area.Size.Width, 14 * 2);
         area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, 14 * 2);
         return true;
     }
 
     maide prusate Bool ButtonChildParentSize(var DrawSize size)
     {
-        size.Wed : size.Wed + 14 * 2;
+        size.Width : size.Width + 14 * 2;
         size.Het : size.Het + 14 * 2;
         return true;
     }
@@ -139,7 +139,7 @@ class Infra : Any
         cubeSize : 16;
         
         area.Pos.Col : area.Pos.Col + cubeSize + 6 * 2;
-        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, cubeSize + 6 * 2);
+        area.Size.Width : this.DrawInfra.BoundSub(area.Size.Width, cubeSize + 6 * 2);
         return true;
     }
 
@@ -148,7 +148,7 @@ class Infra : Any
         var Int cubeSize;
         cubeSize : 16;
 
-        size.Wed : size.Wed + cubeSize + 6 * 2;
+        size.Width : size.Width + cubeSize + 6 * 2;
         return true;
     }
 
@@ -158,7 +158,7 @@ class Infra : Any
         roundSize : 18;
         
         area.Pos.Col : area.Pos.Col + roundSize + 6 * 2;
-        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, roundSize + 6 * 2);
+        area.Size.Width : this.DrawInfra.BoundSub(area.Size.Width, roundSize + 6 * 2);
         return true;
     }
 
@@ -167,7 +167,7 @@ class Infra : Any
         var Int roundSize;
         roundSize : 18;
 
-        size.Wed : size.Wed + roundSize + 6 * 2;
+        size.Width : size.Width + roundSize + 6 * 2;
         return true;
     }
 
@@ -178,7 +178,7 @@ class Infra : Any
 
         area.Pos.Col : area.Pos.Col + radius;
         area.Pos.Row : area.Pos.Row + radius;
-        area.Size.Wed : this.DrawInfra.BoundSub(area.Size.Wed, radius * 2 + 10 + 6);
+        area.Size.Width : this.DrawInfra.BoundSub(area.Size.Width, radius * 2 + 10 + 6);
         area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, radius * 2);
         return true;
     }
@@ -188,7 +188,7 @@ class Infra : Any
         var Int radius;
         radius : 6;
 
-        size.Wed : size.Wed + radius * 2 + 10 + 6;
+        size.Width : size.Width + radius * 2 + 10 + 6;
         size.Het : size.Het + radius * 2;
         return true;
     }
