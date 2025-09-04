@@ -79,7 +79,7 @@ class Radio : View
 
         this.DrawRectA.Pos.Col : this.MathInt(roundCol);
         this.DrawRectA.Pos.Row : this.MathInt(roundRow);
-        this.DrawRectA.Size.Wed : this.MathInt(roundSize);
+        this.DrawRectA.Size.Width : this.MathInt(roundSize);
         this.DrawRectA.Size.Het : this.MathInt(roundSize);
 
         draw.Fill : this.Palete.Bord.Brush;
@@ -96,7 +96,7 @@ class Radio : View
 
             this.DrawRectA.Pos.Col : this.MathInt(roundCol + 1);
             this.DrawRectA.Pos.Row : this.MathInt(roundRow + 1);
-            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(roundSize, 1 * 2));
+            this.DrawRectA.Size.Width : this.MathInt(this.DrawInfra.BoundSub(roundSize, 1 * 2));
             this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(roundSize, 1 * 2));
 
             draw.ExecuteRound(this.DrawRectA);
@@ -108,7 +108,7 @@ class Radio : View
 
             this.DrawRectA.Pos.Col : this.MathValue((roundCol + (roundSize - foreCubeSize) / 2) * 64 + 31, 0sn6);
             this.DrawRectA.Pos.Row : this.MathValue((roundRow + (roundSize - foreCubeSize) / 2) * 64 + 31, 0sn6);
-            this.DrawRectA.Size.Wed : this.MathInt(foreCubeSize);
+            this.DrawRectA.Size.Width : this.MathInt(foreCubeSize);
             this.DrawRectA.Size.Het : this.MathInt(foreCubeSize);
 
             draw.ExecuteRect(this.DrawRectA);
