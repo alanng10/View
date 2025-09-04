@@ -45,7 +45,7 @@ class IndexList : Any
 
         this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 0), this.Index.Area.Pos.Col);
         this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 1), this.Index.Area.Pos.Row);
-        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 2), this.Index.Area.Size.Wed);
+        this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 2), this.Index.Area.Size.Width);
         this.InfraInfra.DataIntSet(this.Data, this.AreaValueDataIndex(ka, 3), this.Index.Area.Size.Het);
         return true;
     }
