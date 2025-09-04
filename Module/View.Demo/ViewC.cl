@@ -45,7 +45,7 @@ class ViewC : View
         this.Pos.Col : 100;
         this.Pos.Row : 0;
         this.Size.Width : 500;
-        this.Size.Het : 400;
+        this.Size.Hegth : 400;
         this.Back : brush;
         this.EllipseBrush : this.EllipseBrushCreate();
         this.EllipseRect : this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(100), this.MathInt(50));
@@ -59,15 +59,15 @@ class ViewC : View
         image.Pos.Col : 0;
         image.Pos.Row : 0;
         image.Size.Width : 16;
-        image.Size.Het : 16;
+        image.Size.Hegth : 16;
         image.Dest.Pos.Col : 0;
         image.Dest.Pos.Row : 0;
         image.Dest.Size.Width : 16;
-        image.Dest.Size.Het : 16;
+        image.Dest.Size.Hegth : 16;
         image.Source.Pos.Col : 0;
         image.Source.Pos.Row : 0;
         image.Source.Size.Width : 16;
-        image.Source.Size.Het : 16;
+        image.Source.Size.Hegth : 16;
         image.Value : this.ButtonImage;
 
         var Text text;
@@ -77,11 +77,11 @@ class ViewC : View
         text.Pos.Col : 0;
         text.Pos.Row : 0;
         text.Size.Width : 80;
-        text.Size.Het : 60;
+        text.Size.Hegth : 60;
         text.Dest.Pos.Col : 0;
         text.Dest.Pos.Row : 0;
         text.Dest.Size.Width : 80;
-        text.Dest.Size.Het : 60;
+        text.Dest.Size.Hegth : 60;
         text.Value : this.Demo.TextCreate("MMMMH k m5 #");
         text.Font : this.ViewInfra.PaleteDefault.FontMono;
 
@@ -91,7 +91,7 @@ class ViewC : View
         this.Button.Pos.Col : 20;
         this.Button.Pos.Row : 20;
         this.Button.Size.Width : 100;
-        this.Button.Size.Het : 60;
+        this.Button.Size.Hegth : 60;
         this.Button.Child : image;
 
         this.Mark : new Mark;
@@ -100,7 +100,7 @@ class ViewC : View
         this.Mark.Pos.Col : 20;
         this.Mark.Pos.Row : 20;
         this.Mark.Size.Width : 100;
-        this.Mark.Size.Het : 60;
+        this.Mark.Size.Hegth : 60;
         this.Mark.Child : text;
 
         this.Radio : new Radio;
@@ -109,7 +109,7 @@ class ViewC : View
         this.Radio.Pos.Col : 120;
         this.Radio.Pos.Row : 20;
         this.Radio.Size.Width : 100;
-        this.Radio.Size.Het : 60;
+        this.Radio.Size.Hegth : 60;
 
         this.Select : new Select;
         this.Select.Palete : this.ViewInfra.PaleteDefault;
@@ -117,7 +117,7 @@ class ViewC : View
         this.Select.Pos.Col : 20;
         this.Select.Pos.Row : 80;
         this.Select.Size.Width : 100;
-        this.Select.Size.Het : 60;
+        this.Select.Size.Hegth : 60;
 
         var Grid grid;
         grid : new Grid;
@@ -125,7 +125,7 @@ class ViewC : View
         grid.Pos.Col : 200;
         grid.Pos.Row : 100;
         grid.Size.Width : 300;
-        grid.Size.Het : 600;
+        grid.Size.Hegth : 600;
         grid.Back : this.ViewInfra.PaleteDefault.Base.Brush;
 
         var ViewCount colA;
@@ -146,7 +146,7 @@ class ViewC : View
         childA.Init();
         childA.View : this.Button;
         childA.Rect.Size.Width : 1;
-        childA.Rect.Size.Het : 1;
+        childA.Rect.Size.Hegth : 1;
 
         var GridChild childB;
         childB : new GridChild;
@@ -154,7 +154,7 @@ class ViewC : View
         childB.View : this.Mark;
         childB.Rect.Pos.Row : 1;
         childB.Rect.Size.Width : 1;
-        childB.Rect.Size.Het : 1;
+        childB.Rect.Size.Hegth : 1;
 
         var GridChild childC;
         childC : new GridChild;
@@ -162,7 +162,7 @@ class ViewC : View
         childC.View : this.Radio;
         childC.Rect.Pos.Row : 1;
         childC.Rect.Size.Width : 1;
-        childC.Rect.Size.Het : 1;
+        childC.Rect.Size.Hegth : 1;
 
         var GridChild childD;
         childD : new GridChild;
@@ -170,7 +170,7 @@ class ViewC : View
         childD.View : this.Select;
         childD.Rect.Pos.Row : 1;
         childD.Rect.Size.Width : 1;
-        childD.Rect.Size.Het : 1;
+        childD.Rect.Size.Hegth : 1;
 
         grid.Col.Add(colA);
         grid.Row.Add(rowA);
@@ -306,7 +306,7 @@ class ViewC : View
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 150);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 50);
         this.DrawRectA.Size.Width : this.MathInt(300);
-        this.DrawRectA.Size.Het : this.MathInt(100);
+        this.DrawRectA.Size.Hegth : this.MathInt(100);
 
         draw.Font : this.Font;
         draw.Line : this.TextSlash;
