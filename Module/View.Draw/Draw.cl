@@ -534,8 +534,8 @@ class Draw : Any
 
         var Int width;
         var Int hegth;
-        width : extern.Size_WedGet(size);
-        hegth : extern.Size_HetGet(size);
+        width : extern.Size_WidthGet(size);
+        hegth : extern.Size_HegthGet(size);
 
         rect.Pos.Col : col;
         rect.Pos.Row : row;
