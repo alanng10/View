@@ -3,13 +3,13 @@ class ViewB : View
     maide prusate Bool Init()
     {
         base.Init();
-        var Int wed;
+        var Int width;
         var Int het;
-        wed : 400;
+        width : 400;
         het : 200;
 
         var DrawRect sourceRect;
-        sourceRect : this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(wed), this.MathInt(het));
+        sourceRect : this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(width), this.MathInt(het));
 
         var DrawRect destRectA;
         destRectA : this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
@@ -19,7 +19,7 @@ class ViewB : View
 
         this.Pos.Col : 60;
         this.Pos.Row : 40;
-        this.Size.Width : wed;
+        this.Size.Width : width;
         this.Size.Hegth : het;
         this.DrawImage : this.Demo.DrawInfra.ImageCreateStorage("View.Demo-0.00.00.data/Demo/image.jpg");
         this.SourceRect : sourceRect;
@@ -52,14 +52,14 @@ class ViewB : View
         var Int row;
         col : this.Pos.Col;
         row : this.Pos.Row;
-        var Int wed;
+        var Int width;
         var Int het;
-        wed : this.Size.Width;
+        width : this.Size.Width;
         het : this.Size.Hegth;
 
         this.DrawRectA.Pos.Col : this.MathInt(col);
         this.DrawRectA.Pos.Row : this.MathInt(row);
-        this.DrawRectA.Size.Width : this.MathInt(wed);
+        this.DrawRectA.Size.Width : this.MathInt(width);
         this.DrawRectA.Size.Hegth : this.MathInt(het);
 
         var Int angle;
