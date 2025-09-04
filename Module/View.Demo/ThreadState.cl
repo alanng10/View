@@ -39,7 +39,7 @@ class ThreadState : State
         col : 20;
         row : 20;
         wed : this.Image.Size.Width - 50;
-        het : this.Image.Size.Het - 50;
+        het : this.Image.Size.Hegth - 50;
 
         var DrawRect rectA;
         rectA : this.Demo.DrawInfra.RectCreate(this.MathInt(col), this.MathInt(row), this.MathInt(wed), this.MathInt(het));
@@ -49,7 +49,7 @@ class ThreadState : State
         draw.Init();
         draw.Out : this.Image.Out;
         draw.Size.Width : this.Image.Size.Width;
-        draw.Size.Het : this.Image.Size.Het;
+        draw.Size.Hegth : this.Image.Size.Hegth;
         draw.SizeSet();
 
         draw.Start();
@@ -69,7 +69,7 @@ class ThreadState : State
         h : h - 40;
 
         rectA.Size.Width : this.MathInt(w);
-        rectA.Size.Het : this.MathInt(h);
+        rectA.Size.Hegth : this.MathInt(h);
 
         var TextText text;
         text : this.Demo.TextCreate("C hr");
