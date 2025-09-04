@@ -256,7 +256,7 @@ class Text : View
     {
         this.DrawRectA.Pos.Col : this.Dest.Pos.Col;
         this.DrawRectA.Pos.Row : this.Dest.Pos.Row;
-        this.DrawRectA.Size.Wed : this.Dest.Size.Wed;
+        this.DrawRectA.Size.Width : this.Dest.Size.Width;
         this.DrawRectA.Size.Het : this.Dest.Size.Het;
 
         draw.Font : this.Font;
