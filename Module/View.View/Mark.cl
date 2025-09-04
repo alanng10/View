@@ -75,7 +75,7 @@ class Mark : View
 
         this.DrawRectA.Pos.Col : this.MathInt(cubeCol);
         this.DrawRectA.Pos.Row : this.MathInt(cubeRow);
-        this.DrawRectA.Size.Wed : this.MathInt(cubeSize);
+        this.DrawRectA.Size.Width : this.MathInt(cubeSize);
         this.DrawRectA.Size.Het : this.MathInt(cubeSize);
 
         draw.Fill : this.Palete.Bord.Brush;
@@ -92,7 +92,7 @@ class Mark : View
 
             this.DrawRectA.Pos.Col : this.MathInt(cubeCol + 1);
             this.DrawRectA.Pos.Row : this.MathInt(cubeRow + 1);
-            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
+            this.DrawRectA.Size.Width : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
             this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
 
             draw.ExecuteRectRound(this.DrawRectA, 
@@ -126,14 +126,14 @@ class Mark : View
 
             this.DrawRectA.Pos.Col : this.MathInt(0sn4);
             this.DrawRectA.Pos.Row : this.MathInt(0sn3);
-            this.DrawRectA.Size.Wed : this.MathValue(3, 0sn1);
+            this.DrawRectA.Size.Width : this.MathValue(3, 0sn1);
             this.DrawRectA.Size.Het : this.MathInt(4);
 
             draw.ExecuteRect(this.DrawRectA);
 
             this.DrawRectA.Pos.Col : this.MathInt(0sn4);
             this.DrawRectA.Pos.Row : this.MathInt(1);
-            this.DrawRectA.Size.Wed : this.MathInt(10);
+            this.DrawRectA.Size.Width : this.MathInt(10);
             this.DrawRectA.Size.Het : this.MathValue(3, 0sn1);
 
             draw.ExecuteRect(this.DrawRectA);
