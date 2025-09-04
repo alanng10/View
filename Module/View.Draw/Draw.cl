@@ -305,8 +305,8 @@ class Draw : Any
         var Extern extern;
         extern : this.Extern;
 
-        extern.Size_WedSet(this.InternSize, this.Size.Width);
-        extern.Size_WedSet(this.InternSize, this.Size.Hegth);
+        extern.Size_WidthSet(this.InternSize, this.Size.Width);
+        extern.Size_HegthSet(this.InternSize, this.Size.Hegth);
         return true;
     }
 
