@@ -4,12 +4,12 @@ class ViewB : View
     {
         base.Init();
         var Int width;
-        var Int het;
+        var Int hegth;
         width : 400;
-        het : 200;
+        hegth : 200;
 
         var DrawRect sourceRect;
-        sourceRect : this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(width), this.MathInt(het));
+        sourceRect : this.Demo.DrawInfra.RectCreate(this.MathInt(1880), this.MathInt(910), this.MathInt(width), this.MathInt(hegth));
 
         var DrawRect destRectA;
         destRectA : this.Demo.DrawInfra.RectCreate(0, 0, this.MathInt(200), this.MathInt(200));
@@ -20,7 +20,7 @@ class ViewB : View
         this.Pos.Col : 60;
         this.Pos.Row : 40;
         this.Size.Width : width;
-        this.Size.Hegth : het;
+        this.Size.Hegth : hegth;
         this.DrawImage : this.Demo.DrawInfra.ImageCreateStorage("View.Demo-0.00.00.data/Demo/image.jpg");
         this.SourceRect : sourceRect;
         this.DestRectA : destRectA;
@@ -53,14 +53,14 @@ class ViewB : View
         col : this.Pos.Col;
         row : this.Pos.Row;
         var Int width;
-        var Int het;
+        var Int hegth;
         width : this.Size.Width;
-        het : this.Size.Hegth;
+        hegth : this.Size.Hegth;
 
         this.DrawRectA.Pos.Col : this.MathInt(col);
         this.DrawRectA.Pos.Row : this.MathInt(row);
         this.DrawRectA.Size.Width : this.MathInt(width);
-        this.DrawRectA.Size.Hegth : this.MathInt(het);
+        this.DrawRectA.Size.Hegth : this.MathInt(hegth);
 
         var Int angle;
         angle : this.MathInt(20);
