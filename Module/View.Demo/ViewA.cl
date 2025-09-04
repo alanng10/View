@@ -74,14 +74,14 @@ class ViewA : View
         col : this.Pos.Col;
         row : this.Pos.Row;
         var Int width;
-        var Int het;
+        var Int hegth;
         width : this.Size.Width;
-        het : this.Size.Hegth;
+        hegth : this.Size.Hegth;
 
         this.DrawRectA.Pos.Col : this.MathInt(col);
         this.DrawRectA.Pos.Row : this.MathInt(row);
         this.DrawRectA.Size.Width : this.MathInt(width);
-        this.DrawRectA.Size.Hegth : this.MathInt(het);
+        this.DrawRectA.Size.Hegth : this.MathInt(hegth);
 
         draw.Fill : this.Back;
         draw.Line : this.Slash;
