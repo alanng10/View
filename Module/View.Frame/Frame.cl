@@ -152,7 +152,7 @@ class Frame : Any
         a : new Draw;
         a.Init();
         a.Out : this.Out;
-        a.Size.Wed : screen.Size.Wed;
+        a.Size.Width : screen.Size.Width;
         a.Size.Het : screen.Size.Het;
         a.SizeSet();
         return a;
@@ -271,7 +271,7 @@ class Frame : Any
         area : draw.Area;
         area.Pos.Col : 0;
         area.Pos.Row : 0;
-        area.Size.Wed : draw.Size.Wed;
+        area.Size.Width : draw.Size.Width;
         area.Size.Het : draw.Size.Het;
         draw.AreaSet();
 
@@ -295,7 +295,7 @@ class Frame : Any
         rectA : this.IndexRectBack;
         rectA.Pos.Col : this.MathInt(area.Pos.Col);
         rectA.Pos.Row : this.MathInt(area.Pos.Row);
-        rectA.Size.Wed : this.MathInt(area.Size.Wed);
+        rectA.Size.Width : this.MathInt(area.Size.Width);
         rectA.Size.Het : this.MathInt(area.Size.Het);
 
         draw.ExecuteRect(rectA);
@@ -307,7 +307,7 @@ class Frame : Any
     maide prusate Bool Update(var DrawRect rect)
     {
         this.InternInfra.RectSet(this.InternUpdateRect, 
-            rect.Pos.Col, rect.Pos.Row, rect.Size.Wed, rect.Size.Het
+            rect.Pos.Col, rect.Pos.Row, rect.Size.Width, rect.Size.Het
         );
 
         this.Extern.Frame_Update(this.Intern, this.InternUpdateRect);
