@@ -8,7 +8,7 @@ class Size : Comp
         this.HetField : this.CreateHetField();
 
         this.Width : 0;
-        this.Het : 0;
+        this.Hegth : 0;
         return true;
     }
 
@@ -59,7 +59,7 @@ class Size : Comp
 
     field prusate Field HetField { get { return data; } set { data : value; } }
 
-    field prusate Int Het
+    field prusate Int Hegth
     {
         get
         {
