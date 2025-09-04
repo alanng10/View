@@ -71,12 +71,12 @@ class Mark : View
         var Int cubeCol;
         var Int cubeRow;
         cubeCol : this.Pos.Col + 6;
-        cubeRow : this.Pos.Row + this.DrawInfra.BoundSub(this.Size.Het, cubeSize) / 2;
+        cubeRow : this.Pos.Row + this.DrawInfra.BoundSub(this.Size.Hegth, cubeSize) / 2;
 
         this.DrawRectA.Pos.Col : this.MathInt(cubeCol);
         this.DrawRectA.Pos.Row : this.MathInt(cubeRow);
         this.DrawRectA.Size.Width : this.MathInt(cubeSize);
-        this.DrawRectA.Size.Het : this.MathInt(cubeSize);
+        this.DrawRectA.Size.Hegth : this.MathInt(cubeSize);
 
         draw.Fill : this.Palete.Bord.Brush;
 
@@ -93,7 +93,7 @@ class Mark : View
             this.DrawRectA.Pos.Col : this.MathInt(cubeCol + 1);
             this.DrawRectA.Pos.Row : this.MathInt(cubeRow + 1);
             this.DrawRectA.Size.Width : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
-            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
+            this.DrawRectA.Size.Hegth : this.MathInt(this.DrawInfra.BoundSub(cubeSize, 1 * 2));
 
             draw.ExecuteRectRound(this.DrawRectA, 
                 this.MathInt(this.DrawInfra.BoundSub(4, 1)), 
@@ -111,7 +111,7 @@ class Mark : View
             var Int formCol;
             var Int formRow;
             formCol : cubeCol + cubeSize / 2;
-            formRow : this.Pos.Row + this.Size.Het / 2;
+            formRow : this.Pos.Row + this.Size.Hegth / 2;
 
             form.Reset();
 
@@ -127,14 +127,14 @@ class Mark : View
             this.DrawRectA.Pos.Col : this.MathInt(0sn4);
             this.DrawRectA.Pos.Row : this.MathInt(0sn3);
             this.DrawRectA.Size.Width : this.MathValue(3, 0sn1);
-            this.DrawRectA.Size.Het : this.MathInt(4);
+            this.DrawRectA.Size.Hegth : this.MathInt(4);
 
             draw.ExecuteRect(this.DrawRectA);
 
             this.DrawRectA.Pos.Col : this.MathInt(0sn4);
             this.DrawRectA.Pos.Row : this.MathInt(1);
             this.DrawRectA.Size.Width : this.MathInt(10);
-            this.DrawRectA.Size.Het : this.MathValue(3, 0sn1);
+            this.DrawRectA.Size.Hegth : this.MathValue(3, 0sn1);
 
             draw.ExecuteRect(this.DrawRectA);
 
