@@ -35,14 +35,14 @@ class ThreadState : State
         var Int col;
         var Int row;
         var Int width;
-        var Int het;
+        var Int hegth;
         col : 20;
         row : 20;
         width : this.Image.Size.Width - 50;
-        het : this.Image.Size.Hegth - 50;
+        hegth : this.Image.Size.Hegth - 50;
 
         var DrawRect rectA;
-        rectA : this.Demo.DrawInfra.RectCreate(this.MathInt(col), this.MathInt(row), this.MathInt(width), this.MathInt(het));
+        rectA : this.Demo.DrawInfra.RectCreate(this.MathInt(col), this.MathInt(row), this.MathInt(width), this.MathInt(hegth));
 
         var Draw draw;
         draw : new Draw;
@@ -65,7 +65,7 @@ class ThreadState : State
         w : w - 40;
 
         var Int h;
-        h : het;
+        h : hegth;
         h : h - 40;
 
         rectA.Size.Width : this.MathInt(w);
