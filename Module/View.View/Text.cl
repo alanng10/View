@@ -257,7 +257,7 @@ class Text : View
         this.DrawRectA.Pos.Col : this.Dest.Pos.Col;
         this.DrawRectA.Pos.Row : this.Dest.Pos.Row;
         this.DrawRectA.Size.Width : this.Dest.Size.Width;
-        this.DrawRectA.Size.Het : this.Dest.Size.Het;
+        this.DrawRectA.Size.Hegth : this.Dest.Size.Hegth;
 
         draw.Font : this.Font;
         draw.Line : this.Fore;
