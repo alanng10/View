@@ -76,7 +76,7 @@ class Image : Any
         var Extern extern;
         extern : this.Extern;
 
-        extern.Size_WedSet(this.InternSize, width);
+        extern.Size_WidthSet(this.InternSize, width);
         extern.Size_HetSet(this.InternSize, hegth);
         
         extern.Image_DataCreate(this.Intern);
