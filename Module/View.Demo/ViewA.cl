@@ -36,7 +36,7 @@ class ViewA : View
 
         this.Pos.Col : 0;
         this.Pos.Row : 0;
-        this.Size.Wed : 600;
+        this.Size.Width : 600;
         this.Size.Het : 400;
         this.Back : brushA;
         this.Slash : slash;
@@ -75,12 +75,12 @@ class ViewA : View
         row : this.Pos.Row;
         var Int wed;
         var Int het;
-        wed : this.Size.Wed;
+        wed : this.Size.Width;
         het : this.Size.Het;
 
         this.DrawRectA.Pos.Col : this.MathInt(col);
         this.DrawRectA.Pos.Row : this.MathInt(row);
-        this.DrawRectA.Size.Wed : this.MathInt(wed);
+        this.DrawRectA.Size.Width : this.MathInt(wed);
         this.DrawRectA.Size.Het : this.MathInt(het);
 
         draw.Fill : this.Back;
@@ -115,7 +115,7 @@ class ViewA : View
 
         this.DrawRectA.Pos.Col : 0;
         this.DrawRectA.Pos.Row : 0;
-        this.DrawRectA.Size.Wed : this.MathInt(300);
+        this.DrawRectA.Size.Width : this.MathInt(300);
         this.DrawRectA.Size.Het : this.MathInt(200);
 
         draw.ExecuteRectRound(this.DrawRectA, this.MathInt(40), this.MathInt(30));
