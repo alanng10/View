@@ -15,7 +15,7 @@ class Screen : Any
         var Int sizeWed;
         var Int sizeHet;
         sizeWed : extern.Size_WidthGet(sizeK);
-        sizeHet : extern.Size_HetGet(sizeK);
+        sizeHet : extern.Size_HegthGet(sizeK);
 
         this.Size : this.DrawInfra.SizeCreate(sizeWed, sizeHet);
 
@@ -25,7 +25,7 @@ class Screen : Any
         var Int dimendWed;
         var Int dimendHet;
         dimendWed : extern.Size_WidthGet(dimendK);
-        dimendHet : extern.Size_HetGet(dimendK);
+        dimendHet : extern.Size_HegthGet(dimendK);
 
         this.Dimend : this.DrawInfra.SizeCreate(dimendWed, dimendHet);
 
