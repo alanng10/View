@@ -19,7 +19,7 @@ class ViewB : View
 
         this.Pos.Col : 60;
         this.Pos.Row : 40;
-        this.Size.Wed : wed;
+        this.Size.Width : wed;
         this.Size.Het : het;
         this.DrawImage : this.Demo.DrawInfra.ImageCreateStorage("View.Demo-0.00.00.data/Demo/image.jpg");
         this.SourceRect : sourceRect;
@@ -54,12 +54,12 @@ class ViewB : View
         row : this.Pos.Row;
         var Int wed;
         var Int het;
-        wed : this.Size.Wed;
+        wed : this.Size.Width;
         het : this.Size.Het;
 
         this.DrawRectA.Pos.Col : this.MathInt(col);
         this.DrawRectA.Pos.Row : this.MathInt(row);
-        this.DrawRectA.Size.Wed : this.MathInt(wed);
+        this.DrawRectA.Size.Width : this.MathInt(wed);
         this.DrawRectA.Size.Het : this.MathInt(het);
 
         var Int angle;
