@@ -65,7 +65,7 @@ class Infra : Any
     maide prusate Bool AssignDrawSizeValue(var DrawSize dest, var DrawSize source)
     {
         dest.Width : source.Width;
-        dest.Het : source.Het;
+        dest.Hegth : source.Hegth;
         return true;
     }
 
@@ -122,14 +122,14 @@ class Infra : Any
         area.Pos.Col : area.Pos.Col + 14;
         area.Pos.Row : area.Pos.Row + 14;
         area.Size.Width : this.DrawInfra.BoundSub(area.Size.Width, 14 * 2);
-        area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, 14 * 2);
+        area.Size.Hegth : this.DrawInfra.BoundSub(area.Size.Hegth, 14 * 2);
         return true;
     }
 
     maide prusate Bool ButtonChildParentSize(var DrawSize size)
     {
         size.Width : size.Width + 14 * 2;
-        size.Het : size.Het + 14 * 2;
+        size.Hegth : size.Hegth + 14 * 2;
         return true;
     }
 
@@ -179,7 +179,7 @@ class Infra : Any
         area.Pos.Col : area.Pos.Col + radius;
         area.Pos.Row : area.Pos.Row + radius;
         area.Size.Width : this.DrawInfra.BoundSub(area.Size.Width, radius * 2 + 10 + 6);
-        area.Size.Het : this.DrawInfra.BoundSub(area.Size.Het, radius * 2);
+        area.Size.Hegth : this.DrawInfra.BoundSub(area.Size.Hegth, radius * 2);
         return true;
     }
 
@@ -189,7 +189,7 @@ class Infra : Any
         radius : 6;
 
         size.Width : size.Width + radius * 2 + 10 + 6;
-        size.Het : size.Het + radius * 2;
+        size.Hegth : size.Hegth + radius * 2;
         return true;
     }
 }
