@@ -44,7 +44,7 @@ class ViewC : View
 
         this.Pos.Col : 100;
         this.Pos.Row : 0;
-        this.Size.Wed : 500;
+        this.Size.Width : 500;
         this.Size.Het : 400;
         this.Back : brush;
         this.EllipseBrush : this.EllipseBrushCreate();
@@ -58,15 +58,15 @@ class ViewC : View
         image.Init();
         image.Pos.Col : 0;
         image.Pos.Row : 0;
-        image.Size.Wed : 16;
+        image.Size.Width : 16;
         image.Size.Het : 16;
         image.Dest.Pos.Col : 0;
         image.Dest.Pos.Row : 0;
-        image.Dest.Size.Wed : 16;
+        image.Dest.Size.Width : 16;
         image.Dest.Size.Het : 16;
         image.Source.Pos.Col : 0;
         image.Source.Pos.Row : 0;
-        image.Source.Size.Wed : 16;
+        image.Source.Size.Width : 16;
         image.Source.Size.Het : 16;
         image.Value : this.ButtonImage;
 
@@ -76,11 +76,11 @@ class ViewC : View
         text.Init();
         text.Pos.Col : 0;
         text.Pos.Row : 0;
-        text.Size.Wed : 80;
+        text.Size.Width : 80;
         text.Size.Het : 60;
         text.Dest.Pos.Col : 0;
         text.Dest.Pos.Row : 0;
-        text.Dest.Size.Wed : 80;
+        text.Dest.Size.Width : 80;
         text.Dest.Size.Het : 60;
         text.Value : this.Demo.TextCreate("MMMMH k m5 #");
         text.Font : this.ViewInfra.PaleteDefault.FontMono;
@@ -90,7 +90,7 @@ class ViewC : View
         this.Button.Init();
         this.Button.Pos.Col : 20;
         this.Button.Pos.Row : 20;
-        this.Button.Size.Wed : 100;
+        this.Button.Size.Width : 100;
         this.Button.Size.Het : 60;
         this.Button.Child : image;
 
@@ -99,7 +99,7 @@ class ViewC : View
         this.Mark.Init();
         this.Mark.Pos.Col : 20;
         this.Mark.Pos.Row : 20;
-        this.Mark.Size.Wed : 100;
+        this.Mark.Size.Width : 100;
         this.Mark.Size.Het : 60;
         this.Mark.Child : text;
 
@@ -108,7 +108,7 @@ class ViewC : View
         this.Radio.Init();
         this.Radio.Pos.Col : 120;
         this.Radio.Pos.Row : 20;
-        this.Radio.Size.Wed : 100;
+        this.Radio.Size.Width : 100;
         this.Radio.Size.Het : 60;
 
         this.Select : new Select;
@@ -116,7 +116,7 @@ class ViewC : View
         this.Select.Init();
         this.Select.Pos.Col : 20;
         this.Select.Pos.Row : 80;
-        this.Select.Size.Wed : 100;
+        this.Select.Size.Width : 100;
         this.Select.Size.Het : 60;
 
         var Grid grid;
@@ -124,7 +124,7 @@ class ViewC : View
         grid.Init();
         grid.Pos.Col : 200;
         grid.Pos.Row : 100;
-        grid.Size.Wed : 300;
+        grid.Size.Width : 300;
         grid.Size.Het : 600;
         grid.Back : this.ViewInfra.PaleteDefault.Base.Brush;
 
@@ -145,7 +145,7 @@ class ViewC : View
         childA : new GridChild;
         childA.Init();
         childA.View : this.Button;
-        childA.Rect.Size.Wed : 1;
+        childA.Rect.Size.Width : 1;
         childA.Rect.Size.Het : 1;
 
         var GridChild childB;
@@ -153,7 +153,7 @@ class ViewC : View
         childB.Init();
         childB.View : this.Mark;
         childB.Rect.Pos.Row : 1;
-        childB.Rect.Size.Wed : 1;
+        childB.Rect.Size.Width : 1;
         childB.Rect.Size.Het : 1;
 
         var GridChild childC;
@@ -161,7 +161,7 @@ class ViewC : View
         childC.Init();
         childC.View : this.Radio;
         childC.Rect.Pos.Row : 1;
-        childC.Rect.Size.Wed : 1;
+        childC.Rect.Size.Width : 1;
         childC.Rect.Size.Het : 1;
 
         var GridChild childD;
@@ -169,7 +169,7 @@ class ViewC : View
         childD.Init();
         childD.View : this.Select;
         childD.Rect.Pos.Row : 1;
-        childD.Rect.Size.Wed : 1;
+        childD.Rect.Size.Width : 1;
         childD.Rect.Size.Het : 1;
 
         grid.Col.Add(colA);
@@ -305,7 +305,7 @@ class ViewC : View
 
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 150);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 50);
-        this.DrawRectA.Size.Wed : this.MathInt(300);
+        this.DrawRectA.Size.Width : this.MathInt(300);
         this.DrawRectA.Size.Het : this.MathInt(100);
 
         draw.Font : this.Font;
