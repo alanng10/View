@@ -301,7 +301,7 @@ class View : Comp
     {
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
-        this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
+        this.DrawRectA.Size.Width : this.MathInt(this.Size.Width);
         this.DrawRectA.Size.Het : this.MathInt(this.Size.Het);
 
         draw.Fill : this.Back;
@@ -347,7 +347,7 @@ class View : Comp
         dest.Pos.Col : col;
         dest.Pos.Row : row;
 
-        dest.Size.Wed : this.Size.Wed;
+        dest.Size.Width : this.Size.Width;
         dest.Size.Het : this.Size.Het;
         return true;
     }
