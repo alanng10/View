@@ -38,7 +38,7 @@ class ThreadState : State
         var Int het;
         col : 20;
         row : 20;
-        wed : this.Image.Size.Wed - 50;
+        wed : this.Image.Size.Width - 50;
         het : this.Image.Size.Het - 50;
 
         var DrawRect rectA;
@@ -48,7 +48,7 @@ class ThreadState : State
         draw : new Draw;
         draw.Init();
         draw.Out : this.Image.Out;
-        draw.Size.Wed : this.Image.Size.Wed;
+        draw.Size.Width : this.Image.Size.Width;
         draw.Size.Het : this.Image.Size.Het;
         draw.SizeSet();
 
@@ -68,7 +68,7 @@ class ThreadState : State
         h : het;
         h : h - 40;
 
-        rectA.Size.Wed : this.MathInt(w);
+        rectA.Size.Width : this.MathInt(w);
         rectA.Size.Het : this.MathInt(h);
 
         var TextText text;
