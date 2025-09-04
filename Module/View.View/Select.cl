@@ -46,7 +46,7 @@ class Select : View
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
         this.DrawRectA.Size.Width : this.MathInt(this.Size.Width);
-        this.DrawRectA.Size.Het : this.MathInt(this.Size.Het);
+        this.DrawRectA.Size.Hegth : this.MathInt(this.Size.Hegth);
 
         draw.Fill : this.Palete.Bord.Brush;
 
@@ -61,7 +61,7 @@ class Select : View
             this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
             this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
             this.DrawRectA.Size.Width : this.MathInt(this.DrawInfra.BoundSub(this.Size.Width, 1 * 2));
-            this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1 * 2));
+            this.DrawRectA.Size.Hegth : this.MathInt(this.DrawInfra.BoundSub(this.Size.Hegth, 1 * 2));
 
             draw.Fill : this.Back;
 
@@ -75,14 +75,14 @@ class Select : View
         this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Width, radius + 10));
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius);
         this.DrawRectA.Size.Width : this.MathInt(10);
-        this.DrawRectA.Size.Het : this.MathInt(4);
+        this.DrawRectA.Size.Hegth : this.MathInt(4);
 
         draw.ExecuteRect(this.DrawRectA);
 
         this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Width, radius + 7));
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius + 4);
         this.DrawRectA.Size.Width : this.MathInt(4);
-        this.DrawRectA.Size.Het : this.MathInt(4);
+        this.DrawRectA.Size.Hegth : this.MathInt(4);
 
         draw.ExecuteRect(this.DrawRectA);
 
