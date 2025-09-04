@@ -45,7 +45,7 @@ class Select : View
 
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
-        this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
+        this.DrawRectA.Size.Width : this.MathInt(this.Size.Width);
         this.DrawRectA.Size.Het : this.MathInt(this.Size.Het);
 
         draw.Fill : this.Palete.Bord.Brush;
@@ -60,7 +60,7 @@ class Select : View
         {
             this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
             this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
-            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 1 * 2));
+            this.DrawRectA.Size.Width : this.MathInt(this.DrawInfra.BoundSub(this.Size.Width, 1 * 2));
             this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1 * 2));
 
             draw.Fill : this.Back;
@@ -72,16 +72,16 @@ class Select : View
 
         draw.Fill : this.Palete.Fore.Brush;
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 10));
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Width, radius + 10));
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius);
-        this.DrawRectA.Size.Wed : this.MathInt(10);
+        this.DrawRectA.Size.Width : this.MathInt(10);
         this.DrawRectA.Size.Het : this.MathInt(4);
 
         draw.ExecuteRect(this.DrawRectA);
 
-        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Wed, radius + 7));
+        this.DrawRectA.Pos.Col : this.MathInt(this.DrawInfra.BoundSub(this.Pos.Col + this.Size.Width, radius + 7));
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + radius + 4);
-        this.DrawRectA.Size.Wed : this.MathInt(4);
+        this.DrawRectA.Size.Width : this.MathInt(4);
         this.DrawRectA.Size.Het : this.MathInt(4);
 
         draw.ExecuteRect(this.DrawRectA);
