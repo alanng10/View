@@ -73,14 +73,14 @@ class ViewA : View
         var Int row;
         col : this.Pos.Col;
         row : this.Pos.Row;
-        var Int wed;
+        var Int width;
         var Int het;
-        wed : this.Size.Width;
+        width : this.Size.Width;
         het : this.Size.Hegth;
 
         this.DrawRectA.Pos.Col : this.MathInt(col);
         this.DrawRectA.Pos.Row : this.MathInt(row);
-        this.DrawRectA.Size.Width : this.MathInt(wed);
+        this.DrawRectA.Size.Width : this.MathInt(width);
         this.DrawRectA.Size.Hegth : this.MathInt(het);
 
         draw.Fill : this.Back;
