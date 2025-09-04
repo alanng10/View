@@ -19,7 +19,7 @@ class Button : View
 
         this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col);
         this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row);
-        this.DrawRectA.Size.Wed : this.MathInt(this.Size.Wed);
+        this.DrawRectA.Size.Width : this.MathInt(this.Size.Width);
         this.DrawRectA.Size.Het : this.MathInt(this.Size.Het);
 
         draw.Fill : this.Palete.Bord.Brush;
@@ -36,7 +36,7 @@ class Button : View
 
             this.DrawRectA.Pos.Col : this.MathInt(this.Pos.Col + 1);
             this.DrawRectA.Pos.Row : this.MathInt(this.Pos.Row + 1);
-            this.DrawRectA.Size.Wed : this.MathInt(this.DrawInfra.BoundSub(this.Size.Wed, 1 * 2));
+            this.DrawRectA.Size.Width : this.MathInt(this.DrawInfra.BoundSub(this.Size.Width, 1 * 2));
             this.DrawRectA.Size.Het : this.MathInt(this.DrawInfra.BoundSub(this.Size.Het, 1 * 2));
 
             draw.ExecuteRectRound(this.DrawRectA, 
