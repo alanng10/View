@@ -135,12 +135,12 @@ class Image : View
     {
         this.DrawRectA.Pos.Col : this.Dest.Pos.Col;
         this.DrawRectA.Pos.Row : this.Dest.Pos.Row;
-        this.DrawRectA.Size.Wed : this.Dest.Size.Wed;
+        this.DrawRectA.Size.Width : this.Dest.Size.Width;
         this.DrawRectA.Size.Het : this.Dest.Size.Het;
 
         this.DrawRectB.Pos.Col : this.Source.Pos.Col;
         this.DrawRectB.Pos.Row : this.Source.Pos.Row;
-        this.DrawRectB.Size.Wed : this.Source.Size.Wed;
+        this.DrawRectB.Size.Width : this.Source.Size.Width;
         this.DrawRectB.Size.Het : this.Source.Size.Het;
 
         draw.ExecuteImage(this.Value, this.DrawRectA, this.DrawRectB);
