@@ -253,7 +253,7 @@ class Grid : View
         startRow : child.Rect.Pos.Row;
         var Int endCol;
         var Int endRow;
-        endCol : startCol + child.Rect.Size.Wed;
+        endCol : startCol + child.Rect.Size.Width;
         endRow : startRow + child.Rect.Size.Het;
 
         var Int lite;
@@ -278,7 +278,7 @@ class Grid : View
 
         dest.Pos.Col : col;
         dest.Pos.Row : row;
-        dest.Size.Wed : width;
+        dest.Size.Width : width;
         dest.Size.Het : hegth;
         return true;
     }
@@ -292,7 +292,7 @@ class Grid : View
     maide precate Bool ValidGridRect(var Rect rect)
     {
         var Bool ba;
-        ba : this.InfraInfra.ValidRange(this.Col.Count, rect.Pos.Col, rect.Size.Wed);
+        ba : this.InfraInfra.ValidRange(this.Col.Count, rect.Pos.Col, rect.Size.Width);
 
         var Bool bb;
         bb : this.InfraInfra.ValidRange(this.Row.Count, rect.Pos.Row, rect.Size.Het);
