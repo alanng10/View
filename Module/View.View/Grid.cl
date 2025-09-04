@@ -254,7 +254,7 @@ class Grid : View
         var Int endCol;
         var Int endRow;
         endCol : startCol + child.Rect.Size.Width;
-        endRow : startRow + child.Rect.Size.Het;
+        endRow : startRow + child.Rect.Size.Hegth;
 
         var Int lite;
         var Int nite;
@@ -279,7 +279,7 @@ class Grid : View
         dest.Pos.Col : col;
         dest.Pos.Row : row;
         dest.Size.Width : width;
-        dest.Size.Het : hegth;
+        dest.Size.Hegth : hegth;
         return true;
     }
 
@@ -295,7 +295,7 @@ class Grid : View
         ba : this.InfraInfra.ValidRange(this.Col.Count, rect.Pos.Col, rect.Size.Width);
 
         var Bool bb;
-        bb : this.InfraInfra.ValidRange(this.Row.Count, rect.Pos.Row, rect.Size.Het);
+        bb : this.InfraInfra.ValidRange(this.Row.Count, rect.Pos.Row, rect.Size.Hegth);
     
         var Bool a;
         a : ba & bb;
