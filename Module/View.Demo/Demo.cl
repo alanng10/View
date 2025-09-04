@@ -65,7 +65,7 @@ class Demo : TextAdd
         this.Frame.Title : "View Demo";
         this.Frame.TitleSet();
 
-        this.UpdateRect : this.DrawInfra.RectCreate(0, 0, this.Screen.Size.Wed, this.Screen.Size.Het);
+        this.UpdateRect : this.DrawInfra.RectCreate(0, 0, this.Screen.Size.Width, this.Screen.Size.Het);
 
         var TypeA type;
         type : new TypeA;
@@ -86,7 +86,7 @@ class Demo : TextAdd
         this.View.Init();
         this.View.Pos.Col : 100;
         this.View.Pos.Row : 100;
-        this.View.Size.Wed : 1600;
+        this.View.Size.Width : 1600;
         this.View.Size.Het : 900;
         this.View.Back : brush;
 
@@ -167,19 +167,19 @@ class Demo : TextAdd
         childA : new GridChild;
         childA.Init();
         childA.View : this.ViewA;
-        childA.Rect.Size.Wed : 1;
+        childA.Rect.Size.Width : 1;
         childA.Rect.Size.Het : 1;
         var GridChild childB;
         childB : new GridChild;
         childB.Init();
         childB.View : this.ViewC;
         childB.Rect.Pos.Col : 1;
-        childB.Rect.Size.Wed : 1;
+        childB.Rect.Size.Width : 1;
         childB.Rect.Size.Het : 1;
 
         grid.Pos.Col : 50;
         grid.Pos.Row : 50;
-        grid.Size.Wed : 1500;
+        grid.Size.Width : 1500;
         grid.Size.Het : 800;
         grid.Row.Add(rowA);
         grid.Col.Add(colA);
@@ -242,7 +242,7 @@ class Demo : TextAdd
         draw : new Draw;
         draw.Init();
         draw.Out : image.Out;
-        draw.Size.Wed : image.Size.Wed;
+        draw.Size.Width : image.Size.Width;
         draw.Size.Het : image.Size.Het;
         draw.SizeSet();
 
@@ -281,8 +281,8 @@ class Demo : TextAdd
 
         image.Final();
 
-        this.ConsoleWriteMathValue("TextWed M 1 ", rectB.Size.Wed);
-        this.ConsoleWriteMathValue("TextWed M 1024 ", rectC.Size.Wed);
+        this.ConsoleWriteMathValue("TextWed M 1 ", rectB.Size.Width);
+        this.ConsoleWriteMathValue("TextWed M 1024 ", rectC.Size.Width);
 
         return true;
     }
